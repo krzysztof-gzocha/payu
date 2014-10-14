@@ -29,7 +29,7 @@ class ShippingMethodCollection implements ShippingMethodCollectionInterface
      */
     public function getShippingMethods()
     {
-        return $this->shippingMethods;
+        return array_values($this->shippingMethods);
     }
 
     /**
