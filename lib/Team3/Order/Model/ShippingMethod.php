@@ -3,12 +3,8 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order;
+namespace Team3\Order\Model;
 
-/**
- * Class ShippingMethod
- * @package Team3\Order
- */
 class ShippingMethod implements ShippingMethodInterface
 {
     /**

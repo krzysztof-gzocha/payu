@@ -2,12 +2,8 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-namespace Team3\Order;
+namespace Team3\Order\Model;
 
-/**
- * Interface UrlsInterface
- * @package Order
- */
 interface UrlsInterface
 {
     /**

@@ -3,12 +3,8 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order;
+namespace Team3\Order\Model;
 
-/**
- * Class ProductCollection
- * @package Team3\Order
- */
 class ProductCollection implements ProductCollectionInterface
 {
     /**
@@ -41,7 +37,7 @@ class ProductCollection implements ProductCollectionInterface
      */
     public function getProducts()
     {
-        return array_values($this->products);
+        return $this->products;
     }
 
     /**
@@ -51,7 +47,7 @@ class ProductCollection implements ProductCollectionInterface
      */
     public function setProducts(array $products)
     {
-        $this->products = $products;
+        $this->products = array_values($products);
 
         return $this;
     }

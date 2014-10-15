@@ -3,12 +3,8 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order;
+namespace Team3\Order\Model;
 
-/**
- * Class ShippingMethodCollection
- * @package Team3\Order
- */
 class ShippingMethodCollection implements ShippingMethodCollectionInterface
 {
     /**
@@ -29,7 +25,7 @@ class ShippingMethodCollection implements ShippingMethodCollectionInterface
      */
     public function getShippingMethods()
     {
-        return array_values($this->shippingMethods);
+        return $this->shippingMethods;
     }
 
     /**
@@ -49,7 +45,7 @@ class ShippingMethodCollection implements ShippingMethodCollectionInterface
      */
     public function setShippingMethods(array $shippingMethods)
     {
-        $this->shippingMethods = $shippingMethods;
+        $this->shippingMethods = array_values($shippingMethods);
 
         return $this;
     }

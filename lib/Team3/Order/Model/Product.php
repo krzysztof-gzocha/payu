@@ -3,12 +3,8 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order;
+namespace Team3\Order\Model;
 
-/**
- * Class Product
- * @package Team3\Order
- */
 class Product implements ProductInterface
 {
     /**

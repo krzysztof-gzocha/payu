@@ -12,7 +12,7 @@ class ProductCollectionSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Team3\Order\ProductCollection');
+        $this->shouldHaveType('Team3\Order\Model\ProductCollection');
     }
 
     function it_returns_correct_number_of_products()
