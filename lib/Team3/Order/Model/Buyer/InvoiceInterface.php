@@ -105,7 +105,7 @@ interface InvoiceInterface
     /**
      * @return string
      */
-    public function getRecipientTin();
+    public function getTin();
 
     /**
      * @param string $recipientTin

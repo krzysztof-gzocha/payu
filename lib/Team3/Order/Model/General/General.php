@@ -34,6 +34,11 @@ class General implements GeneralInterface
     /**
      * @var string
      */
+    protected $description;
+
+    /**
+     * @var string
+     */
     protected $additionalDescription;
 
     /**
@@ -50,6 +55,26 @@ class General implements GeneralInterface
      * @var string
      */
     protected $signature;
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     *
+     * @return General
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 
     /**
      * @inheritdoc

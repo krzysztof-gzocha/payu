@@ -220,7 +220,7 @@ class Invoice implements InvoiceInterface
     /**
      * @return string
      */
-    public function getRecipientTin()
+    public function getTin()
     {
         return $this->recipientTin;
     }

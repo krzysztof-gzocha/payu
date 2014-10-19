@@ -7,6 +7,18 @@ namespace Team3\Order\Model\General;
 interface GeneralInterface
 {
     /**
+     * @return string
+     */
+    public function getDescription();
+
+    /**
+     * @param string $description
+     *
+     * @return General
+     */
+    public function setDescription($description);
+
+    /**
      * @string
      */
     public function getAdditionalDescription();
