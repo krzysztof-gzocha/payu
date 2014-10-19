@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Model;
+namespace Team3\Order\Model\Buyer;
 
 class Buyer implements BuyerInterface
 {
@@ -26,6 +26,22 @@ class Buyer implements BuyerInterface
      * @var string
      */
     protected $lastName;
+
+    /**
+     * @var DeliveryInterface
+     */
+    protected $delivery;
+
+    /**
+     * @var InvoiceInterface
+     */
+    protected $invoice;
+
+    public function __construct()
+    {
+        $this->delivery = new Delivery();
+        $this->invoice = new Invoice();
+    }
 
     /**
      * @return string
@@ -103,6 +119,46 @@ class Buyer implements BuyerInterface
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * @return DeliveryInterface
+     */
+    public function getDelivery()
+    {
+        return $this->delivery;
+    }
+
+    /**
+     * @param DeliveryInterface $delivery
+     *
+     * @return Buyer
+     */
+    public function setDelivery(DeliveryInterface $delivery)
+    {
+        $this->delivery = $delivery;
+
+        return $this;
+    }
+
+    /**
+     * @return InvoiceInterface
+     */
+    public function getInvoice()
+    {
+        return $this->invoice;
+    }
+
+    /**
+     * @param InvoiceInterface $invoice
+     *
+     * @return Buyer
+     */
+    public function setInvoice(InvoiceInterface $invoice)
+    {
+        $this->invoice = $invoice;
 
         return $this;
     }

@@ -2,8 +2,7 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
-namespace Team3\Order\Model;
+namespace Team3\Order\Model\ShippingMethods;
 
 interface ShippingMethodCollectionInterface extends \IteratorAggregate, \Countable
 {
@@ -13,9 +12,14 @@ interface ShippingMethodCollectionInterface extends \IteratorAggregate, \Countab
     public function getShippingMethods();
 
     /**
-     * @param ShippingMethodInterface $shippingMethod
-     *
-     * @return ShippingMethodInterface
+     * @inheritdoc
      */
     public function addShippingMethod(ShippingMethodInterface $shippingMethod);
+
+    /**
+     * @param ShippingMethodInterface[] $shippingMethods
+     *
+     * @return ShippingMethodCollection
+     */
+    public function setShippingMethods(array $shippingMethods);
 }

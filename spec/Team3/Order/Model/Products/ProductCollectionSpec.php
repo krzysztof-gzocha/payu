@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Team3\Order;
+namespace spec\Team3\Order\Model\Products;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Team3\Order\Product;
+use Team3\Order\Model\Products\Product;
 
 class ProductCollectionSpec extends ObjectBehavior
 {
@@ -12,7 +12,7 @@ class ProductCollectionSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Team3\Order\Model\ProductCollection');
+        $this->shouldHaveType('Team3\Order\Model\Products\ProductCollection');
     }
 
     function it_returns_correct_number_of_products()

@@ -14,26 +14,36 @@ class OrderSpec extends ObjectBehavior
 
     public function it_has_buyer_parameter_initialized()
     {
-        $this->getBuyer()->shouldHaveType('Team3\Order\Model\Buyer');
+        $this
+            ->getBuyer()
+            ->shouldImplement('Team3\Order\Model\Buyer\BuyerInterface');
     }
 
     public function it_has_general_parameter_initialized()
     {
-        $this->getGeneral()->shouldHaveType('Team3\Order\Model\General');
+        $this
+            ->getGeneral()
+            ->shouldImplement('Team3\Order\Model\General\GeneralInterface');
     }
 
     public function it_has_product_collection_parameter_initialized()
     {
-        $this->getProductCollection()->shouldHaveType('Team3\Order\Model\ProductCollection');
+        $this
+            ->getProductCollection()
+            ->shouldImplement('Team3\Order\Model\Products\ProductCollectionInterface');
     }
 
     public function it_has_shipping_method_collection_parameter_initialized()
     {
-        $this->getShippingMethodCollection()->shouldHaveType('Team3\Order\Model\ShippingMethodCollection');
+        $this
+            ->getShippingMethodCollection()
+            ->shouldImplement('Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface');
     }
 
     public function it_has_urls_parameter_initialized()
     {
-        $this->getUrls()->shouldHaveType('Team3\Order\Model\Urls');
+        $this
+            ->getUrls()
+            ->shouldImplement('Team3\Order\Model\Urls\Urls');
     }
 }

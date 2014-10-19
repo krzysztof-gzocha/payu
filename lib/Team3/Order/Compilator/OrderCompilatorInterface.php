@@ -9,6 +9,7 @@ namespace Team3\Order\Compilator;
  * into order's model which can be processed by this library.
  * OrderCompilator will use separate steps to compile separate parameters,
  * so to compile buyer parameters there should be used BuyerCompilationStep.
+ * You can use OrderCompilator as OrderCompilationStep so your steps can be hierarchical.
  *
  * Interface OrderCompilatorInterface
  * @package Team3\Order\Compilator

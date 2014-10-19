@@ -3,10 +3,19 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Model;
+namespace Team3\Order\Model\General;
 
 class General implements GeneralInterface
 {
+    const CUSTOMER_IP = 'customerIp';
+    const ORDER_ID = 'extOrderId';
+    const MERCHANT_POS_ID = 'merchantPosId';
+    const DESCRIPTION = 'description';
+    const ADDITIONAL_DESCRIPTION = 'additionalDescription';
+    const CURRENCY_CODE = 'currencyCode';
+    const TOTAL_AMOUNT = 'totalAmount';
+    const SIGNATURE = 'OpenPayu-Signature';
+
     /**
      * @var string
      */

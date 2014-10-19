@@ -5,6 +5,17 @@
 
 namespace Team3\Order\Model;
 
+use Team3\Order\Model\Buyer\Buyer;
+use Team3\Order\Model\Buyer\BuyerInterface;
+use Team3\Order\Model\General\General;
+use Team3\Order\Model\General\GeneralInterface;
+use Team3\Order\Model\Products\ProductCollection;
+use Team3\Order\Model\Products\ProductCollectionInterface;
+use Team3\Order\Model\ShippingMethods\ShippingMethodCollection;
+use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
+use Team3\Order\Model\Urls\Urls;
+use Team3\Order\Model\Urls\UrlsInterface;
+
 class Order implements OrderInterface
 {
     /**
