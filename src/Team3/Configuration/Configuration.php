@@ -31,12 +31,22 @@ class Configuration implements ConfigurationInterface
      */
     protected $version;
 
-    public function __construct()
-    {
-        $this->protocol = 'https';
-        $this->domain = 'payu.com';;
-        $this->path = 'api';
-        $this->version = 'v2_1';
+    /**
+     * @param string $protocol
+     * @param string $domain
+     * @param string $path
+     * @param string $version
+     */
+    public function __construct(
+        $protocol = 'https',
+        $domain = 'payu.com',
+        $path = 'api',
+        $version = 'v2_1'
+    ) {
+        $this->protocol = $protocol;
+        $this->domain = $domain;
+        $this->path = $path;
+        $this->version = $version;
     }
 
     /**
@@ -62,35 +72,11 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
-     * @param string $domain
-     *
-     * @return Configuration
-     */
-    public function setDomain($domain)
-    {
-        $this->domain = $domain;
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getPath()
     {
         return $this->path;
-    }
-
-    /**
-     * @param string $path
-     *
-     * @return Configuration
-     */
-    public function setPath($path)
-    {
-        $this->path = $path;
-
-        return $this;
     }
 
     /**
@@ -102,34 +88,10 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
-     * @param string $protocol
-     *
-     * @return Configuration
-     */
-    public function setProtocol($protocol)
-    {
-        $this->protocol = $protocol;
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getVersion()
     {
         return $this->version;
-    }
-
-    /**
-     * @param string $version
-     *
-     * @return Configuration
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
-
-        return $this;
     }
 }

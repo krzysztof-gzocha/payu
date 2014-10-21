@@ -4,11 +4,11 @@
         "phpmd/phpmd" : "@stable"
     },
     "autoload": {
-        "psr-0": {
-            "": "lib"
-        },
-        "classmap": [
-            "lib/Team3"
-        ]
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "doctrine/annotations": "~1.2"
     }
 }
