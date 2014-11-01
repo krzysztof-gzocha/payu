@@ -8,7 +8,13 @@ use Prophecy\Prophet;
 use \Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
 use \Team3\Order\Annotation\PayU;
 use \Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
+use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
 
+/**
+ * Class UserOrderTransformerSpec
+ * @package spec\Team3\Order\Transformer\UserOrder
+ * @mixin UserOrderTransformer
+ */
 class UserOrderTransformerSpec extends ObjectBehavior
 {
     /**
