@@ -1,6 +1,14 @@
 {
-    "require": {
-        "phpspec/phpspec": "~2.0"
+    "require-dev": {
+        "phpspec/phpspec": "~2.0",
+        "phpmd/phpmd" : "@stable"
     },
-    "autoload": {"psr-0": {"": "src"}}
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "doctrine/annotations": "~1.2"
+    }
 }

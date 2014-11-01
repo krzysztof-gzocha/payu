@@ -1,0 +1,4 @@
+suites:
+    UniqueIndicator:
+        namespace:  Team3
+        src_path:   src
