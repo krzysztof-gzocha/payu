@@ -5,9 +5,9 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Team3\Order\Annotation\OrderAnnotationInterface;
-use Team3\Order\Annotation\OrderPropertyAnnotationInterface;
+use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
+use \ReflectionMethod;
 
 interface UserOrderTransformerStrategyInterface
 {
@@ -15,22 +15,20 @@ interface UserOrderTransformerStrategyInterface
      * Insert proper values which can be read from $reflectionClass and $orderPropertiesAnnotations
      * into $order.
      *
-     * @param OrderInterface                     $order
-     * @param \ReflectionClass                   $reflectionClass
-     * @param OrderPropertyAnnotationInterface[] $orderPropertiesAnnotations
+     * @param OrderInterface   $order
+     * @param ReflectionMethod $reflectionMethod
      *
      * @return OrderInterface
      */
     public function transform(
         OrderInterface $order,
-        \ReflectionClass $reflectionClass,
-        array $orderPropertiesAnnotations
+        ReflectionMethod $reflectionMethod
     );
 
     /**
-     * @param OrderAnnotationInterface $orderAnnotation
+     * @param PayU $annotation
      *
      * @return bool
      */
-    public function supports(OrderAnnotationInterface $orderAnnotation);
+    public function supports(PayU $annotation);
 }

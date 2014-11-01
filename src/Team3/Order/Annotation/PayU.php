@@ -5,12 +5,15 @@
 
 namespace Team3\Order\Annotation;
 
+use Doctrine\Common\Annotations\Annotation\Target;
+
 /**
- * Class OrderPropertyAnnotation
+ * Class PayU
  * @package Team3\Order\Annotation
  * @Annotation
+ * @Target({"METHOD"})
  */
-class OrderPropertyAnnotation implements OrderPropertyAnnotationInterface
+class PayU
 {
     /**
      * @var string
@@ -18,17 +21,13 @@ class OrderPropertyAnnotation implements OrderPropertyAnnotationInterface
     public $propertyName;
 
     /**
-     * @var string
-     */
-    public $type;
-
-    /**
      * @param array $values
      */
-    public function __construct(array $values)
+    public function __construct(array $values = [])
     {
-        $this->propertyName = $values['propertyName'];
-        $this->type = $values['type'];
+        if (array_key_exists('propertyName', $values)) {
+            $this->propertyName = $values['propertyName'];
+        }
     }
 
     /**
@@ -37,13 +36,5 @@ class OrderPropertyAnnotation implements OrderPropertyAnnotationInterface
     public function getPropertyName()
     {
         return $this->propertyName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 }

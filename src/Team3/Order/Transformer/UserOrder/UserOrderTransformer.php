@@ -5,11 +5,9 @@
 
 namespace Team3\Order\Transformer\UserOrder;
 
-use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\Reader;
-use Team3\Order\Annotation\OrderAnnotationInterface;
+use Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
+use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Model\Order;
-use Team3\Order\Model\OrderInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class UserOrderTransformer
@@ -20,27 +18,38 @@ class UserOrderTransformer
     protected $strategies;
 
     /**
-     * @var Reader
+     * @var AnnotationsExtractorInterface
      */
-    protected $annotationReader;
+    protected $annotationsExtractor;
 
-    public function __construct()
-    {
-        $this->annotationReader = new AnnotationReader();
+    /**
+     * @param AnnotationsExtractorInterface $annotationsExtractor
+     */
+    public function __construct(
+        AnnotationsExtractorInterface $annotationsExtractor
+    ) {
+        $this->annotationsExtractor = $annotationsExtractor;
         $this->strategies = [];
     }
 
     /**
-     * @param array $objects
+     * @param object $userOrder
      *
-     * @return OrderInterface
+     * @return Order
      */
-    public function transform(array $objects)
+    public function transform($userOrder)
     {
         $order = new Order();
 
-        foreach ($objects as $object) {
-            $this->transformSingle($order, $object);
+        foreach ($this->getExtractedAnnotations($userOrder) as $extractionResult) {
+            foreach ($this->strategies as $strategy) {
+                if ($strategy->supports($extractionResult->getAnnotation())) {
+                    $strategy->transform(
+                        $order,
+                        $extractionResult->getReflectionMethod()
+                    );
+                }
+            }
         }
 
         return $order;
@@ -56,57 +65,14 @@ class UserOrderTransformer
     }
 
     /**
-     * @param OrderInterface $order
-     * @param mixed          $object
+     * @param $userOrder
      *
-     * @return OrderInterface
+     * @return AnnotationsExtractorResult[]
      */
-    protected function transformSingle(OrderInterface $order, $object)
-    {
-        if (is_array($object)) {
-            return $this->transform($order, $object);
-        }
-
-        return $this->transformObject($order, $object);
-    }
-
-    /**
-     * @param OrderInterface $order
-     * @param mixed          $object
-     *
-     * @return OrderInterface
-     */
-    protected function transformObject(OrderInterface $order, $object)
-    {
-        $reflectionClass = new \ReflectionClass($object);
-        $annotation = $this->getAnnotation($reflectionClass);
-
-        /** @var UserOrderTransformerStrategyInterface $strategy */
-        foreach ($this->strategies as $strategy) {
-            if ($strategy->supports($annotation)) {
-                $strategy->transform(
-                    $order,
-                    $reflectionClass,
-                    $annotation->getProperties()
-                );
-            }
-        }
-
-        return $order;
-    }
-
-    /**
-     * @param \ReflectionClass $reflectionClass
-     *
-     * @return OrderAnnotationInterface
-     */
-    private function getAnnotation(\ReflectionClass $reflectionClass)
+    protected function getExtractedAnnotations($userOrder)
     {
         return $this
-            ->annotationReader
-            ->getClassAnnotation(
-                $reflectionClass,
-                OrderAnnotationInterface::class
-            );
+            ->annotationsExtractor
+            ->extractAnnotations($userOrder);
     }
 }
