@@ -13,7 +13,7 @@ interface AnnotationsExtractorInterface
     /**
      * @param object $object
      *
-     * @return array
+     * @return AnnotationsExtractorInterface
      */
     public function extractAnnotations($object);
 }

@@ -12,16 +12,15 @@ use \ReflectionMethod;
 interface UserOrderTransformerStrategyInterface
 {
     /**
-     * Insert proper values which can be read from $reflectionClass and $orderPropertiesAnnotations
-     * into $order.
-     *
      * @param OrderInterface   $order
+     * @param object           $userOrder
      * @param ReflectionMethod $reflectionMethod
      *
      * @return OrderInterface
      */
     public function transform(
         OrderInterface $order,
+        $userOrder,
         ReflectionMethod $reflectionMethod
     );
 

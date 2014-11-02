@@ -46,6 +46,7 @@ class UserOrderTransformer
                 if ($strategy->supports($extractionResult->getAnnotation())) {
                     $strategy->transform(
                         $order,
+                        $userOrder,
                         $extractionResult->getReflectionMethod()
                     );
                 }
