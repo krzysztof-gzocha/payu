@@ -1,11 +1,13 @@
 {
     "require-dev": {
         "phpspec/phpspec": "~2.0",
+        "codeception/codeception": "dev-master",
         "phpmd/phpmd" : "@stable"
     },
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "": "src/",
+            "tests\\unit\\": "src/tests/unit/"
         }
     },
     "require": {

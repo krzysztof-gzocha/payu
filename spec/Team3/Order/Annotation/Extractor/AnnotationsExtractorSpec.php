@@ -5,8 +5,13 @@ namespace spec\Team3\Order\Annotation\Extractor;
 use Doctrine\Common\Annotations\Reader;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorException;
+use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
 
+/**
+ * Class AnnotationsExtractorSpec
+ * @package spec\Team3\Order\Annotation\Extractor
+ * @mixin AnnotationsExtractor
+ */
 class AnnotationsExtractorSpec extends ObjectBehavior
 {
     public function let(Reader $reader)

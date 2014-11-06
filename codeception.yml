@@ -1,0 +1,17 @@
+actor: Tester
+paths:
+    tests: src/tests
+    log: src/tests/_output
+    data: src/tests/_data
+    helpers: src/tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+modules:
+    config:
+        Db:
+            dsn: ''
+            user: ''
+            password: ''
+            dump: src/tests/_data/dump.sql

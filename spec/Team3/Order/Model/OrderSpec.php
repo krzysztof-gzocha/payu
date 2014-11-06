@@ -4,7 +4,13 @@ namespace spec\Team3\Order\Model;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Team3\Order\Model\Order;
 
+/**
+ * Class OrderSpec
+ * @package spec\Team3\Order\Model
+ * @mixin Order
+ */
 class OrderSpec extends ObjectBehavior
 {
     function it_is_initializable()

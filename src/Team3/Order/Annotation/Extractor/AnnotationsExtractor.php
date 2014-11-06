@@ -72,6 +72,6 @@ class AnnotationsExtractor implements AnnotationsExtractorInterface
      */
     protected function getMethods(ReflectionClass $reflectionClass)
     {
-        return $reflectionClass->getMethods(ReflectionMethod::IS_PUBLIC);
+        return $reflectionClass->getMethods();
     }
 }
