@@ -42,7 +42,7 @@ class AnnotationsExtractorTest extends \Codeception\TestCase\Test
 
     public function testResult()
     {
-        $results = $this->annotationsExtractor->extractAnnotations($model = new Model());
+        $results = $this->annotationsExtractor->extract($model = new Model());
         $this->assertCount(1, $results);
 
         /** @var AnnotationsExtractorResult $firstResult */
@@ -69,6 +69,6 @@ class AnnotationsExtractorTest extends \Codeception\TestCase\Test
     public function testThrowingExceptionWhenNoObjectGiven()
     {
         $this->setExpectedException(AnnotationsextractorException::class);
-        $this->annotationsExtractor->extractAnnotations('test');
+        $this->annotationsExtractor->extract('test');
     }
 }

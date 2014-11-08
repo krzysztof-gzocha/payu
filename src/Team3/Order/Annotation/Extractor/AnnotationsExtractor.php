@@ -30,7 +30,7 @@ class AnnotationsExtractor implements AnnotationsExtractorInterface
      *
      * @return array
      */
-    public function extractAnnotations($object)
+    public function extract($object)
     {
         $this->checkObject($object);
         $extracted = [];

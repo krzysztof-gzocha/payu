@@ -28,7 +28,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
         $this->prophet = new Prophet();
 
         $annotationsExtractor
-            ->extractAnnotations(new Argument\Token\AnyValuesToken())
+            ->extract(new Argument\Token\AnyValuesToken())
             ->willReturn($this->getAnnotationsExtractorResults());
 
         $this->beConstructedWith($annotationsExtractor);

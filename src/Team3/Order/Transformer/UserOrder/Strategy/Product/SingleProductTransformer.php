@@ -52,7 +52,7 @@ class SingleProductTransformer
     {
         return $this
             ->annotationsExtractor
-            ->extractAnnotations($userProduct);
+            ->extract($userProduct);
     }
 
     /**

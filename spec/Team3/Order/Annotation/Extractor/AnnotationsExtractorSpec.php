@@ -42,7 +42,7 @@ class AnnotationsExtractorSpec extends ObjectBehavior
     {
         $this
             ->shouldThrow('Team3\\Order\\Annotation\\Extractor\\AnnotationsExtractorException')
-            ->during('extractAnnotations', [$variable]);
+            ->during('extract', [$variable]);
 
         return $this;
     }

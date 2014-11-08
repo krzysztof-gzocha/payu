@@ -88,7 +88,7 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
     ) {
         $results = $this
             ->annotationsExtractor
-            ->extractAnnotations($userOrder);
+            ->extract($userOrder);
 
         /** @var AnnotationsExtractorResult $result */
         foreach ($results as $result) {

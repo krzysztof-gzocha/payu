@@ -74,6 +74,6 @@ class UserOrderTransformer
     {
         return $this
             ->annotationsExtractor
-            ->extractAnnotations($userOrder);
+            ->extract($userOrder);
     }
 }

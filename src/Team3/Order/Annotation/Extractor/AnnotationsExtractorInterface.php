@@ -15,5 +15,5 @@ interface AnnotationsExtractorInterface
      *
      * @return AnnotationsExtractorInterface
      */
-    public function extractAnnotations($object);
+    public function extract($object);
 }
