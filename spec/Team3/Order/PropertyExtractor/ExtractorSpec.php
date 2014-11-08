@@ -23,6 +23,16 @@ class ExtractorSpec extends ObjectBehavior
         $this->shouldHaveType('Team3\Order\PropertyExtractor\Extractor');
     }
 
+    public function it_should_call_reader(
+        ReaderInterface $reader
+    ) {
+        $this->beConstructedWith($reader);
+        $model = new \stdClass();
+        $reader->read($model)->willReturn([]);
+        $reader->read($model)->shouldBeCalled();
+        $this->extract($model);
+    }
+
     public function it_check_if_argument_is_an_object()
     {
         $this
