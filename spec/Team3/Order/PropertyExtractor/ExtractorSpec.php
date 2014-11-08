@@ -4,14 +4,14 @@ namespace spec\Team3\Order\Annotation\Extractor;
 
 use Doctrine\Common\Annotations\Reader;
 use PhpSpec\ObjectBehavior;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
+use Team3\Order\PropertyExtractor\Extractor;
 
 /**
- * Class AnnotationsExtractorSpec
+ * Class ExtractorSpec
  * @package spec\Team3\Order\Annotation\Extractor
- * @mixin AnnotationsExtractor
+ * @mixin Extractor
  */
-class AnnotationsExtractorSpec extends ObjectBehavior
+class ExtractorSpec extends ObjectBehavior
 {
     public function let(Reader $reader)
     {
@@ -41,7 +41,7 @@ class AnnotationsExtractorSpec extends ObjectBehavior
     protected function exceptionTest($variable)
     {
         $this
-            ->shouldThrow('Team3\\Order\\Annotation\\Extractor\\AnnotationsExtractorException')
+            ->shouldThrow('Team3\\Order\\PropertyExtractor\\ExtractorException')
             ->during('extract', [$variable]);
 
         return $this;

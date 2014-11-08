@@ -3,13 +3,13 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Annotation\Extractor;
+namespace Team3\Order\PropertyExtractor;
 
 /**
- * Class AnnotationsExtractorResult
+ * Class ExtractorResult
  * @package Team3\Order\Annotation\Extractor
  */
-class AnnotationsExtractorResult
+class ExtractorResult
 {
     /**
      * @var string

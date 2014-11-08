@@ -3,11 +3,11 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Annotation\Extractor;
+namespace Team3\Order\PropertyExtractor;
 
 use Team3\PayUException;
 
-class AnnotationsExtractorException extends PayUException
+class ExtractorException extends PayUException
 {
 
 }

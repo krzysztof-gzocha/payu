@@ -5,8 +5,8 @@ namespace spec\Team3\Order\Transformer\UserOrder;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Prophet;
-use \Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
 use \Team3\Order\Annotation\PayU;
+use Team3\Order\PropertyExtractor\ExtractorInterface;
 use \Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
 
@@ -23,15 +23,15 @@ class UserOrderTransformerSpec extends ObjectBehavior
     private $prophet;
 
     public function let(
-        AnnotationsExtractorInterface $annotationsExtractor
+        ExtractorInterface $extractor
     ) {
         $this->prophet = new Prophet();
 
-        $annotationsExtractor
+        $extractor
             ->extract(new Argument\Token\AnyValuesToken())
             ->willReturn($this->getAnnotationsExtractorResults());
 
-        $this->beConstructedWith($annotationsExtractor);
+        $this->beConstructedWith($extractor);
     }
 
     public function it_is_initializable()
@@ -89,7 +89,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
     protected function getAnnotationsExtractorResults()
     {
         $extractorResultProphecy = $this->prophet
-            ->prophesize('Team3\\Order\\Annotation\\Extractor\\AnnotationsExtractorResult');
+            ->prophesize('Team3\\Order\\PropertyExtractor\\ExtractorResult');
         $extractorResultProphecy->getPropertyName()->willReturn($this->getPropertyName());
         $extractorResultProphecy->getValue()->willReturn($this->getValue());
 

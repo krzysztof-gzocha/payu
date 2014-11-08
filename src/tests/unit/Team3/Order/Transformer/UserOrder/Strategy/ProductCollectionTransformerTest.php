@@ -1,11 +1,13 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Doctrine\Common\Annotations\AnnotationReader;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
+use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
+use Team3\Order\Annotation\PayU;
+use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\Products\ProductInterface;
+use Team3\Order\PropertyExtractor\Extractor;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\ProductCollectionTransformer;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\SingleProductTransformer;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\ProductModel;
@@ -35,10 +37,15 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
      */
     protected function _before()
     {
+        // Autoload payu annotation
+        new PayU();
+
         $this->productCollectionTransformer = new ProductCollectionTransformer(
             new SingleProductTransformer(
-                new AnnotationsExtractor(
-                    new AnnotationReader()
+                new Extractor(
+                    new AnnotationReader(
+                        new DoctrineAnnotationReader()
+                    )
                 )
             )
         );
@@ -103,7 +110,7 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         $this->productCollectionTransformer->transform(
             new Order(),
             $userOrder,
-            new AnnotationsExtractorResult(
+            new ExtractorResult(
                 'somePropertyName',
                 $productsMethodReflection->invoke($userOrder)
             )
@@ -125,7 +132,7 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         $this->productCollectionTransformer->transform(
             $order,
             $userOrder,
-            new AnnotationsExtractorResult(
+            new ExtractorResult(
                 'somePropertyName',
                 $productsMethodReflection->invoke($userOrder)
             )

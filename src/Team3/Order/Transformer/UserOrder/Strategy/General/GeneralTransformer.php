@@ -5,9 +5,9 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy\General;
 
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Model\General\GeneralInterface;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class GeneralTransformer implements UserOrderTransformerStrategyInterface
@@ -18,12 +18,12 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
     public function transform(
         OrderInterface $order,
         $userOrder,
-        AnnotationsExtractorResult $annotationsExtractorResult
+        ExtractorResult $extractorResult
     ) {
         $this->copyValue(
             $order->getGeneral(),
-            $annotationsExtractorResult->getPropertyName(),
-            $annotationsExtractorResult->getValue()
+            $extractorResult->getPropertyName(),
+            $extractorResult->getValue()
         );
     }
 

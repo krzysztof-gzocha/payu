@@ -2,18 +2,18 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-namespace Team3\Order\Annotation\Extractor;
+namespace Team3\Order\PropertyExtractor;
 
 /**
- * Interface AnnotationsExtractorInterface
+ * Interface ExtractorInterface
  * @package Team3\Order\Annotation\Extractor
  */
-interface AnnotationsExtractorInterface
+interface ExtractorInterface
 {
     /**
      * @param object $object
      *
-     * @return AnnotationsExtractorInterface
+     * @return ExtractorInterface
      */
     public function extract($object);
 }

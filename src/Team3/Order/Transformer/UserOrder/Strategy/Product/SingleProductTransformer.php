@@ -5,25 +5,25 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductInterface;
+use Team3\Order\PropertyExtractor\ExtractorInterface;
+use Team3\Order\PropertyExtractor\ExtractorResult;
 
 class SingleProductTransformer
 {
     /**
-     * @var AnnotationsExtractorInterface
+     * @var ExtractorInterface
      */
-    private $annotationsExtractor;
+    private $extractor;
 
     /**
-     * @param AnnotationsExtractorInterface $annotationsExtractor
+     * @param ExtractorInterface $extractor
      */
     public function __construct(
-        AnnotationsExtractorInterface $annotationsExtractor
+        ExtractorInterface $extractor
     ) {
-        $this->annotationsExtractor = $annotationsExtractor;
+        $this->extractor = $extractor;
     }
 
     /**
@@ -45,22 +45,22 @@ class SingleProductTransformer
     /**
      * @param object $userProduct
      *
-     * @return AnnotationsExtractorResult[]
+     * @return ExtractorResult[]
      */
     private function getExtractedAnnotations($userProduct)
     {
         return $this
-            ->annotationsExtractor
+            ->extractor
             ->extract($userProduct);
     }
 
     /**
-     * @param ProductInterface           $product
-     * @param AnnotationsExtractorResult $extractionResult
+     * @param ProductInterface $product
+     * @param ExtractorResult  $extractionResult
      */
     private function transformParameter(
         ProductInterface $product,
-        AnnotationsExtractorResult $extractionResult
+        ExtractorResult $extractionResult
     ) {
         switch ($extractionResult->getPropertyName()) {
             case 'product.unitPrice':

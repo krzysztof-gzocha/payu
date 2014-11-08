@@ -5,9 +5,9 @@
 
 namespace Team3\Order\Transformer\UserOrder;
 
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
-use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Model\Order;
+use Team3\Order\PropertyExtractor\ExtractorInterface;
+use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class UserOrderTransformer
@@ -18,17 +18,16 @@ class UserOrderTransformer
     protected $strategies;
 
     /**
-     * @var AnnotationsExtractorInterface
+     * @var ExtractorInterface
      */
-    protected $annotationsExtractor;
+    protected $extractor;
 
     /**
-     * @param AnnotationsExtractorInterface $annotationsExtractor
+     * @param ExtractorInterface $extractor
      */
-    public function __construct(
-        AnnotationsExtractorInterface $annotationsExtractor
-    ) {
-        $this->annotationsExtractor = $annotationsExtractor;
+    public function __construct(ExtractorInterface $extractor)
+    {
+        $this->extractor = $extractor;
         $this->strategies = [];
     }
 
@@ -41,7 +40,7 @@ class UserOrderTransformer
     {
         $order = new Order();
 
-        foreach ($this->getExtractedAnnotations($userOrder) as $extractionResult) {
+        foreach ($this->getExtractedResults($userOrder) as $extractionResult) {
             foreach ($this->strategies as $strategy) {
                 if ($strategy->supports($extractionResult->getPropertyName())) {
                     $strategy->transform(
@@ -68,12 +67,12 @@ class UserOrderTransformer
     /**
      * @param $userOrder
      *
-     * @return AnnotationsExtractorResult[]
+     * @return ExtractorResult[]
      */
-    protected function getExtractedAnnotations($userOrder)
+    protected function getExtractedResults($userOrder)
     {
         return $this
-            ->annotationsExtractor
+            ->extractor
             ->extract($userOrder);
     }
 }
