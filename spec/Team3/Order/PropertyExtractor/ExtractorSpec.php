@@ -2,9 +2,9 @@
 
 namespace spec\Team3\Order\Annotation\Extractor;
 
-use Doctrine\Common\Annotations\Reader;
 use PhpSpec\ObjectBehavior;
 use Team3\Order\PropertyExtractor\Extractor;
+use Team3\Order\PropertyExtractor\Reader\ReaderInterface;
 
 /**
  * Class ExtractorSpec
@@ -13,7 +13,7 @@ use Team3\Order\PropertyExtractor\Extractor;
  */
 class ExtractorSpec extends ObjectBehavior
 {
-    public function let(Reader $reader)
+    public function let(ReaderInterface $reader)
     {
         $this->beConstructedWith($reader);
     }
