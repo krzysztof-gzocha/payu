@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Team3\Order\Annotation\Extractor;
+namespace spec\Team3\Order\PropertyExtractor;
 
 use PhpSpec\ObjectBehavior;
 use Team3\Order\PropertyExtractor\Extractor;
@@ -20,7 +20,7 @@ class ExtractorSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Team3\Order\Annotation\Extractor\AnnotationsExtractor');
+        $this->shouldHaveType('Team3\Order\PropertyExtractor\Extractor');
     }
 
     public function it_check_if_argument_is_an_object()
