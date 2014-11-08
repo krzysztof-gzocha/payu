@@ -4,7 +4,6 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
-use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\Products\ProductInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\ProductCollectionTransformer;
@@ -47,16 +46,12 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
 
     public function testSupportsMethod()
     {
-        $payUAnnotation = new PayU();
-
-        $payUAnnotation->propertyName = 'wrong property name';
         $this->assertFalse(
-            $this->productCollectionTransformer->supports($payUAnnotation)
+            $this->productCollectionTransformer->supports('nonProductCollection')
         );
 
-        $payUAnnotation->propertyName = ProductCollectionTransformer::PARAMETER_NAME;
         $this->assertTrue(
-            $this->productCollectionTransformer->supports($payUAnnotation)
+            $this->productCollectionTransformer->supports('productCollection')
         );
     }
 
@@ -102,13 +97,15 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         $this->setExpectedException('Team3\Order\Transformer\UserOrder\UserOrderTransformerException');
         $userOrder = $this->getUserModel($wrongProducts);
         $userOrderReflection = new \ReflectionClass($userOrder);
+        $productsMethodReflection = $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD);
+        $productsMethodReflection->setAccessible(true);
 
         $this->productCollectionTransformer->transform(
             new Order(),
             $userOrder,
             new AnnotationsExtractorResult(
-                new PayU(),
-                $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD)
+                'somePropertyName',
+                $productsMethodReflection->invoke($userOrder)
             )
         );
 
@@ -122,13 +119,15 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     {
         $order = new Order();
         $userOrderReflection = new \ReflectionClass($userOrder);
+        $productsMethodReflection = $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD);
+        $productsMethodReflection->setAccessible(true);
 
         $this->productCollectionTransformer->transform(
             $order,
             $userOrder,
             new AnnotationsExtractorResult(
-                new PayU(),
-                $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD)
+                'somePropertyName',
+                $productsMethodReflection->invoke($userOrder)
             )
         );
 

@@ -9,7 +9,6 @@ use Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductInterface;
-use \ReflectionMethod;
 
 class SingleProductTransformer
 {
@@ -37,7 +36,7 @@ class SingleProductTransformer
         $product = new Product();
 
         foreach ($this->getExtractedAnnotations($userProduct) as $extractionResult) {
-            $this->transformParameter($product, $userProduct, $extractionResult);
+            $this->transformParameter($product, $extractionResult);
         }
 
         return $product;
@@ -57,47 +56,23 @@ class SingleProductTransformer
 
     /**
      * @param ProductInterface           $product
-     * @param object                     $userProduct
      * @param AnnotationsExtractorResult $extractionResult
      */
     private function transformParameter(
         ProductInterface $product,
-        $userProduct,
         AnnotationsExtractorResult $extractionResult
     ) {
-        switch ($extractionResult->getAnnotation()->getPropertyName()) {
+        switch ($extractionResult->getPropertyName()) {
             case 'product.unitPrice':
-                $product->setUnitPrice($this->getMethodValue(
-                    $userProduct,
-                    $extractionResult->getReflectionMethod())
-                );
+                $product->setUnitPrice($extractionResult->getValue());
                 break;
             case 'product.quantity':
-                $product->setQuantity($this->getMethodValue(
-                    $userProduct,
-                    $extractionResult->getReflectionMethod()
-                ));
+                $product->setQuantity($extractionResult->getValue());
                 break;
             case 'product.name':
-                $product->setName($this->getMethodValue(
-                    $userProduct,
-                    $extractionResult->getReflectionMethod()
-                ));
+                $product->setName($extractionResult->getValue());
                 break;
             default:
         }
-    }
-
-    /**
-     * @param object           $userProduct
-     * @param ReflectionMethod $reflectionMethod
-     *
-     * @return mixed
-     */
-    private function getMethodValue($userProduct, ReflectionMethod $reflectionMethod)
-    {
-        $reflectionMethod->setAccessible(true);
-
-        return $reflectionMethod->invoke($userProduct);
     }
 }

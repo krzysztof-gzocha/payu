@@ -42,8 +42,13 @@ class AnnotationsExtractor implements AnnotationsExtractorInterface
                 ->annotationReader
                 ->getMethodAnnotation($reflectionMethod, PayU::class);
 
+            $reflectionMethod->setAccessible(true);
+
             if (is_object($methodAnnotation)) {
-                $extracted[] = new AnnotationsExtractorResult($methodAnnotation, $reflectionMethod);
+                $extracted[] = new AnnotationsExtractorResult(
+                    $methodAnnotation->getPropertyName(),
+                    $reflectionMethod->invoke($object)
+                );
             }
         }
 

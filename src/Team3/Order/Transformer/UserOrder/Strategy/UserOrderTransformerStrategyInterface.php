@@ -6,7 +6,6 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
-use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
 
 interface UserOrderTransformerStrategyInterface
@@ -25,9 +24,9 @@ interface UserOrderTransformerStrategyInterface
     );
 
     /**
-     * @param PayU $annotation
+     * @param string $propertyName
      *
      * @return bool
      */
-    public function supports(PayU $annotation);
+    public function supports($propertyName);
 }

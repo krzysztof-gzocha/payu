@@ -6,7 +6,6 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy\General;
 
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
-use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\General\GeneralInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
@@ -21,12 +20,10 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
         $userOrder,
         AnnotationsExtractorResult $annotationsExtractorResult
     ) {
-        $annotationsExtractorResult->getReflectionMethod()->setAccessible(true);
-
         $this->copyValue(
             $order->getGeneral(),
-            $annotationsExtractorResult->getAnnotation()->getPropertyName(),
-            $annotationsExtractorResult->getReflectionMethod()->invoke($userOrder)
+            $annotationsExtractorResult->getPropertyName(),
+            $annotationsExtractorResult->getValue()
         );
     }
 
@@ -35,9 +32,9 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
      *
      * @inheritdoc
      */
-    public function supports(PayU $annotation)
+    public function supports($propertyName)
     {
-        return true == preg_match('/^general\./', $annotation->getPropertyName());
+        return true == preg_match('/^general\./', $propertyName);
     }
 
     /**

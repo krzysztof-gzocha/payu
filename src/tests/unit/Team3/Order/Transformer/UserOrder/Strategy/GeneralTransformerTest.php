@@ -5,7 +5,6 @@ use Doctrine\Common\Annotations\AnnotationReader;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorInterface;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
-use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\General\GeneralTransformer;
@@ -47,16 +46,12 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
 
     public function testIfSupportGeneralParameters()
     {
-        $payu = new PayU();
-
-        $payu->propertyName = 'general.something';
         $this->assertTrue(
-            $this->generalTransformer->supports($payu)
+            $this->generalTransformer->supports('general.something')
         );
 
-        $payu->propertyName = 'non-general.test';
         $this->assertFalse(
-            $this->generalTransformer->supports($payu)
+            $this->generalTransformer->supports('non-general.test')
         );
     }
 
@@ -92,7 +87,7 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
 
         /** @var AnnotationsExtractorResult $result */
         foreach ($results as $result) {
-            if ($this->generalTransformer->supports($result->getAnnotation())) {
+            if ($this->generalTransformer->supports($result->getPropertyName())) {
                 $this->generalTransformer->transform(
                     $order,
                     $userOrder,

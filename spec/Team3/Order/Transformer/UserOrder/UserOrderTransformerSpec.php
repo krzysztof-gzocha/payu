@@ -43,7 +43,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
         UserOrderTransformerStrategyInterface $strategy
     ) {
         $strategy
-            ->supports($this->getAnnotation())
+            ->supports($this->getPropertyName())
             ->shouldBeCalledTimes(1);
 
         $this->addStrategy($strategy);
@@ -90,25 +90,24 @@ class UserOrderTransformerSpec extends ObjectBehavior
     {
         $extractorResultProphecy = $this->prophet
             ->prophesize('Team3\\Order\\Annotation\\Extractor\\AnnotationsExtractorResult');
-        $extractorResultProphecy->getAnnotation()->willReturn($this->getAnnotation());
-        $extractorResultProphecy->getReflectionMethod()->willReturn($this->getReflectionMethod());
+        $extractorResultProphecy->getPropertyName()->willReturn($this->getPropertyName());
+        $extractorResultProphecy->getValue()->willReturn($this->getValue());
 
         return [
             $extractorResultProphecy
         ];
     }
 
-    protected function getReflectionMethod()
+    protected function getValue()
     {
-        return $this->prophet
-            ->prophesize('\ReflectionMethod');
+        return 123;
     }
 
     /**
      * @return PayU
      */
-    protected function getAnnotation()
+    protected function getPropertyName()
     {
-        return new PayU();
+        return 'propertyName';
     }
 }

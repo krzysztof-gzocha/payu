@@ -5,9 +5,7 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
-use ReflectionMethod;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
-use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerException;
@@ -38,10 +36,8 @@ class ProductCollectionTransformer implements UserOrderTransformerStrategyInterf
         $userOrder,
         AnnotationsExtractorResult $annotationsExtractorResult
     ) {
-        $reflectionMethod = $annotationsExtractorResult->getReflectionMethod();
-        $reflectionMethod->setAccessible(true);
-        $usersProductCollection = $reflectionMethod->invoke($userOrder);
-        $this->checkProductCollection($usersProductCollection, $reflectionMethod);
+        $usersProductCollection = $annotationsExtractorResult->getValue();
+        $this->checkProductCollection($usersProductCollection);
 
         foreach ($usersProductCollection as $userProduct) {
             $order
@@ -59,31 +55,27 @@ class ProductCollectionTransformer implements UserOrderTransformerStrategyInterf
     /**
      * @inheritdoc
      */
-    public function supports(PayU $annotation)
+    public function supports($propertyName)
     {
-        return self::PARAMETER_NAME === $annotation->getPropertyName();
+        return self::PARAMETER_NAME === $propertyName;
     }
 
     /**
      * Checks if product collection is array or object which implements Traversable.
      * If not throws UserOrderTransformerException.
      *
-     * @param mixed            $productCollection
-     * @param ReflectionMethod $reflectionMethod
+     * @param mixed $productCollection
      *
      * @return bool
      * @throws UserOrderTransformerException
      */
     private function checkProductCollection(
-        $productCollection,
-        ReflectionMethod $reflectionMethod
+        $productCollection
     ) {
         if (!is_array($productCollection)
             && !$productCollection instanceof \Traversable) {
             throw new UserOrderTransformerException(sprintf(
-                'Method %s::%s() should return array or object which implements \Traversable, but it returns %s',
-                $reflectionMethod->getDeclaringClass()->getName(),
-                $reflectionMethod->getName(),
+                'Value should be an array or object which implements \Traversable, but it returns %s',
                 gettype($productCollection)
             ));
         }

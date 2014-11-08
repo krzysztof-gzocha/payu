@@ -5,9 +5,6 @@
 
 namespace Team3\Order\Annotation\Extractor;
 
-use \ReflectionMethod;
-use Team3\Order\Annotation\PayU;
-
 /**
  * Class AnnotationsExtractorResult
  * @package Team3\Order\Annotation\Extractor
@@ -15,40 +12,40 @@ use Team3\Order\Annotation\PayU;
 class AnnotationsExtractorResult
 {
     /**
-     * @var ReflectionMethod
+     * @var string
      */
-    protected $reflectionMethod;
+    protected $propertyName;
 
     /**
-     * @var PayU
+     * @var mixed
      */
-    protected $annotation;
+    protected $value;
 
     /**
-     * @param PayU             $annotation
-     * @param ReflectionMethod $reflectionMethod
+     * @param string $propertyName
+     * @param mixed  $value
      */
     public function __construct(
-        PayU $annotation,
-        ReflectionMethod $reflectionMethod
+        $propertyName,
+        $value
     ) {
-        $this->annotation = $annotation;
-        $this->reflectionMethod = $reflectionMethod;
+        $this->propertyName = $propertyName;
+        $this->value = $value;
     }
 
     /**
-     * @return PayU
+     * @return string
      */
-    public function getAnnotation()
+    public function getPropertyName()
     {
-        return $this->annotation;
+        return $this->propertyName;
     }
 
     /**
-     * @return ReflectionMethod
+     * @return mixed
      */
-    public function getReflectionMethod()
+    public function getValue()
     {
-        return $this->reflectionMethod;
+        return $this->value;
     }
 }

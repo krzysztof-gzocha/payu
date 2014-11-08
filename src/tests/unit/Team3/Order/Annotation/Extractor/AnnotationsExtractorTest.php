@@ -52,17 +52,13 @@ class AnnotationsExtractorTest extends \Codeception\TestCase\Test
             'Team3\Order\Annotation\Extractor\AnnotationsExtractorResult',
             $firstResult
         );
-        $this->assertInstanceOf(
-            PayU::class,
-            $firstResult->getAnnotation()
-        );
         $this->assertEquals(
             self::ANNOTATION_PROPERTY_NAME,
-            $firstResult->getAnnotation()->getPropertyName()
+            $firstResult->getPropertyName()
         );
         $this->assertEquals(
-            (new \ReflectionClass($model))->getMethod(self::MODELS_METHOD_NAME),
-            $firstResult->getReflectionMethod()
+            (new \ReflectionClass($model))->getMethod(self::MODELS_METHOD_NAME)->invoke($model),
+            $firstResult->getValue()
         );
     }
 

@@ -43,7 +43,7 @@ class UserOrderTransformer
 
         foreach ($this->getExtractedAnnotations($userOrder) as $extractionResult) {
             foreach ($this->strategies as $strategy) {
-                if ($strategy->supports($extractionResult->getAnnotation())) {
+                if ($strategy->supports($extractionResult->getPropertyName())) {
                     $strategy->transform(
                         $order,
                         $userOrder,
