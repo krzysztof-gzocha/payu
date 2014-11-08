@@ -6,6 +6,7 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
 use ReflectionMethod;
+use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
@@ -35,8 +36,9 @@ class ProductCollectionTransformer implements UserOrderTransformerStrategyInterf
     public function transform(
         OrderInterface $order,
         $userOrder,
-        ReflectionMethod $reflectionMethod
+        AnnotationsExtractorResult $annotationsExtractorResult
     ) {
+        $reflectionMethod = $annotationsExtractorResult->getReflectionMethod();
         $reflectionMethod->setAccessible(true);
         $usersProductCollection = $reflectionMethod->invoke($userOrder);
         $this->checkProductCollection($usersProductCollection, $reflectionMethod);

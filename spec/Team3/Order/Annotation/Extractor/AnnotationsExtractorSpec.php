@@ -4,7 +4,6 @@ namespace spec\Team3\Order\Annotation\Extractor;
 
 use Doctrine\Common\Annotations\Reader;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
 
 /**

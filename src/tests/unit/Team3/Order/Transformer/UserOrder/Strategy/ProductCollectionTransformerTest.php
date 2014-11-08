@@ -1,9 +1,9 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-
 use Doctrine\Common\Annotations\AnnotationReader;
 use Team3\Order\Annotation\Extractor\AnnotationsExtractor;
+use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\Products\ProductInterface;
@@ -19,6 +19,7 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     const SINGLE_PRODUCT_QUANTITY = 10;
     const SINGLE_PRODUCT_PRICE = 12.34;
     const PRODUCTS_COUNT = 3;
+    const GET_PRODUCTS_METHOD = 'getProducts';
 
     /**
     * @var \UnitTester
@@ -105,7 +106,10 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         $this->productCollectionTransformer->transform(
             new Order(),
             $userOrder,
-            $userOrderReflection->getMethod('getProducts')
+            new AnnotationsExtractorResult(
+                new PayU(),
+                $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD)
+            )
         );
 
         return $this;
@@ -122,7 +126,10 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         $this->productCollectionTransformer->transform(
             $order,
             $userOrder,
-            $userOrderReflection->getMethod('getProducts')
+            new AnnotationsExtractorResult(
+                new PayU(),
+                $userOrderReflection->getMethod(self::GET_PRODUCTS_METHOD)
+            )
         );
 
         $this->assertCount(

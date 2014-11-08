@@ -5,23 +5,23 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
+use Team3\Order\Annotation\Extractor\AnnotationsExtractorResult;
 use Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
-use \ReflectionMethod;
 
 interface UserOrderTransformerStrategyInterface
 {
     /**
-     * @param OrderInterface   $order
-     * @param object           $userOrder
-     * @param ReflectionMethod $reflectionMethod
+     * @param OrderInterface             $order
+     * @param object                     $userOrder
+     * @param AnnotationsExtractorResult $annotationsExtractorResult
      *
      * @return OrderInterface
      */
     public function transform(
         OrderInterface $order,
         $userOrder,
-        ReflectionMethod $reflectionMethod
+        AnnotationsExtractorResult $annotationsExtractorResult
     );
 
     /**

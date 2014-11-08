@@ -3,19 +3,18 @@
 namespace spec\Team3\Order\Model\Products;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Team3\Order\Model\Products\Product;
 
 class ProductCollectionSpec extends ObjectBehavior
 {
     const TESTED_NUMBER_OF_PRODUCTS = 4;
 
-    function it_is_initializable()
+    public function it_is_initializable()
     {
         $this->shouldHaveType('Team3\Order\Model\Products\ProductCollection');
     }
 
-    function it_returns_correct_number_of_products()
+    public function it_returns_correct_number_of_products()
     {
         for ($i = 0; $i < self::TESTED_NUMBER_OF_PRODUCTS; $i++) {
             $this->addProduct($this->getProduct(sprintf('#%s', $i)));
@@ -25,7 +24,7 @@ class ProductCollectionSpec extends ObjectBehavior
         $this->getProducts()->shouldHaveCount(self::TESTED_NUMBER_OF_PRODUCTS);
     }
 
-    function it_return_products_with_correct_keys()
+    public function it_return_products_with_correct_keys()
     {
         $this->setProducts([
             2 => $this->getProduct('#1'),
@@ -53,7 +52,7 @@ class ProductCollectionSpec extends ObjectBehavior
     public function getMatchers()
     {
         return [
-            'haveOrderedKeys' => function($subject) {
+            'haveOrderedKeys' => function ($subject) {
                 $i = 0;
                 foreach ($subject as $key => $value) {
                     if ($key !== $i++) {

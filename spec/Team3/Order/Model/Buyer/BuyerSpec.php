@@ -3,11 +3,10 @@
 namespace spec\Team3\Order\Model\Buyer;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class BuyerSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    public function it_is_initializable()
     {
         $this->shouldHaveType('Team3\Order\Model\Buyer\Buyer');
     }

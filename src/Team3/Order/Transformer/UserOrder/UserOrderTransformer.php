@@ -47,7 +47,7 @@ class UserOrderTransformer
                     $strategy->transform(
                         $order,
                         $userOrder,
-                        $extractionResult->getReflectionMethod()
+                        $extractionResult
                     );
                 }
             }
