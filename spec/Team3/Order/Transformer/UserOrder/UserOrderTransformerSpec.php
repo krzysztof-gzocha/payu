@@ -6,6 +6,7 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Prophet;
 use \Team3\Order\Annotation\PayU;
+use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\ExtractorInterface;
 use \Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
@@ -40,6 +41,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
     }
 
     public function it_should_ask_strategies_if_they_support_annotation(
+        OrderInterface $order,
         UserOrderTransformerStrategyInterface $strategy
     ) {
         $strategy
@@ -47,10 +49,11 @@ class UserOrderTransformerSpec extends ObjectBehavior
             ->shouldBeCalledTimes(1);
 
         $this->addStrategy($strategy);
-        $this->transform(1);
+        $this->transform($order, 1);
     }
 
     public function it_should_transform_if_strategy_supports(
+        OrderInterface $order,
         UserOrderTransformerStrategyInterface $strategy
     ) {
         $strategy
@@ -65,10 +68,11 @@ class UserOrderTransformerSpec extends ObjectBehavior
             ->shouldBeCalledTimes(1);
 
         $this->addStrategy($strategy);
-        $this->transform('users order');
+        $this->transform($order, 'users order');
     }
 
     public function it_should_not_transform_if_strategy_doesnt_supports(
+        OrderInterface $order,
         UserOrderTransformerStrategyInterface $strategy
     ) {
         $strategy
@@ -83,7 +87,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
             ->shouldBeCalledTimes(0);
 
         $this->addStrategy($strategy);
-        $this->transform('users order');
+        $this->transform($order, 'users order');
     }
 
     protected function getAnnotationsExtractorResults()

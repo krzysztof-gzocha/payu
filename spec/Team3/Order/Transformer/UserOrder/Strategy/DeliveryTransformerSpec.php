@@ -3,7 +3,6 @@
 namespace spec\Team3\Order\Transformer\UserOrder\Strategy;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\Buyer\DeliveryInterface;
 use Team3\Order\Model\OrderInterface;

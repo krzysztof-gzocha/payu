@@ -6,11 +6,12 @@
 namespace Team3\Order\Transformer\UserOrder;
 
 use Team3\Order\Model\Order;
+use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\ExtractorInterface;
 use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
-class UserOrderTransformer
+class UserOrderTransformer implements UserOrderTransformerInterface
 {
     /**
      * @var UserOrderTransformerStrategyInterface[]
@@ -32,14 +33,10 @@ class UserOrderTransformer
     }
 
     /**
-     * @param object $userOrder
-     *
-     * @return Order
+     * @inheritdoc
      */
-    public function transform($userOrder)
+    public function transform(OrderInterface $order, $userOrder)
     {
-        $order = new Order();
-
         foreach ($this->getExtractedResults($userOrder) as $extractionResult) {
             foreach ($this->strategies as $strategy) {
                 if ($strategy->supports($extractionResult->getPropertyName())) {

@@ -36,6 +36,7 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
     /**
      * @param InvoiceInterface $invoice
      * @param ExtractorResult  $extractorResult
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     private function copyValue(
         InvoiceInterface $invoice,
