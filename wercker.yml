@@ -1,0 +1,20 @@
+box: wercker/php
+build:
+    # The steps that will be executed on build
+    steps:
+      # A custom script step, name value is used in the UI
+      # and the code value contains the command that get executed
+      - script:
+          name: install dependencies
+          code: composer install --no-interaction --dev
+      - script:
+          name: echo php information
+          code: |
+            echo "php version $(php --version) running"
+            echo "from location $(which php)"
+      - script:
+          name: Codeception
+          code: ./bin/codecept run
+      - script:
+          name: run specs
+          code: ./bin/phpspec run
