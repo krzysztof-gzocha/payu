@@ -5,6 +5,9 @@ build:
       # A custom script step, name value is used in the UI
       # and the code value contains the command that get executed
       - script:
+          name: Configure timezone
+          code: echo 'date.timezone = "Europe/Warsaw"' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+      - script:
           name: install dependencies
           code: composer install --no-interaction --dev
       - script:
