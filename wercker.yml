@@ -13,8 +13,11 @@ build:
             echo "php version $(php --version) running"
             echo "from location $(which php)"
       - script:
-          name: Codeception
+          name: Run Codeception tests
           code: ./bin/codecept run
       - script:
-          name: run specs
+          name: Run phpspec tests
           code: ./bin/phpspec run
+      - script:
+          name: Run PHPMD on src/ exclude tests/
+          code: ./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests
