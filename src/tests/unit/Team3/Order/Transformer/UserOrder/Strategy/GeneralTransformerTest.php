@@ -10,7 +10,7 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\Extractor;
 use Team3\Order\PropertyExtractor\ExtractorInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\General\GeneralTransformer;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\UserOrderModelWithPrivateMethod;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethod;
 
 class GeneralTransformerTest extends \Codeception\TestCase\Test
 {

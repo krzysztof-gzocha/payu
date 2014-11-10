@@ -10,9 +10,9 @@ use Team3\Order\Model\Products\ProductInterface;
 use Team3\Order\PropertyExtractor\Extractor;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\ProductCollectionTransformer;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\SingleProductTransformer;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\ProductModel;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\UserOrderModelWithPrivateMethod;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\UsersProductCollectionModel;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\ProductModel;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethod;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UsersProductCollectionModel;
 
 class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
 {
