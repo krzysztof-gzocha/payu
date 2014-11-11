@@ -5,9 +5,6 @@
 // @codingStandardsIgnoreFile
 
 
-use Codeception\Module\Asserts;
-use Codeception\Module\UnitHelper;
-
 /**
  * Inherited Methods
  * @method void wantToTest($text)
@@ -23,5 +20,5 @@ use Codeception\Module\UnitHelper;
 */
 class UnitTester extends \Codeception\Actor
 {
-   
+
 }

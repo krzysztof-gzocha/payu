@@ -79,7 +79,7 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @param OrderInterface                  $order
+     * @param OrderInterface                   $order
      * @param UserOrderModelWithPrivateMethods $userOrder
      */
     private function copyAllValues(

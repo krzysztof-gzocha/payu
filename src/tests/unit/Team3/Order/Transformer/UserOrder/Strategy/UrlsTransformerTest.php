@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\Extractor;
@@ -65,7 +64,7 @@ class UrlsTransformerTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @param OrderInterface                  $order
+     * @param OrderInterface                   $order
      * @param UserOrderModelWithPrivateMethods $userOrder
      */
     private function copyAllValues(
