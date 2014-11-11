@@ -104,33 +104,6 @@ class UserOrderModelWithPrivateMethods
     }
 
     /**
-     * @return BuyerModelWithPrivateMethods
-     * @PayU(propertyName="buyer")
-     */
-    private function getBuyerEntity()
-    {
-        return new BuyerModelWithPrivateMethods();
-    }
-
-    /**
-     * @return DeliveryModelWithPrivateMethods
-     * @PayU(propertyName="delivery")
-     */
-    private function getDeliveryEntity()
-    {
-        return new DeliveryModelWithPrivateMethods();
-    }
-
-    /**
-     * @return InvoiceModelWithPrivateMethods
-     * @PayU(propertyName="invoice")
-     */
-    private function getInvoiceEntity()
-    {
-        return new InvoiceModelWithPrivateMethods();
-    }
-
-    /**
      * @return string
      * @PayU(propertyName="url.notify")
      */

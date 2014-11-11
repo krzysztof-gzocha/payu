@@ -9,7 +9,7 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerInterface;
 
-abstract class AbstractRecursiveTransformerStrategy implements RecursiveUserOrderTransformerStrategyInterface
+class RecursiveTransformerStrategy implements UserOrderTransformerStrategyInterface
 {
     /**
      * @var UserOrderTransformerInterface
@@ -19,7 +19,7 @@ abstract class AbstractRecursiveTransformerStrategy implements RecursiveUserOrde
     /**
      * @inheritdoc
      */
-    public function setMainTransformer(
+    public function __construct(
         UserOrderTransformerInterface $transformer
     ) {
         $this->transformer = $transformer;
@@ -33,5 +33,13 @@ abstract class AbstractRecursiveTransformerStrategy implements RecursiveUserOrde
         ExtractorResult $extractorResult
     ) {
         $this->transformer->transform($order, $extractorResult->getValue());
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function supports($propertyName)
+    {
+        return 'follow' === $propertyName;
     }
 }
