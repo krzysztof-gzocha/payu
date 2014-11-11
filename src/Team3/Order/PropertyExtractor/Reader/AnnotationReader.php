@@ -10,6 +10,7 @@ use \ReflectionClass;
 use \ReflectionMethod;
 
 use Team3\Order\Annotation\PayU;
+use Team3\Order\PropertyExtractor\ExtractorException;
 
 class AnnotationReader implements ReaderInterface
 {
@@ -31,7 +32,16 @@ class AnnotationReader implements ReaderInterface
      */
     public function read($object)
     {
-        $reflectionClass = new ReflectionClass($object);
+        try {
+            $reflectionClass = new ReflectionClass($object);
+        } catch (\ReflectionException $exception) {
+            throw new ExtractorException(
+                $exception->getMessage(),
+                $exception->getCode(),
+                $exception
+            );
+        }
+
         $read = [];
 
         foreach ($this->getMethods($reflectionClass) as $reflectionMethod) {

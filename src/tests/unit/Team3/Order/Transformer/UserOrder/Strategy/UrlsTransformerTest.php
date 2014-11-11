@@ -1,7 +1,7 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Team3\Order\Annotation\PayU;
+
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\Extractor;
@@ -9,11 +9,9 @@ use Team3\Order\PropertyExtractor\ExtractorInterface;
 use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
-use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
-use Team3\Order\Transformer\UserOrder\UserOrderTransformerInterface;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 
-class BuyerInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
+class UrlsTransformerTest extends \Codeception\TestCase\Test
 {
    /**
     * @var \UnitTester
@@ -21,62 +19,49 @@ class BuyerInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
     protected $tester;
 
     /**
-     * @var UserOrderTransformerInterface
-     */
-    protected $transformer;
-
-    /**
-     * @var BuyerInSeparateEntityTransformer
-     */
-    protected $buyerInSeparateEntityTransformer;
-
-    /**
      * @var ExtractorInterface
      */
     protected $extractor;
 
+    /**
+     * @var UrlsTransformer
+     */
+    protected $urlsTransformer;
+
     protected function _before()
     {
-        //autoload payu annotation
-        new PayU();
-
         $this->extractor = new Extractor(
             new AnnotationReader(
                 new DoctrineAnnotationReader()
             )
         );
 
-        $this->transformer = new UserOrderTransformer(
-            $this->extractor
-        );
-
-        $this->transformer->addStrategy(new BuyerTransformer());
-
-        $this->buyerInSeparateEntityTransformer = new BuyerInSeparateEntityTransformer();
-        $this->buyerInSeparateEntityTransformer->setMainTransformer($this->transformer);
+        $this->urlsTransformer = new UrlsTransformer();
     }
 
-    public function testIfSupportsOnlyCertainPropertyNames()
+    public function testIfSupportsOnlyCertainParameterName()
     {
         $this->assertTrue(
-            $this->buyerInSeparateEntityTransformer->supports('buyer')
+            $this->urlsTransformer->supports('url.test')
         );
         $this->assertFalse(
-            $this->buyerInSeparateEntityTransformer->supports('non-buyer')
+            $this->urlsTransformer->supports('non-url.test')
+        );
+        $this->assertFalse(
+            $this->urlsTransformer->supports('url.')
         );
     }
 
-    public function testResultsFromSeparateEntity()
+    public function testIfAllValuesAreCopied()
     {
         $order = new Order();
         $userOrder = new UserOrderModelWithPrivateMethods();
 
         $this->copyAllValues($order, $userOrder);
-        $buyer = $order->getBuyer();
-        $this->assertNotEmpty($buyer->getEmail());
-        $this->assertNotEmpty($buyer->getFirstName());
-        $this->assertNotEmpty($buyer->getLastName());
-        $this->assertNotEmpty($buyer->getPhone());
+        $urls = $order->getUrls();
+        $this->assertNotEmpty($urls->getContinueUrl());
+        $this->assertNotEmpty($urls->getNotifyUrl());
+        $this->assertNotEmpty($urls->getOrderUrl());
     }
 
     /**
@@ -93,8 +78,8 @@ class BuyerInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
 
         /** @var ExtractorResult $result */
         foreach ($results as $result) {
-            if ($this->buyerInSeparateEntityTransformer->supports($result->getPropertyName())) {
-                $this->buyerInSeparateEntityTransformer->transform(
+            if ($this->urlsTransformer->supports($result->getPropertyName())) {
+                $this->urlsTransformer->transform(
                     $order,
                     $result
                 );

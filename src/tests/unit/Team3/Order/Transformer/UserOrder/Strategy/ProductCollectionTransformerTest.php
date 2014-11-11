@@ -11,7 +11,7 @@ use Team3\Order\PropertyExtractor\Extractor;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\ProductCollectionTransformer;
 use Team3\Order\Transformer\UserOrder\Strategy\Product\SingleProductTransformer;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\ProductModel;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethod;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UsersProductCollectionModel;
 
 class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
@@ -119,9 +119,9 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @param UserOrderModelWithPrivateMethod $userOrder
+     * @param UserOrderModelWithPrivateMethods $userOrder
      */
-    private function testResults(UserOrderModelWithPrivateMethod $userOrder)
+    private function testResults(UserOrderModelWithPrivateMethods $userOrder)
     {
         $order = new Order();
         $userOrderReflection = new \ReflectionClass($userOrder);
@@ -175,11 +175,11 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     /**
      * @param $products
      *
-     * @return UserOrderModelWithPrivateMethod
+     * @return UserOrderModelWithPrivateMethods
      */
     private function getUserModel($products)
     {
-        return new UserOrderModelWithPrivateMethod($products);
+        return new UserOrderModelWithPrivateMethods($products);
     }
 
     /**

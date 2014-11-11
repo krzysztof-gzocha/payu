@@ -11,7 +11,7 @@ use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerInterface;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethod;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 
 class InvoiceInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
 {
@@ -72,7 +72,7 @@ class InvoiceInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
     public function testResultsFromSeparateEntity()
     {
         $order = new Order();
-        $userOrder = new UserOrderModelWithPrivateMethod();
+        $userOrder = new UserOrderModelWithPrivateMethods();
 
         $this->copyAllValues($order, $userOrder);
         $invoice = $order->getBuyer()->getInvoice();
@@ -91,11 +91,11 @@ class InvoiceInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
 
     /**
      * @param OrderInterface                  $order
-     * @param UserOrderModelWithPrivateMethod $userOrder
+     * @param UserOrderModelWithPrivateMethods $userOrder
      */
     private function copyAllValues(
         OrderInterface $order,
-        UserOrderModelWithPrivateMethod $userOrder
+        UserOrderModelWithPrivateMethods $userOrder
     ) {
         $results = $this
             ->extractor

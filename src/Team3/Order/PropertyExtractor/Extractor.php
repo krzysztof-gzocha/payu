@@ -5,9 +5,8 @@
 
 namespace Team3\Order\PropertyExtractor;
 
-use Doctrine\Common\Annotations\Reader;
 use \ReflectionClass;
-use \ReflectionMethod;
+use \ReflectionException;
 use Team3\Order\PropertyExtractor\Reader\ReaderInterface;
 
 class Extractor implements ExtractorInterface
@@ -28,23 +27,32 @@ class Extractor implements ExtractorInterface
     /**
      * @param object $object
      *
-     * @return array
+     * @return ExtractorResult[]
+     * @throws ExtractorException
      */
     public function extract($object)
     {
         $this->checkObject($object);
 
         $extracted = [];
-        $reflectionClass = new ReflectionClass($object);
+        try {
+            $reflectionClass = new ReflectionClass($object);
+        } catch (ReflectionException $exception) {
+            $this->adaptException($exception);
+        }
 
         foreach ($this->reader->read($object) as $readerResult) {
-            $reflectionMethod = $reflectionClass->getMethod($readerResult->getMethodName());
-            $reflectionMethod->setAccessible(true);
+            try {
+                $reflectionMethod = $reflectionClass->getMethod($readerResult->getMethodName());
+                $reflectionMethod->setAccessible(true);
 
-            $extracted[] = new ExtractorResult(
-                $readerResult->getPropertyName(),
-                $reflectionMethod->invoke($object)
-            );
+                $extracted[] = new ExtractorResult(
+                    $readerResult->getPropertyName(),
+                    $reflectionMethod->invoke($object)
+                );
+            } catch (ReflectionException $exception) {
+                $this->adaptException($exception);
+            }
         }
 
         return $extracted;
@@ -63,5 +71,19 @@ class Extractor implements ExtractorInterface
                 gettype($object)
             ));
         }
+    }
+
+    /**
+     * @param \Exception $exception
+     *
+     * @throws ExtractorException
+     */
+    protected function adaptException(\Exception $exception)
+    {
+        throw new ExtractorException(
+            $exception->getMessage(),
+            $exception->getCode(),
+            $exception
+        );
     }
 }

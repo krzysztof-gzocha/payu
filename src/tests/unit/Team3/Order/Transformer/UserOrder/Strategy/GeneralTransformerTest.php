@@ -10,7 +10,7 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\PropertyExtractor\Extractor;
 use Team3\Order\PropertyExtractor\ExtractorInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\General\GeneralTransformer;
-use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethod;
+use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 
 class GeneralTransformerTest extends \Codeception\TestCase\Test
 {
@@ -63,7 +63,7 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
     public function testIfIsCopingValues()
     {
         $order = new Order();
-        $userOrder = new UserOrderModelWithPrivateMethod();
+        $userOrder = new UserOrderModelWithPrivateMethods();
 
         $this->copyAllValues($order, $userOrder);
 
@@ -80,11 +80,11 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
 
     /**
      * @param OrderInterface                  $order
-     * @param UserOrderModelWithPrivateMethod $userOrder
+     * @param UserOrderModelWithPrivateMethods $userOrder
      */
     private function copyAllValues(
         OrderInterface $order,
-        UserOrderModelWithPrivateMethod $userOrder
+        UserOrderModelWithPrivateMethods $userOrder
     ) {
         $results = $this
             ->annotationsExtractor

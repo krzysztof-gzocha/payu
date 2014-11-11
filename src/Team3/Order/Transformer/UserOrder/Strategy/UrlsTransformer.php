@@ -16,7 +16,6 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
      */
     public function transform(
         OrderInterface $order,
-        $userOrder,
         ExtractorResult $extractorResult
     ) {
         $this->copyValue(
@@ -30,7 +29,7 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^.url\.\w+/', $propertyName);
+        return true == preg_match('/^url\.\w+/', $propertyName);
     }
 
     /**

@@ -13,7 +13,8 @@ interface ExtractorInterface
     /**
      * @param object $object
      *
-     * @return ExtractorInterface
+     * @return ExtractorResult[]
+     * @throws ExtractorException
      */
     public function extract($object);
 }

@@ -7,7 +7,7 @@ namespace tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model;
 
 use Team3\Order\Annotation\PayU;
 
-class UserOrderModelWithPrivateMethod
+class UserOrderModelWithPrivateMethods
 {
     /**
      * @var mixed
@@ -128,5 +128,32 @@ class UserOrderModelWithPrivateMethod
     private function getInvoiceEntity()
     {
         return new InvoiceModelWithPrivateMethods();
+    }
+
+    /**
+     * @return string
+     * @PayU(propertyName="url.notify")
+     */
+    private function getNotifyUrl()
+    {
+        return 'google.com';
+    }
+
+    /**
+     * @return string
+     * @PayU(propertyName="url.continue")
+     */
+    private function getContinueUrl()
+    {
+        return 'twitter.com';
+    }
+
+    /**
+     * @return string
+     * @PayU(propertyName="url.order")
+     */
+    private function getOrderUrl()
+    {
+        return 'facebook.com';
     }
 }
