@@ -56,6 +56,19 @@ class InvoiceInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
         $this->invoiceInSeparateEntityTransformer->setMainTransformer($this->transformer);
     }
 
+    public function testIfSupportsOnlyCertainPropertyName()
+    {
+        $this->assertTrue(
+            $this->invoiceInSeparateEntityTransformer->supports('invoice')
+        );
+        $this->assertFalse(
+            $this->invoiceInSeparateEntityTransformer->supports('invoice.test')
+        );
+        $this->assertFalse(
+            $this->invoiceInSeparateEntityTransformer->supports('non-invoice')
+        );
+    }
+
     public function testResultsFromSeparateEntity()
     {
         $order = new Order();

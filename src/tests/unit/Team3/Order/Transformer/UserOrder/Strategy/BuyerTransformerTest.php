@@ -48,6 +48,19 @@ class BuyerTransformerTest extends \Codeception\TestCase\Test
         );
     }
 
+    public function testIfSupportsOnlyCertainPropertyName()
+    {
+        $this->assertTrue(
+            $this->buyerTransformer->supports('buyer.test')
+        );
+        $this->assertFalse(
+            $this->buyerTransformer->supports('non-buyer')
+        );
+        $this->assertFalse(
+            $this->buyerTransformer->supports('buyer')
+        );
+    }
+
     public function testIfAllValuesAreCopied()
     {
         $order = new Order();

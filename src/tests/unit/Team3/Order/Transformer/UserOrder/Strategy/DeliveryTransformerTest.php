@@ -50,6 +50,19 @@ class DeliveryTransformerTest extends \Codeception\TestCase\Test
         );
     }
 
+    public function testIfSupportsOnlyCertainPropertyName()
+    {
+        $this->assertFalse(
+            $this->deliveryTransformer->supports('delivery.')
+        );
+        $this->assertFalse(
+            $this->deliveryTransformer->supports('non-delivery.test')
+        );
+        $this->assertTrue(
+            $this->deliveryTransformer->supports('delivery.test')
+        );
+    }
+
     public function testIfAllValuesAreCopied()
     {
         $order = new Order();

@@ -56,6 +56,19 @@ class DeliveryInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
         $this->deliveryInSeparateEntityTransformer->setMainTransformer($this->transformer);
     }
 
+    public function testIfSupportsOnlyCertainPropertyName()
+    {
+        $this->assertTrue(
+            $this->deliveryInSeparateEntityTransformer->supports('delivery')
+        );
+        $this->assertFalse(
+            $this->deliveryInSeparateEntityTransformer->supports('non-delivery')
+        );
+        $this->assertFalse(
+            $this->deliveryInSeparateEntityTransformer->supports('delivery.test')
+        );
+    }
+
     public function testResultsFromSeparateEntity()
     {
         $order = new Order();

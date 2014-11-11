@@ -56,6 +56,16 @@ class BuyerInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
         $this->buyerInSeparateEntityTransformer->setMainTransformer($this->transformer);
     }
 
+    public function testIfSupportsOnlyCertainPropertyNames()
+    {
+        $this->assertTrue(
+            $this->buyerInSeparateEntityTransformer->supports('buyer')
+        );
+        $this->assertFalse(
+            $this->buyerInSeparateEntityTransformer->supports('non-buyer')
+        );
+    }
+
     public function testResultsFromSeparateEntity()
     {
         $order = new Order();

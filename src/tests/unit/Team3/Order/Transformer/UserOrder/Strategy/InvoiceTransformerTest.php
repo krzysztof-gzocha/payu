@@ -50,6 +50,19 @@ class InvoiceTransformerTest extends \Codeception\TestCase\Test
         );
     }
 
+    public function testIfSupportsOnlyCertainPropertyName()
+    {
+        $this->assertTrue(
+            $this->invoiceTransformer->supports('invoice.test')
+        );
+        $this->assertFalse(
+            $this->invoiceTransformer->supports('invoice.')
+        );
+        $this->assertFalse(
+            $this->invoiceTransformer->supports('no-invoice.test')
+        );
+    }
+
     public function testIfAllValuesAreCopied()
     {
         $order = new Order();
