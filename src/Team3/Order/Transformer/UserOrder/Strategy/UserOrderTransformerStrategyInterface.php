@@ -12,14 +12,12 @@ interface UserOrderTransformerStrategyInterface
 {
     /**
      * @param OrderInterface  $order
-     * @param object          $userOrder
      * @param ExtractorResult $extractorResult
      *
      * @return OrderInterface
      */
     public function transform(
         OrderInterface $order,
-        $userOrder,
         ExtractorResult $extractorResult
     );
 

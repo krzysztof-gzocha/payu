@@ -90,7 +90,6 @@ class DeliveryInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
             if ($this->deliveryInSeparateEntityTransformer->supports($result->getPropertyName())) {
                 $this->deliveryInSeparateEntityTransformer->transform(
                     $order,
-                    $userOrder,
                     $result
                 );
             }

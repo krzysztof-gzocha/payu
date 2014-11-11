@@ -16,7 +16,6 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
      */
     public function transform(
         OrderInterface $order,
-        $userOrder,
         ExtractorResult $extractorResult
     ) {
         $this->copyValue(

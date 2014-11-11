@@ -42,7 +42,7 @@ class BuyerTransformerSpec extends ObjectBehavior
     ) {
         $order->getBuyer()->shouldBeCalledTimes(1);
 
-        $this->transform($order, new \stdClass(), $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 
     public function it_should_get_value_from_extractor_result(
@@ -51,6 +51,6 @@ class BuyerTransformerSpec extends ObjectBehavior
     ) {
         $extractorResult->getPropertyName()->shouldBeCalled();
 
-        $this->transform($order, new \stdClass(), $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 }

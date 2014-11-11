@@ -93,7 +93,6 @@ class InvoiceInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
             if ($this->invoiceInSeparateEntityTransformer->supports($result->getPropertyName())) {
                 $this->invoiceInSeparateEntityTransformer->transform(
                     $order,
-                    $userOrder,
                     $result
                 );
             }

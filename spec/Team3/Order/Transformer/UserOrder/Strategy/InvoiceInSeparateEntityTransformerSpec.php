@@ -23,7 +23,6 @@ class InvoiceInSeparateEntityTransformerSpec extends ObjectBehavior
     public function it_should_call_main_transformer(
         UserOrderTransformerInterface $transformer,
         OrderInterface $order,
-        \stdClass $model,
         \stdClass $separateModel,
         ExtractorResult $extractorResult
     ) {
@@ -31,6 +30,6 @@ class InvoiceInSeparateEntityTransformerSpec extends ObjectBehavior
         $this->setMainTransformer($transformer);
         $transformer->transform($order, $separateModel)->shouldBeCalledTimes(1);
 
-        $this->transform($order, $model, $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 }

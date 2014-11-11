@@ -87,7 +87,6 @@ class InvoiceTransformerTest extends \Codeception\TestCase\Test
             if ($this->invoiceTransformer->supports($result->getPropertyName())) {
                 $this->invoiceTransformer->transform(
                     $order,
-                    $invoice,
                     $result
                 );
             }

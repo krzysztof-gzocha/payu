@@ -109,7 +109,6 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
 
         $this->productCollectionTransformer->transform(
             new Order(),
-            $userOrder,
             new ExtractorResult(
                 'somePropertyName',
                 $productsMethodReflection->invoke($userOrder)
@@ -131,7 +130,6 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
 
         $this->productCollectionTransformer->transform(
             $order,
-            $userOrder,
             new ExtractorResult(
                 'somePropertyName',
                 $productsMethodReflection->invoke($userOrder)

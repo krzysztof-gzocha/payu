@@ -45,7 +45,7 @@ class DeliveryTransformerSpec extends ObjectBehavior
         ExtractorResult $extractorResult
     ) {
         $buyer->getDelivery()->shouldBeCalled();
-        $this->transform($order, new \stdClass(), $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 
     public function it_should_get_property_name_from_extractor(
@@ -53,6 +53,6 @@ class DeliveryTransformerSpec extends ObjectBehavior
         ExtractorResult $extractorResult
     ) {
         $extractorResult->getPropertyName()->shouldBeCalled();
-        $this->transform($order, new \stdClass(), $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 }

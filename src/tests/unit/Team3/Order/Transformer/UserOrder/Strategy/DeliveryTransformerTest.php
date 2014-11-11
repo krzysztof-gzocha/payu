@@ -84,7 +84,6 @@ class DeliveryTransformerTest extends \Codeception\TestCase\Test
             if ($this->deliveryTransformer->supports($result->getPropertyName())) {
                 $this->deliveryTransformer->transform(
                     $order,
-                    $delivery,
                     $result
                 );
             }

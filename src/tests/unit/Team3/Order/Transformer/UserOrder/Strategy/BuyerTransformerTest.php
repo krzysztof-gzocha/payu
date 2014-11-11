@@ -79,7 +79,6 @@ class BuyerTransformerTest extends \Codeception\TestCase\Test
             if ($this->buyerTransformer->supports($result->getPropertyName())) {
                 $this->buyerTransformer->transform(
                     $order,
-                    $buyer,
                     $result
                 );
             }

@@ -30,7 +30,6 @@ abstract class AbstractRecursiveTransformerStrategy implements RecursiveUserOrde
      */
     public function transform(
         OrderInterface $order,
-        $userOrder,
         ExtractorResult $extractorResult
     ) {
         $this->transformer->transform($order, $extractorResult->getValue());

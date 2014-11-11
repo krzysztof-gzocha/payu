@@ -42,6 +42,6 @@ class InvoiceTransformerSpec extends ObjectBehavior
         $buyer->getInvoice()->shouldBeCalled();
         $extractorResult->getPropertyName()->shouldBeCalled();
 
-        $this->transform($order, $model, $extractorResult);
+        $this->transform($order, $extractorResult);
     }
 }

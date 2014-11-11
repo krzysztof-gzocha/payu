@@ -86,7 +86,6 @@ class BuyerInSeparateEntityTransformerTest extends \Codeception\TestCase\Test
             if ($this->buyerInSeparateEntityTransformer->supports($result->getPropertyName())) {
                 $this->buyerInSeparateEntityTransformer->transform(
                     $order,
-                    $userOrder,
                     $result
                 );
             }

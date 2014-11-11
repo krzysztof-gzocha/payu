@@ -95,7 +95,6 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
             if ($this->generalTransformer->supports($result->getPropertyName())) {
                 $this->generalTransformer->transform(
                     $order,
-                    $userOrder,
                     $result
                 );
             }

@@ -42,7 +42,6 @@ class UserOrderTransformer implements UserOrderTransformerInterface
                 if ($strategy->supports($extractionResult->getPropertyName())) {
                     $strategy->transform(
                         $order,
-                        $userOrder,
                         $extractionResult
                     );
                 }

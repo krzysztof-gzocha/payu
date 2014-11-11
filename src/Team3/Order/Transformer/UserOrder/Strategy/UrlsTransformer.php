@@ -5,21 +5,22 @@
 
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Model\Urls\UrlsInterface;
 use Team3\Order\PropertyExtractor\ExtractorResult;
 
-class BuyerTransformer implements UserOrderTransformerStrategyInterface
+class UrlsTransformer implements UserOrderTransformerStrategyInterface
 {
     /**
      * @inheritdoc
      */
     public function transform(
         OrderInterface $order,
+        $userOrder,
         ExtractorResult $extractorResult
     ) {
         $this->copyValue(
-            $order->getBuyer(),
+            $order->getUrls(),
             $extractorResult
         );
     }
@@ -29,29 +30,26 @@ class BuyerTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^buyer\.\w+/', $propertyName);
+        return true == preg_match('/^.url\.\w+/', $propertyName);
     }
 
     /**
-     * @param BuyerInterface  $buyer
+     * @param UrlsInterface   $urls
      * @param ExtractorResult $extractorResult
      */
     private function copyValue(
-        BuyerInterface $buyer,
+        UrlsInterface $urls,
         ExtractorResult $extractorResult
     ) {
         switch ($extractorResult->getPropertyName()) {
-            case 'buyer.email':
-                $buyer->setEmail($extractorResult->getValue());
+            case 'url.notify':
+                $urls->setNotifyUrl($extractorResult->getValue());
                 break;
-            case 'buyer.phone':
-                $buyer->setPhone($extractorResult->getValue());
+            case 'url.continue':
+                $urls->setContinueUrl($extractorResult->getValue());
                 break;
-            case 'buyer.firstName':
-                $buyer->setFirstName($extractorResult->getValue());
-                break;
-            case 'buyer.lastName':
-                $buyer->setLastName($extractorResult->getValue());
+            case 'url.order':
+                $urls->setOrderUrl($extractorResult->getValue());
                 break;
             default:
         }

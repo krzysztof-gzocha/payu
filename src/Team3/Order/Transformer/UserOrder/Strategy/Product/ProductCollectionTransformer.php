@@ -33,7 +33,6 @@ class ProductCollectionTransformer implements UserOrderTransformerStrategyInterf
      */
     public function transform(
         OrderInterface $order,
-        $userOrder,
         ExtractorResult $extractorResult
     ) {
         $usersProductCollection = $extractorResult->getValue();
