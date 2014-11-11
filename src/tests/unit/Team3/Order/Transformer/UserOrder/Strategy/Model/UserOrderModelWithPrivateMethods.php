@@ -156,4 +156,15 @@ class UserOrderModelWithPrivateMethods
     {
         return 'facebook.com';
     }
+
+    /**
+     * @return array
+     * @PayU(propertyName="shippingMethodCollection")
+     */
+    private function getShippingMethodCollection()
+    {
+        return [
+            new UsersShippingModel()
+        ];
+    }
 }
