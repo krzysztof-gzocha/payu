@@ -18,6 +18,11 @@ use Team3\Order\Transformer\UserOrder\Strategy\ShippingMethod\SingleShippingMeth
 use Team3\Order\Transformer\UserOrder\Strategy\UrlsTransformer;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
+/**
+ * Class UserOrderTransformerBuilder
+ * @package Team3\Order\Transformer\UserOrder
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ */
 class UserOrderTransformerBuilder
 {
     /**
