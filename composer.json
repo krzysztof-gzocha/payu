@@ -12,6 +12,7 @@
         }
     },
     "require": {
-        "doctrine/annotations": "~1.2"
+        "doctrine/annotations": "~1.2",
+        "jms/serializer": "0.17.*@dev"
     }
 }
