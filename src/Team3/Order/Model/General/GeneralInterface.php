@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\General;
 
-interface GeneralInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface GeneralInterface extends IsFilledInterface
 {
     /**
      * @return string

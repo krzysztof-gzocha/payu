@@ -5,8 +5,12 @@
 
 namespace Team3\Order\Model\ShippingMethods;
 
+use Team3\Order\Model\IsFilledTrait;
+
 class ShippingMethod implements ShippingMethodInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var string
      */

@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\ShippingMethods;
 
-interface ShippingMethodCollectionInterface extends \IteratorAggregate, \Countable
+use Team3\Order\Model\IsFilledInterface;
+
+interface ShippingMethodCollectionInterface extends \IteratorAggregate, \Countable, IsFilledInterface
 {
     /**
      * @return ShippingMethodInterface[]

@@ -5,8 +5,12 @@
 
 namespace Team3\Order\Model\Urls;
 
+use Team3\Order\Model\IsFilledTrait;
+
 class Urls implements UrlsInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var string
      */

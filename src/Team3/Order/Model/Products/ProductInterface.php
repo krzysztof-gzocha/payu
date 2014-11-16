@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\Products;
 
-interface ProductInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface ProductInterface extends IsFilledInterface
 {
     /**
      * @return string

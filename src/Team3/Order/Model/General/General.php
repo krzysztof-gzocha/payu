@@ -5,8 +5,12 @@
 
 namespace Team3\Order\Model\General;
 
+use Team3\Order\Model\IsFilledTrait;
+
 class General implements GeneralInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var string
      */

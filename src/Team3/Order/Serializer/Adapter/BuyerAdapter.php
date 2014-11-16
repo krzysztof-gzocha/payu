@@ -80,17 +80,29 @@ class BuyerAdapter
 
     /**
      * @return DeliveryInterface
+     *
+     * @JMS\VirtualProperty()
+     * @JMS\Type("Team3\Order\Serializer\Adapter\DeliveryAdapter")
+     * @JMS\SerializedName("delivery")
      */
     public function getDelivery()
     {
-        // TODO: Implement getDelivery() method.
+        if ($this->buyer->getDelivery()->isFilled()) {
+            return new DeliveryAdapter($this->buyer->getDelivery());
+        }
     }
 
     /**
      * @return InvoiceInterface
+     *
+     * @JMS\VirtualProperty()
+     * @JMS\Type("Team3\Order\Serializer\Adapter\InvoiceAdapter")
+     * @JMS\SerializedName("invoice")
      */
     public function getInvoice()
     {
-        // TODO: Implement getInvoice() method.
+        if ($this->buyer->getInvoice()->isFilled()) {
+            return new InvoiceAdapter($this->buyer->getInvoice());
+        }
     }
 }

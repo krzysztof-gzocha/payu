@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\Buyer;
 
-interface BuyerInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface BuyerInterface extends IsFilledInterface
 {
     /**
      * @return string

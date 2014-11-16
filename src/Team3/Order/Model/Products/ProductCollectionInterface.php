@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\Products;
 
-interface ProductCollectionInterface extends \IteratorAggregate, \Countable
+use Team3\Order\Model\IsFilledInterface;
+
+interface ProductCollectionInterface extends \IteratorAggregate, \Countable, IsFilledInterface
 {
     /**
      * @param ProductInterface $product

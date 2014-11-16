@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\Urls;
 
-interface UrlsInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface UrlsInterface extends IsFilledInterface
 {
     /**
      * @return string

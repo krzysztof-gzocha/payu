@@ -10,7 +10,7 @@ use Team3\Order\Model\Products\ProductCollectionInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
 use Team3\Order\Model\Urls\UrlsInterface;
 
-interface OrderInterface
+interface OrderInterface extends IsFilledInterface
 {
     /**
      * @return BuyerInterface

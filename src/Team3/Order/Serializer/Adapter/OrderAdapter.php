@@ -7,6 +7,7 @@ namespace Team3\Order\Serializer\Adapter;
 
 use JMS\Serializer\Annotation as JMS;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Model\Products\ProductInterface;
 
 /**
  * Class OrderAdapter
@@ -33,7 +34,7 @@ class OrderAdapter
     }
 
     /**
-     * @return string
+     * @return ProductAdapter[]
      *
      * @JMS\VirtualProperty()
      * @JMS\Type("array<Team3\Order\Serializer\Adapter\ProductAdapter>")
@@ -44,11 +45,39 @@ class OrderAdapter
         $originalProducts = $this->order->getProductCollection()->getProducts();
         $adaptedProducts = [];
 
+        /** @var ProductInterface $originalProduct */
         foreach ($originalProducts as $originalProduct) {
-            $adaptedProducts[] = new ProductAdapter($originalProduct);
+            if ($originalProduct->isFilled()) {
+                $adaptedProducts[] = new ProductAdapter($originalProduct);
+            }
         }
 
-        return $adaptedProducts;
+        if (0 < count($adaptedProducts)) {
+            return $adaptedProducts;
+        }
+    }
+
+    /**
+     * @return ShippingMethodAdapter[]
+     *
+     * @JMS\VirtualProperty()
+     * @JMS\Type("array<Team3\Order\Serializer\Adapter\ShippingMethodAdapter>")
+     * @JMS\SerializedName("shippingMethods")
+     */
+    public function getShippingMethods()
+    {
+        $shippingMethods = $this->order->getShippingMethodCollection()->getShippingMethods();
+        $adaptedMethods = [];
+
+        foreach ($shippingMethods as $shippingMethod) {
+            if ($shippingMethod->isFilled()) {
+                $adaptedMethods[] = new ShippingMethodAdapter($shippingMethod);
+            }
+        }
+
+        if (0 < count($adaptedMethods)) {
+            return $adaptedMethods;
+        }
     }
 
     /**
@@ -60,6 +89,8 @@ class OrderAdapter
      */
     public function getBuyer()
     {
-        return new BuyerAdapter($this->order->getBuyer());
+        if ($this->order->getBuyer()->isFilled()) {
+            return new BuyerAdapter($this->order->getBuyer());
+        }
     }
 }

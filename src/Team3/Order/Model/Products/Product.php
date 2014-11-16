@@ -5,8 +5,12 @@
 
 namespace Team3\Order\Model\Products;
 
+use Team3\Order\Model\IsFilledTrait;
+
 class Product implements ProductInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var string
      */

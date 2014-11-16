@@ -21,6 +21,16 @@ class ShippingMethodCollection implements ShippingMethodCollectionInterface
     }
 
     /**
+     * Return true if given object is filled
+     *
+     * @return bool
+     */
+    public function isFilled()
+    {
+        return 0 < count($this->shippingMethods);
+    }
+
+    /**
      * @return ShippingMethodInterface[]
      */
     public function getShippingMethods()

@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\Buyer;
 
-interface InvoiceInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface InvoiceInterface extends IsFilledInterface
 {
     /**
      * @return string

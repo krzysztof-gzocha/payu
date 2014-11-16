@@ -21,6 +21,16 @@ class ProductCollection implements ProductCollectionInterface
     }
 
     /**
+     * Return true if given object is filled
+     *
+     * @return bool
+     */
+    public function isFilled()
+    {
+        return 0 < count($this->products);
+    }
+
+    /**
      * @param ProductInterface $product
      *
      * @return $this

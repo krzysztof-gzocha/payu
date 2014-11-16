@@ -4,7 +4,9 @@
  */
 namespace Team3\Order\Model\ShippingMethods;
 
-interface ShippingMethodInterface
+use Team3\Order\Model\IsFilledInterface;
+
+interface ShippingMethodInterface extends IsFilledInterface
 {
     /**
      * @return string

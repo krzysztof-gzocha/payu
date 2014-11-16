@@ -18,6 +18,8 @@ use Team3\Order\Model\Urls\UrlsInterface;
 
 class Order implements OrderInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var GeneralInterface
      */

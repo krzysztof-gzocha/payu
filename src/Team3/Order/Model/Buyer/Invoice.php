@@ -5,8 +5,12 @@
 
 namespace Team3\Order\Model\Buyer;
 
+use Team3\Order\Model\IsFilledTrait;
+
 class Invoice implements InvoiceInterface
 {
+    use IsFilledTrait;
+
     /**
      * @var string
      */
