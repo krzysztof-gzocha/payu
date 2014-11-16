@@ -8,7 +8,6 @@ namespace Team3\Order\PropertyExtractor\Reader;
 use Doctrine\Common\Annotations\Reader;
 use \ReflectionClass;
 use \ReflectionMethod;
-
 use Team3\Order\Annotation\PayU;
 use Team3\Order\PropertyExtractor\ExtractorException;
 

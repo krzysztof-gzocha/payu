@@ -9,7 +9,7 @@ use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UsersShippingMod
 
 class SingleShippingMethodTransformerTest extends \Codeception\TestCase\Test
 {
-   /**
+    /**
     * @var \UnitTester
     */
     protected $tester;
@@ -52,5 +52,4 @@ class SingleShippingMethodTransformerTest extends \Codeception\TestCase\Test
         $this->assertNotEmpty($shippingMethod->getName());
         $this->assertNotEmpty($shippingMethod->getPrice());
     }
-
 }

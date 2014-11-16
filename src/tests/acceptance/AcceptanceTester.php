@@ -22,7 +22,6 @@ use Codeception\Module\PhpBrowser;
 */
 class AcceptanceTester extends \Codeception\Actor
 {
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *

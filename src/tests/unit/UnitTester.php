@@ -20,5 +20,4 @@
 */
 class UnitTester extends \Codeception\Actor
 {
-
 }

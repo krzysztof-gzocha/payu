@@ -13,7 +13,7 @@ use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\DeliveryModelWit
 
 class DeliveryTransformerTest extends \Codeception\TestCase\Test
 {
-   /**
+    /**
     * @var \UnitTester
     */
     protected $tester;

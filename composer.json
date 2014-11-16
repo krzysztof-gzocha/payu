@@ -2,7 +2,8 @@
     "require-dev": {
         "phpspec/phpspec": "~2.0",
         "codeception/codeception": "dev-master",
-        "phpmd/phpmd" : "@stable"
+        "phpmd/phpmd" : "@stable",
+        "fabpot/php-cs-fixer": "1.1.*@dev"
     },
     "autoload": {
         "psr-4": {

@@ -22,7 +22,6 @@ use Codeception\Module\Filesystem;
 */
 class FunctionalTester extends \Codeception\Actor
 {
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *

@@ -9,5 +9,4 @@ use Team3\PayUException;
 
 class ExtractorException extends PayUException
 {
-
 }

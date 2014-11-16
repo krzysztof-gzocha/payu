@@ -7,5 +7,4 @@ namespace tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model;
 
 class UsersProductCollectionModel extends \ArrayIterator
 {
-
 }

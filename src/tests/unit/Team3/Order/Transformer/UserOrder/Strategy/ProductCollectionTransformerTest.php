@@ -74,7 +74,7 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     public function testResultsFromTraversable()
     {
         $userProductCollection = new UsersProductCollectionModel();
-        for ($i=0; $i<self::PRODUCTS_COUNT; $i++) {
+        for ($i = 0; $i<self::PRODUCTS_COUNT; $i++) {
             $userProductCollection->append($this->getUserProductModel());
         }
 
