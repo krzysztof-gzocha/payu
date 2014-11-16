@@ -26,10 +26,11 @@ trait IsFilledTrait
                 if ($value->isFilled()) {
                     return true;
                 }
-            } else {
-                if (null !== $value) {
-                    return true;
-                }
+                break;
+            }
+
+            if (null !== $value) {
+                return true;
             }
         }
 
