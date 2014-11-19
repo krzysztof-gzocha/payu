@@ -5,6 +5,7 @@
 namespace Team3\Order\Model\ShippingMethods;
 
 use Team3\Order\Model\IsFilledInterface;
+use Team3\Order\Model\Money\MoneyInterface;
 
 interface ShippingMethodInterface extends IsFilledInterface
 {
@@ -33,14 +34,14 @@ interface ShippingMethodInterface extends IsFilledInterface
     public function setName($name);
 
     /**
-     * @return int
+     * @return MoneyInterface
      */
     public function getPrice();
 
     /**
-     * @param int $price
+     * @param MoneyInterface $price
      *
      * @return ShippingMethod
      */
-    public function setPrice($price);
+    public function setPrice(MoneyInterface $price);
 }

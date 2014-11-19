@@ -61,6 +61,6 @@ class ProductAdapter
      */
     public function getUnitPrice()
     {
-        return $this->product->getUnitPrice();
+        return $this->product->getUnitPrice()->getValueWithoutSeparation(2);
     }
 }

@@ -76,7 +76,7 @@ trait GeneralParametersTrait
      */
     public function getTotalAmount()
     {
-        return $this->order->getGeneral()->getTotalAmount();
+        return $this->order->getGeneral()->getTotalAmount()->getValueWithoutSeparation(2);
     }
 
     /**

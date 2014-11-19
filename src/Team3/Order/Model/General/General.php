@@ -6,6 +6,7 @@
 namespace Team3\Order\Model\General;
 
 use Team3\Order\Model\IsFilledTrait;
+use Team3\Order\Model\Money\MoneyInterface;
 
 class General implements GeneralInterface
 {
@@ -42,7 +43,7 @@ class General implements GeneralInterface
     protected $currencyCode;
 
     /**
-     * @var int
+     * @var MoneyInterface
      */
     protected $totalAmount;
 
@@ -200,11 +201,11 @@ class General implements GeneralInterface
     }
 
     /**
-     * @param int $totalAmount
+     * @param MoneyInterface $totalAmount
      *
      * @return General
      */
-    public function setTotalAmount($totalAmount)
+    public function setTotalAmount(MoneyInterface $totalAmount)
     {
         $this->totalAmount = $totalAmount;
 

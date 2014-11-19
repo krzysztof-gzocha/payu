@@ -5,6 +5,7 @@
 namespace Team3\Order\Model\General;
 
 use Team3\Order\Model\IsFilledInterface;
+use Team3\Order\Model\Money\MoneyInterface;
 
 interface GeneralInterface extends IsFilledInterface
 {
@@ -93,14 +94,14 @@ interface GeneralInterface extends IsFilledInterface
     public function setSignature($signature);
 
     /**
-     * @inheritdoc
+     * @return MoneyInterface
      */
     public function getTotalAmount();
 
     /**
-     * @param int $totalAmount
+     * @param MoneyInterface $totalAmount
      *
      * @return General
      */
-    public function setTotalAmount($totalAmount);
+    public function setTotalAmount(MoneyInterface $totalAmount);
 }

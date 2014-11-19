@@ -3,6 +3,7 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Team3\Order\Annotation\PayU;
+use Team3\Order\Model\Money\Money;
 use Team3\Order\PropertyExtractor\ExtractorResult;
 use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
 use Team3\Order\Model\Order;
@@ -167,7 +168,7 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
         );
 
         $this->assertEquals(
-            self::SINGLE_PRODUCT_PRICE,
+            new Money(self::SINGLE_PRODUCT_PRICE),
             $product->getUnitPrice()
         );
     }

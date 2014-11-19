@@ -5,6 +5,7 @@
 namespace Team3\Order\Model\Products;
 
 use Team3\Order\Model\IsFilledInterface;
+use Team3\Order\Model\Money\MoneyInterface;
 
 interface ProductInterface extends IsFilledInterface
 {
@@ -33,14 +34,14 @@ interface ProductInterface extends IsFilledInterface
     public function setQuantity($quantity);
 
     /**
-     * @return string
+     * @return MoneyInterface
      */
     public function getUnitPrice();
 
     /**
-     * @param string $unitPrice
+     * @param MoneyInterface $unitPrice
      *
      * @return Product
      */
-    public function setUnitPrice($unitPrice);
+    public function setUnitPrice(MoneyInterface $unitPrice);
 }

@@ -7,6 +7,7 @@ namespace tests\unit\Team3\Order\Serializer;
 
 use Team3\Order\Model\Buyer\Delivery;
 use Team3\Order\Model\Buyer\Invoice;
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\Products\Product;
@@ -19,12 +20,12 @@ class OrderHelper
      */
     public static function getOrderAsJson()
     {
-        return '{"buyer":{"email":"krzysztof.gzocha@xsolve.pl","firstName":"Krzysztof","lastName":"Gzocha","phone":"123456789"},"continueUrl":"localhost","currencyCode":"PLN","customerIp":"127.0.0.1","description":"Description","extOrderId":"123","merchantPosId":"145227","notifyUrl":"localhost","orderUrl":"localhost","products":[{"name":"Product 1","quantity":"1","unitPrice":"400"},{"name":"Product 2","quantity":"1","unitPrice":"600"}],"shippingMethods":[{"country":"PLN","name":"shipping","price":"100"}],"OpenPayU-Signature":"signature","totalAmount":1000}';
+        return '{"buyer":{"email":"krzysztof.gzocha@xsolve.pl","firstName":"Krzysztof","lastName":"Gzocha","phone":"123456789"},"continueUrl":"localhost","currencyCode":"PLN","customerIp":"127.0.0.1","description":"Description","extOrderId":"123","merchantPosId":"145227","notifyUrl":"localhost","orderUrl":"localhost","products":[{"name":"Product 1","quantity":"1","unitPrice":"40000"},{"name":"Product 2","quantity":"1","unitPrice":"60000"}],"shippingMethods":[{"country":"PLN","name":"shipping","price":"10000"}],"OpenPayU-Signature":"signature","totalAmount":100000}';
     }
 
     public static function getOrderWithDeliveryAndInvoiceAsJson()
     {
-        return '{"buyer":{"email":"krzysztof.gzocha@xsolve.pl","firstName":"Krzysztof","lastName":"Gzocha","phone":"123456789","delivery":{"city":"Warsaw","countryCode":"PL","name":"Delivery","postalCode":"99-999","recipientEmail":"krzysztof.gzocha@xsolve.pl","recipientName":"Krzysiek Gzocha","recipientPhone":"123456789","street":"some street"},"invoice":{"city":"Warsaw","countryCode":"PL","name":"Some name","postalCode":"99-999","recipientEmail":"krzysztof.gzocha@xsolve.pl","recipientName":"Krzysztof Gzocha","recipientPhone":"123456789","tin":"123456","street":"some street","einvoiceRequested":true}},"continueUrl":"localhost","currencyCode":"PLN","customerIp":"127.0.0.1","description":"Description","extOrderId":"123","merchantPosId":"145227","notifyUrl":"localhost","orderUrl":"localhost","products":[{"name":"Product 1","quantity":"1","unitPrice":"400"},{"name":"Product 2","quantity":"1","unitPrice":"600"}],"shippingMethods":[{"country":"PLN","name":"shipping","price":"100"}],"OpenPayU-Signature":"signature","totalAmount":1000}';
+        return '{"buyer":{"email":"krzysztof.gzocha@xsolve.pl","firstName":"Krzysztof","lastName":"Gzocha","phone":"123456789","delivery":{"city":"Warsaw","countryCode":"PL","name":"Delivery","postalCode":"99-999","recipientEmail":"krzysztof.gzocha@xsolve.pl","recipientName":"Krzysiek Gzocha","recipientPhone":"123456789","street":"some street"},"invoice":{"city":"Warsaw","countryCode":"PL","name":"Some name","postalCode":"99-999","recipientEmail":"krzysztof.gzocha@xsolve.pl","recipientName":"Krzysztof Gzocha","recipientPhone":"123456789","tin":"123456","street":"some street","einvoiceRequested":true}},"continueUrl":"localhost","currencyCode":"PLN","customerIp":"127.0.0.1","description":"Description","extOrderId":"123","merchantPosId":"145227","notifyUrl":"localhost","orderUrl":"localhost","products":[{"name":"Product 1","quantity":"1","unitPrice":"40000"},{"name":"Product 2","quantity":"1","unitPrice":"60000"}],"shippingMethods":[{"country":"PLN","name":"shipping","price":"10000"}],"OpenPayU-Signature":"signature","totalAmount":100000}';
     }
 
     /**
@@ -40,7 +41,7 @@ class OrderHelper
             ->setMerchantPosId('145227')
             ->setDescription('Description')
             ->setCurrencyCode('PLN')
-            ->setTotalAmount(1000)
+            ->setTotalAmount(new Money(1000))
             ->setOrderId(123)
             ->setSignature('signature');
 
@@ -63,13 +64,13 @@ class OrderHelper
                 (new Product())
                     ->setName('Product 1')
                     ->setQuantity(1)
-                    ->setUnitPrice(400)
+                    ->setUnitPrice(new Money(400))
             )
             ->addProduct(
                 (new Product())
                     ->setName('Product 2')
                     ->setQuantity(1)
-                    ->setUnitPrice(600)
+                    ->setUnitPrice(new Money(600))
             );
 
         $order
@@ -78,7 +79,7 @@ class OrderHelper
                 (new ShippingMethod())
                     ->setName('shipping')
                     ->setCountry('PLN')
-                    ->setPrice('100')
+                    ->setPrice(new Money(100))
             );
 
         return $order;

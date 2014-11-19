@@ -6,6 +6,7 @@
 namespace Team3\Order\Model\ShippingMethods;
 
 use Team3\Order\Model\IsFilledTrait;
+use Team3\Order\Model\Money\MoneyInterface;
 
 class ShippingMethod implements ShippingMethodInterface
 {
@@ -17,7 +18,7 @@ class ShippingMethod implements ShippingMethodInterface
     protected $country;
 
     /**
-     * @var int
+     * @var MoneyInterface
      */
     protected $price;
 
@@ -67,7 +68,7 @@ class ShippingMethod implements ShippingMethodInterface
     }
 
     /**
-     * @return int
+     * @return MoneyInterface
      */
     public function getPrice()
     {
@@ -75,11 +76,11 @@ class ShippingMethod implements ShippingMethodInterface
     }
 
     /**
-     * @param int $price
+     * @param MoneyInterface $price
      *
      * @return ShippingMethod
      */
-    public function setPrice($price)
+    public function setPrice(MoneyInterface $price)
     {
         $this->price = $price;
 

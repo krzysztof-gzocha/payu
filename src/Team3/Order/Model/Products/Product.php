@@ -6,6 +6,7 @@
 namespace Team3\Order\Model\Products;
 
 use Team3\Order\Model\IsFilledTrait;
+use Team3\Order\Model\Money\MoneyInterface;
 
 class Product implements ProductInterface
 {
@@ -17,7 +18,7 @@ class Product implements ProductInterface
     protected $name;
 
     /**
-     * @var string
+     * @var MoneyInterface
      */
     protected $unitPrice;
 
@@ -67,7 +68,7 @@ class Product implements ProductInterface
     }
 
     /**
-     * @return string
+     * @return MoneyInterface
      */
     public function getUnitPrice()
     {
@@ -75,11 +76,11 @@ class Product implements ProductInterface
     }
 
     /**
-     * @param string $unitPrice
+     * @param MoneyInterface $unitPrice
      *
      * @return Product
      */
-    public function setUnitPrice($unitPrice)
+    public function setUnitPrice(MoneyInterface $unitPrice)
     {
         $this->unitPrice = $unitPrice;
 

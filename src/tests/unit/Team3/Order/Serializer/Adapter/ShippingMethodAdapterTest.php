@@ -1,6 +1,7 @@
 <?php
 namespace Team3\Order\Serializer\Adapter;
 
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\ShippingMethods\ShippingMethod;
 use Team3\Order\Model\ShippingMethods\ShippingMethodInterface;
 
@@ -30,7 +31,7 @@ class ShippingMethodAdapterTest extends \Codeception\TestCase\Test
     {
         $this->shippingMethod = (new ShippingMethod())
             ->setName('test')
-            ->setPrice(12.34)
+            ->setPrice(new Money(12.34))
             ->setCountry('PL');
         $this->adapter = new ShippingMethodAdapter($this->shippingMethod);
     }
@@ -42,7 +43,7 @@ class ShippingMethodAdapterTest extends \Codeception\TestCase\Test
             $this->adapter->getName()
         );
         $this->assertEquals(
-            $this->shippingMethod->getPrice(),
+            $this->shippingMethod->getPrice()->getValueWithoutSeparation(2),
             $this->adapter->getPrice()
         );
         $this->assertEquals(

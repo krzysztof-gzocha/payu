@@ -62,6 +62,6 @@ class ShippingMethodAdapter
      */
     public function getPrice()
     {
-        return $this->shippingMethod->getPrice();
+        return $this->shippingMethod->getPrice()->getValueWithoutSeparation(2);
     }
 }

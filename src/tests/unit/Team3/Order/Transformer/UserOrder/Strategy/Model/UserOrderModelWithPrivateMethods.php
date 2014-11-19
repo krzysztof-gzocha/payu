@@ -6,6 +6,7 @@
 namespace tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model;
 
 use Team3\Order\Annotation\PayU;
+use Team3\Order\Model\Money\Money;
 
 class UserOrderModelWithPrivateMethods
 {
@@ -100,7 +101,7 @@ class UserOrderModelWithPrivateMethods
      */
     private function getTotalAmount()
     {
-        return rand(1, 100);
+        return new Money(rand(1, 100));
     }
 
     /**

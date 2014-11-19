@@ -121,7 +121,7 @@ class OrderAdapterTest extends \Codeception\TestCase\Test
         );
         $this->assertEquals(
             $this->adapter->getTotalAmount(),
-            $this->order->getGeneral()->getTotalAmount()
+            $this->order->getGeneral()->getTotalAmount()->getValueWithoutSeparation(2)
         );
     }
 }

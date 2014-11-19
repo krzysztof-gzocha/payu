@@ -6,6 +6,8 @@
 namespace tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model;
 
 use Team3\Order\Annotation\PayU;
+use Team3\Order\Model\Money\Money;
+use Team3\Order\Model\Money\MoneyInterface;
 
 class ProductModel
 {
@@ -22,7 +24,7 @@ class ProductModel
     {
         $this->name = $name;
         $this->quantity = $quantity;
-        $this->unitPrice = $unitPrice;
+        $this->unitPrice = new Money($unitPrice);
     }
 
     /**
@@ -44,7 +46,7 @@ class ProductModel
     }
 
     /**
-     * @return float
+     * @return MoneyInterface
      * @PayU(propertyName="product.unitPrice")
      */
     private function getPrice()

@@ -1,6 +1,7 @@
 <?php
 namespace Team3\Order\Serializer\Adapter;
 
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductInterface;
 
@@ -31,7 +32,7 @@ class ProductAdapterTest extends \Codeception\TestCase\Test
         $this->product = (new Product())
             ->setName('test')
             ->setQuantity(10)
-            ->setUnitPrice(12.34);
+            ->setUnitPrice(new Money(12.34));
 
         $this->adapter = new ProductAdapter($this->product);
     }
@@ -47,7 +48,7 @@ class ProductAdapterTest extends \Codeception\TestCase\Test
             $this->adapter->getQuantity()
         );
         $this->assertEquals(
-            $this->product->getUnitPrice(),
+            $this->product->getUnitPrice()->getValueWithoutSeparation(2),
             $this->adapter->getUnitPrice()
         );
     }

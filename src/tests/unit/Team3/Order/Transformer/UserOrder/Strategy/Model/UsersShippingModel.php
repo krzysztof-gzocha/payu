@@ -6,6 +6,8 @@
 namespace tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model;
 
 use Team3\Order\Annotation\PayU;
+use Team3\Order\Model\Money\Money;
+use Team3\Order\Model\Money\MoneyInterface;
 
 class UsersShippingModel
 {
@@ -19,12 +21,12 @@ class UsersShippingModel
     }
 
     /**
-     * @return float
+     * @return MoneyInterface
      * @PayU(propertyName="shippingMethod.price")
      */
     private function getPrice()
     {
-        return 123.34;
+        return new Money(123.34);
     }
 
     /**
