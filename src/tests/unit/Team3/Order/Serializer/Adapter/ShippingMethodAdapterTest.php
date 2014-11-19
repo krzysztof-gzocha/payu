@@ -9,6 +9,7 @@ use Team3\Order\Model\ShippingMethods\ShippingMethodInterface;
  * Class ShippingMethodAdapterTest
  * @package Team3\Order\Serializer\Adapter
  * @group serializer
+ * @group money
  */
 class ShippingMethodAdapterTest extends \Codeception\TestCase\Test
 {

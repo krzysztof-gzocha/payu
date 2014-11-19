@@ -13,6 +13,11 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\ShippingMethods\ShippingMethod;
 
+/**
+ * Class OrderHelper
+ * @package tests\unit\Team3\Order\Serializer
+ * @group money
+ */
 class OrderHelper
 {
     /**

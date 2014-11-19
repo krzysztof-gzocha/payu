@@ -9,6 +9,7 @@ use Team3\Order\Model\Products\ProductInterface;
  * Class ProductAdapterTest
  * @package Team3\Order\Serializer\Adapter
  * @group serializer
+ * @group money
  */
 class ProductAdapterTest extends \Codeception\TestCase\Test
 {

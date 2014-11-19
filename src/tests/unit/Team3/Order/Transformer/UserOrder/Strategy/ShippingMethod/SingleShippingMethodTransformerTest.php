@@ -7,6 +7,11 @@ use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UsersShippingModel;
 
+/**
+ * Class SingleShippingMethodTransformerTest
+ * @package Team3\Order\Transformer\UserOrder\Strategy\ShippingMethod
+ * @group money
+ */
 class SingleShippingMethodTransformerTest extends \Codeception\TestCase\Test
 {
     /**

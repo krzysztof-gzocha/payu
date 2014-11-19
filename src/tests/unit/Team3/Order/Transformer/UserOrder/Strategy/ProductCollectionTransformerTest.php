@@ -15,6 +15,11 @@ use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\ProductModel;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UsersProductCollectionModel;
 
+/**
+ * Class ProductCollectionTransformerTest
+ * @package Team3\Order\Transformer\UserOrder\Strategy
+ * @group money
+ */
 class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
 {
     const PRODUCT_NAME = 'product name';

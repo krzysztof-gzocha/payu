@@ -8,6 +8,7 @@ use tests\unit\Team3\Order\Serializer\OrderHelper;
  * Class OrderAdapterTest
  * @package Team3\Order\Serializer\Adapter
  * @group serializer
+ * @group money
  */
 class OrderAdapterTest extends \Codeception\TestCase\Test
 {

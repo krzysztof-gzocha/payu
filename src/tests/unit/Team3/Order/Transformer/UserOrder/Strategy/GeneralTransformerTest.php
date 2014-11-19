@@ -12,6 +12,11 @@ use Team3\Order\PropertyExtractor\ExtractorInterface;
 use Team3\Order\Transformer\UserOrder\Strategy\General\GeneralTransformer;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 
+/**
+ * Class GeneralTransformerTest
+ * @package Team3\Order\Transformer\UserOrder\Strategy
+ * @group money
+ */
 class GeneralTransformerTest extends \Codeception\TestCase\Test
 {
     /**
