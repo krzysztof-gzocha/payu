@@ -15,7 +15,7 @@ use Team3\Order\Model\Products\ProductInterface;
  * @JMS\ExclusionPolicy("all")
  * @JMS\AccessorOrder("alphabetical")
  */
-class OrderAdapter
+class OrderAdapter implements AdapterInterface
 {
     use GeneralParametersTrait;
     use UrlsParametersTrait;
