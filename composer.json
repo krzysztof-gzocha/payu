@@ -1,9 +1,9 @@
 {
     "require-dev": {
-        "phpspec/phpspec": "~2.0",
-        "codeception/codeception": "dev-master",
+        "phpspec/phpspec": "@stable",
+        "codeception/codeception": "@stable",
         "phpmd/phpmd" : "@stable",
-        "fabpot/php-cs-fixer": "1.1.*@dev"
+        "fabpot/php-cs-fixer": "@stable"
     },
     "autoload": {
         "psr-4": {
@@ -12,7 +12,7 @@
         }
     },
     "require": {
-        "doctrine/annotations": "~1.2",
-        "jms/serializer": "0.17.*@dev"
+        "doctrine/annotations": "@stable",
+        "jms/serializer": "@stable"
     }
 }
