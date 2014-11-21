@@ -13,6 +13,24 @@ class MoneyTest extends \Codeception\TestCase\Test
      */
     protected $tester;
 
+    public function testToStringMethodWithoutCurrency()
+    {
+        $money = new Money(12.3456, null, 3);
+        $this->assertEquals(
+            '12.346',
+            (string) $money
+        );
+    }
+
+    public function testToStringMethodWithCurrency()
+    {
+        $money = new Money(12.3456, 'EUR');
+        $this->assertEquals(
+            '12.35 EUR',
+            (string) $money
+        );
+    }
+
     public function testIfValueWithoutSeparationIsCorrect()
     {
         $this->assertEquals(

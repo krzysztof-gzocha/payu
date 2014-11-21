@@ -15,3 +15,12 @@ modules:
             user: ''
             password: ''
             dump: src/tests/_data/dump.sql
+coverage:
+    remote:   false
+    enabled:  true
+    blacklist:
+        include:
+            - bin/*
+            - spec/*
+            - src/tests/*
+            - vendor/*

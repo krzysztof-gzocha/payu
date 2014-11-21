@@ -32,13 +32,11 @@ class Extractor implements ExtractorInterface
      */
     public function extract($object)
     {
-        $this->checkObject($object);
-
         $extracted = [];
         try {
             $reflectionClass = new ReflectionClass($object);
         } catch (ReflectionException $exception) {
-            $this->adaptException($exception);
+            throw $this->adaptException($exception);
         }
 
         foreach ($this->reader->read($object) as $readerResult) {
@@ -51,7 +49,7 @@ class Extractor implements ExtractorInterface
                     $reflectionMethod->invoke($object)
                 );
             } catch (ReflectionException $exception) {
-                $this->adaptException($exception);
+                throw $this->adaptException($exception);
             }
         }
 
@@ -59,28 +57,13 @@ class Extractor implements ExtractorInterface
     }
 
     /**
-     * @param $object
-     *
-     * @throws ExtractorException
-     */
-    protected function checkObject($object)
-    {
-        if (!is_object($object)) {
-            throw new ExtractorException(sprintf(
-                'Given argument should be on object, but "%s" given',
-                gettype($object)
-            ));
-        }
-    }
-
-    /**
      * @param \Exception $exception
      *
-     * @throws ExtractorException
+     * @return ExtractorException
      */
     protected function adaptException(\Exception $exception)
     {
-        throw new ExtractorException(
+        return new ExtractorException(
             $exception->getMessage(),
             $exception->getCode(),
             $exception

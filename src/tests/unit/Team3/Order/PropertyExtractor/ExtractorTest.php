@@ -57,9 +57,26 @@ class ExtractorTest extends \Codeception\TestCase\Test
         );
     }
 
+    /**
+     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     */
     public function testThrowingExceptionWhenNoObjectGiven()
     {
-        $this->setExpectedException(ExtractorException::class);
         $this->extractor->extract('test');
+    }
+
+    /**
+     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     */
+    public function testThrowingExceptionWhenWrongMethodReturned()
+    {
+        $reader = $this->getMock(ReaderInterface::class);
+        $reader
+            ->expects($this->any())
+            ->method('read')
+            ->willReturn([new ReaderResult('wrongMethod', self::ANNOTATION_PROPERTY_NAME)]);
+
+        $extractor = new Extractor($reader);
+        $this->extractor->extract(new \stdClass());
     }
 }
