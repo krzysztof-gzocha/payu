@@ -17,7 +17,7 @@ build:
             echo "from location $(which php)"
       - script:
           name: Run Codeception tests
-          code: ./bin/codecept run
+          code: ./bin/codecept run unit
       - script:
           name: Run phpspec tests
           code: ./bin/phpspec run

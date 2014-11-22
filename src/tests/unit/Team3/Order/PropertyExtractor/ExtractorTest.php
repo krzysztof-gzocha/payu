@@ -60,9 +60,17 @@ class ExtractorTest extends \Codeception\TestCase\Test
     /**
      * @expectedException Team3\Order\PropertyExtractor\ExtractorException
      */
-    public function testThrowingExceptionWhenNoObjectGiven()
+    public function testThrowingExceptionWhenWrongClassNameGiven()
     {
         $this->extractor->extract('test');
+    }
+
+    /**
+     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     */
+    public function testThrowingExceptionWhenArrayGiven()
+    {
+        $this->extractor->extract([]);
     }
 
     /**

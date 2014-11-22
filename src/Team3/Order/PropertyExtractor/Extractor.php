@@ -32,25 +32,33 @@ class Extractor implements ExtractorInterface
      */
     public function extract($object)
     {
-        $extracted = [];
+        $this->checkClass($object);
+
         try {
-            $reflectionClass = new ReflectionClass($object);
+            return $this->processExtraction($object);
         } catch (ReflectionException $exception) {
             throw $this->adaptException($exception);
         }
+    }
+
+    /**
+     * @param $object
+     *
+     * @return ExtractorResult[]
+     */
+    protected function processExtraction($object)
+    {
+        $extracted = [];
+        $reflectionClass = new ReflectionClass($object);
 
         foreach ($this->reader->read($object) as $readerResult) {
-            try {
-                $reflectionMethod = $reflectionClass->getMethod($readerResult->getMethodName());
-                $reflectionMethod->setAccessible(true);
+            $reflectionMethod = $reflectionClass->getMethod($readerResult->getMethodName());
+            $reflectionMethod->setAccessible(true);
 
-                $extracted[] = new ExtractorResult(
-                    $readerResult->getPropertyName(),
-                    $reflectionMethod->invoke($object)
-                );
-            } catch (ReflectionException $exception) {
-                throw $this->adaptException($exception);
-            }
+            $extracted[] = new ExtractorResult(
+                $readerResult->getPropertyName(),
+                $reflectionMethod->invoke($object)
+            );
         }
 
         return $extracted;
@@ -68,5 +76,20 @@ class Extractor implements ExtractorInterface
             $exception->getCode(),
             $exception
         );
+    }
+
+    /**
+     * @param $class
+     *
+     * @throws ExtractorException
+     */
+    protected function checkClass($class)
+    {
+        if (!is_object($class)) {
+            throw new ExtractorException(sprintf(
+                'Given argument should be on object, but "%s" given',
+                gettype($class)
+            ));
+        }
     }
 }
