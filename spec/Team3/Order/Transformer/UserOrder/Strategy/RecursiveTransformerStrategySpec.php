@@ -5,7 +5,7 @@ namespace spec\Team3\Order\Transformer\UserOrder\Strategy;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerInterface;
 
 class RecursiveTransformerStrategySpec extends ObjectBehavior

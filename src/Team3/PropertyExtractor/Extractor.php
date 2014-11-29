@@ -3,11 +3,11 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\PropertyExtractor;
+namespace Team3\PropertyExtractor;
 
 use \ReflectionClass;
 use \ReflectionException;
-use Team3\Order\PropertyExtractor\Reader\ReaderInterface;
+use Team3\PropertyExtractor\Reader\ReaderInterface;
 
 class Extractor implements ExtractorInterface
 {

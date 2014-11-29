@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace tests\unit\Team3\Order\PropertyExtractor;
+namespace tests\unit\Team3\PropertyExtractor;
 
 use Team3\Order\Annotation\PayU;
 

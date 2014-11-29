@@ -3,13 +3,13 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\PropertyExtractor\Reader;
+namespace Team3\PropertyExtractor\Reader;
 
 use Doctrine\Common\Annotations\Reader;
 use \ReflectionClass;
 use \ReflectionMethod;
 use Team3\Order\Annotation\PayU;
-use Team3\Order\PropertyExtractor\ExtractorException;
+use Team3\PropertyExtractor\ExtractorException;
 
 class AnnotationReader implements ReaderInterface
 {

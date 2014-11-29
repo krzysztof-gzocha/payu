@@ -7,8 +7,8 @@ namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductInterface;
-use Team3\Order\PropertyExtractor\ExtractorInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorInterface;
+use Team3\PropertyExtractor\ExtractorResult;
 
 class SingleProductTransformer
 {

@@ -2,7 +2,7 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-namespace Team3\Order\PropertyExtractor;
+namespace Team3\PropertyExtractor;
 
 /**
  * Interface ExtractorInterface

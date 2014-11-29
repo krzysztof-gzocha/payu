@@ -7,8 +7,8 @@ namespace Team3\Order\Transformer\UserOrder;
 
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorInterface;
+use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class UserOrderTransformer implements UserOrderTransformerInterface

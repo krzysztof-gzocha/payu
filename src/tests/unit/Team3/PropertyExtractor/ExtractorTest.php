@@ -1,10 +1,10 @@
 <?php
-namespace Team3\Order\PropertyExtractor;
+namespace Team3\PropertyExtractor;
 
 use Codeception\TestCase;
-use Team3\Order\PropertyExtractor\Reader\ReaderInterface;
-use Team3\Order\PropertyExtractor\Reader\ReaderResult;
-use tests\unit\Team3\Order\PropertyExtractor\Model;
+use Team3\PropertyExtractor\Reader\ReaderInterface;
+use Team3\PropertyExtractor\Reader\ReaderResult;
+use tests\unit\Team3\PropertyExtractor\Model;
 
 class ExtractorTest extends \Codeception\TestCase\Test
 {
@@ -44,7 +44,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
         $firstResult = array_pop($results);
 
         $this->assertInstanceOf(
-            'Team3\Order\PropertyExtractor\ExtractorResult',
+            'Team3\PropertyExtractor\ExtractorResult',
             $firstResult
         );
         $this->assertEquals(
@@ -58,7 +58,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     * @expectedException Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenWrongClassNameGiven()
     {
@@ -66,7 +66,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     * @expectedException Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenArrayGiven()
     {
@@ -74,7 +74,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     * @expectedException Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenWrongMethodReturned()
     {

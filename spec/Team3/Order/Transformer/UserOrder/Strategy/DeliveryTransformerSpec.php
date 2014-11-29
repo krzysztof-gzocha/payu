@@ -6,7 +6,7 @@ use PhpSpec\ObjectBehavior;
 use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\Buyer\DeliveryInterface;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\DeliveryTransformer;
 
 /**

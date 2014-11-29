@@ -3,8 +3,8 @@ namespace Team3\Order\Transformer\UserOrder\Strategy\ShippingMethod;
 
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\Extractor;
-use Team3\Order\PropertyExtractor\Reader\AnnotationReader;
+use Team3\PropertyExtractor\Extractor;
+use Team3\PropertyExtractor\Reader\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 

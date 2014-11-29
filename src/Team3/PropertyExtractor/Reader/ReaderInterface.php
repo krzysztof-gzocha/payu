@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\PropertyExtractor\Reader;
+namespace Team3\PropertyExtractor\Reader;
 
 interface ReaderInterface
 {

@@ -6,7 +6,7 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerException;
 

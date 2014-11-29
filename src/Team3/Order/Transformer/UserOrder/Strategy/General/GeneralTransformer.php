@@ -7,7 +7,7 @@ namespace Team3\Order\Transformer\UserOrder\Strategy\General;
 
 use Team3\Order\Model\General\GeneralInterface;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorResult;
+use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class GeneralTransformer implements UserOrderTransformerStrategyInterface

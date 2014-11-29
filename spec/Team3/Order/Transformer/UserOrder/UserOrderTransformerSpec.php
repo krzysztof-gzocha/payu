@@ -7,7 +7,7 @@ use Prophecy\Argument;
 use Prophecy\Prophet;
 use \Team3\Order\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\PropertyExtractor\ExtractorInterface;
+use Team3\PropertyExtractor\ExtractorInterface;
 use \Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformer;
 
@@ -93,7 +93,7 @@ class UserOrderTransformerSpec extends ObjectBehavior
     protected function getAnnotationsExtractorResults()
     {
         $extractorResultProphecy = $this->prophet
-            ->prophesize('Team3\\Order\\PropertyExtractor\\ExtractorResult');
+            ->prophesize('Team3\\PropertyExtractor\\ExtractorResult');
         $extractorResultProphecy->getPropertyName()->willReturn($this->getPropertyName());
         $extractorResultProphecy->getValue()->willReturn($this->getValue());
 

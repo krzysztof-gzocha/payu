@@ -1,5 +1,5 @@
 <?php
-namespace Team3\Order\PropertyExtractor\Reader;
+namespace Team3\PropertyExtractor\Reader;
 
 
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
@@ -12,7 +12,7 @@ class AnnotationReaderTest extends \Codeception\TestCase\Test
     protected $tester;
 
     /**
-     * @expectedException Team3\Order\PropertyExtractor\ExtractorException
+     * @expectedException Team3\PropertyExtractor\ExtractorException
      */
     public function testIfExceptionIsThrown()
     {
