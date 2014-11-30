@@ -12,6 +12,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Model\OrderStatus;
 use tests\unit\Team3\Order\Serializer\OrderHelper;
 
 /**
@@ -127,6 +128,15 @@ class SerializerTest extends \Codeception\TestCase\Test
         $this->assertCount(
             2,
             $deserializedObject->getProductCollection()
+        );
+
+        $this->assertEquals(
+            OrderStatus::NEW_ORDER,
+            $deserializedObject->getStatus()->getValue()
+        );
+
+        $this->assertTrue(
+            $deserializedObject->getStatus()->isNew()
         );
     }
 }

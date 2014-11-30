@@ -178,4 +178,28 @@ interface OrderInterface extends IsFilledInterface
      * @return $this
      */
     public function setOrderUrl($orderUrl);
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt();
+
+    /**
+     * @param \DateTime $createdAt
+     *
+     * @return Order
+     */
+    public function setCreatedAt(\DateTime $createdAt);
+
+    /**
+     * @return OrderStatusInterface
+     */
+    public function getStatus();
+
+    /**
+     * @param OrderStatusInterface $status
+     *
+     * @return Order
+     */
+    public function setStatus(OrderStatusInterface $status);
 }

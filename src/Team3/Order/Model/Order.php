@@ -126,11 +126,29 @@ class Order implements OrderInterface
      */
     protected $shippingMethodCollection;
 
+    /**
+     * @var \DateTime
+     * @JMS\Type("DateTime<'Y-m-d\TH:i:s.uP'>")
+     * @JMS\SerializedName("orderCreateDate")
+     */
+    protected $createdAt;
+
+    /**
+     * @var OrderStatusInterface
+     * @JMS\Type("string")
+     * @JMS\Accessor(
+     *      getter="getStatusForSerialization",
+     *      setter="setStatusFromDeserialization"
+     * )
+     */
+    protected $status;
+
     public function __construct()
     {
         $this->buyer = new Buyer();
         $this->productCollection = new ProductCollection();
         $this->shippingMethodCollection = new ShippingMethodCollection();
+        $this->status = new OrderStatus();
     }
 
     /**
@@ -461,6 +479,66 @@ class Order implements OrderInterface
     public function setOrderUrl($orderUrl)
     {
         $this->orderUrl = $orderUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     *
+     * @return Order
+     */
+    public function setCreatedAt(\DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * @return OrderStatus
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatusForSerialization()
+    {
+        return $this->status->getValue();
+    }
+
+    /**
+     * @param OrderStatusInterface $status
+     *
+     * @return Order
+     */
+    public function setStatus(OrderStatusInterface $status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * @param string $status
+     *
+     * @return $this
+     */
+    public function setStatusFromDeserialization($status)
+    {
+        $this->status = new OrderStatus($status);
 
         return $this;
     }
