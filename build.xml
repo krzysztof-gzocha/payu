@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project name="PayU" default="test-all">
+
+    <target name="cs-fix">
+        <exec command="./bin/php-cs-fixer fix src/"/>
+    </target>
+
+    <target name="test-all" depends="phpspec,unit-tests,phpmd"/>
+
+    <target name="unit-tests">
+        <exec command="./bin/codecept run unit"/>
+    </target>
+
+    <target name="phpspec">
+        <exec command="./bin/phpspec run"/>
+    </target>
+
+    <target name="phpmd">
+        <exec command="./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests"/>
+    </target>
+
+</project>

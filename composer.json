@@ -3,7 +3,8 @@
         "phpspec/phpspec": "@stable",
         "codeception/codeception": "@stable",
         "phpmd/phpmd" : "@stable",
-        "fabpot/php-cs-fixer": "@stable"
+        "fabpot/php-cs-fixer": "@stable",
+        "phing/phing": "2.9.0"
     },
     "autoload": {
         "psr-4": {
