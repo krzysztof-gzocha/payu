@@ -20,6 +20,7 @@ use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
  * @package Team3\Order\Model
  * @JMS\AccessorOrder("alphabetical")
  * @JMS\AccessType("public_method")
+ * @SuppressWarnings(PHPMD.TooManyFields)
  */
 class Order implements OrderInterface
 {

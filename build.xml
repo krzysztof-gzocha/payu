@@ -8,15 +8,18 @@
     <target name="test-all" depends="phpspec,unit-tests,phpmd"/>
 
     <target name="unit-tests">
-        <exec command="./bin/codecept run unit"/>
+        <exec command="./bin/codecept run unit" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="phpspec">
-        <exec command="./bin/phpspec run"/>
+        <exec command="./bin/phpspec run" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="phpmd">
-        <exec command="./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests"/>
+        <exec
+            command="./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests"
+            checkreturn="true"
+            passthru="true" />
     </target>
 
 </project>
