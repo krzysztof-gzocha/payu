@@ -24,13 +24,6 @@ class OrderSpec extends ObjectBehavior
             ->shouldImplement('Team3\Order\Model\Buyer\BuyerInterface');
     }
 
-    public function it_has_general_parameter_initialized()
-    {
-        $this
-            ->getGeneral()
-            ->shouldImplement('Team3\Order\Model\General\GeneralInterface');
-    }
-
     public function it_has_product_collection_parameter_initialized()
     {
         $this
@@ -43,12 +36,5 @@ class OrderSpec extends ObjectBehavior
         $this
             ->getShippingMethodCollection()
             ->shouldImplement('Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface');
-    }
-
-    public function it_has_urls_parameter_initialized()
-    {
-        $this
-            ->getUrls()
-            ->shouldImplement('Team3\Order\Model\Urls\Urls');
     }
 }

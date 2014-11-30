@@ -5,14 +5,14 @@
 
 namespace Team3\Order\Serializer;
 
-use Team3\Order\Serializer\Adapter\AdapterInterface;
+use Team3\Order\Model\OrderInterface;
 
 interface SerializerInterface
 {
     /**
-     * @param AdapterInterface $adapter
+     * @param OrderInterface $order
      *
      * @return string
      */
-    public function toJson(AdapterInterface $adapter);
+    public function toJson(OrderInterface $order);
 }

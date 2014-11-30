@@ -5,13 +5,108 @@
 namespace Team3\Order\Model;
 
 use Team3\Order\Model\Buyer\BuyerInterface;
-use Team3\Order\Model\General\GeneralInterface;
+use Team3\Order\Model\Money\MoneyInterface;
 use Team3\Order\Model\Products\ProductCollectionInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
-use Team3\Order\Model\Urls\UrlsInterface;
 
 interface OrderInterface extends IsFilledInterface
 {
+    /**
+     * @return string
+     */
+    public function getDescription();
+
+    /**
+     * @param string $description
+     *
+     * @return $this
+     */
+    public function setDescription($description);
+
+    /**
+     * @string
+     */
+    public function getAdditionalDescription();
+
+    /**
+     * @param string $additionalDescription
+     *
+     * @return $this
+     */
+    public function setAdditionalDescription($additionalDescription);
+
+    /**
+     * @inheritdoc
+     */
+    public function getCurrencyCode();
+
+    /**
+     * @param string $currencyCode
+     *
+     * @return $this
+     */
+    public function setCurrencyCode($currencyCode);
+
+    /**
+     * @inheritdoc
+     */
+    public function getCustomerIp();
+
+    /**
+     * @param string $customerIp
+     *
+     * @return $this
+     */
+    public function setCustomerIp($customerIp);
+
+    /**
+     * @inheritdoc
+     */
+    public function getMerchantPosId();
+
+    /**
+     * @param string $merchantPosId
+     *
+     * @return $this
+     */
+    public function setMerchantPosId($merchantPosId);
+
+    /**
+     * @inheritdoc
+     */
+    public function getOrderId();
+
+    /**
+     * @param string $orderId
+     *
+     * @return $this
+     */
+    public function setOrderId($orderId);
+
+    /**
+     * @inheritdoc
+     */
+    public function getSignature();
+
+    /**
+     * @param string $signature
+     *
+     * @return $this
+     */
+    public function setSignature($signature);
+
+    /**
+     * @return MoneyInterface
+     */
+    public function getTotalAmount();
+
+    /**
+     * @param MoneyInterface $totalAmount
+     *
+     * @return $this
+     */
+    public function setTotalAmount(MoneyInterface $totalAmount);
+
     /**
      * @return BuyerInterface
      */
@@ -23,18 +118,6 @@ interface OrderInterface extends IsFilledInterface
      * @return Order
      */
     public function setBuyer(BuyerInterface $buyer);
-
-    /**
-     * @return GeneralInterface
-     */
-    public function getGeneral();
-
-    /**
-     * @param GeneralInterface $general
-     *
-     * @return Order
-     */
-    public function setGeneral(GeneralInterface $general);
 
     /**
      * @return ProductCollectionInterface
@@ -61,14 +144,38 @@ interface OrderInterface extends IsFilledInterface
     public function setShippingMethodCollection(ShippingMethodCollectionInterface $shippingMethodCollection);
 
     /**
-     * @return UrlsInterface
+     * @return string
      */
-    public function getUrls();
+    public function getContinueUrl();
 
     /**
-     * @param UrlsInterface $urls
+     * @param string $continueUrl
      *
-     * @return Order
+     * @return $this
      */
-    public function setUrls(UrlsInterface $urls);
+    public function setContinueUrl($continueUrl);
+
+    /**
+     * @return string
+     */
+    public function getNotifyUrl();
+
+    /**
+     * @param string $notifyUrl
+     *
+     * @return $this
+     */
+    public function setNotifyUrl($notifyUrl);
+
+    /**
+     * @return string
+     */
+    public function getOrderUrl();
+
+    /**
+     * @param string $orderUrl
+     *
+     * @return $this
+     */
+    public function setOrderUrl($orderUrl);
 }

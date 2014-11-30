@@ -3,12 +3,10 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Transformer\UserOrder\Strategy\General;
+namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Team3\Order\Model\General\GeneralInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\PropertyExtractor\ExtractorResult;
-use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 
 class GeneralTransformer implements UserOrderTransformerStrategyInterface
 {
@@ -20,7 +18,7 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
         ExtractorResult $extractorResult
     ) {
         $this->copyValue(
-            $order->getGeneral(),
+            $order,
             $extractorResult->getPropertyName(),
             $extractorResult->getValue()
         );
@@ -37,39 +35,39 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
     }
 
     /**
-     * @param GeneralInterface $general
-     * @param string           $propertyName
-     * @param mixed            $value
+     * @param OrderInterface $order
+     * @param                $propertyName
+     * @param                $value
      */
     private function copyValue(
-        GeneralInterface $general,
+        OrderInterface $order,
         $propertyName,
         $value
     ) {
         switch ($propertyName) {
             case 'general.customerIp':
-                $general->setCustomerIp($value);
+                $order->setCustomerIp($value);
                 break;
             case 'general.orderId':
-                $general->setOrderId($value);
+                $order->setOrderId($value);
                 break;
             case 'general.additionalDescription':
-                $general->setAdditionalDescription($value);
+                $order->setAdditionalDescription($value);
                 break;
             case 'general.currencyCode':
-                $general->setCurrencyCode($value);
+                $order->setCurrencyCode($value);
                 break;
             case 'general.description':
-                $general->setDescription($value);
+                $order->setDescription($value);
                 break;
             case 'general.merchantPosId':
-                $general->setMerchantPosId($value);
+                $order->setMerchantPosId($value);
                 break;
             case 'general.signature':
-                $general->setSignature($value);
+                $order->setSignature($value);
                 break;
             case 'general.totalAmount':
-                $general->setTotalAmount($value);
+                $order->setTotalAmount($value);
                 break;
             default:
         }

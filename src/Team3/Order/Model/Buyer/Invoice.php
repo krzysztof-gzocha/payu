@@ -6,7 +6,13 @@
 namespace Team3\Order\Model\Buyer;
 
 use Team3\Order\Model\IsFilledTrait;
+use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Invoice
+ * @package Team3\Order\Model\Buyer
+ * @JMS\AccessorOrder("alphabetical")
+ */
 class Invoice implements InvoiceInterface
 {
     use IsFilledTrait;
@@ -18,6 +24,7 @@ class Invoice implements InvoiceInterface
 
     /**
      * @var string
+     * @JMS\SerializedName("postalCode")
      */
     protected $postalCode;
 
@@ -28,6 +35,7 @@ class Invoice implements InvoiceInterface
 
     /**
      * @var string
+     * @JMS\SerializedName("countryCode")
      */
     protected $countryCode;
 
@@ -38,26 +46,31 @@ class Invoice implements InvoiceInterface
 
     /**
      * @var string
+     * @JMS\SerializedName("recipientName")
      */
     protected $recipientName;
 
     /**
      * @var string
+     * @JMS\SerializedName("recipientEmail")
      */
     protected $recipientEmail;
 
     /**
      * @var string
+     * @JMS\SerializedName("recipientPhone")
      */
     protected $recipientPhone;
 
     /**
      * @var string
+     * @JMS\SerializedName("tin")
      */
     protected $recipientTin;
 
     /**
      * @var bool
+     * @JMS\SerializedName("einvoiceRequested")
      */
     protected $eInvoiceRequested;
 

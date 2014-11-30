@@ -6,8 +6,8 @@
 namespace Team3\Order\Serializer;
 
 use JMS\Serializer\SerializerInterface;
+use Team3\Order\Model\OrderInterface;
 use Team3\Order\Serializer\SerializerInterface as PayUSerializerInterface;
-use Team3\Order\Serializer\Adapter\AdapterInterface;
 
 class Serializer implements PayUSerializerInterface
 {
@@ -25,16 +25,33 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param AdapterInterface $adapter
+     * @param OrderInterface $order
      *
      * @return string
      */
-    public function toJson(AdapterInterface $adapter)
+    public function toJson(OrderInterface $order)
     {
         return $this
             ->serializer
             ->serialize(
-                $adapter,
+                $order,
+                'json'
+            );
+    }
+
+    /**
+     * @param string $data
+     * @param string $type
+     *
+     * @return object
+     */
+    public function fromJson($data, $type)
+    {
+        return $this
+            ->serializer
+            ->deserialize(
+                $data,
+                $type,
                 'json'
             );
     }

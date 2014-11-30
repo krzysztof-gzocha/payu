@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Model\ShippingMethods;
 
-
 class ShippingMethodCollectionTest extends \Codeception\TestCase\Test
 {
     /**

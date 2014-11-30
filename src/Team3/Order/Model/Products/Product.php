@@ -6,24 +6,39 @@
 namespace Team3\Order\Model\Products;
 
 use Team3\Order\Model\IsFilledTrait;
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
+use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Product
+ * @package Team3\Order\Model\Products
+ * @JMS\AccessorOrder("alphabetical")
+ */
 class Product implements ProductInterface
 {
     use IsFilledTrait;
 
     /**
      * @var string
+     * @JMS\Type("string")
      */
     protected $name;
 
     /**
      * @var MoneyInterface
+     * @JMS\SerializedName("unitPrice")
+     * @JMS\Accessor(
+     *      getter="getUnitPriceForSerialization",
+     *      setter="setUnitPriceFromDeserialization"
+     * )
+     * @JMS\Type("integer")
      */
     protected $unitPrice;
 
     /**
      * @var int
+     * @JMS\Type("integer")
      */
     protected $quantity;
 
@@ -76,6 +91,14 @@ class Product implements ProductInterface
     }
 
     /**
+     * @return int
+     */
+    public function getUnitPriceForSerialization()
+    {
+        return $this->unitPrice->getValueWithoutSeparation(2);
+    }
+
+    /**
      * @param MoneyInterface $unitPrice
      *
      * @return Product
@@ -83,6 +106,18 @@ class Product implements ProductInterface
     public function setUnitPrice(MoneyInterface $unitPrice)
     {
         $this->unitPrice = $unitPrice;
+
+        return $this;
+    }
+
+    /**
+     * @param int $price
+     *
+     * @return $this
+     */
+    public function setUnitPriceFromDeserialization($price)
+    {
+        $this->unitPrice = new Money($price / 100);
 
         return $this;
     }

@@ -57,10 +57,9 @@ class UrlsTransformerTest extends \Codeception\TestCase\Test
         $userOrder = new UserOrderModelWithPrivateMethods();
 
         $this->copyAllValues($order, $userOrder);
-        $urls = $order->getUrls();
-        $this->assertNotEmpty($urls->getContinueUrl());
-        $this->assertNotEmpty($urls->getNotifyUrl());
-        $this->assertNotEmpty($urls->getOrderUrl());
+        $this->assertNotEmpty($order->getContinueUrl());
+        $this->assertNotEmpty($order->getNotifyUrl());
+        $this->assertNotEmpty($order->getOrderUrl());
     }
 
     /**

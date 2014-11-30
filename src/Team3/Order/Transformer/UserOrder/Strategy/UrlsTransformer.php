@@ -6,7 +6,6 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\Model\Urls\UrlsInterface;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class UrlsTransformer implements UserOrderTransformerStrategyInterface
@@ -19,7 +18,7 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
         ExtractorResult $extractorResult
     ) {
         $this->copyValue(
-            $order->getUrls(),
+            $order,
             $extractorResult
         );
     }
@@ -33,22 +32,22 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
     }
 
     /**
-     * @param UrlsInterface   $urls
+     * @param OrderInterface  $order
      * @param ExtractorResult $extractorResult
      */
     private function copyValue(
-        UrlsInterface $urls,
+        OrderInterface $order,
         ExtractorResult $extractorResult
     ) {
         switch ($extractorResult->getPropertyName()) {
             case 'url.notify':
-                $urls->setNotifyUrl($extractorResult->getValue());
+                $order->setNotifyUrl($extractorResult->getValue());
                 break;
             case 'url.continue':
-                $urls->setContinueUrl($extractorResult->getValue());
+                $order->setContinueUrl($extractorResult->getValue());
                 break;
             case 'url.order':
-                $urls->setOrderUrl($extractorResult->getValue());
+                $order->setOrderUrl($extractorResult->getValue());
                 break;
             default:
         }

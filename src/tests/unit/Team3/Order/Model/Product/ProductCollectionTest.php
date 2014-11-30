@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Model\Product;
 
-
 use Team3\Order\Model\Products\ProductCollection;
 
 class ProductCollectionTest extends \Codeception\TestCase\Test

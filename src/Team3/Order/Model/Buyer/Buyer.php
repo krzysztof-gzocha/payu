@@ -6,7 +6,13 @@
 namespace Team3\Order\Model\Buyer;
 
 use Team3\Order\Model\IsFilledTrait;
+use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Buyer
+ * @package Team3\Order\Model\Buyer
+ * @JMS\AccessorOrder("alphabetical")
+ */
 class Buyer implements BuyerInterface
 {
     use IsFilledTrait;
@@ -23,21 +29,25 @@ class Buyer implements BuyerInterface
 
     /**
      * @var string
+     * @JMS\SerializedName("firstName")
      */
     protected $firstName;
 
     /**
      * @var string
+     * @JMS\SerializedName("firstName")
      */
     protected $lastName;
 
     /**
      * @var DeliveryInterface
+     * @JMS\Type("Team3\Order\Model\Buyer\Delivery")
      */
     protected $delivery;
 
     /**
      * @var InvoiceInterface
+     * @JMS\Type("Team3\Order\Model\Buyer\Invoice")
      */
     protected $invoice;
 

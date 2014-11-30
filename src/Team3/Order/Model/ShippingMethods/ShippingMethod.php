@@ -6,8 +6,15 @@
 namespace Team3\Order\Model\ShippingMethods;
 
 use Team3\Order\Model\IsFilledTrait;
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
+use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class ShippingMethod
+ * @package Team3\Order\Model\ShippingMethods
+ * @JMS\AccessorOrder("alphabetical")
+ */
 class ShippingMethod implements ShippingMethodInterface
 {
     use IsFilledTrait;
@@ -19,6 +26,10 @@ class ShippingMethod implements ShippingMethodInterface
 
     /**
      * @var MoneyInterface
+     * @JMS\Accessor(
+     *      getter="getPriceForSerialization",
+     *      setter="setPriceFromDeserialization"
+     * )
      */
     protected $price;
 
@@ -76,6 +87,14 @@ class ShippingMethod implements ShippingMethodInterface
     }
 
     /**
+     * @return int
+     */
+    public function getPriceForSerialization()
+    {
+        return $this->price->getValueWithoutSeparation(2);
+    }
+
+    /**
      * @param MoneyInterface $price
      *
      * @return ShippingMethod
@@ -83,6 +102,18 @@ class ShippingMethod implements ShippingMethodInterface
     public function setPrice(MoneyInterface $price)
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * @param int $price
+     *
+     * @return $this
+     */
+    public function setPriceFromDeserialization($price)
+    {
+        $this->price = new Money($price / 100);
 
         return $this;
     }

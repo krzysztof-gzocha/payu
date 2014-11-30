@@ -9,7 +9,6 @@ use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\PropertyExtractor\Extractor;
 use Team3\PropertyExtractor\ExtractorInterface;
-use Team3\Order\Transformer\UserOrder\Strategy\General\GeneralTransformer;
 use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWithPrivateMethods;
 
 /**
@@ -72,15 +71,14 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
 
         $this->copyAllValues($order, $userOrder);
 
-        $general = $order->getGeneral();
-        $this->assertNotEmpty($general->getAdditionalDescription());
-        $this->assertNotEmpty($general->getCurrencyCode());
-        $this->assertNotEmpty($general->getCustomerIp());
-        $this->assertNotEmpty($general->getDescription());
-        $this->assertNotEmpty($general->getMerchantPosId());
-        $this->assertNotEmpty($general->getOrderId());
-        $this->assertNotEmpty($general->getSignature());
-        $this->assertNotEmpty($general->getTotalAmount());
+        $this->assertNotEmpty($order->getAdditionalDescription());
+        $this->assertNotEmpty($order->getCurrencyCode());
+        $this->assertNotEmpty($order->getCustomerIp());
+        $this->assertNotEmpty($order->getDescription());
+        $this->assertNotEmpty($order->getMerchantPosId());
+        $this->assertNotEmpty($order->getOrderId());
+        $this->assertNotEmpty($order->getSignature());
+        $this->assertNotEmpty($order->getTotalAmount());
     }
 
     /**
