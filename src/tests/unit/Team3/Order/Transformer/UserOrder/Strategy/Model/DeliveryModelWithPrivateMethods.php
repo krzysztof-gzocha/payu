@@ -80,4 +80,13 @@ class DeliveryModelWithPrivateMethods
     {
         return 'street';
     }
+
+    /**
+     * @return string
+     * @PayU(propertyName="delivery.someMethod")
+     */
+    private function someMethod()
+    {
+        return 'something';
+    }
 }

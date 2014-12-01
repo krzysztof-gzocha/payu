@@ -63,6 +63,18 @@ class ShippingMethodCollectionTransformerTest extends \Codeception\TestCase\Test
     }
 
     /**
+     * @expectedException Team3\PropertyExtractor\ExtractorException
+     */
+    public function testIfExceptionIsThrown()
+    {
+        $order = new Order();
+        $userOrder = new UserOrderModelWithPrivateMethods();
+        $userOrder->clearShippingMethodCollection();
+
+        $this->copyAllValues($order, $userOrder);
+    }
+
+    /**
      * @param OrderInterface                   $order
      * @param UserOrderModelWithPrivateMethods $userOrder
      */

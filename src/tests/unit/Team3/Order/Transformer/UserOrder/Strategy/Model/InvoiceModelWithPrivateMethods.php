@@ -98,4 +98,13 @@ class InvoiceModelWithPrivateMethods
     {
         return 'Some street name';
     }
+
+    /**
+     * @return int
+     * @PayU(propertyName="invoice.someMethod")
+     */
+    private function someMethod()
+    {
+        return 123;
+    }
 }

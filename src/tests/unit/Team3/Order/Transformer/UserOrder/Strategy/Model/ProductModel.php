@@ -53,4 +53,13 @@ class ProductModel
     {
         return $this->unitPrice;
     }
+
+    /**
+     * @return int
+     * @PayU(propertyName="product.someMethod")
+     */
+    private function someMethod()
+    {
+        return 1234;
+    }
 }

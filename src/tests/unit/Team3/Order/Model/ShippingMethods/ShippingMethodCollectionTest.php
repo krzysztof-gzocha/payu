@@ -38,4 +38,10 @@ class ShippingMethodCollectionTest extends \Codeception\TestCase\Test
             $smc->getIterator()
         );
     }
+
+    public function testIfIsFilled()
+    {
+        $smc = new ShippingMethodCollection([1, 2]);
+        $this->assertTrue($smc->isFilled());
+    }
 }

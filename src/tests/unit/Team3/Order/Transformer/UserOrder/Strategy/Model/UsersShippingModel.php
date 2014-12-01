@@ -37,4 +37,13 @@ class UsersShippingModel
     {
         return 'PL';
     }
+
+    /**
+     * @return int
+     * @PayU(propertyName="shippingMethod.someMethod")
+     */
+    private function someMethod()
+    {
+        return 123;
+    }
 }

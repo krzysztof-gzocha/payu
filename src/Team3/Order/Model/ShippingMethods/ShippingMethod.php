@@ -21,6 +21,7 @@ class ShippingMethod implements ShippingMethodInterface
 
     /**
      * @var string
+     * @JMS\Type("string")
      */
     protected $country;
 
@@ -30,11 +31,13 @@ class ShippingMethod implements ShippingMethodInterface
      *      getter="getPriceForSerialization",
      *      setter="setPriceFromDeserialization"
      * )
+     * @JMS\Type("integer")
      */
     protected $price;
 
     /**
      * @var string
+     * @JMS\Type("string")
      */
     protected $name;
 

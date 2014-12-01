@@ -44,4 +44,13 @@ class BuyerModelWithPrivateMethods
     {
         return 'krzysztof.gzocha@xsolve.pl';
     }
+
+    /**
+     * @return int
+     * @PayU(propertyName="buyer.someOtherMethod")
+     */
+    private function someOtherMethod()
+    {
+        return 1234;
+    }
 }

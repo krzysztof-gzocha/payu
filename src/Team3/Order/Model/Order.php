@@ -69,7 +69,7 @@ class Order implements OrderInterface
 
     /**
      * @var MoneyInterface
-     * @JMS\Type("string")
+     * @JMS\Type("integer")
      * @JMS\SerializedName("totalAmount")
      * @JMS\Accessor(
      *      getter="getTotalAmountForSerialization",

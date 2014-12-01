@@ -11,9 +11,14 @@ use Team3\Order\Model\Money\Money;
 class UserOrderModelWithPrivateMethods
 {
     /**
-     * @var mixed
+     * @var array
      */
     private $products;
+
+    /**
+     * @var array
+     */
+    private $shippingMethods;
 
     /**
      * @param mixed $products
@@ -21,6 +26,9 @@ class UserOrderModelWithPrivateMethods
     public function __construct($products = [])
     {
         $this->products = $products;
+        $this->shippingMethods = [
+            new UsersShippingModel()
+        ];
     }
 
     /**
@@ -105,6 +113,15 @@ class UserOrderModelWithPrivateMethods
     }
 
     /**
+     * @return int
+     * @PayU(propertyName="general.someMethod")
+     */
+    private function someMethodForGeneralParameters()
+    {
+        return 1234;
+    }
+
+    /**
      * @return string
      * @PayU(propertyName="url.notify")
      */
@@ -132,13 +149,28 @@ class UserOrderModelWithPrivateMethods
     }
 
     /**
+     * @return string
+     * @PayU(propertyName="url.something")
+     */
+    private function someMethodForUrl()
+    {
+        return 'test';
+    }
+
+    /**
      * @return array
      * @PayU(propertyName="shippingMethodCollection")
      */
     private function getShippingMethodCollection()
     {
-        return [
-            new UsersShippingModel()
-        ];
+        return $this->shippingMethods;
+    }
+
+    /**
+     * @return void
+     */
+    public function clearShippingMethodCollection()
+    {
+        $this->shippingMethods = null;
     }
 }

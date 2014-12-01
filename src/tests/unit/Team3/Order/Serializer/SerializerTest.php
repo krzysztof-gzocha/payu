@@ -19,6 +19,7 @@ use tests\unit\Team3\Order\Serializer\OrderHelper;
  * Class SerializerTest
  * @package Team3\Order\Serializer
  * @group serializer
+ * @group money
  */
 class SerializerTest extends \Codeception\TestCase\Test
 {
@@ -93,6 +94,13 @@ class SerializerTest extends \Codeception\TestCase\Test
     "description": "New order",
     "currencyCode": "PLN",
     "totalAmount": "3200",
+    "shippingMethods": [
+        {
+            "country": "PL",
+            "name": "Some method",
+            "price": "120"
+        }
+    ],
     "status": "NEW",
     "products": [
         {
