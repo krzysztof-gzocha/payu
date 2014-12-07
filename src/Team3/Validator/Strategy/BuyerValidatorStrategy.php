@@ -8,7 +8,6 @@ namespace Team3\Validator\Strategy;
 use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Validator\AbstractValidator;
-use Team3\Validator\ValidationError;
 
 class BuyerValidatorStrategy extends AbstractValidator
 {
@@ -20,13 +19,28 @@ class BuyerValidatorStrategy extends AbstractValidator
     public function validate(OrderInterface $order)
     {
         $buyer = $order->getBuyer();
-        if (!$buyer->isFilled()) {
+
+        if ($this->shouldNotValidate($buyer)) {
             return true;
         }
 
         $this
             ->checkEmail($buyer)
             ->checkNames($buyer);
+
+        return $this->hasNoErrors();
+    }
+
+    /**
+     * @param BuyerInterface $buyer
+     *
+     * @return bool
+     */
+    protected function shouldNotValidate(BuyerInterface $buyer)
+    {
+        return !$buyer->getEmail()
+            && !$buyer->getFirstName()
+            && !$buyer->getLastName();
     }
 
     /**
@@ -65,7 +79,7 @@ class BuyerValidatorStrategy extends AbstractValidator
         if (null == $buyer->getLastName()) {
             $this->addValidationError(
                 $buyer,
-                'Buyer has no last namespecified',
+                'Buyer has no last name specified',
                 'lastName'
             );
         }

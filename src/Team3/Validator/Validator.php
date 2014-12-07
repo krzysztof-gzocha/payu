@@ -30,10 +30,10 @@ class Validator extends AbstractValidator
         foreach ($this->validatorStrategies as $validationStrategy) {
             if (!$validationStrategy->validate($order)) {
                 $result = false;
-                array_merge(
+                $this->setValidationErrors(array_merge(
                     $this->getValidationErrors(),
                     $validationStrategy->getValidationErrors()
-                );
+                ));
             }
         }
 

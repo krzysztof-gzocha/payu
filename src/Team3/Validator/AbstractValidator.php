@@ -37,4 +37,20 @@ abstract class AbstractValidator implements ValidatorInterface
     ) {
         $this->validationErrors[] = new ValidationError($object, $message, $parameterName);
     }
+
+    /**
+     * @param ValidationErrorInterface[] $errors
+     */
+    protected function setValidationErrors(array $errors)
+    {
+        $this->validationErrors = $errors;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function hasNoErrors()
+    {
+        return 0 === count($this->validationErrors);
+    }
 }
