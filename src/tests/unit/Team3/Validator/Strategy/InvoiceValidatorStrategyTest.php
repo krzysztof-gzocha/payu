@@ -46,6 +46,13 @@ class InvoiceValidatorStrategyTest extends \Codeception\TestCase\Test
         $this->assertEmpty($this->validator->getValidationErrors());
     }
 
+    public function testIfEmptyOrderWillPass()
+    {
+        $result = $this->validator->validate(new Order());
+        $this->assertTrue($result);
+        $this->assertEmpty($this->validator->getValidationErrors());
+    }
+
     public function testIfInvalidValuesWillCauseErrors()
     {
         $invalidOrder = new Order();
@@ -53,8 +60,20 @@ class InvoiceValidatorStrategyTest extends \Codeception\TestCase\Test
             ->getBuyer()
             ->getInvoice()
             ->setStreet('only street');
+
         $result = $this->validator->validate($invalidOrder);
         $this->assertFalse($result);
         $this->assertCount(3, $this->validator->getValidationErrors());
+
+        $invalidOrder
+            ->getBuyer()
+            ->getInvoice()
+            ->setStreet('')
+            ->setPostalCode('some postal');
+
+        $validator = new InvoiceValidatorStrategy();
+        $result = $validator->validate($invalidOrder);
+        $this->assertFalse($result);
+        $this->assertCount(3, $validator->getValidationErrors());
     }
 }

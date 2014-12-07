@@ -45,6 +45,13 @@ class BuyerValidatorStrategyTest extends \Codeception\TestCase\Test
         $this->assertEmpty($this->validator->getValidationErrors());
     }
 
+    public function testIfEmptyOrderWillPass()
+    {
+        $result = $this->validator->validate(new Order());
+        $this->assertTrue($result);
+        $this->assertEmpty($this->validator->getValidationErrors());
+    }
+
     public function testIfInvalidOrderWillNotPass()
     {
         $invalidOrder = new Order();
@@ -55,5 +62,11 @@ class BuyerValidatorStrategyTest extends \Codeception\TestCase\Test
         $errors = $this->validator->getValidationErrors();
         $this->assertNotEmpty($errors);
         $this->assertCount(2, $errors);
+
+        $validator = new BuyerValidatorStrategy();
+        $invalidOrder->getBuyer()->setFirstName('')->setLastName('only last name');
+        $result = $validator->validate($invalidOrder);
+        $this->assertFalse($result);
+        $this->assertCount(2, $validator->getValidationErrors());
     }
 }

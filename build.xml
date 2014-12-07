@@ -15,6 +15,12 @@
         <exec command="./bin/phpspec run" checkreturn="true" passthru="true"/>
     </target>
 
+    <target name="coverage">
+        <exec command="./bin/codecept run unit -c codeception.yml --coverage --coverage-html --coverage-xml"
+              checkreturn="false"
+              passthru="false" />
+    </target>
+
     <target name="phpmd">
         <exec
             command="./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests"
