@@ -43,7 +43,7 @@ class OrderTest extends \Codeception\TestCase\Test
 
         $order->setShippingMethodCollectionFromDeserialization([
             new ShippingMethod(),
-            new ShippingMethod()
+            new ShippingMethod(),
         ]);
         $this->assertCount(
             2,

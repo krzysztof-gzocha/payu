@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Model;
 
-
 use tests\unit\Team3\Order\Model\FilledModel;
 use tests\unit\Team3\Order\Model\IsFilledModel;
 use tests\unit\Team3\Order\Model\NotFilledModel;

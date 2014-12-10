@@ -48,7 +48,7 @@ class BuyerValidatorStrategy extends AbstractValidator
      *
      * @return $this
      */
-    private function checkEmail(BuyerInterface $buyer)
+    protected function checkEmail(BuyerInterface $buyer)
     {
         if (null == $buyer->getEmail()) {
             $this->addValidationError(
@@ -66,7 +66,7 @@ class BuyerValidatorStrategy extends AbstractValidator
      *
      * @return $this
      */
-    private function checkNames(BuyerInterface $buyer)
+    protected function checkNames(BuyerInterface $buyer)
     {
         if (null == $buyer->getFirstName()) {
             $this->addValidationError(

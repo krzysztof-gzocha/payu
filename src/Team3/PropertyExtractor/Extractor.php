@@ -5,8 +5,8 @@
 
 namespace Team3\PropertyExtractor;
 
-use \ReflectionClass;
-use \ReflectionException;
+use ReflectionClass;
+use ReflectionException;
 use Team3\PropertyExtractor\Reader\ReaderInterface;
 
 class Extractor implements ExtractorInterface

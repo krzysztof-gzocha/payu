@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Validator\Strategy;
 
-
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 
@@ -32,7 +31,7 @@ class InvoiceValidatorStrategyTest extends \Codeception\TestCase\Test
         $this->validOrder = new Order();
         $this->validOrder->getBuyer()->getInvoice()
             ->setCity('Some city')
-            ->setCountryCode('country code')
+            ->setCountryCode('CC')
             ->setPostalCode('postal-code')
             ->setStreet('Some street');
 

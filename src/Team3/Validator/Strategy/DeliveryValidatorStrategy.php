@@ -22,7 +22,11 @@ class DeliveryValidatorStrategy extends AbstractValidator
             return true;
         }
 
-        $this->checkAddress($delivery);
+        $this
+            ->checkStreet($delivery)
+            ->checkCity($delivery)
+            ->checkCountryCode($delivery)
+            ->checkPostalCode($delivery);
 
         return $this->hasNoErrors();
     }
@@ -45,7 +49,7 @@ class DeliveryValidatorStrategy extends AbstractValidator
      *
      * @return $this
      */
-    protected function checkAddress(DeliveryInterface $delivery)
+    protected function checkStreet(DeliveryInterface $delivery)
     {
         if (null == $delivery->getStreet()) {
             $this->addValidationError(
@@ -55,6 +59,16 @@ class DeliveryValidatorStrategy extends AbstractValidator
             );
         }
 
+        return $this;
+    }
+
+    /**
+     * @param DeliveryInterface $delivery
+     *
+     * @return $this
+     */
+    protected function checkPostalCode(DeliveryInterface $delivery)
+    {
         if (null == $delivery->getPostalCode()) {
             $this->addValidationError(
                 $delivery,
@@ -63,6 +77,16 @@ class DeliveryValidatorStrategy extends AbstractValidator
             );
         }
 
+        return $this;
+    }
+
+    /**
+     * @param DeliveryInterface $delivery
+     *
+     * @return $this
+     */
+    protected function checkCity(DeliveryInterface $delivery)
+    {
         if (null == $delivery->getCity()) {
             $this->addValidationError(
                 $delivery,
@@ -71,7 +95,17 @@ class DeliveryValidatorStrategy extends AbstractValidator
             );
         }
 
-        if (null == $delivery->getCountryCode()) {
+        return $this;
+    }
+
+    /**
+     * @param DeliveryInterface $delivery
+     *
+     * @return $this
+     */
+    protected function checkCountryCode(DeliveryInterface $delivery)
+    {
+        if (2 !== mb_strlen($delivery->getCountryCode())) {
             $this->addValidationError(
                 $delivery,
                 'Country code of the delivery can not be empty',

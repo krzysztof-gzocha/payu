@@ -27,7 +27,7 @@ class UserOrderModelWithPrivateMethods
     {
         $this->products = $products;
         $this->shippingMethods = [
-            new UsersShippingModel()
+            new UsersShippingModel(),
         ];
     }
 

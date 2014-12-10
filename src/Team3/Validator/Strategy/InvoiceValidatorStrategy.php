@@ -22,7 +22,11 @@ class InvoiceValidatorStrategy extends AbstractValidator
             return true;
         }
 
-        $this->checkAddress($invoice);
+        $this
+            ->checkCity($invoice)
+            ->checkCountryCode($invoice)
+            ->checkPostalCode($invoice)
+            ->checkStreet($invoice);
 
         return $this->hasNoErrors();
     }
@@ -45,7 +49,7 @@ class InvoiceValidatorStrategy extends AbstractValidator
      *
      * @return $this
      */
-    protected function checkAddress(InvoiceInterface $invoice)
+    protected function checkCity(InvoiceInterface $invoice)
     {
         if (null == $invoice->getCity()) {
             $this->addValidationError(
@@ -55,14 +59,34 @@ class InvoiceValidatorStrategy extends AbstractValidator
             );
         }
 
-        if (null == $invoice->getCountryCode()) {
+        return $this;
+    }
+
+    /**
+     * @param InvoiceInterface $invoice
+     *
+     * @return $this
+     */
+    protected function checkCountryCode(InvoiceInterface $invoice)
+    {
+        if (2 !== mb_strlen($invoice->getCountryCode())) {
             $this->addValidationError(
                 $invoice,
-                'Country code of the invoice can not be empty',
+                'Country code of the invoice must have exactly 2 chars',
                 'countryCode'
             );
         }
 
+        return $this;
+    }
+
+    /**
+     * @param InvoiceInterface $invoice
+     *
+     * @return $this
+     */
+    protected function checkPostalCode(InvoiceInterface $invoice)
+    {
         if (null == $invoice->getPostalCode()) {
             $this->addValidationError(
                 $invoice,
@@ -71,6 +95,16 @@ class InvoiceValidatorStrategy extends AbstractValidator
             );
         }
 
+        return $this;
+    }
+
+    /**
+     * @param InvoiceInterface $invoice
+     *
+     * @return $this
+     */
+    protected function checkStreet(InvoiceInterface $invoice)
+    {
         if (null == $invoice->getStreet()) {
             $this->addValidationError(
                 $invoice,
