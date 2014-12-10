@@ -10,12 +10,12 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\Products\ProductCollectionInterface;
 use Team3\Order\Model\Products\ProductInterface;
 use Team3\Validator\AbstractValidator;
+use Team3\Validator\ValidationHelperTrait;
 
 class ProductStrategy extends AbstractValidator
 {
-    const MINIMAL_PRICE = 0.01;
-    const MINIMAL_QUANTITY = 1;
-    const MINIMAL_PRODUCT_NAME_LENGTH = 1;
+    use ValidationHelperTrait;
+    const MINIMAL_QUANTITY  = 1;
 
     /**
      * @inheritdoc
@@ -57,7 +57,7 @@ class ProductStrategy extends AbstractValidator
      */
     protected function checkName(ProductInterface $product)
     {
-        if (self::MINIMAL_PRODUCT_NAME_LENGTH > mb_strlen($product->getName())) {
+        if ($this->isStringEmpty($product->getName())) {
             $this->addValidationError(
                 $product,
                 'Products name can not be empty',
@@ -85,14 +85,12 @@ class ProductStrategy extends AbstractValidator
             return $this;
         }
 
-        $value = $product->getUnitPrice()->getValue();
-
-        if (1 === bccomp(self::MINIMAL_PRICE, $value)) {
+        if ($this->isMoneyNegative($product->getUnitPrice())) {
             $this->addValidationError(
                 $product,
                 sprintf(
                     'Products price can not be less then %s',
-                    self::MINIMAL_PRICE
+                    $this->getMinimalPrice()
                 ),
                 'unitPrice'
             );

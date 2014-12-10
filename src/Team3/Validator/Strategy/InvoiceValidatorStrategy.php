@@ -8,9 +8,12 @@ namespace Team3\Validator\Strategy;
 use Team3\Order\Model\Buyer\InvoiceInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Validator\AbstractValidator;
+use Team3\Validator\ValidationHelperTrait;
 
 class InvoiceValidatorStrategy extends AbstractValidator
 {
+    use ValidationHelperTrait;
+
     /**
      * @inheritdoc
      */
@@ -51,7 +54,7 @@ class InvoiceValidatorStrategy extends AbstractValidator
      */
     protected function checkCity(InvoiceInterface $invoice)
     {
-        if (null == $invoice->getCity()) {
+        if ($this->isStringEmpty($invoice->getCity())) {
             $this->addValidationError(
                 $invoice,
                 'City name of the invoice can not be empty',
@@ -69,10 +72,10 @@ class InvoiceValidatorStrategy extends AbstractValidator
      */
     protected function checkCountryCode(InvoiceInterface $invoice)
     {
-        if (2 !== mb_strlen($invoice->getCountryCode())) {
+        if ($this->isCountryCodeIncorrect($invoice->getCountryCode())) {
             $this->addValidationError(
                 $invoice,
-                'Country code of the invoice must have exactly 2 chars',
+                'Country code of the invoice can not be empty',
                 'countryCode'
             );
         }
@@ -87,7 +90,7 @@ class InvoiceValidatorStrategy extends AbstractValidator
      */
     protected function checkPostalCode(InvoiceInterface $invoice)
     {
-        if (null == $invoice->getPostalCode()) {
+        if ($this->isStringEmpty($invoice->getPostalCode())) {
             $this->addValidationError(
                 $invoice,
                 'Postal code of the invoice can not be empty',
@@ -105,7 +108,7 @@ class InvoiceValidatorStrategy extends AbstractValidator
      */
     protected function checkStreet(InvoiceInterface $invoice)
     {
-        if (null == $invoice->getStreet()) {
+        if ($this->isStringEmpty($invoice->getStreet())) {
             $this->addValidationError(
                 $invoice,
                 'Street name of the invoice can not be empty',

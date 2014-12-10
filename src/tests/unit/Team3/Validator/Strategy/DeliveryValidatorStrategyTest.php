@@ -29,7 +29,7 @@ class DeliveryValidatorStrategyTest extends \Codeception\TestCase\Test
 
         $result = $validator->validate($this->getInvalidOrder());
         $this->assertFalse($result);
-        $this->assertCount(4, $validator->getValidationErrors());
+        $this->assertCount(4, $validator->getValidationErrors(), print_r($validator->getValidationErrors(), true));
     }
 
     public function testIfOrderWithoutInformationWillNotBeValidated()

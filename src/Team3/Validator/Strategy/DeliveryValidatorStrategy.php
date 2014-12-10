@@ -8,9 +8,12 @@ namespace Team3\Validator\Strategy;
 use Team3\Order\Model\Buyer\DeliveryInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Validator\AbstractValidator;
+use Team3\Validator\ValidationHelperTrait;
 
 class DeliveryValidatorStrategy extends AbstractValidator
 {
+    use ValidationHelperTrait;
+
     /**
      * @inheritdoc
      */
@@ -51,7 +54,7 @@ class DeliveryValidatorStrategy extends AbstractValidator
      */
     protected function checkStreet(DeliveryInterface $delivery)
     {
-        if (null == $delivery->getStreet()) {
+        if ($this->isStringEmpty($delivery->getStreet())) {
             $this->addValidationError(
                 $delivery,
                 'Street name of the delivery can not be empty',
@@ -69,7 +72,7 @@ class DeliveryValidatorStrategy extends AbstractValidator
      */
     protected function checkPostalCode(DeliveryInterface $delivery)
     {
-        if (null == $delivery->getPostalCode()) {
+        if ($this->isStringEmpty($delivery->getPostalCode())) {
             $this->addValidationError(
                 $delivery,
                 'Postal code of the delivery can not be empty',
@@ -87,7 +90,7 @@ class DeliveryValidatorStrategy extends AbstractValidator
      */
     protected function checkCity(DeliveryInterface $delivery)
     {
-        if (null == $delivery->getCity()) {
+        if ($this->isStringEmpty($delivery->getCity())) {
             $this->addValidationError(
                 $delivery,
                 'City name of the delivery can not be empty',
@@ -105,7 +108,7 @@ class DeliveryValidatorStrategy extends AbstractValidator
      */
     protected function checkCountryCode(DeliveryInterface $delivery)
     {
-        if (2 !== mb_strlen($delivery->getCountryCode())) {
+        if ($this->isCountryCodeIncorrect($delivery->getCountryCode())) {
             $this->addValidationError(
                 $delivery,
                 'Country code of the delivery can not be empty',

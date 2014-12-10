@@ -10,11 +10,11 @@ use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodInterface;
 use Team3\Validator\AbstractValidator;
+use Team3\Validator\ValidationHelperTrait;
 
 class ShippingMethodStrategy extends AbstractValidator
 {
-    const MINIMAL_PRICE = 0.01;
-    const COUNTRY_CODE_LENGTH = 2;
+    use ValidationHelperTrait;
 
     /**
      * @inheritdoc
@@ -56,13 +56,10 @@ class ShippingMethodStrategy extends AbstractValidator
      */
     protected function checkCountry(ShippingMethodInterface $shippingMethod)
     {
-        if (self::COUNTRY_CODE_LENGTH !== mb_strlen($shippingMethod->getCountry())) {
+        if ($this->isCountryCodeIncorrect($shippingMethod->getCountry())) {
             $this->addValidationError(
                 $shippingMethod,
-                sprintf(
-                    'Country code in shipping method should have exactly %d chars',
-                    self::COUNTRY_CODE_LENGTH
-                ),
+                'Country code in shipping method can not be empty',
                 'country'
             );
         }
@@ -77,7 +74,7 @@ class ShippingMethodStrategy extends AbstractValidator
      */
     protected function checkName(ShippingMethodInterface $shippingMethod)
     {
-        if (1 > mb_strlen($shippingMethod->getName())) {
+        if ($this->isStringEmpty($shippingMethod->getName())) {
             $this->addValidationError(
                 $shippingMethod,
                 'Name of shipping method can not be empty',
@@ -105,14 +102,12 @@ class ShippingMethodStrategy extends AbstractValidator
             return $this;
         }
 
-        $price = $shippingMethod->getPrice()->getValue();
-
-        if (1 === bccomp(self::MINIMAL_PRICE, $price)) {
+        if ($this->isMoneyNegative($shippingMethod->getPrice())) {
             $this->addValidationError(
                 $shippingMethod,
                 sprintf(
                     'Price of shipping method should not be less then %s',
-                    self::MINIMAL_PRICE
+                    $this->getMinimalPrice()
                 ),
                 'price'
             );

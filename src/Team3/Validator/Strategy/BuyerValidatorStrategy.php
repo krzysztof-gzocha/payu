@@ -8,9 +8,12 @@ namespace Team3\Validator\Strategy;
 use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Validator\AbstractValidator;
+use Team3\Validator\ValidationHelperTrait;
 
 class BuyerValidatorStrategy extends AbstractValidator
 {
+    use ValidationHelperTrait;
+
     /**
      * @param OrderInterface $order
      *
@@ -50,7 +53,7 @@ class BuyerValidatorStrategy extends AbstractValidator
      */
     protected function checkEmail(BuyerInterface $buyer)
     {
-        if (null == $buyer->getEmail()) {
+        if ($this->isStringEmpty($buyer->getEmail())) {
             $this->addValidationError(
                 $buyer,
                 'Buyer has no email specified',
@@ -68,7 +71,7 @@ class BuyerValidatorStrategy extends AbstractValidator
      */
     protected function checkNames(BuyerInterface $buyer)
     {
-        if (null == $buyer->getFirstName()) {
+        if ($this->isStringEmpty($buyer->getFirstName())) {
             $this->addValidationError(
                 $buyer,
                 'Buyer has no first name specified',
@@ -76,7 +79,7 @@ class BuyerValidatorStrategy extends AbstractValidator
             );
         }
 
-        if (null == $buyer->getLastName()) {
+        if ($this->isStringEmpty($buyer->getLastName())) {
             $this->addValidationError(
                 $buyer,
                 'Buyer has no last name specified',

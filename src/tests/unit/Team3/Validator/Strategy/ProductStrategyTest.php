@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Validator\Strategy;
 
-
 use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\Products\Product;

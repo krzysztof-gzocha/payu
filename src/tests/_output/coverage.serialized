@@ -4418,6 +4418,52 @@ $coverage->setData(array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
   ),
+  '/var/www/payu/src/Team3/Validator/ValidationHelperTrait.php' => 
+  array (
+    17 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    18 => NULL,
+    27 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      4 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      6 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
+      8 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+      9 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      10 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      11 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
+    28 => NULL,
+    37 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      4 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      5 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      6 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
+    38 => NULL,
+    47 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    48 => NULL,
+  ),
   '/var/www/payu/src/Team3/Validator/ValidatorInterface.php' => 
   array (
   ),
@@ -4535,34 +4581,24 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/BuyerValidatorStrategy.php' => 
   array (
-    21 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    23 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
     24 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    26 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    27 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
     ),
-    25 => NULL,
-    27 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    28 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    29 => 
+    28 => NULL,
+    30 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
@@ -4572,40 +4608,42 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    32 => NULL,
-    41 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    42 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    43 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    44 => NULL,
-    53 => 
+    32 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    54 => 
+    34 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    55 => 
+    35 => NULL,
+    44 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    45 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    46 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    47 => NULL,
     56 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    57 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4619,24 +4657,24 @@ $coverage->setData(array (
     ),
     61 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    62 => NULL,
-    71 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    72 => 
+    62 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    73 => 
+    64 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    65 => NULL,
     74 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    75 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4650,18 +4688,18 @@ $coverage->setData(array (
     ),
     79 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
     80 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    81 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
     82 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    83 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4675,10 +4713,18 @@ $coverage->setData(array (
     ),
     87 => 
     array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    88 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    90 => 
+    array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    88 => NULL,
+    91 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/ValidationError.php' => 
   array (
@@ -4751,38 +4797,23 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/DeliveryValidatorStrategy.php' => 
   array (
-    19 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
-    ),
-    21 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
-    ),
     22 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+    ),
+    24 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+    ),
+    25 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
     ),
-    23 => NULL,
-    25 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    26 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    27 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
+    26 => NULL,
     28 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
@@ -4793,51 +4824,58 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    30 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
     31 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    32 => NULL,
-    41 => 
+    32 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
     ),
-    42 => 
+    34 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
     ),
-    43 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
-    ),
+    35 => NULL,
     44 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
       2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
     ),
-    45 => NULL,
-    54 => 
+    45 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+    ),
+    46 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+    ),
+    47 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+    ),
+    48 => NULL,
+    57 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    55 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    56 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    57 => 
+    58 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4851,24 +4889,24 @@ $coverage->setData(array (
     ),
     62 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    63 => NULL,
-    72 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    73 => 
+    63 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    74 => 
+    65 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    66 => NULL,
     75 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    76 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4882,24 +4920,24 @@ $coverage->setData(array (
     ),
     80 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    81 => NULL,
-    90 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    91 => 
+    81 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    92 => 
+    83 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    84 => NULL,
     93 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    94 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4913,24 +4951,24 @@ $coverage->setData(array (
     ),
     98 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    99 => NULL,
-    108 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    109 => 
+    99 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    110 => 
+    101 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
+    102 => NULL,
     111 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    112 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -4944,45 +4982,38 @@ $coverage->setData(array (
     ),
     116 => 
     array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    117 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    119 => 
+    array (
       0 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    117 => NULL,
+    120 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/InvoiceValidatorStrategy.php' => 
   array (
-    19 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    21 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
     22 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    24 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    25 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
     ),
-    23 => NULL,
-    25 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    26 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    27 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
+    26 => NULL,
     28 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
@@ -4993,51 +5024,58 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
+    30 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
     31 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    32 => NULL,
-    41 => 
+    32 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    42 => 
+    34 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    43 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
+    35 => NULL,
     44 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
       2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    45 => NULL,
-    54 => 
+    45 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    46 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    47 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    48 => NULL,
+    57 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    55 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    56 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    57 => 
+    58 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
@@ -5051,24 +5089,24 @@ $coverage->setData(array (
     ),
     62 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    63 => NULL,
-    72 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    73 => 
+    63 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    74 => 
+    65 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
+    66 => NULL,
     75 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    76 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
@@ -5082,24 +5120,24 @@ $coverage->setData(array (
     ),
     80 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    81 => NULL,
-    90 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    91 => 
+    81 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    92 => 
+    83 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
+    84 => NULL,
     93 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    94 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
@@ -5113,24 +5151,24 @@ $coverage->setData(array (
     ),
     98 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    99 => NULL,
-    108 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    109 => 
+    99 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    110 => 
+    101 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
+    102 => NULL,
     111 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    112 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
@@ -5144,10 +5182,18 @@ $coverage->setData(array (
     ),
     116 => 
     array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    117 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    119 => 
+    array (
       0 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    117 => NULL,
+    120 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/ProductCollectionStrategy.php' => 
   array (
@@ -5331,10 +5377,13 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
+    89 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+    ),
     90 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
     91 => 
     array (
@@ -5356,25 +5405,31 @@ $coverage->setData(array (
     array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
-    98 => 
+    97 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
     99 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
-    ),
-    101 => 
-    array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
-    102 => NULL,
-    111 => 
+    100 => NULL,
+    109 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       2 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+    ),
+    110 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
+      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+    ),
+    111 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
+      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
     112 => 
     array (
@@ -5382,11 +5437,6 @@ $coverage->setData(array (
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
     113 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
-    ),
-    114 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
@@ -5401,23 +5451,18 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
-    119 => 
+    118 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
     120 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
-    ),
-    122 => 
-    array (
       0 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       2 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
-    123 => NULL,
+    121 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/ShippingMethodStrategy.php' => 
   array (
@@ -5512,7 +5557,7 @@ $coverage->setData(array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    63 => 
+    64 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
@@ -5524,28 +5569,28 @@ $coverage->setData(array (
     ),
     67 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    68 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    70 => 
+    68 => NULL,
+    77 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    71 => NULL,
+    78 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
+    79 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
     80 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    81 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
@@ -5562,28 +5607,26 @@ $coverage->setData(array (
     ),
     85 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    86 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    88 => 
+    86 => NULL,
+    95 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    89 => NULL,
+    96 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
+    97 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
     98 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      2 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    99 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
@@ -5591,34 +5634,37 @@ $coverage->setData(array (
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    101 => 
+    102 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    103 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
+    103 => NULL,
     105 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    106 => NULL,
-    108 => 
-    array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    110 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
-      1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    111 => 
+    106 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    112 => 
+    107 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    108 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    109 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    110 => 
+    array (
+      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+    ),
+    111 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
     ),
@@ -5632,22 +5678,10 @@ $coverage->setData(array (
     ),
     116 => 
     array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    118 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    119 => 
-    array (
-      0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    121 => 
-    array (
       0 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
     ),
-    122 => NULL,
+    117 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/Validator.php' => 
   array (
@@ -5920,8 +5954,11 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/dashboard.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/index.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/DeliveryValidatorStrategy.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/ShippingMethodStrategy.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/BuyerValidatorStrategy.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/ProductStrategy.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/InvoiceValidatorStrategy.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/ProductCollectionStrategy.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/ValidationError.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/AbstractValidator.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Validator.php.html' => true,
