@@ -357,6 +357,7 @@ $coverage->setData(array (
       39 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       40 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       41 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      42 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     28 => 
     array (
@@ -402,6 +403,7 @@ $coverage->setData(array (
       39 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       40 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       41 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      42 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     35 => 
     array (
@@ -969,6 +971,7 @@ $coverage->setData(array (
       36 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       37 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       38 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      39 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     21 => 
     array (
@@ -1011,6 +1014,7 @@ $coverage->setData(array (
       36 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       37 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       38 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      39 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     30 => 
     array (
@@ -1140,6 +1144,7 @@ $coverage->setData(array (
       35 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       36 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       37 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      38 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     21 => 
     array (
@@ -1181,6 +1186,7 @@ $coverage->setData(array (
       35 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       36 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       37 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      38 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     30 => 
     array (
@@ -1296,6 +1302,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     57 => 
     array (
@@ -1334,6 +1341,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     58 => 
     array (
@@ -1372,6 +1380,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     65 => 
     array (
@@ -1583,6 +1592,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     150 => 
     array (
@@ -1621,6 +1631,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     151 => 
     array (
@@ -1659,6 +1670,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     152 => 
     array (
@@ -1697,6 +1709,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     153 => 
     array (
@@ -1735,6 +1748,7 @@ $coverage->setData(array (
       32 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       33 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     160 => 
     array (
@@ -4491,6 +4505,7 @@ $coverage->setData(array (
       17 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       18 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       19 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      20 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     18 => 
     array (
@@ -4514,6 +4529,7 @@ $coverage->setData(array (
       17 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       18 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       19 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      20 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     25 => 
     array (
@@ -4530,6 +4546,7 @@ $coverage->setData(array (
       10 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       11 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
       12 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      13 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     26 => NULL,
     38 => 
@@ -4557,12 +4574,24 @@ $coverage->setData(array (
     46 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     47 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    54 => 
+    51 => 
+    array (
+      0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
+    ),
+    52 => 
+    array (
+      0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
+    ),
+    59 => 
     array (
       0 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfProperOrderWillPass',
       1 => 'Team3\\Validator\\Strategy\\BuyerValidatorStrategyTest::testIfInvalidOrderWillNotPass',
@@ -4577,7 +4606,7 @@ $coverage->setData(array (
       10 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       11 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    55 => NULL,
+    60 => NULL,
   ),
   '/var/www/payu/src/Team3/Validator/Strategy/BuyerValidatorStrategy.php' => 
   array (
@@ -5688,67 +5717,88 @@ $coverage->setData(array (
     19 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     20 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     21 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     28 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    30 => 
+    29 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     31 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     32 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     33 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     34 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     35 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     36 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     37 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
     38 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    40 => 
+    39 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    41 => NULL,
-    48 => 
+    41 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
+    42 => NULL,
     49 => 
     array (
       0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
+    ),
+    50 => 
+    array (
+      0 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
+      1 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
   ),
 ));
@@ -5827,6 +5877,7 @@ $coverage->setTests(array (
   'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass' => 0,
   'Team3\\Validator\\ValidationErrorTest::testGetters' => 0,
   'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated' => 0,
+  'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime' => 0,
 ));
 
 $filter = $coverage->filter();
@@ -5960,6 +6011,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/InvoiceValidatorStrategy.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Strategy/ProductCollectionStrategy.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/ValidationError.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Validator/ValidationHelperTrait.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/AbstractValidator.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Validator.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage.serialized' => true,

@@ -60,4 +60,21 @@ class ValidatorSpec extends ObjectBehavior
             $validationError->shouldImplement('Team3\Validator\ValidationErrorInterface');
         }
     }
+
+    public function it_should_collect_errors_to_new_array_each_time(
+        OrderInterface $order,
+        ValidatorInterface $strategy,
+        ValidationErrorInterface $error
+    ) {
+        $strategy->validate($order)->willReturn(false);
+        $strategy->getValidationErrors()->willReturn([$error]);
+
+        $this->addValidatorStrategy($strategy);
+        $this->validate($order)->shouldReturn(false);
+        $this->validate($order);
+        $this->validate($order);
+        $this->validate($order);
+        $this->validate($order);
+        $this->getValidationErrors()->shouldHaveCount(1);
+    }
 }

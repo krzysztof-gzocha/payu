@@ -25,6 +25,7 @@ class Validator extends AbstractValidator
      */
     public function validate(OrderInterface $order)
     {
+        $this->clearValidationErrors();
         $result = true;
 
         foreach ($this->validatorStrategies as $validationStrategy) {

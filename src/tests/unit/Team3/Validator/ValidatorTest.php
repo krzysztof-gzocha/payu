@@ -53,11 +53,11 @@ class ValidatorTest extends \Codeception\TestCase\Test
             ->willReturn([$validationError]);
 
         $this->validator = new Validator();
+        $this->validator->addValidatorStrategy($this->strategy);
     }
 
     public function testIfStrategiesErrorArePropagated()
     {
-        $this->validator->addValidatorStrategy($this->strategy);
         $result = $this->validator->validate($this->order);
         $this->assertFalse($result);
 
@@ -71,5 +71,14 @@ class ValidatorTest extends \Codeception\TestCase\Test
                 $error
             );
         }
+    }
+
+    /**
+     * @depends testIfStrategiesErrorArePropagated
+     */
+    public function testIfErrorsAreClearedEachTime()
+    {
+        $this->validator->validate($this->order);
+        $this->assertCount(1, $this->validator->getValidationErrors());
     }
 }
