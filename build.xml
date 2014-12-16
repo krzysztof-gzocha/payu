@@ -11,6 +11,10 @@
         <exec command="./bin/codecept run unit" checkreturn="true" passthru="true"/>
     </target>
 
+    <target name="hhvm-unit-tests">
+        <exec command="hhvm bin/codecept run unit" checkreturn="true" passthru="true" />
+    </target>
+
     <target name="phpspec">
         <exec command="./bin/phpspec run" checkreturn="true" passthru="true"/>
     </target>
