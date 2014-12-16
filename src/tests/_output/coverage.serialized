@@ -1263,6 +1263,85 @@ $coverage->setData(array (
     ),
     77 => NULL,
   ),
+  '/var/www/payu/src/Team3/Order/Model/OrderUrlsTrait.php' => 
+  array (
+    36 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    37 => NULL,
+    46 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    48 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    49 => NULL,
+    56 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    57 => NULL,
+    66 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    68 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    69 => NULL,
+    76 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    77 => NULL,
+    86 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    88 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    89 => NULL,
+  ),
   '/var/www/payu/src/Team3/Order/Model/Buyer/Buyer.php' => 
   array (
     56 => 
@@ -1555,7 +1634,7 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/Order/Model/Order.php' => 
   array (
-    149 => 
+    72 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1594,7 +1673,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    150 => 
+    73 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1633,7 +1712,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    151 => 
+    74 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1672,7 +1751,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    152 => 
+    75 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1711,7 +1790,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    153 => 
+    76 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1750,7 +1829,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    160 => 
+    83 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1770,17 +1849,17 @@ $coverage->setData(array (
       15 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
       16 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    161 => NULL,
-    170 => 
+    84 => NULL,
+    93 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
     ),
-    172 => 
+    95 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
     ),
-    173 => NULL,
-    180 => 
+    96 => NULL,
+    103 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1796,36 +1875,36 @@ $coverage->setData(array (
       11 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
       12 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
     ),
-    181 => NULL,
-    191 => 
+    104 => NULL,
+    114 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    193 => 
+    116 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    194 => NULL,
-    204 => 
+    117 => NULL,
+    127 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    205 => 
+    128 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    206 => 
+    129 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    208 => 
+    131 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    209 => NULL,
-    216 => 
+    132 => NULL,
+    139 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1838,65 +1917,118 @@ $coverage->setData(array (
       8 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
       9 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
     ),
-    217 => NULL,
+    140 => NULL,
+    150 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    152 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    153 => NULL,
+    163 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    164 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    165 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    167 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    168 => NULL,
+    175 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+    ),
+    176 => NULL,
+    185 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    187 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    188 => NULL,
+    195 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    196 => NULL,
+    203 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+    ),
+    204 => NULL,
+    213 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+    ),
+    215 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+    ),
+    216 => NULL,
+    225 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
     227 => 
     array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    229 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    230 => NULL,
-    240 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    241 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    242 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    244 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    245 => NULL,
-    252 => 
+    228 => NULL,
+  ),
+  '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethodInterface.php' => 
+  array (
+  ),
+  '/var/www/payu/src/Team3/Order/Model/OrderGeneralParametersTrait.php' => 
+  array (
+    76 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    253 => NULL,
-    262 => 
+    77 => NULL,
+    86 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    264 => 
+    88 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    265 => NULL,
-    272 => 
+    89 => NULL,
+    96 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    273 => NULL,
-    282 => 
+    97 => NULL,
+    106 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1904,7 +2036,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    284 => 
+    108 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1912,16 +2044,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    285 => NULL,
-    292 => 
+    109 => NULL,
+    116 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    293 => NULL,
-    302 => 
+    117 => NULL,
+    126 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1929,7 +2061,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    304 => 
+    128 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1937,16 +2069,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    305 => NULL,
-    312 => 
+    129 => NULL,
+    136 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    313 => NULL,
-    322 => 
+    137 => NULL,
+    146 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1954,7 +2086,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    324 => 
+    148 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1962,16 +2094,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    325 => NULL,
-    332 => 
+    149 => NULL,
+    156 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    333 => NULL,
-    342 => 
+    157 => NULL,
+    166 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1979,7 +2111,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    344 => 
+    168 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1987,8 +2119,8 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    345 => NULL,
-    352 => 
+    169 => NULL,
+    176 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -1996,8 +2128,8 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    353 => NULL,
-    362 => 
+    177 => NULL,
+    186 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2005,7 +2137,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    364 => 
+    188 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2013,16 +2145,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    365 => NULL,
-    372 => 
+    189 => NULL,
+    196 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    373 => NULL,
-    382 => 
+    197 => NULL,
+    206 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2030,7 +2162,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    384 => 
+    208 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2038,14 +2170,14 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    385 => NULL,
-    392 => 
+    209 => NULL,
+    216 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    393 => NULL,
-    402 => 
+    217 => NULL,
+    226 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2053,7 +2185,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    404 => 
+    228 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2061,149 +2193,23 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    405 => NULL,
-    414 => 
+    229 => NULL,
+    238 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    416 => 
+    240 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    417 => NULL,
-    424 => 
+    241 => NULL,
+    248 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
     ),
-    425 => NULL,
-    432 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    433 => NULL,
-    442 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    444 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    445 => NULL,
-    452 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    453 => NULL,
-    462 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    464 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    465 => NULL,
-    472 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    473 => NULL,
-    482 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    484 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    485 => NULL,
-    492 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-    ),
-    493 => NULL,
-    502 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    504 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    505 => NULL,
-    512 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    513 => NULL,
-    520 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-    ),
-    521 => NULL,
-    530 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-    ),
-    532 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-    ),
-    533 => NULL,
-    542 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    544 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    545 => NULL,
-  ),
-  '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethodInterface.php' => 
-  array (
+    249 => NULL,
   ),
   '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethod.php' => 
   array (
@@ -5939,6 +5945,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/src/tests/_output/coverage/Order/Annotation/dashboard.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Annotation/index.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Annotation/PayU.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/OrderUrlsTrait.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/dashboard.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/Order.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/OrderStatus.php.html' => true,
@@ -7756,6 +7763,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/SpacesBeforeSemicolonFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/StandardizeNotEqualFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/SingleArrayNoTrailingCommaFixerTest.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/JoinFunctionFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/ConcatWithoutSpacesFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/NamespaceNoLeadingWhitespaceFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/ReturnFixerTest.php' => true,
@@ -7772,6 +7780,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/PhpdocParamsFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/RemoveLeadingSlashUseFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/UnusedUseFixerTest.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/PhpdocIndentFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/DoubleArrowMultilineWhitespacesFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/Symfony/MultilineArrayTrailingCommaFixerTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Fixer/AbstractFixerTestBase.php' => true,
@@ -7794,6 +7803,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/TransformersTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/TokenTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/TokensTest.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/Transformer/DynamicVarBraceTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/Transformer/ClassConstantTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/Transformer/ArrayTypehintTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/Tokenizer/Transformer/DollarCloseCurlyBracesTest.php' => true,
@@ -7804,6 +7814,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tests/UtilsTest.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/FinderInterface.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Utils.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/AbstractAlignFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/ConfigurationResolver.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/FileCacheManager.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/FixerInterface.php' => true,
@@ -7833,6 +7844,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/IncludeFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/TernarySpacesFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/PhpdocParamsFixer.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/JoinFunctionFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/SingleArrayNoTrailingCommaFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/DoubleArrowMultilineWhitespacesFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/MultilineArrayTrailingCommaFixer.php' => true,
@@ -7842,6 +7854,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/WhitespacyLinesFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/ObjectOperatorFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/RemoveLinesBetweenUsesFixer.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/PhpdocIndentFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/NamespaceNoLeadingWhitespaceFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/ConcatWithoutSpacesFixer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Fixer/Symfony/UnusedUseFixer.php' => true,
@@ -7870,6 +7883,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/Transformer/DynamicPropBrace.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/Transformer/ClassConstant.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/Transformer/ArrayTypehint.php' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/Transformer/DynamicVarBrace.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/Tokens.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Tokenizer/AbstractTransformer.php' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/Symfony/CS/Config/Config.php' => true,
@@ -7887,6 +7901,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/README.rst' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/phpunit.xml.dist' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/composer.json' => true,
+  '/var/www/payu/vendor/fabpot/php-cs-fixer/COOKBOOK-FIXERS.md' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/box.json' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/LICENSE' => true,
   '/var/www/payu/vendor/phpspec/prophecy/src/Prophecy/Exception/Exception.php' => true,
@@ -8066,6 +8081,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/FailureException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/MatcherException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/StopOnFailureException.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/SkippingException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/ErrorException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/PendingException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Example/ExampleException.php' => true,
@@ -8073,6 +8089,8 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Exception.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/ExceptionFactory.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/PropertyNotFoundException.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/NamedConstructorNotFoundException.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/FactoryDoesNotReturnObjectException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/MethodInvocationException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/ClassNotFoundException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Fracture/InterfaceNotImplementedException.php' => true,
@@ -8084,9 +8102,19 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Exception/Wrapper/CollaboratorException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/GeneratorManager.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/TemplateRenderer.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/method.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_create_object.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/specification.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_exception.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/class.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/returnconstant.template' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/NamedConstructorGenerator.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/SpecificationGenerator.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/MethodGenerator.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ExistingConstructorTemplate.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ClassGenerator.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ReturnConstantGenerator.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/CreateObjectTemplate.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/PromptingGenerator.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/GeneratorInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/SpecificationInterface.php' => true,
@@ -8096,10 +8124,22 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Event/EventInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Event/ExpectationEvent.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Event/SpecificationEvent.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/PlatformSpecificReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/PhpExecutableReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/PassthruReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/CompositeReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/PcntlReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Process/ReRunner/OptionalReRunner.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/RerunListener.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/ClassNotFoundListener.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/StopOnFailureListener.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/BootstrapListener.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/MethodReturnedNullListener.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/StatisticsCollector.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/MethodNotFoundListener.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Listener/NamedConstructorNotFoundListener.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Config/OptionsConfig.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Loader/Node/SpecificationNode.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Loader/Node/ExampleNode.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Loader/ResourceLoader.php' => true,
@@ -8107,6 +8147,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/ObjectBehavior.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/JUnitFormatter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/HtmlFormatter.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/ObjectEngine.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/ArrayEngine.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/EngineInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/Differ/Differ.php' => true,
@@ -8114,6 +8155,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/StringPresenter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/TaggedPresenter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Presenter/PresenterInterface.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/ConsoleFormatter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/PrettyFormatter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/DotFormatter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Template.php' => true,
@@ -8128,10 +8170,12 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template/ReportPass.html' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template/ReportSummary.html' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template/ReportLine.html' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template/ReportSkipped.html' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template/ReportPending.html' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportPassedItem.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportPendingItem.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportItemFactory.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportSkippedItem.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/Template.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/InvalidExampleResultException.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/IO.php' => true,
@@ -8139,12 +8183,15 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportFailedItem.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Formatter/Html/ReportItem.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/Formatter.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/ContainerAssembler.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/IO.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/Application.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/Command/DescribeCommand.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/Command/RunCommand.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Console/ResultConverter.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Util/Instantiator.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Util/Filesystem.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Util/MethodAnalyser.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/IO/IOInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Wrapper/Collaborator.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Wrapper/Subject.php' => true,
@@ -8185,12 +8232,14 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Locator/ResourceLocatorInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Locator/ResourceInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Locator/ResourceManager.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Locator/ResourceManagerInterface.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/src/PhpSpec/Factory/ReflectionFactory.php' => true,
-  '/var/www/payu/vendor/phpspec/phpspec/behat.yml' => true,
   '/var/www/payu/vendor/phpspec/phpspec/phpspec.yml' => true,
   '/var/www/payu/vendor/phpspec/phpspec/CHANGES.md' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/README.rst' => true,
   '/var/www/payu/vendor/phpspec/phpspec/composer.json' => true,
-  '/var/www/payu/vendor/phpspec/phpspec/README.md' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/behat.yml.dist' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/Makefile' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Matcher/ThrowMatcherSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Matcher/ArrayCountMatcherSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Matcher/ComparisonMatcherSpec.php' => true,
@@ -8204,34 +8253,49 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Matcher/StringEndMatcherSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Matcher/ObjectStateMatcherSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/ExceptionSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Example/StopOnFailureExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Example/NotEqualExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/InterfaceNotImplementedExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/MethodNotFoundExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/PropertyNotFoundExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/ClassNotFoundExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/MethodNotVisibleExceptionSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/Fracture/NamedConstructorNotFoundExceptionSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Exception/ExceptionFactorySpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/GeneratorManagerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/TemplateRendererSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/Generator/SpecificationGeneratorSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/Generator/NamedConstructorGeneratorSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/Generator/ClassGeneratorSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/Generator/ReturnConstantGeneratorSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/CodeGenerator/Generator/MethodGeneratorSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Event/ExpectationEventSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Event/SpecificationEventSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Event/SuiteEventSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Event/MethodCallEventSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Event/ExampleEventSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Process/ReRunner/PcntlReRunnerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Process/ReRunner/CompositeReRunnerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Process/ReRunner/OptionalReRunnerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Process/ReRunner/PassthruRerunnerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/StatisticsCollectorSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/NamedConstructorNotFoundListenerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/ClassNotFoundListenerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/MethodReturnedNullListenerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/RerunListenerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/MethodNotFoundListenerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Listener/StopOnFailureListenerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Config/OptionsConfigSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Loader/Node/ExampleNodeSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Loader/Node/SpecificationNodeSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Loader/SuiteSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/TaggedPresenterSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Differ/ObjectEngineSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Differ/DifferSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Differ/ArrayEngineSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/Differ/StringEngineSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Presenter/StringPresenterSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/ProgressFormatterSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/HtmlFormatterSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/BasicFormatterSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/JUnitFormatterSpec.php' => true,
@@ -8243,7 +8307,10 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Html/ReportFailedItemSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Formatter/Html/ReportPassedItemSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/ServiceContainerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Console/ResultConverterSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Console/IOSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Console/ApplicationSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Util/MethodAnalyserSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Util/InstantiatorSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Wrapper/Subject/Expectation/NegativeSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Wrapper/Subject/Expectation/DecoratorSpec.php' => true,
@@ -8258,28 +8325,45 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Runner/SpecificationRunnerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Runner/ExampleRunnerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Runner/CollaboratorManagerSpec.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Runner/Maintainer/MatchersMaintainerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Runner/MatcherManagerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Locator/PSR0/PSR0ResourceSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Locator/PSR0/PSR0LocatorSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/spec/PhpSpec/Locator/ResourceManagerSpec.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_throw_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_comparison_matcher.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_string_regex_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_type_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_count_matcher.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_string_start_matcher.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_array_key_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_scalar_matcher.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_array_contain_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_inline_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_object_state_matcher.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_string_end_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/matchers/developer_uses_identity_matcher.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/exception_handling/developer_specifies_exceptions.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_reruns_features.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_generates_named_constructor.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_generates_spec.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_generates_class.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_generates_return_constant.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/code_generation/developer_generates_method.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/bootstrap/PhpSpecContext.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/bootstrap/Console/InteractiveStringInput.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/bootstrap/Console/LoggingReRunner.php' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/bootstrap/Console/ApplicationTester.php' => true,
-  '/var/www/payu/vendor/phpspec/phpspec/features/bootstrap/FeatureContext.php' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/formatter/developer_is_shown_diffs.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/formatter/use_the_junit_formatter.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/options/developer_chooses_no_code_generation.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/options/developer_chooses_stop_on_failure.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/construction/developer_specifies_object_construction.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/runner/developer_is_told_about_pending_specs.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/runner/developer_skips_specs.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/features/runner/developer_runs_specs_with_bootstrap.feature' => true,
   '/var/www/payu/vendor/phpspec/phpspec/features/runner/developer_runs_specs.feature' => true,
+  '/var/www/payu/vendor/phpspec/phpspec/box.json' => true,
   '/var/www/payu/vendor/phpspec/phpspec/LICENSE' => true,
   '/var/www/payu/vendor/autoload.php' => true,
   '/var/www/payu/vendor/phpcollection/phpcollection/src/PhpCollection/CollectionInterface.php' => true,

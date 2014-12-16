@@ -11,20 +11,29 @@ use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
 use Team3\Order\Model\Products\ProductCollection;
-use Team3\Order\Model\Products\ProductCollectionInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollection;
-use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
+use Team3\Order\Model\Traits\ProductCollectionTrait;
+use Team3\Order\Model\Traits\ShippingMethodCollectionTrait;
+use Team3\Order\Model\Traits\UrlsTrait;
 
 /**
  * Class Order
  * @package Team3\Order\Model
  * @JMS\AccessorOrder("alphabetical")
  * @JMS\AccessType("public_method")
- * @SuppressWarnings(PHPMD.TooManyFields)
  */
 class Order implements OrderInterface
 {
     use IsFilledTrait;
+    use UrlsTrait;
+    use ProductCollectionTrait;
+    use ShippingMethodCollectionTrait;
+
+    /**
+     * @var BuyerInterface
+     * @JMS\Type("Team3\Order\Model\Buyer\Buyer")
+     */
+    protected $buyer;
 
     /**
      * @var string
@@ -85,49 +94,6 @@ class Order implements OrderInterface
     protected $signature;
 
     /**
-     * @var string
-     * @JMS\Type("string")
-     * @JMS\SerializedName("continueUrl")
-     */
-    protected $continueUrl;
-
-    /**
-     * @var string
-     * @JMS\Type("string")
-     * @JMS\SerializedName("notifyUrl")
-     */
-    protected $notifyUrl;
-
-    /**
-     * @var string
-     * @JMS\Type("string")
-     * @JMS\SerializedName("orderUrl")
-     */
-    protected $orderUrl;
-
-    /**
-     * @var BuyerInterface
-     * @JMS\Type("Team3\Order\Model\Buyer\Buyer")
-     */
-    protected $buyer;
-
-    /**
-     * @var ProductCollectionInterface
-     * @JMS\Type("array<Team3\Order\Model\Products\Product>")
-     * @JMS\SerializedName("products")
-     * @JMS\Accessor(setter="setProductCollectionFromDeserialization")
-     */
-    protected $productCollection;
-
-    /**
-     * @var ShippingMethodCollectionInterface
-     * @JMS\Type("array<Team3\Order\Model\ShippingMethods\ShippingMethod>")
-     * @JMS\SerializedName("shippingMethods")
-     * @JMS\Accessor(setter="setShippingMethodCollectionFromDeserialization")
-     */
-    protected $shippingMethodCollection;
-
-    /**
      * @var \DateTime
      * @JMS\Type("DateTime<'Y-m-d\TH:i:s.uP'>")
      * @JMS\SerializedName("orderCreateDate")
@@ -173,78 +139,6 @@ class Order implements OrderInterface
     }
 
     /**
-     * @return ProductCollectionInterface
-     */
-    public function getProductCollection()
-    {
-        return $this->productCollection;
-    }
-
-    /**
-     * @param ProductCollectionInterface $productCollection
-     *
-     * @return Order
-     */
-    public function setProductCollection(
-        ProductCollectionInterface $productCollection
-    ) {
-        $this->productCollection = $productCollection;
-
-        return $this;
-    }
-
-    /**
-     * @param array $products
-     *
-     * @return $this
-     */
-    public function setProductCollectionFromDeserialization(
-        array $products
-    ) {
-        $this->setProductCollection(
-            new ProductCollection($products)
-        );
-
-        return $this;
-    }
-
-    /**
-     * @return ShippingMethodCollectionInterface
-     */
-    public function getShippingMethodCollection()
-    {
-        return $this->shippingMethodCollection;
-    }
-
-    /**
-     * @param ShippingMethodCollectionInterface $shippingMethodCollection
-     *
-     * @return Order
-     */
-    public function setShippingMethodCollection(
-        ShippingMethodCollectionInterface $shippingMethodCollection
-    ) {
-        $this->shippingMethodCollection = $shippingMethodCollection;
-
-        return $this;
-    }
-
-    /**
-     * @param array $shippingMethods
-     *
-     * @return $this
-     */
-    public function setShippingMethodCollectionFromDeserialization(
-        array $shippingMethods
-    ) {
-        $this->setShippingMethodCollection(
-            new ShippingMethodCollection($shippingMethods)
-        );
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getAdditionalDescription()
@@ -255,7 +149,7 @@ class Order implements OrderInterface
     /**
      * @param string $additionalDescription
      *
-     * @return Order
+     * @return $this
      */
     public function setAdditionalDescription($additionalDescription)
     {
@@ -275,7 +169,7 @@ class Order implements OrderInterface
     /**
      * @param string $currencyCode
      *
-     * @return Order
+     * @return $this
      */
     public function setCurrencyCode($currencyCode)
     {
@@ -295,7 +189,7 @@ class Order implements OrderInterface
     /**
      * @param string $customerIp
      *
-     * @return Order
+     * @return $this
      */
     public function setCustomerIp($customerIp)
     {
@@ -315,7 +209,7 @@ class Order implements OrderInterface
     /**
      * @param string $description
      *
-     * @return Order
+     * @return $this
      */
     public function setDescription($description)
     {
@@ -335,7 +229,7 @@ class Order implements OrderInterface
     /**
      * @param string $merchantPosId
      *
-     * @return Order
+     * @return $this
      */
     public function setMerchantPosId($merchantPosId)
     {
@@ -355,7 +249,7 @@ class Order implements OrderInterface
     /**
      * @param string $orderId
      *
-     * @return Order
+     * @return $this
      */
     public function setOrderId($orderId)
     {
@@ -375,7 +269,7 @@ class Order implements OrderInterface
     /**
      * @param string $signature
      *
-     * @return Order
+     * @return $this
      */
     public function setSignature($signature)
     {
@@ -395,7 +289,7 @@ class Order implements OrderInterface
     /**
      * @param MoneyInterface $totalAmount
      *
-     * @return Order
+     * @return $this
      */
     public function setTotalAmount(MoneyInterface $totalAmount)
     {
@@ -425,66 +319,6 @@ class Order implements OrderInterface
     }
 
     /**
-     * @return string
-     */
-    public function getContinueUrl()
-    {
-        return $this->continueUrl;
-    }
-
-    /**
-     * @param string $continueUrl
-     *
-     * @return Order
-     */
-    public function setContinueUrl($continueUrl)
-    {
-        $this->continueUrl = $continueUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNotifyUrl()
-    {
-        return $this->notifyUrl;
-    }
-
-    /**
-     * @param string $notifyUrl
-     *
-     * @return Order
-     */
-    public function setNotifyUrl($notifyUrl)
-    {
-        $this->notifyUrl = $notifyUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrderUrl()
-    {
-        return $this->orderUrl;
-    }
-
-    /**
-     * @param string $orderUrl
-     *
-     * @return Order
-     */
-    public function setOrderUrl($orderUrl)
-    {
-        $this->orderUrl = $orderUrl;
-
-        return $this;
-    }
-
-    /**
      * @return \DateTime
      */
     public function getCreatedAt()
@@ -495,7 +329,7 @@ class Order implements OrderInterface
     /**
      * @param \DateTime $createdAt
      *
-     * @return Order
+     * @return $this
      */
     public function setCreatedAt(\DateTime $createdAt)
     {
@@ -523,7 +357,7 @@ class Order implements OrderInterface
     /**
      * @param OrderStatusInterface $status
      *
-     * @return Order
+     * @return $this
      */
     public function setStatus(OrderStatusInterface $status)
     {
