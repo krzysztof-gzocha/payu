@@ -10,6 +10,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
 {
     const ANNOTATION_PROPERTY_NAME = 'test';
     const MODELS_METHOD_NAME = 'method';
+    const READER_INTERFACE = '\Team3\PropertyExtractor\Reader\ReaderInterface';
 
     /**
     * @var \UnitTester
@@ -26,7 +27,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
      */
     protected function _before()
     {
-        $reader = $this->getMock(ReaderInterface::class);
+        $reader = $this->getMock(self::READER_INTERFACE);
         $reader
             ->expects($this->any())
             ->method('read')
@@ -78,7 +79,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
      */
     public function testThrowingExceptionWhenWrongMethodReturned()
     {
-        $reader = $this->getMock(ReaderInterface::class);
+        $reader = $this->getMock(self::READER_INTERFACE);
         $reader
             ->expects($this->any())
             ->method('read')

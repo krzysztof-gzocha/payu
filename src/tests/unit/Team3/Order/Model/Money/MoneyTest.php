@@ -8,6 +8,8 @@ namespace Team3\Order\Model\Money;
  */
 class MoneyTest extends \Codeception\TestCase\Test
 {
+    const WRONG_MONEY_EXCEPTION_CLASS = '\Team3\Order\Model\Money\WrongMoneyValueException';
+
     /**
      * @var \UnitTester
      */
@@ -61,7 +63,7 @@ class MoneyTest extends \Codeception\TestCase\Test
 
     public function testIfThrowsExceptionWhenArrayGiven()
     {
-        $this->setExpectedException(WrongMoneyValueException::class);
+        $this->setExpectedException(self::WRONG_MONEY_EXCEPTION_CLASS);
         $this->assertInstanceOf(
             'Team3\Order\Model\Money\MoneyInterface',
             new Money([])
@@ -70,7 +72,7 @@ class MoneyTest extends \Codeception\TestCase\Test
 
     public function testIfThrowsExceptionWhenObjectGiven()
     {
-        $this->setExpectedException(WrongMoneyValueException::class);
+        $this->setExpectedException(self::WRONG_MONEY_EXCEPTION_CLASS);
         $this->assertInstanceOf(
             'Team3\Order\Model\Money\MoneyInterface',
             new Money(new \stdClass())
@@ -79,7 +81,7 @@ class MoneyTest extends \Codeception\TestCase\Test
 
     public function testIfThrowsExceptionWhenNullGiven()
     {
-        $this->setExpectedException(WrongMoneyValueException::class);
+        $this->setExpectedException(self::WRONG_MONEY_EXCEPTION_CLASS);
         $this->assertInstanceOf(
             'Team3\Order\Model\Money\MoneyInterface',
             new Money(null)

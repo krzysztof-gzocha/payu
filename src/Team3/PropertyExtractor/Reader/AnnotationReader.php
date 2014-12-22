@@ -13,6 +13,7 @@ use Team3\PropertyExtractor\ExtractorException;
 
 class AnnotationReader implements ReaderInterface
 {
+    const ANNOTATION_CLASS = 'Team3\Order\Annotation\PayU';
     /**
      * @var Reader
      */
@@ -47,7 +48,7 @@ class AnnotationReader implements ReaderInterface
             /** @var PayU $methodAnnotation */
             $methodAnnotation = $this
                 ->reader
-                ->getMethodAnnotation($reflectionMethod, PayU::class);
+                ->getMethodAnnotation($reflectionMethod, self::ANNOTATION_CLASS);
 
             if (is_object($methodAnnotation)) {
                 $read[] = new ReaderResult(

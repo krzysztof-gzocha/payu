@@ -116,7 +116,7 @@ class SerializerTest extends \Codeception\TestCase\Test
     ]
 }';
         /** @var OrderInterface $deserializedObject */
-        $deserializedObject = $this->serializer->fromJson($serializedString, Order::class);
+        $deserializedObject = $this->serializer->fromJson($serializedString, 'Team3\Order\Model\Order');
 
         $this->assertEquals(
             $deserializedObject->getOrderId(),
