@@ -453,267 +453,227 @@ $coverage->setData(array (
   '/var/www/payu/src/Team3/Order/Model/OrderStatusInterface.php' => 
   array (
   ),
+  '/var/www/payu/src/Team3/Order/Model/Traits/ProductCollectionTrait.php' => 
+  array (
+    26 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      4 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
+      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
+      7 => 'Team3\\Validator\\Strategy\\ProductCollectionStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\ProductCollectionStrategyTest::testIfInvalidOrderWillNotPass',
+      9 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
+      10 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfEmptyOrderWillPass',
+      11 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
+      12 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
+    ),
+    27 => NULL,
+    37 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    39 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    40 => NULL,
+    50 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    51 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    52 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    54 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    55 => NULL,
+  ),
   '/var/www/payu/src/Team3/Order/Model/Buyer/InvoiceInterface.php' => 
   array (
   ),
+  '/var/www/payu/src/Team3/Order/Model/Traits/UrlsTrait.php' => 
+  array (
+    36 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    37 => NULL,
+    46 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    48 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    49 => NULL,
+    56 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    57 => NULL,
+    66 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    68 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    69 => NULL,
+    76 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    77 => NULL,
+    86 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    88 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    89 => NULL,
+  ),
+  '/var/www/payu/src/Team3/Order/Model/Traits/ShippingMethodCollectionTrait.php' => 
+  array (
+    29 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      4 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
+      6 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfEmptyOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
+      9 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
+    ),
+    30 => NULL,
+    40 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    42 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    43 => NULL,
+    53 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    54 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    55 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    57 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    58 => NULL,
+  ),
   '/var/www/payu/src/Team3/Order/Model/Buyer/Invoice.php' => 
   array (
-    82 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      3 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    83 => NULL,
-    92 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    94 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    95 => NULL,
-    102 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      3 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    103 => NULL,
-    112 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    114 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    115 => NULL,
-    122 => 
+    39 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    123 => NULL,
-    132 => 
+    40 => NULL,
+    49 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    134 => 
+    51 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    135 => NULL,
-    142 => 
+    52 => NULL,
+    59 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    143 => NULL,
-    152 => 
+    60 => NULL,
+    69 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    154 => 
+    71 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    155 => NULL,
-    162 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      3 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    163 => NULL,
-    172 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    174 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    175 => NULL,
-    182 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    183 => NULL,
-    192 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    194 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    195 => NULL,
-    202 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    203 => NULL,
-    212 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    214 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    215 => NULL,
-    222 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    223 => NULL,
-    232 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    234 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    235 => NULL,
-    242 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    243 => NULL,
-    252 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    254 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    255 => NULL,
-    262 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      3 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    263 => NULL,
-    272 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    274 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
-    ),
-    275 => NULL,
+    72 => NULL,
   ),
   '/var/www/payu/src/Team3/Order/Model/OrderInterface.php' => 
   array (
@@ -723,190 +683,244 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/Order/Model/Buyer/Delivery.php' => 
   array (
+  ),
+  '/var/www/payu/src/Team3/Order/Model/Traits/AddressTrait.php' => 
+  array (
+    60 => 
+    array (
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      4 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    61 => NULL,
     70 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    71 => NULL,
+    72 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    73 => NULL,
     80 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      4 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    82 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    83 => NULL,
+    81 => NULL,
     90 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    91 => NULL,
+    92 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    93 => NULL,
     100 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    102 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    103 => NULL,
+    101 => NULL,
     110 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
     ),
-    111 => NULL,
+    112 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+    ),
+    113 => NULL,
     120 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      4 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    122 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-    ),
-    123 => NULL,
+    121 => NULL,
     130 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    131 => NULL,
+    132 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
+    ),
+    133 => NULL,
     140 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    142 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    143 => NULL,
+    141 => NULL,
     150 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
     ),
-    151 => NULL,
+    152 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+    ),
+    153 => NULL,
     160 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    162 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-    ),
-    163 => NULL,
+    161 => NULL,
     170 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
     ),
-    171 => NULL,
+    172 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+    ),
+    173 => NULL,
     180 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    182 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-    ),
-    183 => NULL,
+    181 => NULL,
     190 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
     ),
-    191 => NULL,
+    192 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+    ),
+    193 => NULL,
     200 => 
     array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      4 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      5 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    202 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-    ),
-    203 => NULL,
+    201 => NULL,
     210 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      2 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-      3 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfOrderWithoutInformationWillNotBeValidated',
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
+      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    211 => NULL,
-    220 => 
+    212 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -915,18 +929,11 @@ $coverage->setData(array (
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
       5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
       6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
+      7 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfValidOrderWillPass',
+      8 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
+      9 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    222 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      5 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfValidOrderWillPass',
-      6 => 'Team3\\Validator\\Strategy\\DeliveryValidatorStrategyTest::testIfInvalidOrderWillNotPass',
-    ),
-    223 => NULL,
+    213 => NULL,
   ),
   '/var/www/payu/src/Team3/Order/Model/Products/ProductCollection.php' => 
   array (
@@ -1263,85 +1270,6 @@ $coverage->setData(array (
     ),
     77 => NULL,
   ),
-  '/var/www/payu/src/Team3/Order/Model/OrderUrlsTrait.php' => 
-  array (
-    36 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    37 => NULL,
-    46 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    48 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    49 => NULL,
-    56 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    57 => NULL,
-    66 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    68 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    69 => NULL,
-    76 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    77 => NULL,
-    86 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    88 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    89 => NULL,
-  ),
   '/var/www/payu/src/Team3/Order/Model/Buyer/Buyer.php' => 
   array (
     56 => 
@@ -1634,7 +1562,7 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/Order/Model/Order.php' => 
   array (
-    72 => 
+    119 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1673,7 +1601,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    73 => 
+    120 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1712,7 +1640,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    74 => 
+    121 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1751,7 +1679,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    75 => 
+    122 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1790,7 +1718,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    76 => 
+    123 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1829,7 +1757,7 @@ $coverage->setData(array (
       34 => 'Team3\\Validator\\ValidatorTest::testIfStrategiesErrorArePropagated',
       35 => 'Team3\\Validator\\ValidatorTest::testIfErrorsAreClearedEachTime',
     ),
-    83 => 
+    130 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
@@ -1849,186 +1777,42 @@ $coverage->setData(array (
       15 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfEmptyOrderWillPass',
       16 => 'Team3\\Validator\\Strategy\\InvoiceValidatorStrategyTest::testIfInvalidValuesWillCauseErrors',
     ),
-    84 => NULL,
-    93 => 
+    131 => NULL,
+    140 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
     ),
-    95 => 
+    142 => 
     array (
       0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
     ),
-    96 => NULL,
-    103 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      4 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
-      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
-      7 => 'Team3\\Validator\\Strategy\\ProductCollectionStrategyTest::testIfValidOrderWillPass',
-      8 => 'Team3\\Validator\\Strategy\\ProductCollectionStrategyTest::testIfInvalidOrderWillNotPass',
-      9 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfValidOrderWillPass',
-      10 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfEmptyOrderWillPass',
-      11 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testIfInvalidOrderWillNotPass',
-      12 => 'Team3\\Validator\\Strategy\\ProductStrategyTest::testInvalidOrderWithInvalidMoneyWillNotPass',
-    ),
-    104 => NULL,
-    114 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    116 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    117 => NULL,
-    127 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    128 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    129 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    131 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    132 => NULL,
-    139 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      3 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-      4 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
-      6 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfEmptyOrderWillPass',
-      7 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfValidOrderWillPass',
-      8 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWillNotPass',
-      9 => 'Team3\\Validator\\Strategy\\ShippingMethodStrategyTest::testIfInvalidOrderWithoutMoneyWillNotPass',
-    ),
-    140 => NULL,
+    143 => NULL,
     150 => 
     array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    152 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    153 => NULL,
-    163 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    164 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    165 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    167 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    168 => NULL,
-    175 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-    ),
-    176 => NULL,
-    185 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    187 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    188 => NULL,
-    195 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    196 => NULL,
-    203 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
-      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
-      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
-    ),
-    204 => NULL,
-    213 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-    ),
-    215 => 
-    array (
-      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
-    ),
-    216 => NULL,
-    225 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    227 => 
-    array (
-      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
-    ),
-    228 => NULL,
-  ),
-  '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethodInterface.php' => 
-  array (
-  ),
-  '/var/www/payu/src/Team3/Order/Model/OrderGeneralParametersTrait.php' => 
-  array (
-    76 => 
-    array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    77 => NULL,
-    86 => 
+    151 => NULL,
+    160 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    88 => 
+    162 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    89 => NULL,
-    96 => 
+    163 => NULL,
+    170 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    97 => NULL,
-    106 => 
+    171 => NULL,
+    180 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2036,7 +1820,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    108 => 
+    182 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2044,16 +1828,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    109 => NULL,
-    116 => 
+    183 => NULL,
+    190 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    117 => NULL,
-    126 => 
+    191 => NULL,
+    200 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2061,7 +1845,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    128 => 
+    202 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2069,16 +1853,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    129 => NULL,
-    136 => 
+    203 => NULL,
+    210 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    137 => NULL,
-    146 => 
+    211 => NULL,
+    220 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2086,7 +1870,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    148 => 
+    222 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2094,16 +1878,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    149 => NULL,
-    156 => 
+    223 => NULL,
+    230 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    157 => NULL,
-    166 => 
+    231 => NULL,
+    240 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2111,7 +1895,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    168 => 
+    242 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2119,8 +1903,8 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    169 => NULL,
-    176 => 
+    243 => NULL,
+    250 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2128,8 +1912,8 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    177 => NULL,
-    186 => 
+    251 => NULL,
+    260 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2137,7 +1921,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    188 => 
+    262 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2145,16 +1929,16 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    189 => NULL,
-    196 => 
+    263 => NULL,
+    270 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
       3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    197 => NULL,
-    206 => 
+    271 => NULL,
+    280 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2162,7 +1946,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    208 => 
+    282 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2170,14 +1954,14 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    209 => NULL,
-    216 => 
+    283 => NULL,
+    290 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    217 => NULL,
-    226 => 
+    291 => NULL,
+    300 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2185,7 +1969,7 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    228 => 
+    302 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
@@ -2193,23 +1977,73 @@ $coverage->setData(array (
       3 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
       4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
     ),
-    229 => NULL,
-    238 => 
+    303 => NULL,
+    312 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    240 => 
+    314 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
     ),
-    241 => NULL,
-    248 => 
+    315 => NULL,
+    322 => 
     array (
       0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
       1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
       2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
     ),
-    249 => NULL,
+    323 => NULL,
+    330 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+    ),
+    331 => NULL,
+    340 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    342 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    343 => NULL,
+    350 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    351 => NULL,
+    358 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsJson',
+      1 => 'Team3\\Order\\Serializer\\SerializerTest::testIfResultIsFull',
+      2 => 'Team3\\Order\\Serializer\\SerializerTest::testResultWithoutDeliveryAndInvoice',
+    ),
+    359 => NULL,
+    368 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+    ),
+    370 => 
+    array (
+      0 => 'Team3\\Order\\Model\\OrderTest::testSetters',
+    ),
+    371 => NULL,
+    380 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    382 => 
+    array (
+      0 => 'Team3\\Order\\Serializer\\SerializerTest::testDeserialization',
+    ),
+    383 => NULL,
+  ),
+  '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethodInterface.php' => 
+  array (
   ),
   '/var/www/payu/src/Team3/Order/Model/ShippingMethods/ShippingMethod.php' => 
   array (
@@ -2849,32 +2683,6 @@ $coverage->setData(array (
   ),
   '/var/www/payu/src/Team3/PropertyExtractor/Reader/AnnotationReader.php' => 
   array (
-    26 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfIsImplementingStrategyInterface',
-      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfSupportsOnlyCertainPropertyName',
-      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfImplementsStrategyInterface',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfSupportsOnlyCertainPropertyName',
-      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsImplementingStrategyInterface',
-      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfSupportGeneralParameters',
-      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
-      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfImplementsStrategyInterface',
-      10 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfSupportsOnlyCertainPropertyName',
-      11 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      12 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testSupportsMethod',
-      13 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
-      14 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
-      15 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testExceptionWhenWrongProductCollectionTypeIsReturned',
-      16 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfSupportsOnlyCertainPropertyName',
-      17 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
-      18 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
-      19 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
-      20 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfSupportsOnlyCertainParameterName',
-      21 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-      22 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
-    ),
     27 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfIsImplementingStrategyInterface',
@@ -2901,19 +2709,31 @@ $coverage->setData(array (
       21 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
       22 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
     ),
-    35 => 
+    28 => 
     array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
-      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
-      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
-      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
-      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
-      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-      10 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfIsImplementingStrategyInterface',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfSupportsOnlyCertainPropertyName',
+      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfImplementsStrategyInterface',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfSupportsOnlyCertainPropertyName',
+      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsImplementingStrategyInterface',
+      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfSupportGeneralParameters',
+      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
+      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfImplementsStrategyInterface',
+      10 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfSupportsOnlyCertainPropertyName',
+      11 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      12 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testSupportsMethod',
+      13 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
+      14 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
+      15 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testExceptionWhenWrongProductCollectionTypeIsReturned',
+      16 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfSupportsOnlyCertainPropertyName',
+      17 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
+      18 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
+      19 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
+      20 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfSupportsOnlyCertainParameterName',
+      21 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+      22 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
     ),
     36 => 
     array (
@@ -2931,7 +2751,17 @@ $coverage->setData(array (
     ),
     37 => 
     array (
-      0 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
+      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
+      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
+      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
+      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
+      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+      10 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
     ),
     38 => 
     array (
@@ -2941,11 +2771,15 @@ $coverage->setData(array (
     array (
       0 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
     ),
-    41 => 
+    40 => 
     array (
       0 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
     ),
-    44 => 
+    42 => 
+    array (
+      0 => 'Team3\\PropertyExtractor\\Reader\\AnnotationReaderTest::testIfExceptionIsThrown',
+    ),
+    45 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -2958,7 +2792,7 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    46 => 
+    47 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -2971,7 +2805,7 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    48 => 
+    49 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -2984,20 +2818,7 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    50 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
-      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
-      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
-      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
-      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
-      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
-      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
-      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
-      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
-    ),
-    52 => 
+    51 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -3088,7 +2909,7 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    60 => 
+    59 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -3101,8 +2922,7 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    61 => NULL,
-    70 => 
+    61 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
@@ -3115,7 +2935,21 @@ $coverage->setData(array (
       8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
       9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
     ),
-    71 => NULL,
+    62 => NULL,
+    71 => 
+    array (
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\BuyerTransformerTest::testIfAllValuesAreCopied',
+      1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\DeliveryTransformerTest::testIfAllValuesAreCopied',
+      2 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\GeneralTransformerTest::testIfIsCopingValues',
+      3 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+      4 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromArray',
+      5 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ProductCollectionTransformerTest::testResultsFromTraversable',
+      6 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testResultsOnRealExample',
+      7 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\ShippingMethodCollectionTransformerTest::testIfExceptionIsThrown',
+      8 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\ShippingMethod\\SingleShippingMethodTransformerTest::testOnRealExample',
+      9 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\UrlsTransformerTest::testIfAllValuesAreCopied',
+    ),
+    72 => NULL,
   ),
   '/var/www/payu/src/Team3/PropertyExtractor/Reader/ReaderInterface.php' => 
   array (
@@ -3761,49 +3595,30 @@ $coverage->setData(array (
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    32 => 
+    26 => NULL,
+    28 => 
+    array (
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+    ),
+    29 => 
+    array (
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+    ),
+    30 => 
+    array (
+      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
+    ),
+    37 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfSupportsOnlyCertainPropertyName',
       1 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    33 => NULL,
-    44 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    45 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    46 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    47 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    48 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    49 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
+    38 => NULL,
     50 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
     51 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    52 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    53 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
@@ -3823,86 +3638,11 @@ $coverage->setData(array (
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    58 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    59 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
     60 => 
     array (
       0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
     ),
-    61 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    62 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    63 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    64 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    65 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    66 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    67 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    68 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    69 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    70 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    71 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    72 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    73 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    74 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    75 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    76 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
-    77 => 
-    array (
-      0 => 'Team3\\Order\\Transformer\\UserOrder\\Strategy\\InvoiceTransformerTest::testIfAllValuesAreCopied',
-    ),
+    61 => NULL,
   ),
   '/var/www/payu/src/Team3/Order/Transformer/UserOrder/Strategy/Product/ProductCollectionTransformer.php' => 
   array (
@@ -5963,6 +5703,13 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/src/tests/_output/coverage/Order/Model/Money/Money.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/Money/MoneyInterface.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/IsFilledTrait.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/dashboard.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/UrlsTrait.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/index.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/AddressTrait.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/ProductCollectionTrait.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/Traits/ShippingMethodCollectionTrait.php.html' => true,
+  '/var/www/payu/src/tests/_output/coverage/Order/Model/OrderGeneralParametersTrait.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/OrderInterface.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/ShippingMethods/dashboard.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Order/Model/ShippingMethods/index.html' => true,
@@ -6022,6 +5769,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/src/tests/_output/coverage/Validator/AbstractValidator.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage/Validator/Validator.php.html' => true,
   '/var/www/payu/src/tests/_output/coverage.serialized' => true,
+  '/var/www/payu/src/tests/_output/build/logs/clover.xml' => true,
   '/var/www/payu/src/tests/_output/coverage.xml' => true,
   '/var/www/payu/src/tests/unit.suite.yml' => true,
   '/var/www/payu/src/tests/acceptance/AcceptanceTester.php' => true,
@@ -7608,7 +7356,6 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/composer/installed.json' => true,
   '/var/www/payu/vendor/composer/autoload_namespaces.php' => true,
   '/var/www/payu/vendor/composer/ClassLoader.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/phpunit.xml.dist' => true,
   '/var/www/payu/vendor/doctrine/annotations/composer.json' => true,
   '/var/www/payu/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/CachedReader.php' => true,
   '/var/www/payu/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Target.php' => true,
@@ -7630,84 +7377,6 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/IndexedReader.php' => true,
   '/var/www/payu/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php' => true,
   '/var/www/payu/vendor/doctrine/annotations/README.md' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/DoctrineTestCase.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Annotation/TargetTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/CachedReaderTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/SimpleAnnotationReaderTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/AbstractReaderTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/PhpParserTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/AnnotationReaderTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/DummyClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/PerformanceTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/DocLexerTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithAtInDescriptionAndAnnotation.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithAnnotationWithVarType.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithFullyQualifiedUseStatements.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithIgnoreAnnotation.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationEnumInvalid.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/Autoload.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/Secure.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/AnnotWithDefaultValue.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/Template.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/Route.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Annotation/Version.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassOverwritesTrait.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/EqualNamespacesPerFileWithClassAsFirst.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationTargetAnnotation.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithInvalidAnnotationTargetAtProperty.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithAnnotationEnum.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithTargetSyntaxError.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithValidAnnotationTarget.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationEnumLiteral.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithVarType.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassDDC1660.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithClassAnnotationOnly.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithRequire.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/IntefaceWithConstants.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/NonNamespacedClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/InvalidAnnotationUsageButIgnoredClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/MultipleClassesInFile.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithInvalidAnnotationTargetAtClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithRequiredAttributes.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithConstants.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/NoAnnotation.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithConstants.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationEnum.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/TraitWithAnnotatedMethod.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationTargetAll.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/DifferentNamespacesPerFileWithClassAsFirst.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassNoNamespaceNoComment.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Controller.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/EqualNamespacesPerFileWithClassAsLast.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/InvalidAnnotationUsageClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassUsesTrait.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/TestInterface.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/IgnoreAnnotationClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationTargetClass.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithRequiredAttributesWithoutContructor.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationTargetMethod.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/DifferentNamespacesPerFileWithClassAsLast.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationWithAttributes.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/NamespacedSingleClassLOC1000.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithClosure.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/GlobalNamespacesPerFileWithClassAsFirst.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithAnnotationWithTargetSyntaxError.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/NamespaceWithClosureDeclaration.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/SingleClassLOC1000.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/GlobalNamespacesPerFileWithClassAsLast.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/ClassWithInvalidAnnotationTargetAtMethod.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/NamespaceAndClassCommentedOut.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/MultipleImportsInUseStatement.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/Api.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationEnumLiteralInvalid.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Fixtures/AnnotationTargetPropertyMethod.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/TopLevelAnnotation.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/FileCacheReaderTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/DocParserTest.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Ticket/DCOM58Test.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Ticket/DCOM55Test.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations/Ticket/DCOM58Entity.php' => true,
-  '/var/www/payu/vendor/doctrine/annotations/tests/Doctrine/Tests/TestInit.php' => true,
   '/var/www/payu/vendor/doctrine/annotations/LICENSE' => true,
   '/var/www/payu/vendor/doctrine/lexer/composer.json' => true,
   '/var/www/payu/vendor/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php' => true,
@@ -7904,6 +7573,75 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/fabpot/php-cs-fixer/COOKBOOK-FIXERS.md' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/box.json' => true,
   '/var/www/payu/vendor/fabpot/php-cs-fixer/LICENSE' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Component/File/Path.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Component/Log/ConsoleLogger.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Component/System/SystemCommand.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Component/System/Git/GitCommand.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsBundle/Entity/ArrayConvertable.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsBundle/Console/Application.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Api/CoverallsApi.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Api/Jobs.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Collector/CiEnvVarsCollector.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Collector/GitInfoCollector.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Collector/CloverXmlCoverageCollector.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Config/Configurator.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Config/CoverallsConfiguration.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Config/Configuration.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/Coveralls.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/JsonFile.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/Git.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/Remote.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/Commit.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/SourceFile.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Entity/Metrics.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/src/Contrib/Bundle/CoverallsV1Bundle/Command/CoverallsV1JobsCommand.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/composer/bin/coveralls' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/CHANGELOG.md' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/travis.phpunit.xml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/phpunit.xml.dist' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/composer.json' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/README.md' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/build/config/phpmd.xml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/build/config/phpcs.xml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/build/config/apigen.neon' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/travis/empty' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Component/File/PathTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Component/Log/ConsoleLoggerTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Component/System/Git/GitCommandTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsBundle/Console/ApplicationTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Api/JobsTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Collector/GitInfoCollectorTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Collector/CiEnvVarsCollectorTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Collector/CloverXmlCoverageCollectorTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/empty.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/exclude_no_stmt_true.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/coverage_clover.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/src_dir.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/coverage_clover_invalid.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/coverage_clover_array.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/coverage_clover_not_found.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/exclude_no_stmt_false.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/exclude_no_stmt_invalid.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/coverage_clover_glob.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/src_dir_not_found.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/json_path.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/yaml/json_path_not_found.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/ConfiguratorTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Config/ConfigurationTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/JsonFileTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/SourceFileTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/MetricsTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/RemoteTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/CommitTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Entity/Git/GitTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/Contrib/Bundle/CoverallsV1Bundle/Command/CoverallsV1JobsCommandTest.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/prj/files/AbstractClass.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/prj/files/test2.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/prj/files/TestInterface.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/prj/files/test.php' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/tests/prj/coveralls.yml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/build.xml' => true,
+  '/var/www/payu/vendor/satooshi/php-coveralls/LICENSE' => true,
   '/var/www/payu/vendor/phpspec/prophecy/src/Prophecy/Exception/Exception.php' => true,
   '/var/www/payu/vendor/phpspec/prophecy/src/Prophecy/Exception/Prophecy/MethodProphecyException.php' => true,
   '/var/www/payu/vendor/phpspec/prophecy/src/Prophecy/Exception/Prophecy/ObjectProphecyException.php' => true,
@@ -8553,6 +8291,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/PHPUnit/ResultPrinter.php' => true,
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/PHPUnit/Listener.php' => true,
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/Util/XmlBuilder.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/src/Codeception/Util/JsonArray.php' => true,
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/Util/Locator.php' => true,
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/Util/FileSystem.php' => true,
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/Util/Autoload.php' => true,
@@ -8596,6 +8335,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/src/Codeception/SuiteManager.php' => true,
   '/var/www/payu/vendor/codeception/codeception/package/bin' => true,
   '/var/www/payu/vendor/codeception/codeception/package/stub.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/CONTRIBUTING.md' => true,
   '/var/www/payu/vendor/codeception/codeception/codecept.bat' => true,
   '/var/www/payu/vendor/codeception/codeception/CHANGELOG.md' => true,
   '/var/www/payu/vendor/codeception/codeception/autoload.php' => true,
@@ -8714,6 +8454,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/complex.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/button.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example6.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/bug1585.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example10.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example1.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/select_two_submits.php' => true,
@@ -8726,8 +8467,10 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/bug1467.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/empty_fill.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/file.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/bug1598.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/unchecked.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example16.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/index.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example3.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/textarea.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example13.php' => true,
@@ -8737,11 +8480,13 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example8.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/bug1535.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/select.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/field_values.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example5.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/select_multiple.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/hidden.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/popup.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/checkbox.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/relative_siteroot.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/field.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example14.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/data/app/view/form/example12.php' => true,
@@ -8898,6 +8643,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/ConfigurationTest.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Util/AnnotationTest.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Util/AutoloadTest.php' => true,
+  '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Util/JsonArrayTest.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Util/StubTest.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Util/LocatorTest.php' => true,
   '/var/www/payu/vendor/codeception/codeception/tests/unit/Codeception/Coverage/FilterTest.php' => true,
@@ -9354,6 +9100,507 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpmd/phpmd/CHANGELOG' => true,
   '/var/www/payu/vendor/phpmd/phpmd/build.xml' => true,
   '/var/www/payu/vendor/phpmd/phpmd/LICENSE' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Client.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/CachingConfigLoader.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ResponseClassException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ValidationException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandTransferException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/DescriptionBuilderException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceBuilderException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/CommandException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/InconsistentClientTransferException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Exception/ServiceNotFoundException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/Model.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorClassFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/MapResourceIteratorFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorApplyBatched.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/CompositeResourceIteratorFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/ResourceIteratorFactoryInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/AbstractResourceIteratorFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ValidatorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/OperationInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaValidator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Parameter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/SchemaFormatter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescription.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/Operation.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Description/ServiceDescriptionLoader.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilderLoader.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Builder/ServiceBuilder.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/ClientInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/AbstractCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationResponseParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CommandInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultRequestSerializer.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/RequestSerializerInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseParserInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/VisitorFlyweight.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/HeaderVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ResponseVisitorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/BodyVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/AbstractResponseVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/JsonVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/StatusCodeVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/ReasonPhraseVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/XmlVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/RequestVisitorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/HeaderVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/QueryVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/ResponseBodyVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/AbstractRequestVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFileVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/BodyVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/JsonVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/PostFieldVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Request/XmlVisitor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ClosureCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/OperationCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/CreateResponseClassEvent.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/DefaultResponseParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/ResponseClassInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/FactoryInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/CompositeFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ConcreteClassFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/AliasFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/MapFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/Command/Factory/ServiceDescriptionFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/ConfigLoaderInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Service/AbstractConfigLoader.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Inflection/PreComputedInflector.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Inflection/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Inflection/Inflector.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Inflection/MemoizingInflector.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Inflection/InflectorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/MapIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/FilterIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/README.md' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/ChunkedIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Iterator/MethodProxyIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/ClosureLogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/PsrLogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/LogAdapterInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/AbstractLogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/Zf2LogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/ArrayLogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/MonologLogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/Zf1LogAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/MessageFormatter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Log/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CurlException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/RequestException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/HttpException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ClientErrorResponseException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/TooManyRedirectsException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/BadResponseException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/ServerErrorResponseException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/MultiTransferException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBodyInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/IoEmittingEntityBody.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/DuplicateAggregator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/PhpAggregator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/CommaAggregator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/QueryAggregator/QueryAggregatorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactoryInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Request.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/MessageInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequestInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/RequestInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Response.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/AbstractMessage.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFileInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/PostFile.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderCollection.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactoryInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/CacheControl.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/Link.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/EntityBody.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/RedirectPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/ReadLimitEntityBody.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/CachingEntityBody.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/AbstractEntityBodyDecorator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Mimetypes.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/ClientInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlVersion.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMulti.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlHandle.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiProxy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlMultiInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/RequestMediator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/QueryString.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/Url.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Http/StaticClient.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/ExceptionCollection.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/GuzzleException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/InvalidArgumentException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/RuntimeException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/UnexpectedValueException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Exception/BadMethodCallException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/FromConfigInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/ToArrayInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/AbstractHasDispatcher.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/HasDispatcherInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Version.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Collection.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Common/Event.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/CurlAuth/CurlAuthPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/CurlAuth/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Async/AsyncPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Async/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Log/LogPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Log/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/History/HistoryPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/History/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponseExceptionInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/Exception/ErrorResponseException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/ErrorResponsePlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/CommandContentMd5Plugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/Md5ValidatorPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Exception/InvalidCookieException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/FileCookieJar.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/CookieJarInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar/ArrayCookieJar.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookiePlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/Cookie.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Mock/MockPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Mock/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffLogger.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/TruncatedBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CurlBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/CallbackBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/HttpBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ReasonPhraseBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ExponentialBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/ConstantBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/AbstractErrorCodeBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/BackoffStrategyInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Backoff/LinearBackoffStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/SkipRevalidation.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheKeyProvider.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CallbackCanCacheStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CachePlugin.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheStorageInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CacheKeyProviderInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCacheStorage.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultRevalidation.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DefaultCanCacheStrategy.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/RevalidationInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/CanCacheStrategyInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cache/DenyRevalidation.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/Exception/BatchTransferException.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchDivisorInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchSizeDivisor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/FlushingBatch.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchBuilder.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchCommandTransfer.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchTransferInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchRequestTransfer.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/NotifyingBatch.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/HistoryBatch.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/Batch.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/AbstractBatchDecorator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureTransfer.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/ExceptionBufferingBatch.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Batch/BatchClosureDivisor.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Stream/Stream.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Stream/StreamRequestFactoryInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Stream/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Stream/PhpStreamRequestFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/DoctrineCacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/NullCacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/ClosureCacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/AbstractCacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf1CacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf2CacheAdapter.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Cache/CacheAdapterFactory.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/AbstractMessageParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/PeclHttpMessageParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParserInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Message/MessageParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/ParserRegistry.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParserInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Cookie/CookieParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParserInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlParser.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplateInterface.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/UriTemplate.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/src/Guzzle/Parser/UriTemplate/PeclUriTemplate.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phar-stub.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/CHANGELOG.md' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phpunit.xml.dist' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/batching/batching.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_templates/index.html' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_templates/nav_links.html' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_templates/leftbar.html' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/testing/unit-testing.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/docs.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/getting-started/installation.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/getting-started/overview.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/getting-started/faq.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/http-redirects.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/uri-templates.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/response.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/client.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/request.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/http-client/entity-bodies.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/webservice-client/webservice-client.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/webservice-client/using-the-service-builder.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/webservice-client/guzzle-service-descriptions.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/Makefile' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/conf.py' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/index.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_static/logo.png' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_static/prettify.css' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_static/homepage.css' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_static/guzzle-icon.png' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_static/prettify.js' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/_downloads/guzzle-schema-1.0.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/iterators/guzzle-iterators.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/iterators/resource-iterators.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/requirements.txt' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/mock-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/async-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/creating-plugins.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/curl-auth-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/backoff-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/cookie-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/plugins-list.rst.inc' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/log-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/md5-validator-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/cache-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/history-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/oauth-plugin.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/docs/plugins/plugins-overview.rst' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/composer.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/UPGRADING.md' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/build.properties.dist' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/tasks/ComposerLintTask.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/tasks/GuzzleSubSplitTask.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/tasks/GuzzlePearPharPackageTask.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/imports/deploy.xml' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/phing/imports/dependencies.xml' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/README.md' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/bootstrap.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/ValidationExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/CommandTransferExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Exception/InconsistentClientTransferExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ResourceIteratorClassFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/CompositeResourceIteratorFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ResourceIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/ModelTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Resource/MapResourceIteratorFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/AbstractConfigLoaderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/ClientTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/OperationTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ServiceDescriptionLoaderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ParameterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/SchemaFormatterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/ServiceDescriptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Description/SchemaValidatorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Builder/ServiceBuilderLoaderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Builder/ServiceBuilderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Model/MockCommandIterator.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/MockClient.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/MockCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/Sub/Sub.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/OtherCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Mock/Command/IterableCommand.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/CachingConfigLoaderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/OperationCommandTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/AbstractCommandTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/ClosureCommandTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/OperationResponseParserTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/DefaultResponseParserTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/AbstractResponseVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/HeaderVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/JsonVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/BodyVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/XmlVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/StatusCodeVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Response/ReasonPhraseVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/VisitorFlyweightTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/AbstractVisitorTestCase.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/HeaderVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/PostFieldVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/JsonVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/BodyVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/XmlVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/QueryVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/ResponseBodyVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/LocationVisitor/Request/PostFileVisitorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/DefaultRequestSerializerTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/CommandTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/MapFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/ServiceDescriptionFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/ConcreteClassFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/CompositeFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Service/Command/Factory/AliasFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/InflectorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/MemoizingInflectorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Inflection/PreComputedInflectorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/GuzzleTestCase.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/AppendIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/ChunkedIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/FilterIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/MethodProxyIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Iterator/MapIteratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/PsrLogAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/ClosureLogAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/ArrayLogAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/MessageFormatterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Log/Zf2LogAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/CurlExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/MultiTransferExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Exception/ExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Server.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/UrlTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/EntityBodyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/MimetypesTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/ClientTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/CachingEntityBodyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/CommaAggregatorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/DuplicateAggregatorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryAggregator/PhpAggregatorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/RequestTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/EntityEnclosingRequestTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/ResponseTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderComparison.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/RequestFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/Header/HeaderFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/Header/LinkTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/AbstractMessageTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/HeaderComparisonTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Message/PostFileTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/RedirectPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/AbstractEntityBodyDecoratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/ReadLimitEntityBodyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/StaticClientTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlMultiTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlVersionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlHandleTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/CurlMultiProxyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/Curl/RequestMediatorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/IoEmittingEntityBodyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/QueryStringTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/Exception/ExceptionCollectionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/Exception/BatchTransferExceptionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/VersionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/AbstractHasDispatcherTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/EventTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Common/CollectionTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/CurlAuth/CurlAuthPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Async/AsyncPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Log/LogPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/History/HistoryPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/ErrorResponse/ErrorResponsePluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Md5/Md5ValidatorPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Md5/CommandContentMd5PluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookiePluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieJar/ArrayCookieJarTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cookie/CookieJar/FileCookieJarTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Mock/MockPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/BackoffPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/CurlBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/TruncatedBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/CallbackBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ExponentialBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/BackoffLoggerTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/HttpBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/AbstractBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ReasonPhraseBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/ConstantBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Backoff/LinearBackoffStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Oauth/OauthPluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DenyRevalidationTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultCacheStorageTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/CallbackCanCacheStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/SkipRevalidationTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/CachePluginTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultRevalidationTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Plugin/Cache/DefaultCanCacheStrategyTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/ExceptionMock.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/ErrorResponseMock.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockMulti.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/CustomResponseModel.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockObserver.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Mock/MockSubject.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchRequestTransferTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/ExceptionBufferingBatchTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchSizeDivisorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchClosureTransferTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/HistoryBatchTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchCommandTransferTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/NotifyingBatchTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/FlushingBatchTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchBuilderTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/AbstractBatchDecoratorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Batch/BatchClosureDivisorTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service2.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/FileBody.txt' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/foo.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/baz.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/bar.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/description/recursive.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/mock_response' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/json2.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/services.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/services/json1.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/TestData/test_service_3.json' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Stream/StreamTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Stream/PhpStreamRequestFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/CacheAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/ClosureCacheAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/NullCacheAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/Zf2CacheAdapterTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Cache/CacheAdapterFactoryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/MessageParserProvider.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/PeclHttpMessageParserTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Message/MessageParserTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/ParserRegistryTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Cookie/CookieParserProvider.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/Cookie/CookieParserTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/AbstractUriTemplateTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/UriTemplateTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/PeclUriTemplateTest.php' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/build.xml' => true,
+  '/var/www/payu/vendor/guzzle/guzzle/LICENSE' => true,
   '/var/www/payu/vendor/guzzlehttp/ringphp/src/Exception/CancelledFutureAccessException.php' => true,
   '/var/www/payu/vendor/guzzlehttp/ringphp/src/Exception/RingException.php' => true,
   '/var/www/payu/vendor/guzzlehttp/ringphp/src/Exception/ConnectException.php' => true,
@@ -9590,6 +9837,7 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/guzzlehttp/streams/tests/UtilsTest.php' => true,
   '/var/www/payu/vendor/guzzlehttp/streams/tests/InflateStreamTest.php' => true,
   '/var/www/payu/vendor/guzzlehttp/streams/LICENSE' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/composer/bin/test-reporter' => true,
   '/var/www/payu/vendor/phpunit/phpunit/phpunit' => true,
   '/var/www/payu/vendor/phing/phing/classes/phing/Target.php' => true,
   '/var/www/payu/vendor/phing/phing/classes/phing/system/io/WinNTFileSystem.php' => true,
@@ -10420,6 +10668,18 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/react/promise/tests/FulfilledPromiseTest.php' => true,
   '/var/www/payu/vendor/react/promise/tests/FunctionReduceTest.php' => true,
   '/var/www/payu/vendor/react/promise/LICENSE' => true,
+  '/var/www/payu/vendor/psr/log/composer.json' => true,
+  '/var/www/payu/vendor/psr/log/README.md' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/LogLevel.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/InvalidArgumentException.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/AbstractLogger.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/Test/LoggerInterfaceTest.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/LoggerInterface.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/LoggerAwareTrait.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/NullLogger.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/LoggerTrait.php' => true,
+  '/var/www/payu/vendor/psr/log/Psr/Log/LoggerAwareInterface.php' => true,
+  '/var/www/payu/vendor/psr/log/LICENSE' => true,
   '/var/www/payu/vendor/phpoption/phpoption/src/PhpOption/None.php' => true,
   '/var/www/payu/vendor/phpoption/phpoption/src/PhpOption/Some.php' => true,
   '/var/www/payu/vendor/phpoption/phpoption/src/PhpOption/Option.php' => true,
@@ -10434,6 +10694,23 @@ $filter->setBlacklistedFiles(array (
   '/var/www/payu/vendor/phpoption/phpoption/tests/PhpOption/Tests/SomeTest.php' => true,
   '/var/www/payu/vendor/phpoption/phpoption/tests/bootstrap.php' => true,
   '/var/www/payu/vendor/phpoption/phpoption/LICENSE' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Component/System/Git/GitCommand.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/CoverageCollector.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/ApiClient.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/Entity/CiInfo.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/Entity/JsonFile.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/Version.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/Console/Application.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/src/CodeClimate/Bundle/TestReporterBundle/Command/TestReporterCommand.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/DEVELOPING.md' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/phpunit.xml.dist' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/composer.json' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/README.md' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/tests/files/clover.xml' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/tests/files/test.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/tests/bootstrap.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/tests/CodeClimate/Bundle/TestReporterBundle/Console/ApplicationTest.php' => true,
+  '/var/www/payu/vendor/codeclimate/php-test-reporter/LICENSE' => true,
   '/var/www/payu/vendor/facebook/webdriver/composer.json' => true,
   '/var/www/payu/vendor/facebook/webdriver/lib/WebDriverKeyboard.php' => true,
   '/var/www/payu/vendor/facebook/webdriver/lib/WebDriverCommandExecutor.php' => true,

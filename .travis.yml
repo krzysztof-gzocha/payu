@@ -1,20 +1,25 @@
 language: php
+sudo: false
 
 php:
   - 5.4
   - 5.5
   - 5.6
+  - hhvm
 
 addons:
   code_climate:
     repo_token: 867c5e28ec9eab9e1f267802e29b0082903e8709ad91ac2d0340dde278b10a4b
 
-before_script: composer install --no-interaction --dev
+before_script:
+  - composer self-update
+  - composer install --no-interaction --dev
 
 script:
-  - ./bin/codecept run unit -c codeception.yml -q -n --coverage-xml build/logs/clover.xml
+  - ./bin/codecept run unit -c codeception.yml -q -n --coverage-xml ../../../build/logs/clover.xml
   - ./bin/phpspec run
   - ./bin/phpmd src/ text cleancode,codesize,controversial,design,unusedcode --exclude tests
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" == "hhvm" ]; then hhvm bin/codecept run unit; fi;'
 
 after_script:
   - vendor/bin/test-reporter

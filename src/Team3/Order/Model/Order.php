@@ -65,9 +65,13 @@ class Order implements OrderInterface
     /**
      * @var string
      * @JMS\Type("string")
+     * @JMS\Accessor(
+     *      getter="getAdditionalDescription",
+     *      setter="setAdditionalDescription"
+     * )
      * @JMS\SerializedName("additionalDescription")
      */
-    protected $additionalDescription;
+    protected $extraDescription;
 
     /**
      * @var string
@@ -114,7 +118,7 @@ class Order implements OrderInterface
     {
         $this->buyer = new Buyer();
         $this->productCollection = new ProductCollection();
-        $this->shippingMethodCollection = new ShippingMethodCollection();
+        $this->shippingCollection = new ShippingMethodCollection();
         $this->status = new OrderStatus();
     }
 
@@ -143,7 +147,7 @@ class Order implements OrderInterface
      */
     public function getAdditionalDescription()
     {
-        return $this->additionalDescription;
+        return $this->extraDescription;
     }
 
     /**
@@ -153,7 +157,7 @@ class Order implements OrderInterface
      */
     public function setAdditionalDescription($additionalDescription)
     {
-        $this->additionalDescription = $additionalDescription;
+        $this->extraDescription = $additionalDescription;
 
         return $this;
     }
