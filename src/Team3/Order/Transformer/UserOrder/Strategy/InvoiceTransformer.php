@@ -18,10 +18,15 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
         OrderInterface $order,
         ExtractorResult $extractorResult
     ) {
-        $this->copyValue(
-            $order->getBuyer()->getInvoice(),
-            $extractorResult
-        );
+        $invoice = $order->getBuyer()->getInvoice();
+        $property = $this->getInvoiceProperty($invoice, $extractorResult);
+
+        if (null === $property) {
+            return;
+        }
+
+        $property->setAccessible(true);
+        $property->setValue($invoice, $extractorResult->getValue());
     }
 
     /**
@@ -29,50 +34,29 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^invoice\.\w+/', $propertyName);
+        return true === (bool) preg_match('/^invoice\.\w+$/', $propertyName);
     }
 
     /**
      * @param InvoiceInterface $invoice
      * @param ExtractorResult  $extractorResult
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     *
+     * @return \ReflectionProperty|null
      */
-    private function copyValue(
+    private function getInvoiceProperty(
         InvoiceInterface $invoice,
         ExtractorResult $extractorResult
     ) {
-        switch ($extractorResult->getPropertyName()) {
-            case 'invoice.street':
-                $invoice->setStreet($extractorResult->getValue());
-                break;
-            case 'invoice.city':
-                $invoice->setCity($extractorResult->getValue());
-                break;
-            case 'invoice.countryCode':
-                $invoice->setCountryCode($extractorResult->getValue());
-                break;
-            case 'invoice.eInvoiceRequested':
-                $invoice->setEInvoiceRequested($extractorResult->getValue());
-                break;
-            case 'invoice.name':
-                $invoice->setName($extractorResult->getValue());
-                break;
-            case 'invoice.postalCode':
-                $invoice->setPostalCode($extractorResult->getValue());
-                break;
-            case 'invoice.recipientEmail':
-                $invoice->setRecipientEmail($extractorResult->getValue());
-                break;
-            case 'invoice.recipientName':
-                $invoice->setRecipientName($extractorResult->getValue());
-                break;
-            case 'invoice.recipientPhone':
-                $invoice->setRecipientPhone($extractorResult->getValue());
-                break;
-            case 'invoice.recipientTin':
-                $invoice->setRecipientTin($extractorResult->getValue());
-                break;
-            default:
+        $matches = [];
+        preg_match('/^invoice\.([a-zA-z]+)$/', $extractorResult->getPropertyName(), $matches);
+
+        try {
+            $reflectionClass = new \ReflectionClass($invoice);
+            $reflectionMethod = $reflectionClass->getProperty($matches[1]);
+        } catch (\ReflectionException $exception) {
+            return null;
         }
+
+        return $reflectionMethod;
     }
 }

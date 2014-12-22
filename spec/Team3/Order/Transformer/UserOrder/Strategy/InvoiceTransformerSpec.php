@@ -28,20 +28,4 @@ class InvoiceTransformerSpec extends ObjectBehavior
         $this->supports('wrong-invoice.test')->shouldReturn(false);
         $this->supports('invoice.')->shouldReturn(false);
     }
-
-    public function it_should_call_invoice(
-        OrderInterface $order,
-        BuyerInterface $buyer,
-        InvoiceInterface $invoice,
-        \stdClass $model,
-        ExtractorResult $extractorResult
-    ) {
-        $order->getBuyer()->willReturn($buyer);
-        $buyer->getInvoice()->willReturn($invoice);
-
-        $buyer->getInvoice()->shouldBeCalled();
-        $extractorResult->getPropertyName()->shouldBeCalled();
-
-        $this->transform($order, $extractorResult);
-    }
 }

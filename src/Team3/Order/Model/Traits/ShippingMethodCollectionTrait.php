@@ -14,16 +14,19 @@ trait ShippingMethodCollectionTrait
      * @var ShippingMethodCollectionInterface
      * @JMS\Type("array<Team3\Order\Model\ShippingMethods\ShippingMethod>")
      * @JMS\SerializedName("shippingMethods")
-     * @JMS\Accessor(setter="setShippingMethodCollectionFromDeserialization")
+     * @JMS\Accessor(
+     *      getter="getShippingMethodCollection",
+     *      setter="setShippingMethodCollectionFromDeserialization"
+     * )
      */
-    protected $shippingMethodCollection;
+    protected $shippingCollection;
 
     /**
      * @return ShippingMethodCollectionInterface
      */
     public function getShippingMethodCollection()
     {
-        return $this->shippingMethodCollection;
+        return $this->shippingCollection;
     }
 
     /**
@@ -34,7 +37,7 @@ trait ShippingMethodCollectionTrait
     public function setShippingMethodCollection(
         ShippingMethodCollectionInterface $shippingMethodCollection
     ) {
-        $this->shippingMethodCollection = $shippingMethodCollection;
+        $this->shippingCollection = $shippingMethodCollection;
 
         return $this;
     }
