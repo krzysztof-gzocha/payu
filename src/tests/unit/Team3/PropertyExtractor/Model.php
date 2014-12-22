@@ -5,7 +5,7 @@
 
 namespace tests\unit\Team3\PropertyExtractor;
 
-use Team3\Order\Annotation\PayU;
+use Team3\Annotation\PayU;
 
 class Model
 {

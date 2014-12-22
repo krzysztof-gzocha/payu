@@ -2,7 +2,7 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
-use Team3\Order\Annotation\PayU;
+use Team3\Annotation\PayU;
 use Team3\Order\Model\Money\Money;
 use Team3\PropertyExtractor\ExtractorResult;
 use Team3\PropertyExtractor\Reader\AnnotationReader;

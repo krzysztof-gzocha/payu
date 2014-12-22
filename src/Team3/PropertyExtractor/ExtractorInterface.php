@@ -6,7 +6,7 @@ namespace Team3\PropertyExtractor;
 
 /**
  * Interface ExtractorInterface
- * @package Team3\Order\Annotation\Extractor
+ * @package Team3\Annotation\Extractor
  */
 interface ExtractorInterface
 {

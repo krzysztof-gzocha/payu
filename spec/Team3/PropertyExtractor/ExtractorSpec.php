@@ -8,7 +8,7 @@ use Team3\PropertyExtractor\Reader\ReaderInterface;
 
 /**
  * Class ExtractorSpec
- * @package spec\Team3\Order\Annotation\Extractor
+ * @package spec\Team3\Annotation\Extractor
  * @mixin Extractor
  */
 class ExtractorSpec extends ObjectBehavior

@@ -5,7 +5,7 @@ namespace spec\Team3\Order\Transformer\UserOrder;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Prophet;
-use \Team3\Order\Annotation\PayU;
+use \Team3\Annotation\PayU;
 use Team3\Order\Model\OrderInterface;
 use Team3\PropertyExtractor\ExtractorInterface;
 use \Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;

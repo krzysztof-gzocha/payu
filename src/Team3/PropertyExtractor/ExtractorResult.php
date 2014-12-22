@@ -7,7 +7,7 @@ namespace Team3\PropertyExtractor;
 
 /**
  * Class ExtractorResult
- * @package Team3\Order\Annotation\Extractor
+ * @package Team3\Annotation\Extractor
  */
 class ExtractorResult
 {
