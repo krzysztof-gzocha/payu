@@ -8,12 +8,12 @@ namespace Team3\PropertyExtractor\Reader;
 use Doctrine\Common\Annotations\Reader;
 use ReflectionClass;
 use ReflectionMethod;
-use Team3\Order\Annotation\PayU;
+use Team3\Annotation\PayU;
 use Team3\PropertyExtractor\ExtractorException;
 
 class AnnotationReader implements ReaderInterface
 {
-    const ANNOTATION_CLASS = 'Team3\Order\Annotation\PayU';
+    const ANNOTATION_CLASS = 'Team3\Annotation\PayU';
     /**
      * @var Reader
      */

@@ -1,1 +1,2 @@
-[![wercker status](https://app.wercker.com/status/53c4abe719097cfb2bf4eaf8d0847576/m "wercker status")](https://app.wercker.com/project/bykey/53c4abe719097cfb2bf4eaf8d0847576)
+[![Code Climate](https://codeclimate.com/github/krzysztof-gzocha/payu/badges/gpa.svg)](https://codeclimate.com/github/krzysztof-gzocha/payu)
+[![Build Status](https://travis-ci.org/krzysztof-gzocha/payu.svg?branch=master)](https://travis-ci.org/krzysztof-gzocha/payu)

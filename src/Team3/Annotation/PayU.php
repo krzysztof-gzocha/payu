@@ -3,13 +3,13 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Annotation;
+namespace Team3\Annotation;
 
 use Doctrine\Common\Annotations\Annotation\Target;
 
 /**
  * Class PayU
- * @package Team3\Order\Annotation
+ * @package Team3\Annotation
  * @Annotation
  * @Target({"METHOD"})
  */
