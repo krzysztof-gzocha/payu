@@ -5,20 +5,25 @@
 
 namespace Team3\Order\Model\Money;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Money implements MoneyInterface
 {
     /**
      * @var float
+     * @Assert\GreaterThan(0)
      */
     protected $value;
 
     /**
      * @var string
+     * @Assert\Length(min="2", max="2")
      */
     protected $currency;
 
     /**
      * @var int
+     * @Assert\GreaterThan(0)
      */
     protected $precision;
 

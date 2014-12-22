@@ -15,6 +15,7 @@
     },
     "require": {
         "doctrine/annotations": "@stable",
-        "jms/serializer": "@stable"
+        "jms/serializer": "@stable",
+        "symfony/validator": "@stable"
     }
 }

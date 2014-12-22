@@ -5,7 +5,6 @@
 
 namespace Team3\Order\Model\Buyer;
 
-use Team3\Order\Model\IsFilledTrait;
 use JMS\Serializer\Annotation as JMS;
 use Team3\Order\Model\Traits\AddressTrait;
 
@@ -16,7 +15,6 @@ use Team3\Order\Model\Traits\AddressTrait;
  */
 class Invoice implements InvoiceInterface
 {
-    use IsFilledTrait;
     use AddressTrait;
 
     /**

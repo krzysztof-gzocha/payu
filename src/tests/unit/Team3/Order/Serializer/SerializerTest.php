@@ -10,6 +10,14 @@ use JMS\Serializer\Annotation\AccessType;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
+use Symfony\Component\Validator\Constraints\Callback;
+use Symfony\Component\Validator\Constraints\Country;
+use Symfony\Component\Validator\Constraints\Currency;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\GreaterThan;
+use Symfony\Component\Validator\Constraints\Ip;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\NotNull;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\OrderStatus;
@@ -24,8 +32,8 @@ use tests\unit\Team3\Order\Serializer\OrderHelper;
 class SerializerTest extends \Codeception\TestCase\Test
 {
     /**
-    * @var \UnitTester
-    */
+     * @var \UnitTester
+     */
     protected $tester;
 
     /**
@@ -40,12 +48,6 @@ class SerializerTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        new Type();
-        new SerializedName(['value' => 'name']);
-        new AccessorOrder();
-        new AccessType();
-        new Accessor();
-
         $this->serializer = new Serializer(
             SerializerBuilder::create()->build()
         );
@@ -146,5 +148,23 @@ class SerializerTest extends \Codeception\TestCase\Test
         $this->assertTrue(
             $deserializedObject->getStatus()->isNew()
         );
+    }
+
+    private function load()
+    {
+        new Type();
+        new SerializedName(['value' => 'name']);
+        new AccessorOrder();
+        new AccessType();
+        new Accessor();
+        new Ip();
+        new NotBlank();
+        new Currency();
+        new \Symfony\Component\Validator\Constraints\Type(["type" => "integer"]);
+        new Email();
+        new Country();
+        new GreaterThan();
+        new NotNull();
+        new Callback();
     }
 }

@@ -5,6 +5,9 @@
 
 namespace Team3\Order\Model\Traits;
 
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+
 trait AddressTrait
 {
     /**
@@ -26,6 +29,7 @@ trait AddressTrait
     /**
      * @var string
      * @JMS\SerializedName("countryCode")
+     * @Assert\Country()
      */
     protected $countryCode;
 
@@ -43,6 +47,7 @@ trait AddressTrait
     /**
      * @var string
      * @JMS\SerializedName("recipientEmail")
+     * @Assert\Email()
      */
     protected $recipientEmail;
 
@@ -51,6 +56,45 @@ trait AddressTrait
      * @JMS\SerializedName("recipientPhone")
      */
     protected $recipientPhone;
+
+    /**
+     * Return true if given object is filled
+     *
+     * @return bool
+     */
+    public function isFilled()
+    {
+        return $this->getStreet()
+            && $this->getCity()
+            && $this->getCountryCode()
+            && $this->getPostalCode();
+    }
+
+    /**
+     * @param ExecutionContextInterface $executionContext
+     * @Assert\Callback()
+     */
+    public function validate(
+        ExecutionContextInterface $executionContext
+    ) {
+        if (!$this->getStreet()
+            && !$this->getCity()
+            && !$this->getCountryCode()
+            && !$this->getPostalCode()) {
+            return;
+        }
+
+        if (!$this->getStreet()
+            || !$this->getCity()
+            || !$this->getCountryCode()
+            || !$this->getPostalCode()) {
+            $executionContext
+                ->buildViolation(
+                    sprintf('Object %s is not filled correctly', get_class($this))
+                )
+                ->addViolation();
+        }
+    }
 
     /**
      * @return string

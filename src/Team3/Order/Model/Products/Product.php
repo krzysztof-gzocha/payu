@@ -9,6 +9,7 @@ use Team3\Order\Model\IsFilledTrait;
 use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
 use JMS\Serializer\Annotation as JMS;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Product
@@ -22,6 +23,7 @@ class Product implements ProductInterface
     /**
      * @var string
      * @JMS\Type("string")
+     * @Assert\NotBlank()
      */
     protected $name;
 
@@ -33,12 +35,18 @@ class Product implements ProductInterface
      *      setter="setUnitPriceFromDeserialization"
      * )
      * @JMS\Type("integer")
+     * @Assert\NotBlank()
+     * @Assert\Valid()
+     * @Assert\Type(type="object")
      */
     protected $unitPrice;
 
     /**
      * @var int
      * @JMS\Type("integer")
+     * @Assert\NotBlank()
+     * @Assert\Type(type="integer")
+     * @Assert\GreaterThan(0)
      */
     protected $quantity;
 

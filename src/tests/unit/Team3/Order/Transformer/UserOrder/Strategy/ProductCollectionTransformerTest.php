@@ -29,8 +29,8 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
     const GET_PRODUCTS_METHOD = 'getProducts';
 
     /**
-    * @var \UnitTester
-    */
+     * @var \UnitTester
+     */
     protected $tester;
 
     /**

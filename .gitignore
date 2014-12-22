@@ -5,3 +5,6 @@
 /src/tests/_output/*
 /src/tests/_data/*
 /src/tests/_support/*
+src/tests/unit/UnitTester.php
+src/tests/functional/FunctionalTester.php
+src/tests/acceptance/AcceptanceTester.php
