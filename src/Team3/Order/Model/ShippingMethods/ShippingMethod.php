@@ -9,6 +9,7 @@ use Team3\Order\Model\IsFilledTrait;
 use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
 use JMS\Serializer\Annotation as JMS;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class ShippingMethod
@@ -22,6 +23,8 @@ class ShippingMethod implements ShippingMethodInterface
     /**
      * @var string
      * @JMS\Type("string")
+     * @Assert\Country()
+     * @Assert\NotBlank()
      */
     protected $country;
 
@@ -32,12 +35,15 @@ class ShippingMethod implements ShippingMethodInterface
      *      setter="setPriceFromDeserialization"
      * )
      * @JMS\Type("integer")
+     * @Assert\Type(type="object")
+     * @Assert\Valid
      */
     protected $price;
 
     /**
      * @var string
      * @JMS\Type("string")
+     * @Assert\NotNull
      */
     protected $name;
 

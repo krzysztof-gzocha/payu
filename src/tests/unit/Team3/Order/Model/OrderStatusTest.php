@@ -4,7 +4,7 @@ namespace Team3\Order\Model;
 /**
  * Class OrderStatusTest
  * @package Team3\Order\Model
- * @group money
+ * @group status
  */
 class OrderStatusTest extends \Codeception\TestCase\Test
 {

@@ -5,10 +5,13 @@
 
 namespace Team3\Order\Model\Products;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class ProductCollection implements ProductCollectionInterface
 {
     /**
      * @var ProductInterface[]
+     * @Assert\Count(min="1")
      */
     protected $products;
 

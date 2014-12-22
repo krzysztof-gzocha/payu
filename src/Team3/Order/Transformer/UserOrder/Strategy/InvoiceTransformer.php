@@ -54,7 +54,7 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
             $reflectionClass = new \ReflectionClass($invoice);
             $reflectionMethod = $reflectionClass->getProperty($matches[1]);
         } catch (\ReflectionException $exception) {
-            return null;
+            return;
         }
 
         return $reflectionMethod;

@@ -24,7 +24,7 @@ interface OrderInterface extends IsFilledInterface
     public function setDescription($description);
 
     /**
-     * @string
+     * @return string
      */
     public function getAdditionalDescription();
 

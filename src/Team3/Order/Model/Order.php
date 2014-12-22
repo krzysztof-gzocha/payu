@@ -15,6 +15,7 @@ use Team3\Order\Model\ShippingMethods\ShippingMethodCollection;
 use Team3\Order\Model\Traits\ProductCollectionTrait;
 use Team3\Order\Model\Traits\ShippingMethodCollectionTrait;
 use Team3\Order\Model\Traits\UrlsTrait;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Order
@@ -32,6 +33,7 @@ class Order implements OrderInterface
     /**
      * @var BuyerInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Buyer")
+     * @Assert\Valid()
      */
     protected $buyer;
 
@@ -39,6 +41,8 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("customerIp")
+     * @Assert\Ip()
+     * @Assert\NotBlank()
      */
     protected $customerIp;
 
@@ -53,12 +57,14 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("merchantPosId")
+     * @Assert\NotBlank()
      */
     protected $merchantPosId;
 
     /**
      * @var string
      * @JMS\Type("string")
+     * @Assert\NotBlank()
      */
     protected $description;
 
@@ -77,6 +83,7 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("currencyCode")
+     * @Assert\NotBlank()
      */
     protected $currencyCode;
 
@@ -86,7 +93,11 @@ class Order implements OrderInterface
      * @JMS\SerializedName("totalAmount")
      * @JMS\Accessor(
      *      getter="getTotalAmountForSerialization",
-     *      setter="setTotalAmountFromDeserialization")
+     *      setter="setTotalAmountFromDeserialization"
+     * )
+     * @Assert\Type(type="object")
+     * @Assert\NotBlank()
+     * @Assert\Valid
      */
     protected $totalAmount;
 
@@ -94,6 +105,7 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("OpenPayU-Signature")
+     * @Assert\NotBlank()
      */
     protected $signature;
 

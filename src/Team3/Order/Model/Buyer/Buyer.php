@@ -5,8 +5,9 @@
 
 namespace Team3\Order\Model\Buyer;
 
-use Team3\Order\Model\IsFilledTrait;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use JMS\Serializer\Annotation as JMS;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Buyer
@@ -15,10 +16,9 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Buyer implements BuyerInterface
 {
-    use IsFilledTrait;
-
     /**
      * @var string
+     * @Assert\Email()
      */
     protected $email;
 
@@ -42,12 +42,14 @@ class Buyer implements BuyerInterface
     /**
      * @var DeliveryInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Delivery")
+     * @Assert\Valid
      */
     protected $delivery;
 
     /**
      * @var InvoiceInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Invoice")
+     * @Assert\Valid()
      */
     protected $invoice;
 
@@ -55,6 +57,40 @@ class Buyer implements BuyerInterface
     {
         $this->delivery = new Delivery();
         $this->invoice = new Invoice();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFilled()
+    {
+        return $this->firstName
+            && $this->lastName
+            && $this->email;
+    }
+
+    /**
+     * @param ExecutionContextInterface $executionContext
+     * @Assert\Callback()
+     */
+    public function validate(
+        ExecutionContextInterface $executionContext
+    ) {
+        if (!$this->getFirstName()
+            && !$this->getLastName()
+            && !$this->getEmail()) {
+            return;
+        }
+
+        if (!$this->getFirstName()
+            || !$this->getLastName()
+            || !$this->getEmail()) {
+            $executionContext
+                ->buildViolation(
+                    sprintf('Object %s is not filled correctly', get_class($this))
+                )
+                ->addViolation();
+        }
     }
 
     /**
