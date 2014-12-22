@@ -11,8 +11,8 @@ use tests\unit\Team3\Order\Transformer\UserOrder\Strategy\Model\UserOrderModelWi
 class ShippingMethodCollectionTransformerTest extends \Codeception\TestCase\Test
 {
     /**
-    * @var \UnitTester
-    */
+     * @var \UnitTester
+     */
     protected $tester;
 
     /**

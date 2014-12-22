@@ -13,8 +13,8 @@ class ExtractorTest extends \Codeception\TestCase\Test
     const READER_INTERFACE = '\Team3\PropertyExtractor\Reader\ReaderInterface';
 
     /**
-    * @var \UnitTester
-    */
+     * @var \UnitTester
+     */
     protected $tester;
 
     /**

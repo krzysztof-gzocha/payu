@@ -1,6 +1,12 @@
 <?php
 namespace Team3\Order\Model\Money;
 
+use Doctrine\Common\Annotations\AnnotationReader;
+use Symfony\Component\Validator\Constraints\GreaterThan;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Team3\ValidatorBuilder\ValidatorBuilder;
+
 /**
  * Class MoneyTest
  * @package Team3\Order\Model\Money
@@ -14,6 +20,24 @@ class MoneyTest extends \Codeception\TestCase\Test
      * @var \UnitTester
      */
     protected $tester;
+
+    /**
+     * @var ValidatorInterface
+     */
+    protected $validator;
+
+    protected function _before()
+    {
+        new GreaterThan();
+        new Length(["min" => 1]);
+        $this->validator = (new ValidatorBuilder())->getValidator(new AnnotationReader());
+    }
+
+    public function testValidationConfiguration()
+    {
+        $valid = $this->validator->validate(new Money(-1, 'notCurrencyCode', 0));
+        $this->assertCount(3, $valid);
+    }
 
     public function testToStringMethodWithoutCurrency()
     {
