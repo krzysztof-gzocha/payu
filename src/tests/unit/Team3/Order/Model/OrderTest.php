@@ -5,6 +5,7 @@ use Doctrine\Common\Annotations\AnnotationReader;
 use JMS\Serializer\Annotation\Accessor;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\AccessType;
+use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use Symfony\Component\Validator\Constraints\Callback;
@@ -102,6 +103,7 @@ class OrderTest extends \Codeception\TestCase\Test
 
     private function load()
     {
+        new Groups();
         new Valid();
         new AccessorOrder();
         new AccessType();

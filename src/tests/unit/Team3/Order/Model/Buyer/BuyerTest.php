@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Model\Buyer;
 
-
 class BuyerTest extends \Codeception\TestCase\Test
 {
     /**
