@@ -3,9 +3,16 @@
 namespace spec\Team3\Configuration;
 
 use PhpSpec\ObjectBehavior;
+use Team3\Configuration\Credentials\CredentialsInterface;
 
 class ConfigurationSpec extends ObjectBehavior
 {
+    public function let(CredentialsInterface $credentials)
+    {
+        $this
+            ->beConstructedWith($credentials);
+    }
+
     public function it_is_initializable()
     {
         $this

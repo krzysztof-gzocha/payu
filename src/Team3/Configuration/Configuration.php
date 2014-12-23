@@ -5,6 +5,8 @@
 
 namespace Team3\Configuration;
 
+use Team3\Configuration\Credentials\CredentialsInterface;
+
 /**
  * PayU API basic configuration
  * @package Team3\Configuration
@@ -32,17 +34,25 @@ class Configuration implements ConfigurationInterface
     protected $version;
 
     /**
-     * @param string $protocol
-     * @param string $domain
-     * @param string $path
-     * @param string $version
+     * @var CredentialsInterface
+     */
+    protected $credentials;
+
+    /**
+     * @param CredentialsInterface $credentials
+     * @param string               $protocol
+     * @param string               $domain
+     * @param string               $path
+     * @param string               $version
      */
     public function __construct(
+        CredentialsInterface $credentials,
         $protocol = 'https',
         $domain = 'payu.com',
         $path = 'api',
         $version = 'v2_1'
     ) {
+        $this->credentials = $credentials;
         $this->protocol = $protocol;
         $this->domain = $domain;
         $this->path = $path;
@@ -93,5 +103,13 @@ class Configuration implements ConfigurationInterface
     public function getVersion()
     {
         return $this->version;
+    }
+
+    /**
+     * @return CredentialsInterface
+     */
+    public function getCredentials()
+    {
+        return $this->credentials;
     }
 }

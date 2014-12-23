@@ -33,6 +33,7 @@ class Order implements OrderInterface
     /**
      * @var BuyerInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Buyer")
+     * @JMS\Groups({"buyer"})
      * @Assert\Valid()
      */
     protected $buyer;
@@ -50,8 +51,12 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("extOrderId")
+     * @JMS\Accessor(
+     *      setter="setOrderId",
+     *      getter="getOrderId"
+     * )
      */
-    protected $orderId;
+    protected $extOrderId;
 
     /**
      * @var string
@@ -132,6 +137,7 @@ class Order implements OrderInterface
         $this->productCollection = new ProductCollection();
         $this->shippingCollection = new ShippingMethodCollection();
         $this->status = new OrderStatus();
+        $this->totalAmount = new Money(0);
     }
 
     /**
@@ -259,7 +265,7 @@ class Order implements OrderInterface
      */
     public function getOrderId()
     {
-        return $this->orderId;
+        return $this->extOrderId;
     }
 
     /**
@@ -269,7 +275,7 @@ class Order implements OrderInterface
      */
     public function setOrderId($orderId)
     {
-        $this->orderId = $orderId;
+        $this->extOrderId = $orderId;
 
         return $this;
     }
