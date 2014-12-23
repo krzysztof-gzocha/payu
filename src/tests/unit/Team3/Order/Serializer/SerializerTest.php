@@ -7,6 +7,7 @@ namespace Team3\Order\Serializer;
 use JMS\Serializer\Annotation\Accessor;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\AccessType;
+use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
@@ -42,6 +43,11 @@ class SerializerTest extends \Codeception\TestCase\Test
     protected $serializer;
 
     /**
+     * @var SerializationContext
+     */
+    protected $serializationContext;
+
+    /**
      * @var OrderInterface
      */
     protected $order;
@@ -49,15 +55,18 @@ class SerializerTest extends \Codeception\TestCase\Test
     protected function _before()
     {
         $this->serializer = new Serializer(
-            SerializerBuilder::create()->build()
+            SerializerBuilder::create()->build(),
+            new GroupsSpecifier()
         );
+
+        $this->serializationContext = SerializationContext::create();
 
         $this->order = OrderHelper::getOrderWithDeliveryAndInvoice();
     }
 
     public function testIfResultIsJson()
     {
-        $serialized = $this->serializer->toJson($this->order);
+        $serialized = $this->serializer->toJson($this->order, $this->serializationContext);
         $this->assertNotEmpty($serialized);
         $this->assertJson($serialized);
     }
@@ -75,7 +84,8 @@ class SerializerTest extends \Codeception\TestCase\Test
     public function testResultWithoutDeliveryAndInvoice()
     {
         $serialized = $this->serializer->toJson(
-            OrderHelper::getOrderWithoutDeliveryAndInvoice()
+            OrderHelper::getOrderWithoutDeliveryAndInvoice(),
+            $this->serializationContext
         );
 
         $this->assertEquals(

@@ -43,6 +43,7 @@ class Buyer implements BuyerInterface
      * @var DeliveryInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Delivery")
      * @Assert\Valid
+     * @JMS\Groups({"delivery"})
      */
     protected $delivery;
 
@@ -50,6 +51,7 @@ class Buyer implements BuyerInterface
      * @var InvoiceInterface
      * @JMS\Type("Team3\Order\Model\Buyer\Invoice")
      * @Assert\Valid()
+     * @JMS\Groups({"invoice"})
      */
     protected $invoice;
 

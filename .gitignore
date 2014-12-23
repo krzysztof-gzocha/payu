@@ -2,7 +2,7 @@
 /vendor
 /.idea
 *.log
-/src/tests/_output/*
+src/tests/_output
 /src/tests/_data/*
 /src/tests/_support/*
 src/tests/unit/UnitTester.php

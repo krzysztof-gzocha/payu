@@ -18,6 +18,7 @@ trait ShippingMethodCollectionTrait
      *      getter="getShippingMethodCollection",
      *      setter="setShippingMethodCollectionFromDeserialization"
      * )
+     * @JMS\Groups({"shippingMethods"})
      */
     protected $shippingCollection;
 
