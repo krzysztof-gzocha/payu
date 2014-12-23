@@ -5,6 +5,8 @@
 
 namespace Team3\Configuration;
 
+use Team3\Configuration\Credentials\CredentialsInterface;
+
 /**
  * PayU API basic configuration
  * @package Team3\Configuration
@@ -35,4 +37,9 @@ interface ConfigurationInterface
      * @return string
      */
     public function getAPIUrl();
+
+    /**
+     * @return CredentialsInterface
+     */
+    public function getCredentials();
 }

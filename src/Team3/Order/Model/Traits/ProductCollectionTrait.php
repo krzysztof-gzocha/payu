@@ -15,6 +15,7 @@ trait ProductCollectionTrait
      * @JMS\Type("array<Team3\Order\Model\Products\Product>")
      * @JMS\SerializedName("products")
      * @JMS\Accessor(setter="setProductCollectionFromDeserialization")
+     * @JMS\Groups({"products"})
      */
     protected $productCollection;
 
