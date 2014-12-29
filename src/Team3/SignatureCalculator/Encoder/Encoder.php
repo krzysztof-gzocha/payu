@@ -48,7 +48,10 @@ class Encoder implements EncoderInterface
             }
         }
 
-        $this->throwNoStrategiesException($algorithm);
+        $exception = $this->buildException($algorithm);
+        $this->logException($exception);
+
+        throw $exception;
     }
 
     /**
@@ -89,18 +92,28 @@ class Encoder implements EncoderInterface
     /**
      * @param AlgorithmInterface $algorithm
      *
-     * @throws EncoderException
+     * @return EncoderException
      */
-    private function throwNoStrategiesException(AlgorithmInterface $algorithm)
+    private function buildException(AlgorithmInterface $algorithm)
     {
-        $message = sprintf(
+        return new EncoderException(sprintf(
             'None of encoder strategies supports algorithm "%s"',
             get_class($algorithm)
-        );
+        ));
+    }
+
+    /**
+     * @param \Exception $exception
+     */
+    private function logException(\Exception $exception)
+    {
         $this
             ->logger
-            ->error($message);
-
-        throw new EncoderException($message);
+            ->error(sprintf(
+                '%s thrown %s with message "%s"',
+                get_class($this),
+                get_class($exception),
+                $exception->getMessage()
+            ));
     }
 }

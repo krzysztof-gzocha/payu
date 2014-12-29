@@ -88,7 +88,7 @@ class Money implements MoneyInterface
         if (!is_numeric($value)) {
             throw new WrongMoneyValueException(sprintf(
                 'Value passed to %s should be numeric, but is %s',
-                __CLASS__,
+                get_class($this),
                 gettype($value)
             ));
         }
