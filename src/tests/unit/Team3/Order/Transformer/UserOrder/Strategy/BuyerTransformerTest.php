@@ -34,8 +34,10 @@ class BuyerTransformerTest extends \Codeception\TestCase\Test
 
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
         $this->buyerTransformer = new BuyerTransformer();
     }
@@ -96,5 +98,13 @@ class BuyerTransformerTest extends \Codeception\TestCase\Test
                 );
             }
         }
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

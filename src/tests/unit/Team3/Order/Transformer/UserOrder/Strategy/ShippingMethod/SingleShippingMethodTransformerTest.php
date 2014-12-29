@@ -33,8 +33,10 @@ class SingleShippingMethodTransformerTest extends \Codeception\TestCase\Test
     {
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
 
         $this->singleShippingMethodTransformer = new SingleShippingMethodTransformer(
@@ -56,5 +58,13 @@ class SingleShippingMethodTransformerTest extends \Codeception\TestCase\Test
         $this->assertNotEmpty($shippingMethod->getCountry());
         $this->assertNotEmpty($shippingMethod->getName());
         $this->assertNotEmpty($shippingMethod->getPrice());
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

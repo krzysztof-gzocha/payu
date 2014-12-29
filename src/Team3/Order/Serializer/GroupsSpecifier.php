@@ -5,6 +5,7 @@
 
 namespace Team3\Order\Serializer;
 
+use Psr\Log\LoggerInterface;
 use Team3\Order\Model\Buyer\DeliveryInterface;
 use Team3\Order\Model\Buyer\InvoiceInterface;
 use Team3\Order\Model\OrderInterface;
@@ -26,6 +27,19 @@ class GroupsSpecifier implements GroupsSpecifierInterface
     private $groups;
 
     /**
+     * @var LoggerInterface
+     */
+    private $logger;
+
+    /**
+     * @param LoggerInterface $logger
+     */
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+    /**
      * @param  OrderInterface $order
      * @return array
      */
@@ -36,6 +50,8 @@ class GroupsSpecifier implements GroupsSpecifierInterface
         $this->checkBuyer($order);
         $this->checkShippingMethods($order->getShippingMethodCollection());
         $this->checkProducts($order->getProductCollection());
+
+        $this->logSpecifiedGroups($order);
 
         return $this->groups;
     }
@@ -113,5 +129,19 @@ class GroupsSpecifier implements GroupsSpecifierInterface
         }
 
         return $this;
+    }
+
+    /**
+     * @param OrderInterface $order
+     */
+    private function logSpecifiedGroups(OrderInterface $order)
+    {
+        $this
+            ->logger
+            ->debug(sprintf(
+                'Serialization groups for order %s were specified to %s',
+                $order->getOrderId(),
+                print_r($this->groups, true)
+            ));
     }
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
+use Psr\Log\LoggerInterface;
 use Team3\Annotation\PayU;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
@@ -35,8 +36,10 @@ class InvoiceTransformerTest extends \Codeception\TestCase\Test
 
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
 
         $this->invoiceTransformer = new InvoiceTransformer();
@@ -104,5 +107,13 @@ class InvoiceTransformerTest extends \Codeception\TestCase\Test
                 );
             }
         }
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

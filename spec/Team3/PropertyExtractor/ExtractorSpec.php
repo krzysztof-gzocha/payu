@@ -3,6 +3,7 @@
 namespace spec\Team3\PropertyExtractor;
 
 use PhpSpec\ObjectBehavior;
+use Psr\Log\LoggerInterface;
 use Team3\PropertyExtractor\Extractor;
 use Team3\PropertyExtractor\Reader\ReaderInterface;
 
@@ -13,9 +14,9 @@ use Team3\PropertyExtractor\Reader\ReaderInterface;
  */
 class ExtractorSpec extends ObjectBehavior
 {
-    public function let(ReaderInterface $reader)
+    public function let(ReaderInterface $reader, LoggerInterface $logger)
     {
-        $this->beConstructedWith($reader);
+        $this->beConstructedWith($reader, $logger);
     }
 
     public function it_is_initializable()
@@ -24,9 +25,10 @@ class ExtractorSpec extends ObjectBehavior
     }
 
     public function it_should_call_reader(
-        ReaderInterface $reader
+        ReaderInterface $reader,
+        LoggerInterface $logger
     ) {
-        $this->beConstructedWith($reader);
+        $this->beConstructedWith($reader, $logger);
         $model = new \stdClass();
         $reader->read($model)->willReturn([]);
         $reader->read($model)->shouldBeCalled();

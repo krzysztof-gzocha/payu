@@ -16,6 +16,7 @@
     "require": {
         "doctrine/annotations": "@stable",
         "jms/serializer": "@stable",
-        "symfony/validator": "@stable"
+        "symfony/validator": "@stable",
+        "psr/log": "1.0.0"
     }
 }

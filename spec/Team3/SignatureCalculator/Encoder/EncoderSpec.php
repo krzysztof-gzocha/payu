@@ -4,6 +4,7 @@ namespace spec\Team3\SignatureCalculator\Encoder;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Psr\Log\LoggerInterface;
 use Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 use Team3\SignatureCalculator\Encoder\Strategy\EncoderStrategyInterface;
 
@@ -11,23 +12,28 @@ class EncoderSpec extends ObjectBehavior
 {
     const ENCODED_STRING = 'encodedString';
 
+    public function let(LoggerInterface $logger)
+    {
+        $this->beConstructedWith($logger);
+    }
+
     public function it_is_initializable()
     {
         $this->shouldHaveType('Team3\SignatureCalculator\Encoder\Encoder');
     }
 
     public function it_throws_exception_when_no_strategy_supports_algorithm(
-        $data,
         AlgorithmInterface $algorithm
     ) {
+        $data = '123';
         $this->shouldThrow('Team3\SignatureCalculator\Encoder\EncoderException')->during('encode', [$data, $algorithm]);
     }
 
     public function it_should_call_strategy(
-        $data,
         AlgorithmInterface $algorithm,
         EncoderStrategyInterface $encoderStrategy
     ) {
+        $data = '123';
         $encoderStrategy->supports($algorithm)->willReturn(true);
         $encoderStrategy->supports($algorithm)->shouldBeCalledTimes(1);
 

@@ -2,6 +2,7 @@
 namespace Team3\SignatureCalculator;
 
 use JMS\Serializer\SerializerBuilder;
+use Psr\Log\LoggerInterface;
 use Team3\Configuration\Credentials\Credentials;
 use Team3\Configuration\Credentials\TestCredentials;
 use Team3\Order\Model\Money\Money;
@@ -73,7 +74,8 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
 
         $this->signatureCalculator = new SignatureCalculator(
             $this->parametersSorter,
-            $encoder
+            $encoder,
+            $this->getLogger()
         );
     }
 
@@ -126,7 +128,8 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
 
         $signatureCalculator = new SignatureCalculator(
             $this->parametersSorter,
-            $encoder
+            $encoder,
+            $this->getLogger()
         );
 
         $signatureCalculator->calculate($order, $credentials, $algorithm);
@@ -137,11 +140,12 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         $credentials = new TestCredentials();
         $order = $this->getOrder();
         $algorithm = new Md5Algorithm();
-        $encoder = new Encoder();
+        $encoder = new Encoder($this->getLogger());
         $encoder->addStrategy(new Md5Strategy());
         $signatureCalculator = new SignatureCalculator(
             $this->getParametersSorter(),
-            $encoder
+            $encoder,
+            $this->getLogger()
         );
 
         $this->assertEquals(
@@ -158,7 +162,8 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         $parametersSorter = new ParametersSorter(
             new Serializer(
                 SerializerBuilder::create()->build(),
-                new GroupsSpecifier()
+                new GroupsSpecifier($this->getLogger()),
+                $this->getLogger()
             )
         );
 
@@ -195,5 +200,13 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
             );
 
         return $order;
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

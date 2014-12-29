@@ -42,7 +42,13 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
         new PayU();
 
         $this->generalTransformer = new GeneralTransformer();
-        $this->annotationsExtractor = new Extractor(new AnnotationReader(new DoctrineAnnotationReader()));
+        $this->annotationsExtractor = new Extractor(
+            new AnnotationReader(
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
+        );
     }
 
     public function testIfIsImplementingStrategyInterface()
@@ -102,5 +108,13 @@ class GeneralTransformerTest extends \Codeception\TestCase\Test
                 );
             }
         }
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }
