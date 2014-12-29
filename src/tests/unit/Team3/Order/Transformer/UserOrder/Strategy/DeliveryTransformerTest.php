@@ -1,7 +1,6 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
-use Team3\Annotation\PayU;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\PropertyExtractor\Extractor;
@@ -30,9 +29,6 @@ class DeliveryTransformerTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        //autoload payu annotation
-        new PayU();
-
         $this->extractor = new Extractor(
             new AnnotationReader(
                 new DoctrineAnnotationReader(),

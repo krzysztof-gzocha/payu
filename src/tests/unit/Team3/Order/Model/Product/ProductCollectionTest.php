@@ -2,12 +2,7 @@
 namespace Team3\Order\Model\Product;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use JMS\Serializer\Annotation\Accessor;
-use JMS\Serializer\Annotation\AccessorOrder;
-use JMS\Serializer\Annotation\SerializedName;
 use Symfony\Component\Validator\Constraints\Count;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Type;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductCollection;
@@ -27,7 +22,6 @@ class ProductCollectionTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        $this->load();
         $this->validator = (new ValidatorBuilder())->getValidator(new AnnotationReader());
     }
 
@@ -84,16 +78,5 @@ class ProductCollectionTest extends \Codeception\TestCase\Test
             '\Iterator',
             $productCollection->getIterator()
         );
-    }
-
-    private function load()
-    {
-        new Count(["min" => 0]);
-        new AccessorOrder();
-        new NotBlank();
-        new \JMS\Serializer\Annotation\Type();
-        new SerializedName(['value' => 't']);
-        new Accessor();
-        new Type(['type' => 'integer']);
     }
 }
