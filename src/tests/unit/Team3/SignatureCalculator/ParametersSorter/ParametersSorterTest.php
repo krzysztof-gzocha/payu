@@ -8,6 +8,7 @@ use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\SerializerBuilder;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Constraints\Callback;
 use Symfony\Component\Validator\Constraints\Country;
 use Symfony\Component\Validator\Constraints\Email;
@@ -47,7 +48,8 @@ class ParametersSorterTest extends \Codeception\TestCase\Test
         $this->load();
         $this->serializer = new Serializer(
             SerializerBuilder::create()->build(),
-            new GroupsSpecifier()
+            new GroupsSpecifier($this->getLogger()),
+            $this->getLogger()
         );
 
         $this->order = new Order();
@@ -76,6 +78,14 @@ class ParametersSorterTest extends \Codeception\TestCase\Test
             }
             $lastKey = $key;
         }
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 
     private function load()

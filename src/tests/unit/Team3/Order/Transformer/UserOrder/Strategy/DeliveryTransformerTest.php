@@ -35,8 +35,10 @@ class DeliveryTransformerTest extends \Codeception\TestCase\Test
 
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
 
         $this->deliveryTransformer = new DeliveryTransformer();
@@ -101,5 +103,13 @@ class DeliveryTransformerTest extends \Codeception\TestCase\Test
                 );
             }
         }
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

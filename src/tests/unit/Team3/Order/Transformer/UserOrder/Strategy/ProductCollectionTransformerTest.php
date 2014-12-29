@@ -2,6 +2,7 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
+use Psr\Log\LoggerInterface;
 use Team3\Annotation\PayU;
 use Team3\Order\Model\Money\Money;
 use Team3\PropertyExtractor\ExtractorResult;
@@ -50,8 +51,10 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
             new SingleProductTransformer(
                 new Extractor(
                     new AnnotationReader(
-                        new DoctrineAnnotationReader()
-                    )
+                        new DoctrineAnnotationReader(),
+                        $this->getLogger()
+                    ),
+                    $this->getLogger()
                 )
             )
         );
@@ -198,5 +201,13 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
             self::SINGLE_PRODUCT_QUANTITY,
             self::SINGLE_PRODUCT_PRICE
         );
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

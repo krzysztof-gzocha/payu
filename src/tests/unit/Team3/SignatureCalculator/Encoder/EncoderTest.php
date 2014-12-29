@@ -1,6 +1,7 @@
 <?php
 namespace Team3\SignatureCalculator\Encoder;
 
+use Psr\Log\LoggerInterface;
 use Team3\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
 use Team3\SignatureCalculator\Encoder\Strategy\Md5Strategy;
 
@@ -21,7 +22,7 @@ class EncoderTest extends \Codeception\TestCase\Test
 
     public function testIfStrategiesAreUsed()
     {
-        $encoder = new Encoder();
+        $encoder = new Encoder($this->getLogger());
         $encoder->addStrategy(new Md5Strategy());
 
         $this->assertEquals(
@@ -36,7 +37,17 @@ class EncoderTest extends \Codeception\TestCase\Test
      */
     public function testExceptionWhenNoStrategies()
     {
-        $encoder = new Encoder();
+        $encoder = new Encoder($this->getLogger());
         $encoder->encode(self::DATA, new Md5Algorithm());
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        $logger = $this->getMockBuilder('Psr\Log\LoggerInterface')->getMock();
+
+        return $logger;
     }
 }
