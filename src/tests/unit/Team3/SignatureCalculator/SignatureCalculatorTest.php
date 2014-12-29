@@ -1,10 +1,19 @@
 <?php
 namespace Team3\SignatureCalculator;
 
+use JMS\Serializer\SerializerBuilder;
 use Team3\Configuration\Credentials\Credentials;
 use Team3\Configuration\Credentials\TestCredentials;
+use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Order;
+use Team3\Order\Model\Products\Product;
+use Team3\Order\Serializer\GroupsSpecifier;
+use Team3\Order\Serializer\Serializer;
+use Team3\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
+use Team3\SignatureCalculator\Encoder\Encoder;
 use Team3\SignatureCalculator\Encoder\EncoderException;
+use Team3\SignatureCalculator\Encoder\Strategy\Md5Strategy;
+use Team3\SignatureCalculator\ParametersSorter\ParametersSorter;
 use Team3\SignatureCalculator\ParametersSorter\ParametersSorterInterface;
 
 /**
@@ -121,5 +130,70 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         );
 
         $signatureCalculator->calculate($order, $credentials, $algorithm);
+    }
+
+    public function testRealExample()
+    {
+        $credentials = new TestCredentials();
+        $order = $this->getOrder();
+        $algorithm = new Md5Algorithm();
+        $encoder = new Encoder();
+        $encoder->addStrategy(new Md5Strategy());
+        $signatureCalculator = new SignatureCalculator(
+            $this->getParametersSorter(),
+            $encoder
+        );
+
+        $this->assertEquals(
+            'signature=0fcbdfd920b218edd56366966bef2dcc;algorithm=MD5;sender=145227',
+            $signatureCalculator->calculate($order, $credentials, $algorithm)
+        );
+    }
+
+    /**
+     * @return ParametersSorter
+     */
+    private function getParametersSorter()
+    {
+        $parametersSorter = new ParametersSorter(
+            new Serializer(
+                SerializerBuilder::create()->build(),
+                new GroupsSpecifier()
+            )
+        );
+
+        return $parametersSorter;
+    }
+
+    /**
+     * Will return initialized order with parameters taken from
+     * {@link http://developers.payu.com/pl/restapi.html#payment_form}
+     * @return Order
+     */
+    private function getOrder()
+    {
+        $order = new Order();
+        $order->setCustomerIp('123.123.123.123');
+        $order->setMerchantPosId('145227');
+        $order->setDescription('Order description');
+        $order->setTotalAmount(new Money(10));
+
+        /**
+         * Documentation was mistaken in currency code.
+         * Correct code was taken from {@link http://jsfiddle.net/FDrsF/177/}
+         */
+        $order->setCurrencyCode('PLN');
+        $order->setContinueUrl('http://localhost/continue');
+        $order->setNotifyUrl('http://shop.url/notify.json');
+        $order
+            ->getProductCollection()
+            ->addProduct(
+                (new Product())
+                    ->setName('Product 1')
+                    ->setUnitPrice(new Money(10))
+                    ->setQuantity(1)
+            );
+
+        return $order;
     }
 }
