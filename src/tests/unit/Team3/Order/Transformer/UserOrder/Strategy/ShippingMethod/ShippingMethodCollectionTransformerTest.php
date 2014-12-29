@@ -29,8 +29,10 @@ class ShippingMethodCollectionTransformerTest extends \Codeception\TestCase\Test
     {
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
 
         $this->shippingMethodCollectionTransformer = new ShippingMethodCollectionTransformer(
@@ -63,7 +65,7 @@ class ShippingMethodCollectionTransformerTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\PropertyExtractor\ExtractorException
+     * @expectedException \Team3\PropertyExtractor\ExtractorException
      */
     public function testIfExceptionIsThrown()
     {
@@ -93,5 +95,13 @@ class ShippingMethodCollectionTransformerTest extends \Codeception\TestCase\Test
                     ->transform($order, $extractedResult);
             }
         }
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

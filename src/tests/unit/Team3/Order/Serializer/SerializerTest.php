@@ -56,7 +56,8 @@ class SerializerTest extends \Codeception\TestCase\Test
     {
         $this->serializer = new Serializer(
             SerializerBuilder::create()->build(),
-            new GroupsSpecifier()
+            new GroupsSpecifier($this->getLogger()),
+            $this->getLogger()
         );
 
         $this->serializationContext = SerializationContext::create();
@@ -158,6 +159,14 @@ class SerializerTest extends \Codeception\TestCase\Test
         $this->assertTrue(
             $deserializedObject->getStatus()->isNew()
         );
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 
     private function load()

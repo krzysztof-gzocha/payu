@@ -1,6 +1,7 @@
 <?php
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
+use Psr\Log\LoggerInterface;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\PropertyExtractor\Extractor;
@@ -31,8 +32,10 @@ class UrlsTransformerTest extends \Codeception\TestCase\Test
     {
         $this->extractor = new Extractor(
             new AnnotationReader(
-                new DoctrineAnnotationReader()
-            )
+                new DoctrineAnnotationReader(),
+                $this->getLogger()
+            ),
+            $this->getLogger()
         );
 
         $this->urlsTransformer = new UrlsTransformer();
@@ -83,5 +86,13 @@ class UrlsTransformerTest extends \Codeception\TestCase\Test
                 );
             }
         }
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

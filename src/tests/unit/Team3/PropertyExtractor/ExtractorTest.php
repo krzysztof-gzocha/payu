@@ -2,6 +2,7 @@
 namespace Team3\PropertyExtractor;
 
 use Codeception\TestCase;
+use Psr\Log\LoggerInterface;
 use Team3\PropertyExtractor\Reader\ReaderInterface;
 use Team3\PropertyExtractor\Reader\ReaderResult;
 use tests\unit\Team3\PropertyExtractor\Model;
@@ -33,7 +34,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
             ->method('read')
             ->willReturn([new ReaderResult(self::MODELS_METHOD_NAME, self::ANNOTATION_PROPERTY_NAME)]);
 
-        $this->extractor = new Extractor($reader);
+        $this->extractor = new Extractor($reader, $this->getLogger());
     }
 
     public function testResult()
@@ -59,7 +60,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\PropertyExtractor\ExtractorException
+     * @expectedException \Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenWrongClassNameGiven()
     {
@@ -67,7 +68,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\PropertyExtractor\ExtractorException
+     * @expectedException \Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenArrayGiven()
     {
@@ -75,7 +76,7 @@ class ExtractorTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException Team3\PropertyExtractor\ExtractorException
+     * @expectedException \Team3\PropertyExtractor\ExtractorException
      */
     public function testThrowingExceptionWhenWrongMethodReturned()
     {
@@ -85,7 +86,15 @@ class ExtractorTest extends \Codeception\TestCase\Test
             ->method('read')
             ->willReturn([new ReaderResult('wrongMethod', self::ANNOTATION_PROPERTY_NAME)]);
 
-        $extractor = new Extractor($reader);
-        $this->extractor->extract(new \stdClass());
+        $extractor = new Extractor($reader, $this->getLogger());
+        $extractor->extract(new \stdClass());
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private function getLogger()
+    {
+        return $this->getMock('Psr\Log\LoggerInterface');
     }
 }

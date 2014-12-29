@@ -5,7 +5,7 @@
         <exec command="./bin/php-cs-fixer fix src/"/>
     </target>
 
-    <target name="test-all" depends="phpspec,unit-tests,phpmd"/>
+    <target name="test-all" depends="phpspec,unit-tests,hhvm-unit-tests,phpmd"/>
 
     <target name="unit-tests">
         <exec command="./bin/codecept run unit" checkreturn="true" passthru="true"/>
