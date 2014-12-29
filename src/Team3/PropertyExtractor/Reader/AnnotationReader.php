@@ -98,7 +98,7 @@ class AnnotationReader implements ReaderInterface
             ->logger
             ->debug(sprintf(
                 '%s found result on object %s method %s with property name %s',
-                __CLASS__,
+                get_class($this),
                 get_class($object),
                 $readerResult->getMethodName(),
                 $readerResult->getPropertyName()

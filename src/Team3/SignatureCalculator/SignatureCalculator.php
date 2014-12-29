@@ -104,11 +104,7 @@ class SignatureCalculator implements SignatureCalculatorInterface
         );
         $this->dataToEncrypt = '';
 
-        try {
-            return $this->encoder->encode($dataToEncrypt, $algorithm);
-        } catch (EncoderException $exception) {
-            $this->adaptException($exception);
-        }
+        return $this->encode($dataToEncrypt, $algorithm);
     }
 
     /**
@@ -137,25 +133,52 @@ class SignatureCalculator implements SignatureCalculatorInterface
     }
 
     /**
-     * @param \Exception $exception
+     * @param string             $data
+     * @param AlgorithmInterface $algorithm
      *
+     * @return string
      * @throws SignatureCalculatorException
      */
+    private function encode($data, AlgorithmInterface $algorithm)
+    {
+        try {
+            $encodedData = $this->encoder->encode($data, $algorithm);
+        } catch (EncoderException $exception) {
+            $adaptedException = $this->adaptException($exception);
+            $this->logException($adaptedException);
+
+            throw $adaptedException;
+        }
+
+        return $encodedData;
+    }
+
+    /**
+     * @param \Exception $exception
+     *
+     * @return SignatureCalculatorException
+     */
     private function adaptException(\Exception $exception)
+    {
+        return new SignatureCalculatorException(
+            $exception->getMessage(),
+            $exception->getCode(),
+            $exception
+        );
+    }
+
+    /**
+     * @param \Exception $exception
+     */
+    private function logException(\Exception $exception)
     {
         $this
             ->logger
             ->error(sprintf(
                 '%s thrown %s with message "%s"',
-                __CLASS__,
+                get_class($this),
                 get_class($exception),
                 $exception->getMessage()
             ));
-
-        throw new SignatureCalculatorException(
-            $exception->getMessage(),
-            $exception->getCode(),
-            $exception
-        );
     }
 }
