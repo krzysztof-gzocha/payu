@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "96e3fd7969cad9e3cd95f03248396389",
+    "hash": "23cd7b107780323419d70afe89e72382",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1130,16 +1130,16 @@
         },
         {
             "name": "phing/phing",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phingofficial/phing.git",
-                "reference": "12af1264dd4c5b88e28ee787e829de13c5ec172e"
+                "reference": "393edeffa8a85d43636ce0c9b4deb1ff9ac60a5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/12af1264dd4c5b88e28ee787e829de13c5ec172e",
-                "reference": "12af1264dd4c5b88e28ee787e829de13c5ec172e",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/393edeffa8a85d43636ce0c9b4deb1ff9ac60a5c",
+                "reference": "393edeffa8a85d43636ce0c9b4deb1ff9ac60a5c",
                 "shasum": ""
             },
             "require": {
@@ -1215,7 +1215,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2014-11-25 14:58:59"
+            "time": "2014-12-03 09:18:46"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2895,10 +2895,12 @@
         "doctrine/annotations": 0,
         "jms/serializer": 0,
         "symfony/validator": 0,
+        "psr/log": 0,
         "phpspec/phpspec": 0,
         "codeception/codeception": 0,
         "phpmd/phpmd": 0,
         "fabpot/php-cs-fixer": 0,
+        "phing/phing": 0,
         "codeclimate/php-test-reporter": 20
     },
     "prefer-stable": false,
