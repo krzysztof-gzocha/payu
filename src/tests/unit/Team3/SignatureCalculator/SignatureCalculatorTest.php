@@ -166,6 +166,8 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
     }
 
     /**
+     * Will return initialized order with parameters taken from
+     * {@link http://developers.payu.com/pl/restapi.html#payment_form}
      * @return Order
      */
     private function getOrder()
@@ -175,6 +177,11 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         $order->setMerchantPosId('145227');
         $order->setDescription('Order description');
         $order->setTotalAmount(new Money(10));
+
+        /**
+         * Documentation was mistaken in currency code.
+         * Correct code was taken from {@link http://jsfiddle.net/FDrsF/177/}
+         */
         $order->setCurrencyCode('PLN');
         $order->setContinueUrl('http://localhost/continue');
         $order->setNotifyUrl('http://shop.url/notify.json');
