@@ -1,4 +1,8 @@
 {
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "vendor"
+    },
     "require-dev": {
         "phpspec/phpspec": "@stable",
         "codeception/codeception": "@stable",
@@ -17,6 +21,7 @@
         "doctrine/annotations": "@stable",
         "jms/serializer": "@stable",
         "symfony/validator": "@stable",
-        "psr/log": "@stable"
+        "psr/log": "@stable",
+        "php": ">=5.4.0"
     }
 }

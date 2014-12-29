@@ -2,19 +2,6 @@
 namespace Team3\Order\Model;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use JMS\Serializer\Annotation\Accessor;
-use JMS\Serializer\Annotation\AccessorOrder;
-use JMS\Serializer\Annotation\AccessType;
-use JMS\Serializer\Annotation\Groups;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\Type;
-use Symfony\Component\Validator\Constraints\Callback;
-use Symfony\Component\Validator\Constraints\Country;
-use Symfony\Component\Validator\Constraints\Currency;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Validator\Constraints\Ip;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Valid;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Order\Model\Buyer\Buyer;
 use Team3\Order\Model\Money\Money;
@@ -37,7 +24,6 @@ class OrderTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        $this->load();
         $this->validator = (new ValidatorBuilder())->getValidator(new AnnotationReader());
     }
 
@@ -99,23 +85,5 @@ class OrderTest extends \Codeception\TestCase\Test
             'Team3\Order\Model\ShippingMethods\ShippingMethodCollection',
             $order->getShippingMethodCollection()
         );
-    }
-
-    private function load()
-    {
-        new Groups();
-        new Valid();
-        new AccessorOrder();
-        new AccessType();
-        new Type();
-        new SerializedName(['value' => 'test']);
-        new Ip();
-        new NotBlank();
-        new Accessor();
-        new Currency();
-        new \Symfony\Component\Validator\Constraints\Type(['type' => 'integer']);
-        new Email();
-        new Country();
-        new Callback();
     }
 }

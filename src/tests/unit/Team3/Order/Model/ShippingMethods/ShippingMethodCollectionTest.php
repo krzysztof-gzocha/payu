@@ -2,9 +2,6 @@
 namespace Team3\Order\Model\ShippingMethods;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Symfony\Component\Validator\Constraints\Country;
-use Symfony\Component\Validator\Constraints\NotNull;
-use Symfony\Component\Validator\Constraints\Valid;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Order\Model\Money\Money;
 use Team3\ValidatorBuilder\ValidatorBuilder;
@@ -23,7 +20,6 @@ class ShippingMethodCollectionTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        $this->load();
         $this->validator = (new ValidatorBuilder())->getValidator(new AnnotationReader());
     }
 
@@ -70,12 +66,5 @@ class ShippingMethodCollectionTest extends \Codeception\TestCase\Test
     {
         $smc = new ShippingMethodCollection([1, 2]);
         $this->assertTrue($smc->isFilled());
-    }
-
-    private function load()
-    {
-        new Valid();
-        new Country();
-        new NotNull();
     }
 }

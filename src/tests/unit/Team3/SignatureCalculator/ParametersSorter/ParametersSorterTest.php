@@ -1,20 +1,8 @@
 <?php
 namespace Team3\SignatureCalculator\ParametersSorter;
 
-use JMS\Serializer\Annotation\Accessor;
-use JMS\Serializer\Annotation\AccessorOrder;
-use JMS\Serializer\Annotation\AccessType;
-use JMS\Serializer\Annotation\Groups;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Validator\Constraints\Callback;
-use Symfony\Component\Validator\Constraints\Country;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Validator\Constraints\Ip;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Valid;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Serializer\GroupsSpecifier;
@@ -45,7 +33,6 @@ class ParametersSorterTest extends \Codeception\TestCase\Test
 
     protected function _before()
     {
-        $this->load();
         $this->serializer = new Serializer(
             SerializerBuilder::create()->build(),
             new GroupsSpecifier($this->getLogger()),
@@ -86,23 +73,5 @@ class ParametersSorterTest extends \Codeception\TestCase\Test
     private function getLogger()
     {
         return $this->getMock('Psr\Log\LoggerInterface');
-    }
-
-    private function load()
-    {
-        new AccessorOrder();
-        new AccessType();
-        new Type();
-        new Accessor();
-        new Groups();
-
-        new Valid();
-        new SerializedName(['value' => 't']);
-        new Ip();
-        new NotBlank();
-        new \Symfony\Component\Validator\Constraints\Type(['type' => 'test']);
-        new Callback();
-        new Email();
-        new Country();
     }
 }

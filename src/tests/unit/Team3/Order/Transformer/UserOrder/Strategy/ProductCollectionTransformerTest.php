@@ -3,7 +3,6 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Psr\Log\LoggerInterface;
-use Team3\Annotation\PayU;
 use Team3\Order\Model\Money\Money;
 use Team3\PropertyExtractor\ExtractorResult;
 use Team3\PropertyExtractor\Reader\AnnotationReader;
@@ -44,9 +43,6 @@ class ProductCollectionTransformerTest extends \Codeception\TestCase\Test
      */
     protected function _before()
     {
-        // Autoload payu annotation
-        new PayU();
-
         $this->productCollectionTransformer = new ProductCollectionTransformer(
             new SingleProductTransformer(
                 new Extractor(
