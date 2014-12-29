@@ -8,8 +8,9 @@ use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\Money\MoneyInterface;
 use Team3\Order\Model\Products\ProductCollectionInterface;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollectionInterface;
+use Team3\Order\Serializer\SerializableInterface;
 
-interface OrderInterface extends IsFilledInterface
+interface OrderInterface extends IsFilledInterface, SerializableInterface
 {
     /**
      * @return string
@@ -202,4 +203,9 @@ interface OrderInterface extends IsFilledInterface
      * @return Order
      */
     public function setStatus(OrderStatusInterface $status);
+
+    /**
+     * @return string
+     */
+    public function getPayUOrderId();
 }
