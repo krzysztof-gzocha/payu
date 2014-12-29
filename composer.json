@@ -4,7 +4,7 @@
         "codeception/codeception": "@stable",
         "phpmd/phpmd" : "@stable",
         "fabpot/php-cs-fixer": "@stable",
-        "phing/phing": "2.9.0",
+        "phing/phing": "@stable",
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
@@ -17,6 +17,6 @@
         "doctrine/annotations": "@stable",
         "jms/serializer": "@stable",
         "symfony/validator": "@stable",
-        "psr/log": "1.0.0"
+        "psr/log": "@stable"
     }
 }
