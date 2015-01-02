@@ -44,13 +44,13 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param OrderInterface       $order
+     * @param OrderInterface       $serializable
      * @param SerializationContext $serializationContext
      *
      * @return string
      */
     public function toJson(
-        OrderInterface $order,
+        OrderInterface $serializable,
         SerializationContext $serializationContext = null
     ) {
         if (null == $serializationContext) {
@@ -60,11 +60,11 @@ class Serializer implements PayUSerializerInterface
         $serializationResult = $this
             ->serializer
             ->serialize(
-                $order,
+                $serializable,
                 'json',
-                $this->getSerializationContext($order, $serializationContext)
+                $this->getSerializationContext($serializable, $serializationContext)
             );
-        $this->logSerializationResult($order, $serializationResult);
+        $this->logSerializationResult($serializable, $serializationResult);
 
         return $serializationResult;
     }
@@ -73,17 +73,30 @@ class Serializer implements PayUSerializerInterface
      * @param string $data
      * @param string $type
      *
-     * @return object
+     * @return array|object
+     * @throws SerializerException
      */
     public function fromJson($data, $type)
     {
-        return $this
-            ->serializer
-            ->deserialize(
-                $data,
-                $type,
-                'json'
+        try {
+            $result = $this
+                ->serializer
+                ->deserialize(
+                    $data,
+                    $type,
+                    'json'
+                );
+        } catch (\Exception $exception) {
+            $adaptedException = new SerializerException(
+                $exception->getMessage(),
+                $exception->getCode(),
+                $exception
             );
+            $this->logException($adaptedException);
+            throw $adaptedException;
+        }
+
+        return $result;
     }
 
     /**
@@ -118,5 +131,17 @@ class Serializer implements PayUSerializerInterface
                 $order->getOrderId(),
                 $result
             ));
+    }
+
+    /**
+     * @param \Exception $exception
+     */
+    private function logException(\Exception $exception)
+    {
+        $this->logger->error(sprintf(
+            '%s exception occurred on deserialization with message "%s"',
+            get_class($exception),
+            $exception->getMessage()
+        ));
     }
 }

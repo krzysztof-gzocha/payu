@@ -150,6 +150,14 @@ class SerializerTest extends \Codeception\TestCase\Test
     }
 
     /**
+     * @expectedException \Team3\Order\Serializer\SerializerException
+     */
+    public function testWrongDeserialization()
+    {
+        $this->serializer->fromJson('{}', 'NonExistenceClass');
+    }
+
+    /**
      * @return \Psr\Log\LoggerInterface
      */
     private function getLogger()
