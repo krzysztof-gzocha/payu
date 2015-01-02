@@ -22,6 +22,7 @@
         "jms/serializer": "@stable",
         "symfony/validator": "@stable",
         "psr/log": "@stable",
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "kriswallsmith/buzz": "0.13"
     }
 }

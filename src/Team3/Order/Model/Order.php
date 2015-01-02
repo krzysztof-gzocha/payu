@@ -12,6 +12,7 @@ use Team3\Order\Model\Money\Money;
 use Team3\Order\Model\Money\MoneyInterface;
 use Team3\Order\Model\Products\ProductCollection;
 use Team3\Order\Model\ShippingMethods\ShippingMethodCollection;
+use Team3\Order\Model\Traits\OrderIdentificationParametersTrait;
 use Team3\Order\Model\Traits\ProductCollectionTrait;
 use Team3\Order\Model\Traits\ShippingMethodCollectionTrait;
 use Team3\Order\Model\Traits\UrlsTrait;
@@ -29,6 +30,7 @@ class Order implements OrderInterface
     use UrlsTrait;
     use ProductCollectionTrait;
     use ShippingMethodCollectionTrait;
+    use OrderIdentificationParametersTrait;
 
     /**
      * @var BuyerInterface
@@ -46,17 +48,6 @@ class Order implements OrderInterface
      * @Assert\NotBlank()
      */
     protected $customerIp;
-
-    /**
-     * @var string
-     * @JMS\Type("string")
-     * @JMS\SerializedName("extOrderId")
-     * @JMS\Accessor(
-     *      setter="setOrderId",
-     *      getter="getOrderId"
-     * )
-     */
-    protected $extOrderId;
 
     /**
      * @var string
@@ -256,26 +247,6 @@ class Order implements OrderInterface
     public function setMerchantPosId($merchantPosId)
     {
         $this->merchantPosId = $merchantPosId;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrderId()
-    {
-        return $this->extOrderId;
-    }
-
-    /**
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        $this->extOrderId = $orderId;
 
         return $this;
     }
