@@ -44,13 +44,13 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param OrderInterface       $serializable
-     * @param SerializationContext $serializationContext
+     * @param SerializableInterface $serializable
+     * @param SerializationContext  $serializationContext
      *
      * @return string
      */
     public function toJson(
-        OrderInterface $serializable,
+        SerializableInterface $serializable,
         SerializationContext $serializationContext = null
     ) {
         if (null == $serializationContext) {
@@ -100,35 +100,37 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param OrderInterface       $order
-     * @param SerializationContext $serializationContext
+     * @param SerializableInterface $serializable
+     * @param SerializationContext  $serializationContext
      *
      * @return SerializationContext
      */
     private function getSerializationContext(
-        OrderInterface $order,
+        SerializableInterface $serializable,
         SerializationContext $serializationContext
     ) {
-        $serializationContext->setGroups(
-            $this->groupsSpecifier->specifyGroups($order)
-        );
+        if ($serializable instanceof OrderInterface) {
+            $serializationContext->setGroups(
+                $this->groupsSpecifier->specifyGroups($serializable)
+            );
+        }
 
         return $serializationContext;
     }
 
     /**
-     * @param OrderInterface $order
-     * @param string         $result
+     * @param SerializableInterface $serializable
+     * @param string                $result
      */
     private function logSerializationResult(
-        OrderInterface $order,
+        SerializableInterface $serializable,
         $result
     ) {
         $this
             ->logger
             ->debug(sprintf(
-                'Order with id %s was serialized to "%s"',
-                $order->getOrderId(),
+                'Serializable object %s was serialized to "%s"',
+                get_class($serializable),
                 $result
             ));
     }

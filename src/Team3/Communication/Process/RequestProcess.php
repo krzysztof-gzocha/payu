@@ -6,19 +6,26 @@
 namespace Team3\Communication\Process;
 
 use Buzz\Message\MessageInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Configuration\ConfigurationInterface;
+use Team3\Order\Serializer\SerializableInterface;
 use Team3\Order\Serializer\SerializerException;
 use Team3\Order\Serializer\SerializerInterface;
 
+/**
+ * Class RequestProcess
+ * @package Team3\Communication\Process
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ */
 class RequestProcess implements RequestProcessInterface
 {
     /**
-     * @var ClientInterface
+     * @var ResponseInterface[]
      */
-    private $client;
+    private $responses;
 
     /**
      * @var SerializerInterface
@@ -26,33 +33,48 @@ class RequestProcess implements RequestProcessInterface
     private $serializer;
 
     /**
-     * @var ResponseInterface[]
+     * @var ClientInterface
      */
-    private $responses;
+    private $client;
+
+    /**
+     * @var ValidatorInterface
+     */
+    private $validator;
 
     /**
      * @param SerializerInterface $serializer
      * @param ClientInterface     $client
+     * @param ValidatorInterface  $validator
      */
     public function __construct(
         SerializerInterface $serializer,
-        ClientInterface $client
+        ClientInterface $client,
+        ValidatorInterface $validator
     ) {
+        $this->responses = [];
         $this->serializer = $serializer;
         $this->client = $client;
-        $this->responses = [];
+        $this->validator = $validator;
     }
 
     /**
      * @param PayURequestInterface   $payURequest
      * @param ConfigurationInterface $configuration
+     * @param bool                   $shouldValidate
      *
      * @return object
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function process(
         PayURequestInterface $payURequest,
-        ConfigurationInterface $configuration
+        ConfigurationInterface $configuration,
+        $shouldValidate = true
     ) {
+        if ($shouldValidate) {
+            $this->validate($payURequest->getDataObject());
+        }
+
         $curlResponse = $this->client->sendRequest($configuration, $payURequest);
 
         return $this->deserializeRawResponse($curlResponse, $payURequest);
@@ -68,6 +90,39 @@ class RequestProcess implements RequestProcessInterface
         $this->responses[] = $response;
 
         return $this;
+    }
+
+    /**
+     * @param ResponseInterface[] $responses
+     *
+     * @return $this
+     */
+    public function setResponses(array $responses)
+    {
+        $this->responses = $responses;
+
+        return $this;
+    }
+
+    /**
+     * @param SerializableInterface $object
+     *
+     * @throws InvalidRequestDataObjectException
+     */
+    private function validate(SerializableInterface $object)
+    {
+        $violations = $this->validator->validate($object);
+
+        if (0 < $violations->count()) {
+            throw new InvalidRequestDataObjectException(
+                $violations,
+                sprintf(
+                    "Given object %s in PayU request is invalid. %d violations are in this exception.",
+                    get_class($object),
+                    $violations->count()
+                )
+            );
+        }
     }
 
     /**

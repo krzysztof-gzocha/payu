@@ -5,10 +5,12 @@
 
 namespace Team3\Communication\Request;
 
+use Team3\Order\Serializer\SerializableInterface;
+
 abstract class AbstractPayURequest implements PayURequestInterface
 {
     /**
-     * @var string
+     * @var SerializableInterface
      */
     protected $data;
 
@@ -18,9 +20,9 @@ abstract class AbstractPayURequest implements PayURequestInterface
     protected $path;
 
     /**
-     * @return string
+     * @return SerializableInterface
      */
-    public function getData()
+    public function getDataObject()
     {
         return $this->data;
     }
@@ -31,5 +33,13 @@ abstract class AbstractPayURequest implements PayURequestInterface
     public function getPath()
     {
         return $this->path;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return self::METHOD_POST;
     }
 }

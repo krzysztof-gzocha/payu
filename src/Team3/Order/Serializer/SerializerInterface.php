@@ -6,18 +6,17 @@
 namespace Team3\Order\Serializer;
 
 use JMS\Serializer\SerializationContext;
-use Team3\Order\Model\OrderInterface;
 
 interface SerializerInterface
 {
     /**
-     * @param OrderInterface       $order
-     * @param SerializationContext $serializationContext
+     * @param SerializableInterface $serializable
+     * @param SerializationContext  $serializationContext
      *
      * @return string
      */
     public function toJson(
-        OrderInterface $order,
+        SerializableInterface $serializable,
         SerializationContext $serializationContext = null
     );
 

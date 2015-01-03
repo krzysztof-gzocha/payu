@@ -11,10 +11,10 @@ use Team3\Communication\Request\RequestStatus;
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Class CreateOrderResponse
+ * Class OrderCreateResponse
  * @package Team3\Communication\Response
  */
-class CreateOrderResponse implements ResponseInterface
+class OrderCreateResponse implements ResponseInterface
 {
     /**
      * @var string
@@ -65,7 +65,7 @@ class CreateOrderResponse implements ResponseInterface
     /**
      * @param string $redirectUri
      *
-     * @return CreateOrderResponse
+     * @return OrderCreateResponse
      */
     public function setRedirectUri($redirectUri)
     {
@@ -85,7 +85,7 @@ class CreateOrderResponse implements ResponseInterface
     /**
      * @param string $orderId
      *
-     * @return CreateOrderResponse
+     * @return OrderCreateResponse
      */
     public function setOrderId($orderId)
     {
@@ -105,7 +105,7 @@ class CreateOrderResponse implements ResponseInterface
     /**
      * @param string $extOrderId
      *
-     * @return CreateOrderResponse
+     * @return OrderCreateResponse
      */
     public function setExtOrderId($extOrderId)
     {
@@ -125,7 +125,7 @@ class CreateOrderResponse implements ResponseInterface
     /**
      * @param RequestStatus $requestStatus
      *
-     * @return CreateOrderResponse
+     * @return OrderCreateResponse
      */
     public function setRequestStatus(RequestStatus $requestStatus)
     {

@@ -1,16 +1,16 @@
 <?php
-namespace Team3\Communication\RequestProcess;
+namespace Team3\Communication\Process;
 
 use Buzz\Message\MessageInterface;
 use Buzz\Message\Response;
 use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
-use Team3\Communication\Process\RequestProcess;
-use Team3\Communication\Process\RequestProcessException;
-use Team3\Communication\RequestBuilder\CreateOrderRequestBuilder;
-use Team3\Communication\RequestBuilder\OrderStatusRequestBuilder;
-use Team3\Communication\Response\CreateOrderResponse;
+use Team3\Communication\Request\OrderCreateRequest;
+use Team3\Communication\Request\OrderStatusRequest;
+use Team3\Communication\Request\PayURequestInterface;
+use Team3\Communication\Response\OrderCreateResponse;
 use Team3\Communication\Response\OrderStatusResponse;
 use Team3\Configuration\Configuration;
 use Team3\Configuration\ConfigurationInterface;
@@ -61,17 +61,15 @@ class RequestProcessTest extends \Codeception\TestCase\Test
 
     public function testCreateOrderRequestProcess()
     {
-        $createOrderRequestBuilder = new CreateOrderRequestBuilder($this->serializer);
-
         $response = $this
             ->getRequestProcess($this->getCreateOrderCurlResponse())
             ->process(
-                $createOrderRequestBuilder->build(new Order()),
+                new OrderCreateRequest(new Order()),
                 $this->configuration
             );
 
         $this->assertInstanceOf(
-            '\Team3\Communication\Response\CreateOrderResponse',
+            '\Team3\Communication\Response\OrderCreateResponse',
             $response
         );
         $this->assertEquals(
@@ -94,13 +92,11 @@ class RequestProcessTest extends \Codeception\TestCase\Test
 
     public function testOrderStatusRequestProcess()
     {
-        $orderStatusRequestBuilder = new OrderStatusRequestBuilder();
-
         /** @var OrderStatusResponse $response */
         $response = $this
             ->getRequestProcess($this->getOrderStatusCurlResponse())
             ->process(
-                $orderStatusRequestBuilder->build(new Order()),
+                new OrderStatusRequest(new Order()),
                 $this->configuration
             );
 
@@ -140,11 +136,12 @@ class RequestProcessTest extends \Codeception\TestCase\Test
 
         $requestProcess = new RequestProcess(
             $this->serializer,
-            $client
+            $client,
+            $this->getValidator()
         );
 
         $requestProcess->process(
-            $this->getMock('\Team3\Communication\Request\PayURequestInterface'),
+            $this->getPayURequest(),
             $this->configuration
         );
     }
@@ -182,14 +179,31 @@ class RequestProcessTest extends \Codeception\TestCase\Test
 
         $requestProcess = new RequestProcess(
             $serializer,
-            $client
+            $client,
+            $this->getValidator()
         );
         $requestProcess->addResponse($response);
 
         $requestProcess->process(
-            $this->getMock('\Team3\Communication\Request\PayURequestInterface'),
+            $this->getPayURequest(),
             $this->configuration
         );
+    }
+
+    /**
+     * @return PayURequestInterface
+     */
+    private function getPayURequest()
+    {
+        $request = $this->getMock('\Team3\Communication\Request\PayURequestInterface');
+        $request
+            ->expects($this->any())
+            ->method('getDataObject')
+            ->willReturn(
+                $this->getMock('\Team3\Order\Serializer\SerializableInterface')
+            );
+
+        return $request;
     }
 
     /**
@@ -201,12 +215,13 @@ class RequestProcessTest extends \Codeception\TestCase\Test
     {
         $requestProcess = new RequestProcess(
             $this->serializer,
-            $this->getClient($curlResponse)
+            $this->getClient($curlResponse),
+            $this->getValidator()
         );
 
         $requestProcess
             ->addResponse(new OrderStatusResponse())
-            ->addResponse(new CreateOrderResponse());
+            ->addResponse(new OrderCreateResponse());
 
         return $requestProcess;
     }
@@ -240,6 +255,35 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         return $this
             ->getMockBuilder('Psr\Log\LoggerInterface')
             ->getMock();
+    }
+
+    /**
+     * @param int $violationsCount
+     *
+     * @return ValidatorInterface
+     */
+    private function getValidator($violationsCount = 0)
+    {
+        $validator = $this
+            ->getMockBuilder('\Symfony\Component\Validator\Validator\ValidatorInterface')
+            ->getMock();
+
+        $violations = $this
+            ->getMockBuilder('\Symfony\Component\Validator\ConstraintViolationListInterface')
+            ->getMock();
+
+        $violations
+            ->expects($this->any())
+            ->method('count')
+            ->willReturn($violationsCount);
+
+        $validator
+            ->expects($this->any())
+            ->method('validate')
+            ->withAnyParameters()
+            ->willReturn($violations);
+
+        return $validator;
     }
 
     /**

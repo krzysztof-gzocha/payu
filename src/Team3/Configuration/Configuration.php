@@ -48,7 +48,7 @@ class Configuration implements ConfigurationInterface
     public function __construct(
         CredentialsInterface $credentials,
         $protocol = 'https',
-        $domain = 'payu.com',
+        $domain = 'secure.payu.com',
         $path = 'api',
         $version = 'v2_1'
     ) {

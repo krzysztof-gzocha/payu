@@ -27,7 +27,7 @@ class ClientTest extends \Codeception\TestCase\Test
 
     public function testResponseContent()
     {
-        $client = new Client(
+        $client = new ClientAdapter(
             $this->getCurlClient(),
             $this->getCurlRequestBuilder(),
             $this->getLogger()
@@ -55,7 +55,7 @@ class ClientTest extends \Codeception\TestCase\Test
      */
     public function testCurlsException()
     {
-        $client = new Client(
+        $client = new ClientAdapter(
             $this->getCurlClientWithException(),
             $this->getCurlRequestBuilder(),
             $this->getLogger()
@@ -116,6 +116,7 @@ class ClientTest extends \Codeception\TestCase\Test
 
         $curlRequestBuilder = $this
             ->getMockBuilder('Team3\Communication\CurlRequestBuilder\CurlRequestBuilder')
+            ->disableOriginalConstructor()
             ->getMock();
 
         $curlRequestBuilder

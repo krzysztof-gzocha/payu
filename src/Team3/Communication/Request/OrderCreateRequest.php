@@ -5,14 +5,16 @@
 
 namespace Team3\Communication\Request;
 
+use Team3\Order\Model\OrderInterface;
+
 class OrderCreateRequest extends AbstractPayURequest
 {
     /**
-     * @param string $data
+     * @param OrderInterface $order
      */
-    public function __construct($data)
+    public function __construct(OrderInterface $order)
     {
-        $this->data = $data;
-        $this->path = '/orders';
+        $this->data = $order;
+        $this->path = 'orders';
     }
 }

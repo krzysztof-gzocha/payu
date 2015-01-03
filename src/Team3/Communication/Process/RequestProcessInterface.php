@@ -13,10 +13,16 @@ interface RequestProcessInterface
     /**
      * @param PayURequestInterface   $payURequest
      * @param ConfigurationInterface $configuration
+     * @param bool                   $shouldValidate
      *
      * @return object
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
-    public function process(PayURequestInterface $payURequest, ConfigurationInterface $configuration);
+    public function process(
+        PayURequestInterface $payURequest,
+        ConfigurationInterface $configuration,
+        $shouldValidate = true
+    );
 
     /**
      * @param ResponseInterface $response
@@ -24,4 +30,11 @@ interface RequestProcessInterface
      * @return $this
      */
     public function addResponse(ResponseInterface $response);
+
+    /**
+     * @param ResponseInterface[] $responses
+     *
+     * @return $this
+     */
+    public function setResponses(array $responses);
 }

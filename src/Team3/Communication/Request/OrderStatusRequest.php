@@ -5,27 +5,24 @@
 
 namespace Team3\Communication\Request;
 
+use Team3\Order\Model\OrderInterface;
+
 class OrderStatusRequest extends AbstractPayURequest
 {
     /**
-     * @var string
+     * @param OrderInterface $order
      */
-    private $payUOrderId;
-
-    /**
-     * @param string $payUOrderId
-     */
-    public function __construct($payUOrderId)
+    public function __construct(OrderInterface $order)
     {
-        $this->data = '';
-        $this->payUOrderId = $payUOrderId;
+        $this->data = $order;
+        $this->path = sprintf('orders/%s', $order->getPayUOrderId());
     }
 
     /**
      * @return string
      */
-    public function getPath()
+    public function getMethod()
     {
-        return sprintf('/orders/%s', $this->payUOrderId);
+        return self::METHOD_GET;
     }
 }

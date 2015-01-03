@@ -22,7 +22,7 @@ class ConfigurationTest extends \Codeception\TestCase\Test
         );
 
         $this->assertEquals(
-            'payu.com',
+            'secure.payu.com',
             $configuration->getDomain()
         );
 
@@ -42,7 +42,7 @@ class ConfigurationTest extends \Codeception\TestCase\Test
         );
 
         $this->assertEquals(
-            'https://payu.com/api/v2_1',
+            'https://secure.payu.com/api/v2_1',
             $configuration->getAPIUrl()
         );
     }

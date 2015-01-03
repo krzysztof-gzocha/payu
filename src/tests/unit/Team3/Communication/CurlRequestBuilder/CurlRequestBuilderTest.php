@@ -4,6 +4,8 @@ namespace Team3\Communication\CurlRequestBuilder;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Configuration\Configuration;
 use Team3\Configuration\Credentials\TestCredentials;
+use Team3\Order\Model\Order;
+use Team3\Order\Serializer\SerializerInterface;
 
 /**
  * Class CurlRequestBuilderTest
@@ -12,6 +14,7 @@ use Team3\Configuration\Credentials\TestCredentials;
  */
 class CurlRequestBuilderTest extends \Codeception\TestCase\Test
 {
+    const DATA = 'DATA';
     /**
      * @var \UnitTester
      */
@@ -19,7 +22,7 @@ class CurlRequestBuilderTest extends \Codeception\TestCase\Test
 
     public function testResults()
     {
-        $builder = new CurlRequestBuilder();
+        $builder = new CurlRequestBuilder($this->getSerializer());
         $configuration = new Configuration(new TestCredentials());
 
         $payURequest = $this->getPayURequest();
@@ -31,17 +34,22 @@ class CurlRequestBuilderTest extends \Codeception\TestCase\Test
         );
 
         $this->assertEquals(
-            $configuration->getDomain(),
+            sprintf('%s://%s/', $configuration->getProtocol(), $configuration->getDomain()),
             $curlRequest->getHost()
         );
 
         $this->assertEquals(
-            $payURequest->getData(),
+            self::DATA,
             $curlRequest->getContent()
         );
 
         $this->assertEquals(
-            $payURequest->getPath(),
+            sprintf(
+                '%s/%s/%s',
+                $configuration->getPath(),
+                $configuration->getVersion(),
+                $payURequest->getPath()
+            ),
             $curlRequest->getResource()
         );
     }
@@ -56,13 +64,36 @@ class CurlRequestBuilderTest extends \Codeception\TestCase\Test
             ->getMock();
         $payURequest
             ->expects($this->any())
-            ->method('getData')
-            ->willReturn('DATA');
+            ->method('getDataObject')
+            ->willReturn(new Order());
         $payURequest
             ->expects($this->any())
             ->method('getPath')
-            ->willReturn('/path');
+            ->willReturn('path');
+        $payURequest
+            ->expects($this->any())
+            ->method('getMethod')
+            ->willReturn('POST');
 
         return $payURequest;
+    }
+
+    /**
+     * @return SerializerInterface
+     */
+    private function getSerializer()
+    {
+        $serializer = $this
+            ->getMockBuilder('Team3\Order\Serializer\Serializer')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $serializer
+            ->expects($this->any())
+            ->method('toJson')
+            ->withAnyParameters()
+            ->willReturn(self::DATA);
+
+        return $serializer;
     }
 }
