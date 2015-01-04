@@ -6,7 +6,7 @@
 namespace Team3\Order\Serializer;
 
 use JMS\Serializer\SerializationContext;
-use JMS\Serializer\SerializerInterface;
+use JMS\Serializer\SerializerInterface as JMSSerializerInterface;
 use Psr\Log\LoggerInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Serializer\SerializerInterface as PayUSerializerInterface;
@@ -14,7 +14,7 @@ use Team3\Order\Serializer\SerializerInterface as PayUSerializerInterface;
 class Serializer implements PayUSerializerInterface
 {
     /**
-     * @var SerializerInterface
+     * @var JMSSerializerInterface
      */
     protected $serializer;
 
@@ -29,12 +29,12 @@ class Serializer implements PayUSerializerInterface
     protected $logger;
 
     /**
-     * @param SerializerInterface      $serializer
+     * @param JMSSerializerInterface   $serializer
      * @param GroupsSpecifierInterface $groupsSpecifier
      * @param LoggerInterface          $logger
      */
     public function __construct(
-        SerializerInterface $serializer,
+        JMSSerializerInterface $serializer,
         GroupsSpecifierInterface $groupsSpecifier,
         LoggerInterface $logger
     ) {

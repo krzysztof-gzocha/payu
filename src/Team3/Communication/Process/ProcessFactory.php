@@ -5,25 +5,20 @@
 
 namespace Team3\Communication\Process;
 
-use Buzz\Client\Curl;
-use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Team3\Communication\ClientAdapter;
+use Team3\Communication\ClientAdapterFactory;
 use Team3\Communication\ClientInterface;
-use Team3\Communication\CurlRequestBuilder\CurlRequestBuilder;
 use Team3\Communication\Response\OrderCreateResponse;
 use Team3\Communication\Response\OrderStatusResponse;
 use Team3\Communication\Response\ResponseInterface;
-use Team3\Order\Serializer\GroupsSpecifier;
-use Team3\Order\Serializer\Serializer;
+use Team3\Order\Serializer\SerializerFactory;
 use Team3\Order\Serializer\SerializerInterface;
 use Team3\ValidatorBuilder\ValidatorBuilder;
 
 /**
  * Class ProcessFactory
  * @package Team3\Communication\Process
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class ProcessFactory implements ProcessFactoryInterface
 {
@@ -55,29 +50,28 @@ class ProcessFactory implements ProcessFactoryInterface
     }
 
     /**
+     * @param LoggerInterface $logger
+     *
      * @return SerializerInterface
      */
     private function getSerializer(LoggerInterface $logger)
     {
-        $serializerBuilder = new SerializerBuilder();
+        $serializerFactory = new SerializerFactory();
 
-        return new Serializer(
-            $serializerBuilder->build(),
-            new GroupsSpecifier($logger),
-            $logger
-        );
+        return $serializerFactory->build($logger);
     }
 
     /**
+     * @param LoggerInterface $logger
+     *
      * @return ClientInterface
      */
     private function getClient(LoggerInterface $logger)
     {
-        return new ClientAdapter(
-            new Curl(),
-            new CurlRequestBuilder(
-                $this->getSerializer($logger)
-            ),
+        $clientAdapterFactory = new ClientAdapterFactory();
+
+        return $clientAdapterFactory->build(
+            $this->getSerializer($logger),
             $logger
         );
     }

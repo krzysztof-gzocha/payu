@@ -72,4 +72,12 @@ class RequestStatus
     {
         return self::STATUS_SUCCESS === $this->code;
     }
+
+    /**
+     * @return bool
+     */
+    public function isError()
+    {
+        return self::STATUS_SUCCESS !== $this->code;
+    }
 }

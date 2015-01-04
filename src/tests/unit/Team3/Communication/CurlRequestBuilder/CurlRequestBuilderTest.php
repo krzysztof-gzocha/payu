@@ -84,7 +84,7 @@ class CurlRequestBuilderTest extends \Codeception\TestCase\Test
     private function getSerializer()
     {
         $serializer = $this
-            ->getMockBuilder('Team3\Order\Serializer\Serializer')
+            ->getMockBuilder('Team3\Order\Serializer\SerializerInterface')
             ->disableOriginalConstructor()
             ->getMock();
 
