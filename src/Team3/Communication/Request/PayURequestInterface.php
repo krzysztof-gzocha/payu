@@ -5,15 +5,25 @@
 
 namespace Team3\Communication\Request;
 
+use Team3\Order\Serializer\SerializableInterface;
+
 interface PayURequestInterface
 {
+    const METHOD_POST = 'POST';
+    const METHOD_GET = 'GET';
+
     /**
-     * @return string
+     * @return SerializableInterface
      */
-    public function getData();
+    public function getDataObject();
 
     /**
      * @return string
      */
     public function getPath();
+
+    /**
+     * @return string
+     */
+    public function getMethod();
 }

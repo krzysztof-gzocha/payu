@@ -6,12 +6,25 @@
 namespace Team3\Communication\CurlRequestBuilder;
 
 use Buzz\Message\Request;
-use Buzz\Message\RequestInterface as CurlRequestInterface;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Configuration\ConfigurationInterface;
+use Team3\Order\Serializer\SerializerInterface;
 
 class CurlRequestBuilder implements CurlRequestBuilderInterface
 {
+    /**
+     * @var SerializerInterface
+     */
+    private $serializer;
+
+    /**
+     * @param SerializerInterface $serializer
+     */
+    public function __construct(SerializerInterface $serializer)
+    {
+        $this->serializer = $serializer;
+    }
+
     /**
      * @param ConfigurationInterface $configuration
      * @param PayURequestInterface   $request
@@ -23,11 +36,52 @@ class CurlRequestBuilder implements CurlRequestBuilderInterface
         PayURequestInterface $request
     ) {
         $curlRequest = new Request();
-        $curlRequest->setContent($request->getData());
-        $curlRequest->setHost($configuration->getDomain());
-        $curlRequest->setResource($request->getPath());
-        $curlRequest->setMethod(CurlRequestInterface::METHOD_POST);
+
+        if (PayURequestInterface::METHOD_POST === $request->getMethod()) {
+            $curlRequest->setContent(
+                $this->serializer->toJson($request->getDataObject())
+            );
+        }
+
+        $curlRequest->setHost(sprintf(
+            '%s://%s/',
+            $configuration->getProtocol(),
+            $configuration->getDomain()
+        ));
+        $curlRequest->setResource(sprintf(
+            '%s/%s/%s',
+            $configuration->getPath(),
+            $configuration->getVersion(),
+            $request->getPath()
+        ));
+        $curlRequest->setMethod($request->getMethod());
+        $this->addHeaders($curlRequest, $configuration);
 
         return $curlRequest;
+    }
+
+    /**
+     * @param Request                $curlRequest
+     * @param ConfigurationInterface $configuration
+     */
+    private function addHeaders(
+        Request $curlRequest,
+        ConfigurationInterface $configuration
+    ) {
+        $authorization = sprintf(
+            'Basic %s',
+            base64_encode(
+                sprintf(
+                    '%s:%s',
+                    $configuration->getCredentials()->getMerchantPosId(),
+                    $configuration->getCredentials()->getPrivateKey()
+                )
+            )
+        );
+        $curlRequest->addHeaders([
+            'Authorization' => $authorization,
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json',
+        ]);
     }
 }

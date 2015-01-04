@@ -26,7 +26,9 @@ class RequestStatusTest extends \Codeception\TestCase\Test
             $status->getDescription()
         );
         $this->assertFalse($status->isSuccess());
+        $this->assertTrue($status->isError());
         $status->setCode(RequestStatus::STATUS_SUCCESS);
         $this->assertTrue($status->isSuccess());
+        $this->assertFalse($status->isError());
     }
 }

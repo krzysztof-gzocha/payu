@@ -6,7 +6,7 @@
 namespace Team3\Order\Serializer;
 
 use JMS\Serializer\SerializationContext;
-use JMS\Serializer\SerializerInterface;
+use JMS\Serializer\SerializerInterface as JMSSerializerInterface;
 use Psr\Log\LoggerInterface;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Serializer\SerializerInterface as PayUSerializerInterface;
@@ -14,7 +14,7 @@ use Team3\Order\Serializer\SerializerInterface as PayUSerializerInterface;
 class Serializer implements PayUSerializerInterface
 {
     /**
-     * @var SerializerInterface
+     * @var JMSSerializerInterface
      */
     protected $serializer;
 
@@ -29,12 +29,12 @@ class Serializer implements PayUSerializerInterface
     protected $logger;
 
     /**
-     * @param SerializerInterface      $serializer
+     * @param JMSSerializerInterface   $serializer
      * @param GroupsSpecifierInterface $groupsSpecifier
      * @param LoggerInterface          $logger
      */
     public function __construct(
-        SerializerInterface $serializer,
+        JMSSerializerInterface $serializer,
         GroupsSpecifierInterface $groupsSpecifier,
         LoggerInterface $logger
     ) {
@@ -44,13 +44,13 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param OrderInterface       $serializable
-     * @param SerializationContext $serializationContext
+     * @param SerializableInterface $serializable
+     * @param SerializationContext  $serializationContext
      *
      * @return string
      */
     public function toJson(
-        OrderInterface $serializable,
+        SerializableInterface $serializable,
         SerializationContext $serializationContext = null
     ) {
         if (null == $serializationContext) {
@@ -100,35 +100,37 @@ class Serializer implements PayUSerializerInterface
     }
 
     /**
-     * @param OrderInterface       $order
-     * @param SerializationContext $serializationContext
+     * @param SerializableInterface $serializable
+     * @param SerializationContext  $serializationContext
      *
      * @return SerializationContext
      */
     private function getSerializationContext(
-        OrderInterface $order,
+        SerializableInterface $serializable,
         SerializationContext $serializationContext
     ) {
-        $serializationContext->setGroups(
-            $this->groupsSpecifier->specifyGroups($order)
-        );
+        if ($serializable instanceof OrderInterface) {
+            $serializationContext->setGroups(
+                $this->groupsSpecifier->specifyGroups($serializable)
+            );
+        }
 
         return $serializationContext;
     }
 
     /**
-     * @param OrderInterface $order
-     * @param string         $result
+     * @param SerializableInterface $serializable
+     * @param string                $result
      */
     private function logSerializationResult(
-        OrderInterface $order,
+        SerializableInterface $serializable,
         $result
     ) {
         $this
             ->logger
             ->debug(sprintf(
-                'Order with id %s was serialized to "%s"',
-                $order->getOrderId(),
+                'Serializable object %s was serialized to "%s"',
+                get_class($serializable),
                 $result
             ));
     }

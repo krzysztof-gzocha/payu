@@ -5,6 +5,7 @@
 
 namespace Team3\ValidatorBuilder;
 
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -18,6 +19,10 @@ class ValidatorBuilder implements ValidatorBuilderInterface
      */
     public function getValidator(Reader $reader = null)
     {
+        if (null === $reader) {
+            $reader = new AnnotationReader();
+        }
+
         return Validation::createValidatorBuilder()
             ->enableAnnotationMapping($reader)
             ->getValidator();

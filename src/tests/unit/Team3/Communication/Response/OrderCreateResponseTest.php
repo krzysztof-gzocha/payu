@@ -3,7 +3,7 @@ namespace Team3\Communication\Response;
 
 use Team3\Communication\Request\RequestStatus;
 
-class CreateOrderResponseTest extends \Codeception\TestCase\Test
+class OrderCreateResponseTest extends \Codeception\TestCase\Test
 {
     const EXT_ORDER_ID = '123';
     const ORDER_ID = '456';
@@ -15,7 +15,7 @@ class CreateOrderResponseTest extends \Codeception\TestCase\Test
 
     public function testParameters()
     {
-        $response = new CreateOrderResponse();
+        $response = new OrderCreateResponse();
         $response->setExtOrderId(self::EXT_ORDER_ID);
         $response->setOrderId(self::ORDER_ID);
         $response->setRedirectUri(self::REDIRECT_URI);

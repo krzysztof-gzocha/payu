@@ -23,6 +23,6 @@ class ConfigurationSpec extends ObjectBehavior
     {
         $this
             ->getAPIUrl()
-            ->shouldReturn('https://payu.com/api/v2_1');
+            ->shouldReturn('https://secure.payu.com/api/v2_1');
     }
 }

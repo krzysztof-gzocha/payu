@@ -16,7 +16,10 @@ interface RequestProcessInterface
      *
      * @return object
      */
-    public function process(PayURequestInterface $payURequest, ConfigurationInterface $configuration);
+    public function process(
+        PayURequestInterface $payURequest,
+        ConfigurationInterface $configuration
+    );
 
     /**
      * @param ResponseInterface $response
@@ -24,4 +27,16 @@ interface RequestProcessInterface
      * @return $this
      */
     public function addResponse(ResponseInterface $response);
+
+    /**
+     * @param ResponseInterface[] $responses
+     *
+     * @return $this
+     */
+    public function setResponses(array $responses);
+
+    /**
+     * @return $this
+     */
+    public function disableValidation();
 }

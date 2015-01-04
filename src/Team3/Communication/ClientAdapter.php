@@ -6,17 +6,19 @@
 namespace Team3\Communication;
 
 use Buzz\Client\ClientInterface;
+use Buzz\Message\MessageInterface;
+use Buzz\Message\RequestInterface;
 use Team3\Communication\ClientInterface as PayUClientInterface;
 use Buzz\Exception\ClientException;
-use Buzz\Message\RequestInterface;
 use Buzz\Message\Response;
 use Psr\Log\LoggerInterface;
-use Team3\Communication\ClientException as PayUClientException;
 use Team3\Communication\CurlRequestBuilder\CurlRequestBuilderInterface;
 use Team3\Communication\Request\PayURequestInterface;
+use Team3\Communication\Sender\Sender;
+use Team3\Communication\Sender\SenderInterface;
 use Team3\Configuration\ConfigurationInterface;
 
-class Client implements PayUClientInterface
+class ClientAdapter implements PayUClientInterface
 {
     /**
      * @var ClientInterface
@@ -34,6 +36,11 @@ class Client implements PayUClientInterface
     private $logger;
 
     /**
+     * @var SenderInterface
+     */
+    private $sender;
+
+    /**
      * @param ClientInterface             $client
      * @param CurlRequestBuilderInterface $requestBuilder
      * @param LoggerInterface             $logger
@@ -46,6 +53,8 @@ class Client implements PayUClientInterface
         $this->client = $client;
         $this->requestBuilder = $requestBuilder;
         $this->logger = $logger;
+
+        $this->sender = new Sender($this->client, $this->logger);
     }
 
     /**
@@ -60,61 +69,44 @@ class Client implements PayUClientInterface
         PayURequestInterface $request
     ) {
         $curlRequest = $this->requestBuilder->build($configuration, $request);
-        $response = $this->send($curlRequest);
-
-        $this
-            ->logger
-            ->debug(sprintf(
-                'Request to %s/%s with content "%s" was send and response with content "%s" received',
-                $curlRequest->getHost(),
-                $curlRequest->getResource(),
-                $curlRequest->getContent(),
-                $response->getContent()
-            ));
+        $this->logRequest($curlRequest);
+        $response = $this->sender->send($curlRequest, $configuration->getCredentials());
+        $this->logResponse($curlRequest, $response);
 
         return $response;
     }
 
     /**
      * @param RequestInterface $request
-     *
-     * @return Response
-     * @throws PayUClientException
      */
-    private function send(RequestInterface $request)
-    {
-        $response = new Response();
-
-        try {
-            $this
-                ->client
-                ->send(
-                    $request,
-                    $response
-                );
-        } catch (\Exception $exception) {
-            $this->logException($exception);
-            throw new PayUClientException(
-                $exception->getMessage(),
-                $exception->getCode(),
-                $exception
-            );
-        }
-
-        return $response;
-    }
-
-    /**
-     * @param \Exception $exception
-     */
-    private function logException(\Exception $exception)
+    private function logRequest(RequestInterface $request)
     {
         $this
             ->logger
-            ->error(sprintf(
-                '%s was thrown with message %s',
-                get_class($exception),
-                $exception->getMessage()
+            ->debug(sprintf(
+                'Sending request to host:%s resource:%s with content "%s"',
+                $request->getHost(),
+                $request->getResource(),
+                $request->getContent()
+            ));
+    }
+
+    /**
+     * @param RequestInterface $request
+     * @param MessageInterface $response
+     */
+    private function logResponse(
+        RequestInterface $request,
+        MessageInterface $response
+    ) {
+        $this
+            ->logger
+            ->debug(sprintf(
+                'Request to %s%s with content "%s" was send and response with content "%s" received',
+                $request->getHost(),
+                $request->getResource(),
+                $request->getContent(),
+                $response->getContent()
             ));
     }
 }
