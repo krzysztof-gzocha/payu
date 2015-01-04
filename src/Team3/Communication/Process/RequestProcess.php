@@ -56,22 +56,20 @@ class RequestProcess implements RequestProcessInterface
         $this->serializer = $serializer;
         $this->client = $client;
         $this->validator = $validator;
+        $this->shouldValidate = true;
     }
 
     /**
      * @param PayURequestInterface   $payURequest
      * @param ConfigurationInterface $configuration
-     * @param bool                   $shouldValidate
      *
      * @return object
-     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function process(
         PayURequestInterface $payURequest,
-        ConfigurationInterface $configuration,
-        $shouldValidate = true
+        ConfigurationInterface $configuration
     ) {
-        if ($shouldValidate) {
+        if ($this->shouldValidate) {
             $this->validate($payURequest->getDataObject());
         }
 
@@ -100,6 +98,16 @@ class RequestProcess implements RequestProcessInterface
     public function setResponses(array $responses)
     {
         $this->responses = $responses;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function disableValidation()
+    {
+        $this->shouldValidate = false;
 
         return $this;
     }
