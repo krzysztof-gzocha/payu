@@ -5,32 +5,24 @@
 
 namespace Team3\Communication\Process;
 
-use Buzz\Message\MessageInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
+use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializerInterface;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Configuration\ConfigurationInterface;
 use Team3\Order\Serializer\SerializableInterface;
-use Team3\Order\Serializer\SerializerException;
-use Team3\Order\Serializer\SerializerInterface;
 
 /**
  * Class RequestProcess
  * @package Team3\Communication\Process
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class RequestProcess implements RequestProcessInterface
 {
     /**
-     * @var ResponseInterface[]
+     * @var ResponseDeserializerInterface
      */
-    private $responses;
-
-    /**
-     * @var SerializerInterface
-     */
-    private $serializer;
+    private $responseDeserializer;
 
     /**
      * @var ClientInterface
@@ -43,17 +35,21 @@ class RequestProcess implements RequestProcessInterface
     private $validator;
 
     /**
-     * @param SerializerInterface $serializer
-     * @param ClientInterface     $client
-     * @param ValidatorInterface  $validator
+     * @var bool
+     */
+    private $shouldValidate;
+
+    /**
+     * @param ResponseDeserializerInterface $responseDeserializer
+     * @param ClientInterface               $client
+     * @param ValidatorInterface            $validator
      */
     public function __construct(
-        SerializerInterface $serializer,
+        ResponseDeserializerInterface $responseDeserializer,
         ClientInterface $client,
         ValidatorInterface $validator
     ) {
-        $this->responses = [];
-        $this->serializer = $serializer;
+        $this->responseDeserializer = $responseDeserializer;
         $this->client = $client;
         $this->validator = $validator;
         $this->shouldValidate = true;
@@ -75,7 +71,7 @@ class RequestProcess implements RequestProcessInterface
 
         $curlResponse = $this->client->sendRequest($configuration, $payURequest);
 
-        return $this->deserializeRawResponse($curlResponse, $payURequest);
+        return $this->responseDeserializer->deserializeResponse($curlResponse, $payURequest);
     }
 
     /**
@@ -85,19 +81,7 @@ class RequestProcess implements RequestProcessInterface
      */
     public function addResponse(ResponseInterface $response)
     {
-        $this->responses[] = $response;
-
-        return $this;
-    }
-
-    /**
-     * @param ResponseInterface[] $responses
-     *
-     * @return $this
-     */
-    public function setResponses(array $responses)
-    {
-        $this->responses = $responses;
+        $this->responseDeserializer->addResponse($response);
 
         return $this;
     }
@@ -131,60 +115,5 @@ class RequestProcess implements RequestProcessInterface
                 )
             );
         }
-    }
-
-    /**
-     * @param MessageInterface     $curlResponse
-     * @param PayURequestInterface $payURequest
-     *
-     * @return object
-     * @throws NoResponseObjectException
-     * @throws RequestProcessException
-     */
-    private function deserializeRawResponse(
-        MessageInterface $curlResponse,
-        PayURequestInterface $payURequest
-    ) {
-        try {
-            $deserialized = $this
-                ->serializer
-                ->fromJson(
-                    $curlResponse->getContent(),
-                    $this->getResponseClass($payURequest)
-                );
-        } catch (SerializerException $exception) {
-            throw new RequestProcessException(
-                sprintf(
-                    'Exception %s was thrown during deserialization. Message: "%s"',
-                    get_class($exception),
-                    $exception->getMessage()
-                ),
-                $exception->getCode(),
-                $exception
-            );
-        }
-
-        return $deserialized;
-    }
-
-    /**
-     * @param PayURequestInterface $payURequest
-     *
-     * @return string
-     * @throws NoResponseObjectException
-     */
-    private function getResponseClass(
-        PayURequestInterface $payURequest
-    ) {
-        foreach ($this->responses as $response) {
-            if ($response->supports($payURequest)) {
-                return get_class($response);
-            }
-        }
-
-        throw new NoResponseObjectException(sprintf(
-            'There is no response object that support %s request',
-            get_class($payURequest)
-        ));
     }
 }

@@ -7,6 +7,8 @@ use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
+use Team3\Communication\Process\ResponseDeserializer\NoResponseObjectException;
+use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\Communication\Request\OrderCreateRequest;
 use Team3\Communication\Request\OrderStatusRequest;
 use Team3\Communication\Request\PayURequestInterface;
@@ -57,6 +59,23 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         );
 
         $this->configuration = new Configuration(new TestCredentials());
+    }
+
+    /**
+     * There is no response object, so NoResponseObjectException can be thrown
+     * as long as there is no InvalidRequestDataObjectException
+     *
+     * @expectedException \Team3\Communication\Process\ResponseDeserializer\NoResponseObjectException
+     */
+    public function testDisabledValidation()
+    {
+        $requestProcess = new RequestProcess(
+            $this->getResponseDeserializer(),
+            $this->getClient($this->getCreateOrderCurlResponse()),
+            $this->getValidator(1)
+        );
+        $requestProcess->disableValidation();
+        $requestProcess->process($this->getPayURequest(), $this->configuration);
     }
 
     public function testCreateOrderRequestProcess()
@@ -121,32 +140,6 @@ class RequestProcessTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException \Team3\Communication\Process\NoResponseObjectException
-     */
-    public function testNoResponseObjectException()
-    {
-        $client = $this->getMock('\Team3\Communication\ClientInterface');
-        $client
-            ->expects($this->any())
-            ->method('sendRequest')
-            ->withAnyParameters()
-            ->willReturn(
-                new Response()
-            );
-
-        $requestProcess = new RequestProcess(
-            $this->serializer,
-            $client,
-            $this->getValidator()
-        );
-
-        $requestProcess->process(
-            $this->getPayURequest(),
-            $this->configuration
-        );
-    }
-
-    /**
      * @expectedException \Team3\Communication\Process\RequestProcessException
      */
     public function testSerializerException()
@@ -178,7 +171,7 @@ class RequestProcessTest extends \Codeception\TestCase\Test
             ->willThrowException(new SerializerException());
 
         $requestProcess = new RequestProcess(
-            $serializer,
+            $this->getResponseDeserializer(),
             $client,
             $this->getValidator()
         );
@@ -214,7 +207,7 @@ class RequestProcessTest extends \Codeception\TestCase\Test
     private function getRequestProcess(Response $curlResponse)
     {
         $requestProcess = new RequestProcess(
-            $this->serializer,
+            $this->getResponseDeserializer(),
             $this->getClient($curlResponse),
             $this->getValidator()
         );
@@ -255,6 +248,14 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         return $this
             ->getMockBuilder('Psr\Log\LoggerInterface')
             ->getMock();
+    }
+
+    /**
+     * @return ResponseDeserializer
+     */
+    private function getResponseDeserializer()
+    {
+        return new ResponseDeserializer($this->serializer);
     }
 
     /**
