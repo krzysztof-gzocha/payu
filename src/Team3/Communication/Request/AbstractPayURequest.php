@@ -5,7 +5,7 @@
 
 namespace Team3\Communication\Request;
 
-use Team3\Order\Serializer\SerializableInterface;
+use Team3\Serializer\SerializableInterface;
 
 abstract class AbstractPayURequest implements PayURequestInterface
 {

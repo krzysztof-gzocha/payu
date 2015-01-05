@@ -5,7 +5,7 @@ namespace spec\Team3\SignatureCalculator\ParametersSorter;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 class ParametersSorterSpec extends ObjectBehavior
 {

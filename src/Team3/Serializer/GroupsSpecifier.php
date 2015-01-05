@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Order\Serializer;
+namespace Team3\Serializer;
 
 use Psr\Log\LoggerInterface;
 use Team3\Order\Model\Buyer\DeliveryInterface;

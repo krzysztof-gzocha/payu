@@ -13,8 +13,8 @@ use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\Communication\Response\OrderCreateResponse;
 use Team3\Communication\Response\OrderStatusResponse;
 use Team3\Communication\Response\ResponseInterface;
-use Team3\Order\Serializer\SerializerFactory;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerFactory;
+use Team3\Serializer\SerializerInterface;
 use Team3\ValidatorBuilder\ValidatorBuilder;
 
 /**

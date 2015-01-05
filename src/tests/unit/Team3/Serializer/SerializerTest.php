@@ -2,19 +2,17 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-namespace Team3\Order\Serializer;
+namespace Team3\Serializer;
 
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerBuilder;
-use Symfony\Component\Validator\Constraints\Country;
-use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
 use Team3\Order\Model\OrderStatus;
-use tests\unit\Team3\Order\Serializer\OrderHelper;
+use tests\unit\Team3\Serializer\OrderHelper;
 
 /**
  * Class SerializerTest
- * @package Team3\Order\Serializer
+ * @package Team3\Serializer
  * @group serializer
  * @group money
  */
@@ -150,7 +148,7 @@ class SerializerTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @expectedException \Team3\Order\Serializer\SerializerException
+     * @expectedException \Team3\Serializer\SerializerException
      */
     public function testWrongDeserialization()
     {

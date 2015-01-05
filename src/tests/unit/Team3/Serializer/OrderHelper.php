@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace tests\unit\Team3\Order\Serializer;
+namespace tests\unit\Team3\Serializer;
 
 use Team3\Order\Model\Buyer\Delivery;
 use Team3\Order\Model\Buyer\Invoice;
@@ -15,7 +15,7 @@ use Team3\Order\Model\ShippingMethods\ShippingMethod;
 
 /**
  * Class OrderHelper
- * @package tests\unit\Team3\Order\Serializer
+ * @package tests\unit\Team3\Serializer
  * @group money
  */
 class OrderHelper

@@ -5,7 +5,7 @@ use Team3\Communication\Request\PayURequestInterface;
 use Team3\Configuration\Configuration;
 use Team3\Configuration\Credentials\TestCredentials;
 use Team3\Order\Model\Order;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 /**
  * Class CurlRequestBuilderTest
@@ -84,7 +84,7 @@ class CurlRequestBuilderTest extends \Codeception\TestCase\Test
     private function getSerializer()
     {
         $serializer = $this
-            ->getMockBuilder('Team3\Order\Serializer\SerializerInterface')
+            ->getMockBuilder('Team3\Serializer\SerializerInterface')
             ->disableOriginalConstructor()
             ->getMock();
 

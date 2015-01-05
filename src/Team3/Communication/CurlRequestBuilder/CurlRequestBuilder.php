@@ -8,7 +8,7 @@ namespace Team3\Communication\CurlRequestBuilder;
 use Buzz\Message\Request;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Configuration\ConfigurationInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 class CurlRequestBuilder implements CurlRequestBuilderInterface
 {

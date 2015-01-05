@@ -2,7 +2,7 @@
 namespace Team3\Communication;
 
 use Psr\Log\LoggerInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 /**
  * Class ClientAdapterFactoryTest
@@ -34,7 +34,7 @@ class ClientAdapterFactoryTest extends \Codeception\TestCase\Test
      */
     private function getSerializer()
     {
-        return $this->getMock('Team3\Order\Serializer\SerializerInterface');
+        return $this->getMock('Team3\Serializer\SerializerInterface');
     }
 
     /**

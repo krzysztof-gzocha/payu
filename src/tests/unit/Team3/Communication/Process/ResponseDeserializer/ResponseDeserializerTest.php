@@ -4,7 +4,7 @@ namespace Team3\Communication\Process\ResponseDeserializer;
 use Buzz\Message\MessageInterface;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 /**
  * Class ResponseDeserializerTest
@@ -69,7 +69,7 @@ class ResponseDeserializerTest extends \Codeception\TestCase\Test
      */
     private function getSerializer()
     {
-        $serializer = $this->getMock('Team3\Order\Serializer\SerializerInterface');
+        $serializer = $this->getMock('Team3\Serializer\SerializerInterface');
         $serializer
             ->expects($this->any())
             ->method('fromJson')

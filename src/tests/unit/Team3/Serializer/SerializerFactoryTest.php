@@ -1,5 +1,5 @@
 <?php
-namespace Team3\Order\Serializer;
+namespace Team3\Serializer;
 
 class SerializerFactoryTest extends \Codeception\TestCase\Test
 {
@@ -13,7 +13,7 @@ class SerializerFactoryTest extends \Codeception\TestCase\Test
         $factory = new SerializerFactory();
 
         $this->assertInstanceOf(
-            'Team3\Order\Serializer\SerializerInterface',
+            'Team3\Serializer\SerializerInterface',
             $factory->build($this->getLogger())
         );
     }
