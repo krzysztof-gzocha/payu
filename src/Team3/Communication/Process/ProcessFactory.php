@@ -9,6 +9,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientAdapterFactory;
 use Team3\Communication\ClientInterface;
+use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\Communication\Response\OrderCreateResponse;
 use Team3\Communication\Response\OrderStatusResponse;
 use Team3\Communication\Response\ResponseInterface;
@@ -30,12 +31,12 @@ class ProcessFactory implements ProcessFactoryInterface
     public function build(LoggerInterface $logger)
     {
         $requestProcess = new RequestProcess(
-            $this->getSerializer($logger),
+            $this->getDeserializer($logger),
             $this->getClient($logger),
             $this->getValidator()
         );
 
-        return $requestProcess->setResponses($this->getResponses());
+        return $requestProcess;
     }
 
     /**
@@ -47,6 +48,19 @@ class ProcessFactory implements ProcessFactoryInterface
             new OrderCreateResponse(),
             new OrderStatusResponse()
         ];
+    }
+
+    /**
+     * @param LoggerInterface $logger
+     *
+     * @return ResponseDeserializer
+     */
+    private function getDeserializer(LoggerInterface $logger)
+    {
+        $deserializer = new ResponseDeserializer($this->getSerializer($logger));
+        $deserializer->setResponses($this->getResponses());
+
+        return $deserializer;
     }
 
     /**

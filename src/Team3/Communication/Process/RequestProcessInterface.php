@@ -22,21 +22,14 @@ interface RequestProcessInterface
     );
 
     /**
+     * @return $this
+     */
+    public function disableValidation();
+
+    /**
      * @param ResponseInterface $response
      *
      * @return $this
      */
     public function addResponse(ResponseInterface $response);
-
-    /**
-     * @param ResponseInterface[] $responses
-     *
-     * @return $this
-     */
-    public function setResponses(array $responses);
-
-    /**
-     * @return $this
-     */
-    public function disableValidation();
 }
