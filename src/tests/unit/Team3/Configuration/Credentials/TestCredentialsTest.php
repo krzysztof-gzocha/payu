@@ -23,6 +23,11 @@ class TestCredentialsTest extends \Codeception\TestCase\Test
             TestCredentials::PRIVATE_KEY,
             $testCredentials->getPrivateKey()
         );
+
+        $this->assertInstanceOf(
+            '\Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface',
+            $testCredentials->getAlgorithm()
+        );
     }
 
     public function testIfCredentialsAreRight()

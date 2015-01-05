@@ -33,6 +33,39 @@ class MoneyTest extends \Codeception\TestCase\Test
         $this->validator = (new ValidatorBuilder())->getValidator(new AnnotationReader());
     }
 
+    public function testMultiply()
+    {
+        $a = new Money(1.1);
+        $this->assertEquals(
+            11,
+            $a->multiply(10)->getValue()
+        );
+
+        $this->assertEquals(
+            1.1,
+            $a->getValue()
+        );
+    }
+
+    public function testAdd()
+    {
+        $a = new Money(0.1);
+        $b = new Money(0.7);
+
+        $this->assertEquals(
+            0.8,
+            $a->add($b)->getValue()
+        );
+        $this->assertEquals(
+            0.1,
+            $a->getValue()
+        );
+        $this->assertEquals(
+            0.7,
+            $b->getValue()
+        );
+    }
+
     public function testValidationConfiguration()
     {
         $valid = $this->validator->validate(new Money(-1, 'notCurrencyCode', 0));

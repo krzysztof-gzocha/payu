@@ -18,4 +18,18 @@ interface MoneyInterface
      * @return int
      */
     public function getValueWithoutSeparation($precision = 2);
+
+    /**
+     * @param MoneyInterface $money
+     *
+     * @return MoneyInterface
+     */
+    public function add(MoneyInterface $money);
+
+    /**
+     * @param double $multiplier
+     *
+     * @return MoneyInterface
+     */
+    public function multiply($multiplier);
 }

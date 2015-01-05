@@ -5,10 +5,17 @@
 
 namespace Team3\Configuration\Credentials;
 
-class TestCredentials implements CredentialsInterface
+use Team3\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
+
+class TestCredentials extends Credentials
 {
     const MERCHANT_POS_ID = '145227';
     const PRIVATE_KEY = '13a980d4f851f3d9a1cfc792fb1f5e50';
+
+    public function __construct()
+    {
+        $this->algorithm = new Md5Algorithm();
+    }
 
     /**
      * @return string

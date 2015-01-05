@@ -4,6 +4,8 @@
  */
 namespace Team3\Configuration\Credentials;
 
+use Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
+
 interface CredentialsInterface
 {
     /**
@@ -15,4 +17,9 @@ interface CredentialsInterface
      * @return string
      */
     public function getPrivateKey();
+
+    /**
+     * @return AlgorithmInterface
+     */
+    public function getAlgorithm();
 }

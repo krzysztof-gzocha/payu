@@ -10,14 +10,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Money implements MoneyInterface
 {
     /**
-     * @var float
+     * @var double
      * @Assert\GreaterThan(0)
      */
     protected $value;
 
     /**
      * @var string
-     * @Assert\Length(min="2", max="2")
+     * @Assert\Length(min="3", max="3")
      */
     protected $currency;
 
@@ -28,7 +28,7 @@ class Money implements MoneyInterface
     protected $precision;
 
     /**
-     * @param float  $value
+     * @param double $value
      * @param string $currency
      * @param int    $precision
      *
@@ -64,7 +64,7 @@ class Money implements MoneyInterface
      */
     public function getValue()
     {
-        return (float) $this->value;
+        return (double) $this->value;
     }
 
     /**
@@ -79,7 +79,43 @@ class Money implements MoneyInterface
     }
 
     /**
-     * @param int|float $value
+     * @param MoneyInterface $money
+     *
+     * @return MoneyInterface
+     */
+    public function add(MoneyInterface $money)
+    {
+        return new self(
+            bcadd(
+                $this->getValue(),
+                $money->getValue(),
+                $this->precision + 1
+            ),
+            $this->currency,
+            $this->precision
+        );
+    }
+
+    /**
+     * @param double $multiplier
+     *
+     * @return MoneyInterface
+     */
+    public function multiply($multiplier)
+    {
+        return new self(
+            bcmul(
+                $this->getValue(),
+                $multiplier,
+                $this->precision + 1
+            ),
+            $this->currency,
+            $this->precision
+        );
+    }
+
+    /**
+     * @param double $value
      *
      * @throws WrongMoneyValueException
      */

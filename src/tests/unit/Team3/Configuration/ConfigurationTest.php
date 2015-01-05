@@ -1,7 +1,7 @@
 <?php
-namespace Team3\Configuration;
+namespace Team3\Configuration\Credentials;
 
-use Team3\Configuration\Credentials\TestCredentials;
+use Team3\Configuration\Configuration;
 
 class ConfigurationTest extends \Codeception\TestCase\Test
 {
