@@ -1,7 +1,7 @@
 <?php
 namespace Team3\SignatureCalculator;
 
-class SignatureCalculatorFactoryTest extends \Codeception\TestCase\Test
+class OrderSignatureCalculatorFactoryTest extends \Codeception\TestCase\Test
 {
     /**
      * @var \UnitTester
@@ -10,10 +10,10 @@ class SignatureCalculatorFactoryTest extends \Codeception\TestCase\Test
 
     public function testResult()
     {
-        $factory = new SignatureCalculatorFactory();
+        $factory = new OrderSignatureCalculatorFactory();
 
         $this->assertInstanceOf(
-            'Team3\SignatureCalculator\SignatureCalculatorInterface',
+            'Team3\SignatureCalculator\OrderSignatureCalculatorInterface',
             $factory->build($this->getLogger())
         );
     }

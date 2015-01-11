@@ -11,18 +11,18 @@ use Team3\SignatureCalculator\Encoder\EncoderFactory;
 use Team3\SignatureCalculator\Encoder\EncoderInterface;
 use Team3\SignatureCalculator\ParametersSorter\ParametersSorter;
 
-class SignatureCalculatorFactory implements SignatureCalculatorFactoryInterface
+class OrderSignatureCalculatorFactory implements OrderSignatureCalculatorFactoryInterface
 {
     /**
      * @param LoggerInterface $logger
      *
-     * @return SignatureCalculatorInterface
+     * @return OrderSignatureCalculatorInterface
      */
     public function build(LoggerInterface $logger)
     {
-        return new SignatureCalculator(
-            $this->getParametersSorter($logger),
+        return new OrderSignatureCalculator(
             $this->getEncoder($logger),
+            $this->getParametersSorter($logger),
             $logger
         );
     }

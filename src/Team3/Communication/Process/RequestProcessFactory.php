@@ -18,10 +18,10 @@ use Team3\Serializer\SerializerInterface;
 use Team3\ValidatorBuilder\ValidatorBuilder;
 
 /**
- * Class ProcessFactory
+ * Class RequestProcessFactory
  * @package Team3\Communication\Process
  */
-class ProcessFactory implements ProcessFactoryInterface
+class RequestProcessFactory implements RequestProcessFactoryInterface
 {
     /**
      * @param LoggerInterface $logger

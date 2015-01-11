@@ -24,6 +24,8 @@ class ParametersSorter implements ParametersSorterInterface
     }
 
     /**
+     * Will return order serializable parameters in ascending order.
+     *
      * @param  OrderInterface $order
      * @return array
      */

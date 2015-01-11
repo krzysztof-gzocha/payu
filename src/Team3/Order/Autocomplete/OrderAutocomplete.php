@@ -22,6 +22,9 @@ class OrderAutocomplete implements OrderAutocompleteInterface
      */
     private $logger;
 
+    /**
+     * @param LoggerInterface $logger
+     */
     public function __construct(LoggerInterface $logger)
     {
         $this->strategies = [];
@@ -69,7 +72,8 @@ class OrderAutocomplete implements OrderAutocompleteInterface
             ->logger
             ->info(
                 sprintf(
-                    'Order parameters were autocompleted by %s',
+                    'Order with ID %s parameters were autocompleted by %s',
+                    $order->getOrderId(),
                     get_class($strategy)
                 ),
                 [

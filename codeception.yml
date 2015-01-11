@@ -18,6 +18,9 @@ modules:
 coverage:
     remote:   false
     enabled:  true
+    whitelist:
+        include:
+            - src/Team3/*
     blacklist:
         include:
             - bin/*

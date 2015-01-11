@@ -7,11 +7,11 @@ use Team3\Configuration\Credentials\TestCredentials;
 use Team3\Order\Model\Order;
 
 /**
- * Class ProcessFactoryTest
+ * Class RequestProcessFactoryTest
  * @package Team3\Communication\Process
  * @group logger
  */
-class ProcessFactoryTest extends \Codeception\TestCase\Test
+class RequestProcessFactoryTest extends \Codeception\TestCase\Test
 {
     /**
      * @var \UnitTester
@@ -21,7 +21,7 @@ class ProcessFactoryTest extends \Codeception\TestCase\Test
     public function testBuild()
     {
         $logger = $this->getMock('Psr\Log\LoggerInterface');
-        $factory = new ProcessFactory();
+        $factory = new RequestProcessFactory();
 
         $this->assertInstanceOf(
             'Team3\Communication\Process\RequestProcess',
@@ -41,7 +41,7 @@ class ProcessFactoryTest extends \Codeception\TestCase\Test
             ->willReturn(null);
         $configuration = new Configuration(new TestCredentials());
 
-        $factory = new ProcessFactory();
+        $factory = new RequestProcessFactory();
         $process = $factory->build($logger);
         $process->process(new OrderCreateRequest(new Order()), $configuration);
     }

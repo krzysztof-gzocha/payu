@@ -31,6 +31,9 @@ class Encoder implements EncoderInterface
     }
 
     /**
+     * Will encode single string with given algorithm.
+     * If could not find strategy for this algorithm will throw exception.
+     *
      * @param string             $data
      * @param AlgorithmInterface $algorithm
      *

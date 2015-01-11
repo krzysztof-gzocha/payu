@@ -11,8 +11,8 @@ use Team3\Order\Autocomplete\Strategy\CustomerIpStrategy;
 use Team3\Order\Autocomplete\Strategy\MerchantPosIdStrategy;
 use Team3\Order\Autocomplete\Strategy\SignatureStrategy;
 use Team3\Order\Autocomplete\Strategy\TotalAmountStrategy;
-use Team3\SignatureCalculator\SignatureCalculatorFactory;
-use Team3\SignatureCalculator\SignatureCalculatorInterface;
+use Team3\SignatureCalculator\OrderSignatureCalculatorFactory;
+use Team3\SignatureCalculator\OrderSignatureCalculatorInterface;
 
 class OrderAutocompleteFactory implements OrderAutocompleteFactoryInterface
 {
@@ -49,11 +49,11 @@ class OrderAutocompleteFactory implements OrderAutocompleteFactoryInterface
     /**
      * @param LoggerInterface $logger
      *
-     * @return SignatureCalculatorInterface
+     * @return OrderSignatureCalculatorInterface
      */
     private function getSignatureCalculator(LoggerInterface $logger)
     {
-        $calculatorFactory = new SignatureCalculatorFactory();
+        $calculatorFactory = new OrderSignatureCalculatorFactory();
 
         return $calculatorFactory->build($logger);
     }

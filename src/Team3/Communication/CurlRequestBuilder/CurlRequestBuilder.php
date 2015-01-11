@@ -12,6 +12,8 @@ use Team3\Serializer\SerializerInterface;
 
 class CurlRequestBuilder implements CurlRequestBuilderInterface
 {
+    const CONTENT_TYPE = 'application/json';
+
     /**
      * @var SerializerInterface
      */
@@ -80,8 +82,8 @@ class CurlRequestBuilder implements CurlRequestBuilderInterface
         );
         $curlRequest->addHeaders([
             'Authorization' => $authorization,
-            'Content-Type' => 'application/json',
-            'Accept' => 'application/json',
+            'Content-Type' => self::CONTENT_TYPE,
+            'Accept' => self::CONTENT_TYPE,
         ]);
     }
 }

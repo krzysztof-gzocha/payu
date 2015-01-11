@@ -2,16 +2,16 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-namespace Team3\Communication\Process;
+namespace Team3\SignatureCalculator;
 
 use Psr\Log\LoggerInterface;
 
-interface ProcessFactoryInterface
+interface OrderSignatureCalculatorFactoryInterface
 {
     /**
      * @param LoggerInterface $logger
      *
-     * @return RequestProcess
+     * @return OrderSignatureCalculatorInterface
      */
     public function build(LoggerInterface $logger);
 }

@@ -18,11 +18,11 @@ use Team3\SignatureCalculator\ParametersSorter\ParametersSorter;
 use Team3\SignatureCalculator\ParametersSorter\ParametersSorterInterface;
 
 /**
- * Class SignatureCalculatorTest
+ * Class OrderSignatureCalculatorTest
  * @package Team3\SignatureCalculator
  * @group signature
  */
-class SignatureCalculatorTest extends \Codeception\TestCase\Test
+class OrderSignatureCalculatorTest extends \Codeception\TestCase\Test
 {
     const ENCODED_STRING = 'encodedString';
     const ALGORITHM = 'algorithm';
@@ -40,7 +40,7 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
     protected $parametersSorter;
 
     /**
-     * @var SignatureCalculatorInterface
+     * @var OrderSignatureCalculatorInterface
      */
     protected $signatureCalculator;
 
@@ -72,9 +72,9 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
             ->withAnyParameters()
             ->willReturn(self::ENCODED_STRING);
 
-        $this->signatureCalculator = new SignatureCalculator(
-            $this->parametersSorter,
+        $this->signatureCalculator = new OrderSignatureCalculator(
             $encoder,
+            $this->parametersSorter,
             $this->getLogger()
         );
     }
@@ -94,7 +94,7 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         $signature = $this->signatureCalculator->calculate($order, $credentials, $algorithm);
         $this->assertEquals(
             sprintf(
-                SignatureCalculator::SIGNATURE_FORMAT,
+                OrderSignatureCalculator::SIGNATURE_FORMAT,
                 self::ENCODED_STRING,
                 self::ALGORITHM,
                 self::MERCHANT_POS_ID
@@ -126,9 +126,9 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
             ->withAnyParameters()
             ->willThrowException(new EncoderException(self::EXCEPTION_MESSAGE));
 
-        $signatureCalculator = new SignatureCalculator(
-            $this->parametersSorter,
+        $signatureCalculator = new OrderSignatureCalculator(
             $encoder,
+            $this->parametersSorter,
             $this->getLogger()
         );
 
@@ -142,9 +142,9 @@ class SignatureCalculatorTest extends \Codeception\TestCase\Test
         $algorithm = new Md5Algorithm();
         $encoder = new Encoder($this->getLogger());
         $encoder->addStrategy(new Md5Strategy());
-        $signatureCalculator = new SignatureCalculator(
-            $this->getParametersSorter(),
+        $signatureCalculator = new OrderSignatureCalculator(
             $encoder,
+            $this->getParametersSorter(),
             $this->getLogger()
         );
 

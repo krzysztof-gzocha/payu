@@ -9,20 +9,20 @@ use Team3\Configuration\ConfigurationInterface;
 use Team3\Order\Autocomplete\OrderAutocompleteException;
 use Team3\Order\Model\OrderInterface;
 use Team3\SignatureCalculator\SignatureCalculatorException;
-use Team3\SignatureCalculator\SignatureCalculatorInterface;
+use Team3\SignatureCalculator\OrderSignatureCalculatorInterface;
 
 class SignatureStrategy implements AutocompleteStrategyInterface
 {
     /**
-     * @var SignatureCalculatorInterface
+     * @var OrderSignatureCalculatorInterface
      */
     private $signatureCalculator;
 
     /**
-     * @param SignatureCalculatorInterface $signatureCalculator
+     * @param OrderSignatureCalculatorInterface $signatureCalculator
      */
     public function __construct(
-        SignatureCalculatorInterface $signatureCalculator
+        OrderSignatureCalculatorInterface $signatureCalculator
     ) {
         $this->signatureCalculator = $signatureCalculator;
     }

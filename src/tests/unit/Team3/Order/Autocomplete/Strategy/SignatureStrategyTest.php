@@ -6,7 +6,7 @@ use Team3\Configuration\Credentials\TestCredentials;
 use Team3\Order\Autocomplete\OrderAutocompleteException;
 use Team3\Order\Model\Order;
 use Team3\SignatureCalculator\SignatureCalculatorException;
-use Team3\SignatureCalculator\SignatureCalculatorInterface;
+use Team3\SignatureCalculator\OrderSignatureCalculatorInterface;
 
 class SignatureStrategyTest extends \Codeception\TestCase\Test
 {
@@ -42,7 +42,7 @@ class SignatureStrategyTest extends \Codeception\TestCase\Test
     public function testCalculatorException()
     {
         $calculator = $this
-            ->getMockBuilder('\Team3\SignatureCalculator\SignatureCalculator')
+            ->getMockBuilder('\Team3\SignatureCalculator\OrderSignatureCalculator')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -57,12 +57,12 @@ class SignatureStrategyTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * @return SignatureCalculatorInterface
+     * @return OrderSignatureCalculatorInterface
      */
     private function getSignatureCalculator()
     {
         $calculator = $this
-            ->getMockBuilder('\Team3\SignatureCalculator\SignatureCalculator')
+            ->getMockBuilder('\Team3\SignatureCalculator\OrderSignatureCalculator')
             ->disableOriginalConstructor()
             ->getMock();
 

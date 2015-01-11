@@ -40,6 +40,9 @@ class GroupsSpecifier implements GroupsSpecifierInterface
     }
 
     /**
+     * Not all orders parameters have to be serialized.
+     * For example if buyer has no name, then whole buyer section should not be serialized.
+     *
      * @param  OrderInterface $order
      * @return array
      */

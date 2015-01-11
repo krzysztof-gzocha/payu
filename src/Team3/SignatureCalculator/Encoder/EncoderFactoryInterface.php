@@ -5,6 +5,7 @@
 namespace Team3\SignatureCalculator\Encoder;
 
 use Psr\Log\LoggerInterface;
+use Team3\SignatureCalculator\Encoder\Strategy\EncoderStrategyInterface;
 
 interface EncoderFactoryInterface
 {
@@ -14,4 +15,9 @@ interface EncoderFactoryInterface
      * @return EncoderInterface
      */
     public function build(LoggerInterface $logger);
+
+    /**
+     * @return EncoderStrategyInterface
+     */
+    public function getStrategies();
 }
