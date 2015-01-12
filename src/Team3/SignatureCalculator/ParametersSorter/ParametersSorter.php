@@ -6,7 +6,7 @@
 namespace Team3\SignatureCalculator\ParametersSorter;
 
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 class ParametersSorter implements ParametersSorterInterface
 {
@@ -24,6 +24,8 @@ class ParametersSorter implements ParametersSorterInterface
     }
 
     /**
+     * Will return order serializable parameters in ascending order.
+     *
      * @param  OrderInterface $order
      * @return array
      */

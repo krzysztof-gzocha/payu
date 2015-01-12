@@ -5,13 +5,12 @@
 namespace Team3\SignatureCalculator;
 
 use Team3\Configuration\Credentials\CredentialsInterface;
-use Team3\Order\Model\OrderInterface;
 use Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 
 interface SignatureCalculatorInterface
 {
     /**
-     * @param OrderInterface       $order
+     * @param string[]             $data
      * @param CredentialsInterface $credentials
      * @param AlgorithmInterface   $algorithm
      *
@@ -19,7 +18,7 @@ interface SignatureCalculatorInterface
      * @throws SignatureCalculatorException
      */
     public function calculate(
-        OrderInterface $order,
+        array $data,
         CredentialsInterface $credentials,
         AlgorithmInterface $algorithm
     );

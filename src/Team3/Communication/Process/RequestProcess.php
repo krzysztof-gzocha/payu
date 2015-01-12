@@ -11,7 +11,7 @@ use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializerInterfa
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Configuration\ConfigurationInterface;
-use Team3\Order\Serializer\SerializableInterface;
+use Team3\Serializer\SerializableInterface;
 
 /**
  * Class RequestProcess

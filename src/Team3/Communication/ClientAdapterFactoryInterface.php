@@ -5,7 +5,7 @@
 namespace Team3\Communication;
 
 use Psr\Log\LoggerInterface;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 interface ClientAdapterFactoryInterface
 {

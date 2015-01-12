@@ -5,26 +5,44 @@
 
 namespace Team3\Configuration\Credentials;
 
+use Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
+use Team3\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
+
 class Credentials implements CredentialsInterface
 {
     /**
      * @var string
      */
-    private $merchantPosId;
+    protected $merchantPosId;
 
     /**
      * @var string
      */
-    private $privateKey;
+    protected $protectedKey;
 
     /**
-     * @param string $merchantPosId
-     * @param string $privateKey
+     * @var AlgorithmInterface
      */
-    public function __construct($merchantPosId, $privateKey)
-    {
+    protected $algorithm;
+
+    /**
+     * @param string             $merchantPosId
+     * @param string             $privateKey
+     * @param AlgorithmInterface $algorithm
+     */
+    public function __construct(
+        $merchantPosId,
+        $privateKey,
+        AlgorithmInterface $algorithm = null
+    ) {
         $this->merchantPosId = $merchantPosId;
         $this->privateKey = $privateKey;
+
+        if (null === $algorithm) {
+            $algorithm = new Md5Algorithm();
+        }
+
+        $this->algorithm = $algorithm;
     }
 
     /**
@@ -41,5 +59,13 @@ class Credentials implements CredentialsInterface
     public function getPrivateKey()
     {
         return $this->privateKey;
+    }
+
+    /**
+     * @return AlgorithmInterface
+     */
+    public function getAlgorithm()
+    {
+        return $this->algorithm;
     }
 }

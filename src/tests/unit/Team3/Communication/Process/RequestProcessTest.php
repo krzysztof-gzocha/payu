@@ -18,10 +18,10 @@ use Team3\Configuration\Configuration;
 use Team3\Configuration\ConfigurationInterface;
 use Team3\Configuration\Credentials\TestCredentials;
 use Team3\Order\Model\Order;
-use Team3\Order\Serializer\GroupsSpecifier;
-use Team3\Order\Serializer\Serializer;
-use Team3\Order\Serializer\SerializerException;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\GroupsSpecifier;
+use Team3\Serializer\Serializer;
+use Team3\Serializer\SerializerException;
+use Team3\Serializer\SerializerInterface;
 
 /**
  * Class RequestProcessTest
@@ -162,7 +162,7 @@ class RequestProcessTest extends \Codeception\TestCase\Test
             ->withAnyParameters()
             ->willReturn($message);
         $serializer = $this
-            ->getMockBuilder('\Team3\Order\Serializer\SerializerInterface')
+            ->getMockBuilder('\Team3\Serializer\SerializerInterface')
             ->getMock();
         $serializer
             ->expects($this->any())
@@ -193,7 +193,7 @@ class RequestProcessTest extends \Codeception\TestCase\Test
             ->expects($this->any())
             ->method('getDataObject')
             ->willReturn(
-                $this->getMock('\Team3\Order\Serializer\SerializableInterface')
+                $this->getMock('\Team3\Serializer\SerializableInterface')
             );
 
         return $request;

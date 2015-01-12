@@ -8,7 +8,7 @@ namespace Team3\Communication;
 use Buzz\Client\Curl;
 use Psr\Log\LoggerInterface;
 use Team3\Communication\CurlRequestBuilder\CurlRequestBuilder;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerInterface;
 
 class ClientAdapterFactory implements ClientAdapterFactoryInterface
 {

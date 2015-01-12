@@ -5,9 +5,9 @@ use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
 use Team3\Order\Model\Order;
 use Team3\Order\Model\OrderInterface;
-use Team3\Order\Serializer\GroupsSpecifier;
-use Team3\Order\Serializer\Serializer;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\GroupsSpecifier;
+use Team3\Serializer\Serializer;
+use Team3\Serializer\SerializerInterface;
 
 /**
  * Class ParametersSorterTest

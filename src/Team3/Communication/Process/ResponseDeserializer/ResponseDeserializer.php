@@ -9,8 +9,8 @@ use Buzz\Message\MessageInterface;
 use Team3\Communication\Process\RequestProcessException;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
-use Team3\Order\Serializer\SerializerException;
-use Team3\Order\Serializer\SerializerInterface;
+use Team3\Serializer\SerializerException;
+use Team3\Serializer\SerializerInterface;
 
 class ResponseDeserializer implements ResponseDeserializerInterface
 {
