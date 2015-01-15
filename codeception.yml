@@ -1,9 +1,9 @@
 actor: Tester
 paths:
-    tests: src/tests
-    log: src/tests/_output
-    data: src/tests/_data
-    helpers: src/tests/_support
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
 settings:
     bootstrap: _bootstrap.php
     colors: true
@@ -14,7 +14,7 @@ modules:
             dsn: ''
             user: ''
             password: ''
-            dump: src/tests/_data/dump.sql
+            dump: tests/_data/dump.sql
 coverage:
     remote:   false
     enabled:  true
@@ -25,5 +25,5 @@ coverage:
         include:
             - bin/*
             - spec/*
-            - src/tests/*
+            - tests/*
             - vendor/*

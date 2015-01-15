@@ -14,7 +14,7 @@
     "autoload": {
         "psr-4": {
             "": "src/",
-            "tests\\unit\\": "src/tests/unit/"
+            "tests\\unit\\": "tests/unit/"
         }
     },
     "require": {
