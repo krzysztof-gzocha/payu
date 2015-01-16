@@ -7,6 +7,8 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\Buyer\InvoiceInterface;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
+use Team3\Order\Transformer\UserOrder\TransformerPropertiesRegExp;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class InvoiceTransformer implements UserOrderTransformerStrategyInterface
@@ -18,15 +20,17 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
         OrderInterface $order,
         ExtractorResult $extractorResult
     ) {
-        $invoice = $order->getBuyer()->getInvoice();
-        $property = $this->getInvoiceProperty($invoice, $extractorResult);
-
-        if (null === $property) {
-            return;
-        }
-
-        $property->setAccessible(true);
-        $property->setValue($invoice, $extractorResult->getValue());
+        $this
+            ->copyValue(
+                $order->getBuyer()->getInvoice(),
+                $extractorResult->getPropertyName(),
+                $extractorResult->getValue()
+            )
+            ->copyRecipientValue(
+                $order->getBuyer()->getInvoice(),
+                $extractorResult->getPropertyName(),
+                $extractorResult->getValue()
+            );
     }
 
     /**
@@ -34,29 +38,73 @@ class InvoiceTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true === (bool) preg_match('/^invoice\.\w+$/', $propertyName);
+        return 1 === preg_match(
+            TransformerPropertiesRegExp::INVOICE_REGEXP,
+            $propertyName
+        );
     }
 
     /**
-     * @param InvoiceInterface $invoice
-     * @param ExtractorResult  $extractorResult
-     *
-     * @return \ReflectionProperty|null
+     * @param  InvoiceInterface   $invoice
+     * @param  string             $propertyName
+     * @param  string             $value
+     * @return InvoiceTransformer
      */
-    private function getInvoiceProperty(
+    private function copyValue(
         InvoiceInterface $invoice,
-        ExtractorResult $extractorResult
+        $propertyName,
+        $value
     ) {
-        $matches = [];
-        preg_match('/^invoice\.([a-zA-z]+)$/', $extractorResult->getPropertyName(), $matches);
-
-        try {
-            $reflectionClass = new \ReflectionClass($invoice);
-            $reflectionMethod = $reflectionClass->getProperty($matches[1]);
-        } catch (\ReflectionException $exception) {
-            return;
+        switch ($propertyName) {
+            case TransformerProperties::INVOICE_CITY:
+                $invoice->setCity($value);
+                break;
+            case TransformerProperties::INVOICE_COUNTRY_CODE:
+                $invoice->setCountryCode($value);
+                break;
+            case TransformerProperties::INVOICE_E_INVOICE_REQUESTED:
+                $invoice->setEInvoiceRequested($value);
+                break;
+            case TransformerProperties::INVOICE_NAME:
+                $invoice->setName($value);
+                break;
+            case TransformerProperties::INVOICE_POSTAL_CODE:
+                $invoice->setPostalCode($value);
+                break;
+            case TransformerProperties::INVOICE_STREET:
+                $invoice->setStreet($value);
+                break;
         }
 
-        return $reflectionMethod;
+        return $this;
+    }
+
+    /**
+     * @param  InvoiceInterface   $invoice
+     * @param  string             $propertyName
+     * @param  string             $value
+     * @return InvoiceTransformer
+     */
+    private function copyRecipientValue(
+        InvoiceInterface $invoice,
+        $propertyName,
+        $value
+    ) {
+        switch ($propertyName) {
+            case TransformerProperties::INVOICE_RECIPIENT_EMAIL:
+                $invoice->setRecipientEmail($value);
+                break;
+            case TransformerProperties::INVOICE_RECIPIENT_NAME:
+                $invoice->setRecipientName($value);
+                break;
+            case TransformerProperties::INVOICE_RECIPIENT_PHONE:
+                $invoice->setRecipientPhone($value);
+                break;
+            case TransformerProperties::INVOICE_RECIPIENT_TIN:
+                $invoice->setRecipientTin($value);
+                break;
+        }
+
+        return $this;
     }
 }

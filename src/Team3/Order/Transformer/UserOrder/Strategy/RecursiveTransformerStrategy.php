@@ -6,6 +6,7 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
 use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerInterface;
 
@@ -40,6 +41,6 @@ class RecursiveTransformerStrategy implements UserOrderTransformerStrategyInterf
      */
     public function supports($propertyName)
     {
-        return 'follow' === $propertyName;
+        return TransformerProperties::RECURSIVE === $propertyName;
     }
 }

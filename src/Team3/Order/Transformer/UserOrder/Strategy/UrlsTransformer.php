@@ -6,6 +6,8 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
+use Team3\Order\Transformer\UserOrder\TransformerPropertiesRegExp;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class UrlsTransformer implements UserOrderTransformerStrategyInterface
@@ -28,7 +30,10 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^url\.\w+/', $propertyName);
+        return 1 === preg_match(
+            TransformerPropertiesRegExp::URL_REGEXP,
+            $propertyName
+        );
     }
 
     /**
@@ -40,13 +45,13 @@ class UrlsTransformer implements UserOrderTransformerStrategyInterface
         ExtractorResult $extractorResult
     ) {
         switch ($extractorResult->getPropertyName()) {
-            case 'url.notify':
+            case TransformerProperties::URLS_NOTIFY:
                 $order->setNotifyUrl($extractorResult->getValue());
                 break;
-            case 'url.continue':
+            case TransformerProperties::URLS_CONTINUE:
                 $order->setContinueUrl($extractorResult->getValue());
                 break;
-            case 'url.order':
+            case TransformerProperties::URLS_ORDER:
                 $order->setOrderUrl($extractorResult->getValue());
                 break;
             default:
