@@ -107,7 +107,7 @@ interface InvoiceInterface extends IsFilledInterface
     /**
      * @return string
      */
-    public function getTin();
+    public function getRecipientTin();
 
     /**
      * @param string $recipientTin

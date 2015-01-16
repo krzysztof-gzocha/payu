@@ -78,7 +78,7 @@ class InvoiceTransformerTest extends \Codeception\TestCase\Test
         $this->assertNotEmpty($invoice->getRecipientName());
         $this->assertNotEmpty($invoice->getRecipientPhone());
         $this->assertNotEmpty($invoice->getStreet());
-        $this->assertNotEmpty($invoice->getTin());
+        $this->assertNotEmpty($invoice->getRecipientTin());
         $this->assertNotEmpty($invoice->isEInvoiceRequested());
     }
 

@@ -7,6 +7,8 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\Buyer\DeliveryInterface;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
+use Team3\Order\Transformer\UserOrder\TransformerPropertiesRegExp;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class DeliveryTransformer implements UserOrderTransformerStrategyInterface
@@ -29,7 +31,10 @@ class DeliveryTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^delivery\.\w+/', $propertyName);
+        return 1 === preg_match(
+            TransformerPropertiesRegExp::DELIVERY_REGEXP,
+            $propertyName
+        );
     }
 
     /**
@@ -41,28 +46,28 @@ class DeliveryTransformer implements UserOrderTransformerStrategyInterface
         ExtractorResult $extractorResult
     ) {
         switch ($extractorResult->getPropertyName()) {
-            case 'delivery.recipientPhone':
+            case TransformerProperties::DELIVERY_RECIPIENT_PHONE:
                 $delivery->setRecipientPhone($extractorResult->getValue());
                 break;
-            case 'delivery.recipientName':
+            case TransformerProperties::DELIVERY_RECIPIENT_NAME:
                 $delivery->setRecipientName($extractorResult->getValue());
                 break;
-            case 'delivery.recipientEmail':
+            case TransformerProperties::DELIVERY_RECIPIENT_EMAIL:
                 $delivery->setRecipientEmail($extractorResult->getValue());
                 break;
-            case 'delivery.postalCode':
+            case TransformerProperties::DELIVERY_POSTAL_CODE:
                 $delivery->setPostalCode($extractorResult->getValue());
                 break;
-            case 'delivery.city':
+            case TransformerProperties::DELIVERY_CITY:
                 $delivery->setCity($extractorResult->getValue());
                 break;
-            case 'delivery.countryCode':
+            case TransformerProperties::DELIVERY_COUNTRY_CODE:
                 $delivery->setCountryCode($extractorResult->getValue());
                 break;
-            case 'delivery.name':
+            case TransformerProperties::DELIVERY_NAME:
                 $delivery->setName($extractorResult->getValue());
                 break;
-            case 'delivery.street':
+            case TransformerProperties::DELIVERY_STREET:
                 $delivery->setStreet($extractorResult->getValue());
                 break;
             default:

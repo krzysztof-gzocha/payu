@@ -6,14 +6,13 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
 use Team3\PropertyExtractor\ExtractorResult;
 use Team3\Order\Transformer\UserOrder\Strategy\UserOrderTransformerStrategyInterface;
 use Team3\Order\Transformer\UserOrder\UserOrderTransformerException;
 
 class ProductCollectionTransformer implements UserOrderTransformerStrategyInterface
 {
-    const PARAMETER_NAME = 'productCollection';
-
     /**
      * @var SingleProductTransformer
      */
@@ -56,7 +55,7 @@ class ProductCollectionTransformer implements UserOrderTransformerStrategyInterf
      */
     public function supports($propertyName)
     {
-        return self::PARAMETER_NAME === $propertyName;
+        return TransformerProperties::PRODUCT_COLLECTION === $propertyName;
     }
 
     /**

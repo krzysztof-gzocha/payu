@@ -7,6 +7,7 @@ namespace Team3\Order\Transformer\UserOrder\Strategy\Product;
 
 use Team3\Order\Model\Products\Product;
 use Team3\Order\Model\Products\ProductInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
 use Team3\PropertyExtractor\ExtractorInterface;
 use Team3\PropertyExtractor\ExtractorResult;
 
@@ -20,9 +21,8 @@ class SingleProductTransformer
     /**
      * @param ExtractorInterface $extractor
      */
-    public function __construct(
-        ExtractorInterface $extractor
-    ) {
+    public function __construct(ExtractorInterface $extractor)
+    {
         $this->extractor = $extractor;
     }
 
@@ -63,13 +63,13 @@ class SingleProductTransformer
         ExtractorResult $extractionResult
     ) {
         switch ($extractionResult->getPropertyName()) {
-            case 'product.unitPrice':
+            case TransformerProperties::PRODUCT_UNIT_PRICE:
                 $product->setUnitPrice($extractionResult->getValue());
                 break;
-            case 'product.quantity':
+            case TransformerProperties::PRODUCT_QUANTITY:
                 $product->setQuantity($extractionResult->getValue());
                 break;
-            case 'product.name':
+            case TransformerProperties::PRODUCT_NAME:
                 $product->setName($extractionResult->getValue());
                 break;
             default:

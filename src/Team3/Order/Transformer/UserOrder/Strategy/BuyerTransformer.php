@@ -7,6 +7,8 @@ namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\Buyer\BuyerInterface;
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
+use Team3\Order\Transformer\UserOrder\TransformerPropertiesRegExp;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class BuyerTransformer implements UserOrderTransformerStrategyInterface
@@ -29,7 +31,10 @@ class BuyerTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^buyer\.\w+/', $propertyName);
+        return 1 === preg_match(
+            TransformerPropertiesRegExp::BUYER_REGEXP,
+            $propertyName
+        );
     }
 
     /**
@@ -41,16 +46,16 @@ class BuyerTransformer implements UserOrderTransformerStrategyInterface
         ExtractorResult $extractorResult
     ) {
         switch ($extractorResult->getPropertyName()) {
-            case 'buyer.email':
+            case TransformerProperties::BUYER_EMAIL:
                 $buyer->setEmail($extractorResult->getValue());
                 break;
-            case 'buyer.phone':
+            case TransformerProperties::BUYER_PHONE:
                 $buyer->setPhone($extractorResult->getValue());
                 break;
-            case 'buyer.firstName':
+            case TransformerProperties::BUYER_FIRST_NAME:
                 $buyer->setFirstName($extractorResult->getValue());
                 break;
-            case 'buyer.lastName':
+            case TransformerProperties::BUYER_LAST_NAME:
                 $buyer->setLastName($extractorResult->getValue());
                 break;
             default:

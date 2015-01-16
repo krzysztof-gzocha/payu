@@ -15,7 +15,7 @@ class AlgorithmExtractor implements AlgorithmExtractorInterface
      * If there is no algorithm with this name will throw exception.
      *
      * @param string               $signatureHeader
-     * @param AlgorithmInterface[] $algorithms array of algorithms to search
+     * @param AlgorithmInterface[] $algorithms      array of algorithms to search
      *
      * @throws AlgorithmExtractorException
      * @return AlgorithmInterface

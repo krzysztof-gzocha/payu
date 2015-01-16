@@ -30,7 +30,7 @@ class SignatureCalculator implements SignatureCalculatorInterface
      *
      * @param string[]             $data
      * @param CredentialsInterface $credentials private key is needed to calculate signature
-     * @param AlgorithmInterface   $algorithm calculator uses encoder which can use multiple algorithms
+     * @param AlgorithmInterface   $algorithm   calculator uses encoder which can use multiple algorithms
      *
      * @return string
      * @throws SignatureCalculatorException

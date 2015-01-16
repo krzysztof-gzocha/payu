@@ -6,6 +6,8 @@
 namespace Team3\Order\Transformer\UserOrder\Strategy;
 
 use Team3\Order\Model\OrderInterface;
+use Team3\Order\Transformer\UserOrder\TransformerProperties;
+use Team3\Order\Transformer\UserOrder\TransformerPropertiesRegExp;
 use Team3\PropertyExtractor\ExtractorResult;
 
 class GeneralTransformer implements UserOrderTransformerStrategyInterface
@@ -31,7 +33,10 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
      */
     public function supports($propertyName)
     {
-        return true == preg_match('/^general\./', $propertyName);
+        return 1 === preg_match(
+            TransformerPropertiesRegExp::GENERAL_REGEXP,
+            $propertyName
+        );
     }
 
     /**
@@ -45,28 +50,28 @@ class GeneralTransformer implements UserOrderTransformerStrategyInterface
         $value
     ) {
         switch ($propertyName) {
-            case 'general.customerIp':
+            case TransformerProperties::GENERAL_CUSTOMER_IP:
                 $order->setCustomerIp($value);
                 break;
-            case 'general.orderId':
+            case TransformerProperties::GENERAL_ORDER_ID:
                 $order->setOrderId($value);
                 break;
-            case 'general.additionalDescription':
+            case TransformerProperties::GENERAL_ADDITIONAL_DESC:
                 $order->setAdditionalDescription($value);
                 break;
-            case 'general.currencyCode':
+            case TransformerProperties::GENERAL_CURRENCY_CODE:
                 $order->setCurrencyCode($value);
                 break;
-            case 'general.description':
+            case TransformerProperties::GENERAL_DESCRIPTION:
                 $order->setDescription($value);
                 break;
-            case 'general.merchantPosId':
+            case TransformerProperties::GENERAL_MERCHANT_POS_ID:
                 $order->setMerchantPosId($value);
                 break;
-            case 'general.signature':
+            case TransformerProperties::GENERAL_SIGNATURE:
                 $order->setSignature($value);
                 break;
-            case 'general.totalAmount':
+            case TransformerProperties::GENERAL_TOTAL_AMOUNT:
                 $order->setTotalAmount($value);
                 break;
             default:
