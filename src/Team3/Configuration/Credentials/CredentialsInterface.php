@@ -21,5 +21,10 @@ interface CredentialsInterface
     /**
      * @return AlgorithmInterface
      */
-    public function getAlgorithm();
+    public function getSignatureAlgorithm();
+
+    /**
+     * @return string
+     */
+    public function getEncryptionProtocols();
 }

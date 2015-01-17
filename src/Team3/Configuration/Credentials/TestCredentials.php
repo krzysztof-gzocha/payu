@@ -14,7 +14,8 @@ class TestCredentials extends Credentials
 
     public function __construct()
     {
-        $this->algorithm = new Md5Algorithm();
+        $this->signatureAlgorithm = new Md5Algorithm();
+        $this->encryptionProtocols = 'TLSv1';
     }
 
     /**

@@ -88,7 +88,7 @@ class Sender implements SenderInterface
                 $credentials->getMerchantPosId()
             ),
             CURLOPT_SSLVERSION => 1,
-            CURLOPT_SSL_CIPHER_LIST => 'TLSv1',
+            CURLOPT_SSL_CIPHER_LIST => $credentials->getEncryptionProtocols(),
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_ENCODING => 'gzip',
