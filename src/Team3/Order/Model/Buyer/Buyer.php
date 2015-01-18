@@ -19,23 +19,27 @@ class Buyer implements BuyerInterface
     /**
      * @var string
      * @Assert\Email()
+     * @JMS\Type("string")
      */
     protected $email;
 
     /**
      * @var string
+     * @JMS\Type("string")
      */
     protected $phone;
 
     /**
      * @var string
      * @JMS\SerializedName("firstName")
+     * @JMS\Type("string")
      */
     protected $firstName;
 
     /**
      * @var string
      * @JMS\SerializedName("firstName")
+     * @JMS\Type("string")
      */
     protected $lastName;
 

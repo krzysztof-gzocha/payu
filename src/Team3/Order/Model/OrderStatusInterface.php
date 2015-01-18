@@ -6,6 +6,13 @@ namespace Team3\Order\Model;
 
 interface OrderStatusInterface
 {
+    const NEW_ORDER = 'NEW';
+    const PENDING = 'PENDING';
+    const WAITING_FOR_CONFIRMATION = 'WAITING_FOR_CONFIRMATION';
+    const COMPLETED = 'COMPLETED';
+    const CANCELED = 'CANCELED';
+    const REJECTED = 'REJECTED';
+
     /**
      * @return string
      */

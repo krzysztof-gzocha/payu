@@ -4,6 +4,8 @@ namespace Team3\Communication\Process\NotificationProcess;
 
 use Team3\Communication\Notification\OrderNotification;
 use Team3\Configuration\Credentials\TestCredentials;
+use Team3\Order\Model\OrderStatus;
+use Team3\Order\Model\OrderStatusInterface;
 use Team3\Serializer\SerializerInterface;
 use Team3\SignatureCalculator\Validator\SignatureValidatorInterface;
 
@@ -13,6 +15,51 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
      * @var \UnitTester
      */
     protected $tester;
+
+    public function testCompletedStatus()
+    {
+        $factory = new OrderNotificationProcessFactory();
+        $process = $factory->build($this->getMock('\Psr\Log\LoggerInterface'));
+        $notification = $process->process(new TestCredentials(), $this->getRealNotification());
+
+        $this->assertTrue(
+            $notification->getOrder()->getStatus()->isCompleted()
+        );
+        $this->assertFalse(
+            $notification->getOrder()->getStatus()->isPending()
+        );
+        $this->assertFalse(
+            $notification->getOrder()->getStatus()->isCanceled()
+        );
+        $this->assertEquals(
+            '31.12.2012 12:00:00',
+            $notification->getOrder()->getCreatedAt()->format('d.m.Y H:i:s')
+        );
+    }
+
+    public function testPendingStatus()
+    {
+        $factory = new OrderNotificationProcessFactory();
+        $process = $factory->build($this->getMock('\Psr\Log\LoggerInterface'));
+        $notification = $process->process(
+            new TestCredentials(),
+            $this->getRealNotification(OrderStatusInterface::PENDING)
+        );
+
+        $this->assertTrue(
+            $notification->getOrder()->getStatus()->isPending()
+        );
+        $this->assertFalse(
+            $notification->getOrder()->getStatus()->isCompleted()
+        );
+        $this->assertFalse(
+            $notification->getOrder()->getStatus()->isCanceled()
+        );
+        $this->assertEquals(
+            '31.12.2012 12:00:00',
+            $notification->getOrder()->getCreatedAt()->format('d.m.Y H:i:s')
+        );
+    }
 
     public function testResult()
     {
@@ -78,5 +125,39 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
             ->willReturn(new OrderNotification());
 
         return $serializer;
+    }
+
+    /**
+     * @return string notification in json format
+     */
+    private function getRealNotification($status = 'COMPLETED')
+    {
+        return sprintf('{
+   "order":{
+      "orderId":"LDLW5N7MF4140324GUEST000P01",
+      "extOrderId":"123456",
+      "orderCreateDate":"2012-12-31T12:00:00",
+      "notifyUrl":"http://tempuri.org/notify",
+      "customerIp":"127.0.0.1",
+      "merchantPosId":"123456",
+      "description":"Twój opis zamówienia",
+      "currencyCode":"PLN",
+      "totalAmount":"200",
+      "buyer":{
+         "email":"john.doe@example.org",
+         "phone":"111111111",
+         "firstName":"John",
+         "lastName":"Doe"
+      },
+      "products":[
+         {
+               "name":"Product 1",
+               "unitPrice":"200",
+               "quantity":"1"
+         }
+      ],
+      "status":"%s"
+   }
+}', $status);
     }
 }

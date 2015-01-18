@@ -13,7 +13,7 @@ class OrderNotification implements SerializableInterface
 {
     /**
      * @var OrderInterface
-     * @JMS\Type("array<Team3\Order\Model\Order>")
+     * @JMS\Type("Team3\Order\Model\Order")
      * @JMS\SerializedName("order")
      */
     private $order;

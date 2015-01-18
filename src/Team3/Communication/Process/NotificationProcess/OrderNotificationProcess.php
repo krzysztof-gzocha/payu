@@ -12,7 +12,7 @@ use Team3\SignatureCalculator\Validator\SignatureValidatorInterface;
 
 class OrderNotificationProcess
 {
-    const ORDER_NOTIFICATION_CLASS = '\Team3\Communication\Notification\OrderNotification';
+    const ORDER_NOTIFICATION_CLASS = 'Team3\Communication\Notification\OrderNotification';
 
     /**
      * @var SerializerInterface

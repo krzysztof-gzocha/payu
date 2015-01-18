@@ -139,6 +139,10 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         $this->assertTrue(
             $response->getFirstOrder()->getStatus()->isNew()
         );
+        $this->assertEquals(
+            '27.10.2014 14:58:17',
+            $response->getFirstOrder()->getCreatedAt()->format('d.m.Y H:i:s')
+        );
     }
 
     /**
