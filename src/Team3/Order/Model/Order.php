@@ -107,7 +107,10 @@ class Order implements OrderInterface
 
     /**
      * @var \DateTime
-     * @JMS\Type("DateTime<'Y-m-d\TH:i:s.uP'>")
+     * @JMS\Type("string")
+     * @JMS\Accessor(
+     *      setter="setCreatedAtFromDeserialization"
+     * )
      * @JMS\SerializedName("orderCreateDate")
      */
     protected $createdAt;
@@ -367,6 +370,20 @@ class Order implements OrderInterface
     public function setStatusFromDeserialization($status)
     {
         $this->status = new OrderStatus($status);
+
+        return $this;
+    }
+
+    /**
+     * PayU is using different datetime formats for different things.
+     * This method will capture any datetime format and parse it into DateTime object
+     * @param string $createdAt
+     *
+     * @return $this
+     */
+    public function setCreatedAtFromDeserialization($createdAt)
+    {
+        $this->createdAt = new \DateTime($createdAt);
 
         return $this;
     }
