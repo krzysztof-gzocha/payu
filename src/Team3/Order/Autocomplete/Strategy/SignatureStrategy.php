@@ -67,7 +67,7 @@ class SignatureStrategy implements AutocompleteStrategyInterface
                 ->calculate(
                     $order,
                     $configuration->getCredentials(),
-                    $configuration->getCredentials()->getAlgorithm()
+                    $configuration->getCredentials()->getSignatureAlgorithm()
                 );
         } catch (SignatureCalculatorException $exception) {
             throw new OrderAutocompleteException(

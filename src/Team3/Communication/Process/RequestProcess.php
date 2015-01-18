@@ -7,6 +7,9 @@ namespace Team3\Communication\Process;
 
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
+use Team3\Communication\HttpStatusParser\HttpStatusParser;
+use Team3\Communication\HttpStatusParser\HttpStatusParserException;
+use Team3\Communication\HttpStatusParser\HttpStatusParserInterface;
 use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializerInterface;
 use Team3\Communication\Request\PayURequestInterface;
 use Team3\Communication\Response\ResponseInterface;
@@ -35,6 +38,11 @@ class RequestProcess implements RequestProcessInterface
     private $validator;
 
     /**
+     * @var HttpStatusParserInterface
+     */
+    private $httpStatusParser;
+
+    /**
      * @var bool
      */
     private $shouldValidate;
@@ -43,15 +51,18 @@ class RequestProcess implements RequestProcessInterface
      * @param ResponseDeserializerInterface $responseDeserializer
      * @param ClientInterface               $client
      * @param ValidatorInterface            $validator
+     * @param HttpStatusParserInterface     $httpStatusParser
      */
     public function __construct(
         ResponseDeserializerInterface $responseDeserializer,
         ClientInterface $client,
-        ValidatorInterface $validator
+        ValidatorInterface $validator,
+        HttpStatusParserInterface $httpStatusParser
     ) {
         $this->responseDeserializer = $responseDeserializer;
         $this->client = $client;
         $this->validator = $validator;
+        $this->httpStatusParser = $httpStatusParser;
         $this->shouldValidate = true;
     }
 
@@ -60,6 +71,8 @@ class RequestProcess implements RequestProcessInterface
      * @param ConfigurationInterface $configuration
      *
      * @return object
+     * @throws HttpStatusParserException         when status code is not 200
+     * @throws InvalidRequestDataObjectException when request data object is invalid
      */
     public function process(
         PayURequestInterface $payURequest,
@@ -70,6 +83,7 @@ class RequestProcess implements RequestProcessInterface
         }
 
         $curlResponse = $this->client->sendRequest($configuration, $payURequest);
+        $this->httpStatusParser->parse($curlResponse);
 
         return $this->responseDeserializer->deserializeResponse($curlResponse, $payURequest);
     }

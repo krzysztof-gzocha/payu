@@ -6,7 +6,6 @@
 namespace Team3\Communication;
 
 use Buzz\Client\ClientInterface;
-use Buzz\Message\MessageInterface;
 use Buzz\Message\RequestInterface;
 use Team3\Communication\ClientInterface as PayUClientInterface;
 use Buzz\Exception\ClientException;
@@ -93,20 +92,21 @@ class ClientAdapter implements PayUClientInterface
 
     /**
      * @param RequestInterface $request
-     * @param MessageInterface $response
+     * @param Response         $response
      */
     private function logResponse(
         RequestInterface $request,
-        MessageInterface $response
+        Response $response
     ) {
         $this
             ->logger
             ->debug(sprintf(
-                'Request to %s%s with content "%s" was send and response with content "%s" received',
+                'Request to %s%s with content "%s" was send and response with content "%s" and status %d received',
                 $request->getHost(),
                 $request->getResource(),
                 $request->getContent(),
-                $response->getContent()
+                $response->getContent(),
+                $response->getStatusCode()
             ));
     }
 }

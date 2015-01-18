@@ -18,31 +18,40 @@ class Credentials implements CredentialsInterface
     /**
      * @var string
      */
-    protected $protectedKey;
+    protected $privateKey;
 
     /**
      * @var AlgorithmInterface
      */
-    protected $algorithm;
+    protected $signatureAlgorithm;
+
+    /**
+     * Used to specify CURLOPT_SSL_CIPHER_LIST cURL option
+     * @var string
+     */
+    protected $encryptionProtocols;
 
     /**
      * @param string             $merchantPosId
      * @param string             $privateKey
-     * @param AlgorithmInterface $algorithm
+     * @param AlgorithmInterface $signatureAlgorithm
+     * @param string             $encryptionProtocols
      */
     public function __construct(
         $merchantPosId,
         $privateKey,
-        AlgorithmInterface $algorithm = null
+        AlgorithmInterface $signatureAlgorithm = null,
+        $encryptionProtocols = 'TLSv1'
     ) {
         $this->merchantPosId = $merchantPosId;
         $this->privateKey = $privateKey;
 
-        if (null === $algorithm) {
-            $algorithm = new Md5Algorithm();
+        if (null === $signatureAlgorithm) {
+            $signatureAlgorithm = new Md5Algorithm();
         }
 
-        $this->algorithm = $algorithm;
+        $this->signatureAlgorithm = $signatureAlgorithm;
+        $this->encryptionProtocols = $encryptionProtocols;
     }
 
     /**
@@ -64,8 +73,16 @@ class Credentials implements CredentialsInterface
     /**
      * @return AlgorithmInterface
      */
-    public function getAlgorithm()
+    public function getSignatureAlgorithm()
     {
-        return $this->algorithm;
+        return $this->signatureAlgorithm;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEncryptionProtocols()
+    {
+        return $this->encryptionProtocols;
     }
 }

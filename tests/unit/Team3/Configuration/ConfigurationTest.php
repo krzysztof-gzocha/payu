@@ -16,6 +16,11 @@ class ConfigurationTest extends \Codeception\TestCase\Test
             new TestCredentials()
         );
 
+        $this->assertInstanceOf(
+            'Team3\Configuration\Credentials\CredentialsInterface',
+            $configuration->getCredentials()
+        );
+
         $this->assertEquals(
             'https',
             $configuration->getProtocol()

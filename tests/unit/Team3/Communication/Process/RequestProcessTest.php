@@ -7,6 +7,7 @@ use JMS\Serializer\SerializerBuilder;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
+use Team3\Communication\HttpStatusParser\HttpStatusParserInterface;
 use Team3\Communication\Process\ResponseDeserializer\NoResponseObjectException;
 use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\Communication\Request\OrderCreateRequest;
@@ -72,7 +73,8 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         $requestProcess = new RequestProcess(
             $this->getResponseDeserializer(),
             $this->getClient($this->getCreateOrderCurlResponse()),
-            $this->getValidator(1)
+            $this->getValidator(1),
+            $this->getHttpStatusParser()
         );
         $requestProcess->disableValidation();
         $requestProcess->process($this->getPayURequest(), $this->configuration);
@@ -173,7 +175,8 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         $requestProcess = new RequestProcess(
             $this->getResponseDeserializer(),
             $client,
-            $this->getValidator()
+            $this->getValidator(),
+            $this->getHttpStatusParser()
         );
         $requestProcess->addResponse($response);
 
@@ -181,6 +184,15 @@ class RequestProcessTest extends \Codeception\TestCase\Test
             $this->getPayURequest(),
             $this->configuration
         );
+    }
+
+    /**
+     * @return HttpStatusParserInterface
+     */
+    private function getHttpStatusParser()
+    {
+        return $this
+            ->getMock('\Team3\Communication\HttpStatusParser\HttpStatusParserInterface');
     }
 
     /**
@@ -209,7 +221,8 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         $requestProcess = new RequestProcess(
             $this->getResponseDeserializer(),
             $this->getClient($curlResponse),
-            $this->getValidator()
+            $this->getValidator(),
+            $this->getHttpStatusParser()
         );
 
         $requestProcess

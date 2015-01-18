@@ -1,7 +1,9 @@
 <?php
 namespace Team3\Configuration;
 
+use Team3\Configuration\Credentials\Credentials;
 use Team3\Configuration\Credentials\TestCredentials;
+use Team3\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
 
 class TestCredentialsTest extends \Codeception\TestCase\Test
 {
@@ -10,7 +12,7 @@ class TestCredentialsTest extends \Codeception\TestCase\Test
      */
     protected $tester;
 
-    public function testCredentials()
+    public function testTestCredentials()
     {
         $testCredentials = new TestCredentials();
 
@@ -26,7 +28,12 @@ class TestCredentialsTest extends \Codeception\TestCase\Test
 
         $this->assertInstanceOf(
             '\Team3\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface',
-            $testCredentials->getAlgorithm()
+            $testCredentials->getSignatureAlgorithm()
+        );
+
+        $this->assertEquals(
+            'TLSv1',
+            $testCredentials->getEncryptionProtocols()
         );
     }
 
