@@ -123,7 +123,7 @@ class RequestProcess implements RequestProcessInterface
             throw new InvalidRequestDataObjectException(
                 $violations,
                 sprintf(
-                    "Given object %s in PayU request is invalid. %d violations are in this exception.",
+                    'Given object %s in PayU request is invalid. %d violations are in this exception.',
                     get_class($object),
                     $violations->count()
                 )

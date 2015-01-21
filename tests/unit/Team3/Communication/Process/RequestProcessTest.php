@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Team3\Communication\ClientInterface;
 use Team3\Communication\HttpStatusParser\HttpStatusParserInterface;
-use Team3\Communication\Process\ResponseDeserializer\NoResponseObjectException;
+use Team3\Communication\Process\ResponseDeserializer\NoResponseFoundException;
 use Team3\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\Communication\Request\OrderCreateRequest;
 use Team3\Communication\Request\OrderStatusRequest;
@@ -63,10 +63,11 @@ class RequestProcessTest extends \Codeception\TestCase\Test
     }
 
     /**
-     * There is no response object, so NoResponseObjectException can be thrown
+     * There is no response object, so NoResponseFoundException can be thrown
      * as long as there is no InvalidRequestDataObjectException
      *
-     * @expectedException \Team3\Communication\Process\ResponseDeserializer\NoResponseObjectException
+     * @throws \Team3\Communication\Process\ResponseDeserializer\NoResponseFoundException
+     * @expectedException \Team3\Communication\Process\ResponseDeserializer\NoResponseFoundException
      */
     public function testDisabledValidation()
     {

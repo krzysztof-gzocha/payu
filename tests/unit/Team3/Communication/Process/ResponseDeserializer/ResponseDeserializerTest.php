@@ -3,6 +3,7 @@ namespace Team3\Communication\Process\ResponseDeserializer;
 
 use Buzz\Message\MessageInterface;
 use Team3\Communication\Request\PayURequestInterface;
+use Team3\Communication\Response\EmptyResponse;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Serializer\SerializerInterface;
 
@@ -19,8 +20,7 @@ class ResponseDeserializerTest extends \Codeception\TestCase\Test
     protected $tester;
 
     /**
-     * @expectedException \Team3\Communication\Process\RequestProcessException
-     * @throws \Team3\Communication\Process\RequestProcessException
+     * @expectedException \Team3\Communication\Process\ResponseDeserializer\NoResponseFoundException
      */
     public function testException()
     {
