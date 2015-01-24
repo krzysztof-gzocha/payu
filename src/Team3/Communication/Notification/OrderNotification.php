@@ -7,9 +7,8 @@ namespace Team3\Communication\Notification;
 
 use Team3\Order\Model\OrderInterface;
 use JMS\Serializer\Annotation as JMS;
-use Team3\Serializer\SerializableInterface;
 
-class OrderNotification implements SerializableInterface
+class OrderNotification implements NotificationInterface
 {
     /**
      * @var OrderInterface

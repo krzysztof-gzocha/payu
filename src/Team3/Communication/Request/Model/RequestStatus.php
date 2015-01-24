@@ -3,7 +3,7 @@
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
 
-namespace Team3\Communication\Request;
+namespace Team3\Communication\Request\Model;
 
 use JMS\Serializer\Annotation as JMS;
 

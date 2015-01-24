@@ -4,7 +4,7 @@ namespace Team3\Communication\Process\NotificationProcess;
 
 use Psr\Log\LoggerInterface;
 
-class OrderNotificationProcessFactoryTest extends \Codeception\TestCase\Test
+class NotificationProcessFactoryTest extends \Codeception\TestCase\Test
 {
     /**
      * @var \UnitTester
@@ -13,10 +13,10 @@ class OrderNotificationProcessFactoryTest extends \Codeception\TestCase\Test
 
     public function testResult()
     {
-        $factory = new OrderNotificationProcessFactory();
+        $factory = new NotificationProcessFactory();
 
         $this->assertInstanceOf(
-            '\Team3\Communication\Process\NotificationProcess\OrderNotificationProcess',
+            '\Team3\Communication\Process\NotificationProcess\NotificationProcess',
             $factory->build($this->getLogger())
         );
     }

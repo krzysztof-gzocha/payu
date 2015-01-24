@@ -1,7 +1,7 @@
 <?php
 namespace Team3\Communication\Response;
 
-use Team3\Communication\Request\RequestStatus;
+use Team3\Communication\Request\Model\RequestStatus;
 
 class OrderCreateResponseTest extends \Codeception\TestCase\Test
 {
@@ -37,7 +37,7 @@ class OrderCreateResponseTest extends \Codeception\TestCase\Test
         );
 
         $this->assertInstanceOf(
-            'Team3\Communication\Request\RequestStatus',
+            'Team3\Communication\Request\Model\RequestStatus',
             $response->getRequestStatus()
         );
     }

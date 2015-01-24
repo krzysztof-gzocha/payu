@@ -8,7 +8,6 @@ namespace Team3\Communication\Process\ResponseDeserializer;
 use Buzz\Message\MessageInterface;
 use Team3\Communication\Process\RequestProcessException;
 use Team3\Communication\Request\PayURequestInterface;
-use Team3\Communication\Response\EmptyResponse;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Serializer\SerializerException;
 use Team3\Serializer\SerializerInterface;

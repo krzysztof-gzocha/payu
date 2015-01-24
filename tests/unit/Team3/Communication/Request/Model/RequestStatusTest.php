@@ -1,5 +1,5 @@
 <?php
-namespace Team3\Communication\Request;
+namespace Team3\Communication\Request\Model;
 
 class RequestStatusTest extends \Codeception\TestCase\Test
 {
