@@ -1,4 +1,16 @@
 {
+    "name": "krzysztof-gzocha/payu",
+    "type": "library",
+    "description": "Integration with PayU",
+    "keywords": ["integration","payu","rest","api","money","transfer"],
+    "homepage": "https://github.com/krzysztof-gzocha/payu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krzysztof Gzocha",
+            "role": "Developer"
+        }
+    ],
     "config": {
         "bin-dir": "bin",
         "vendor-dir": "vendor"
@@ -23,6 +35,7 @@
         "symfony/validator": "@stable",
         "psr/log": "@stable",
         "php": ">=5.4.0",
+        "ext-curl": "*",
         "kriswallsmith/buzz": "0.13"
     }
 }
