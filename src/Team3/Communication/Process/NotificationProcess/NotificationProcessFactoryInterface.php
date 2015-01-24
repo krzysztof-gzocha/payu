@@ -6,12 +6,12 @@ namespace Team3\Communication\Process\NotificationProcess;
 
 use Psr\Log\LoggerInterface;
 
-interface OrderNotificationProcessFactoryInterface
+interface NotificationProcessFactoryInterface
 {
     /**
      * @param LoggerInterface $logger
      *
-     * @return OrderNotificationProcess
+     * @return NotificationProcess
      */
     public function build(LoggerInterface $logger);
 }

@@ -10,7 +10,7 @@ use Team3\Configuration\Credentials\CredentialsInterface;
 use Team3\Serializer\SerializerInterface;
 use Team3\SignatureCalculator\Validator\SignatureValidatorInterface;
 
-class OrderNotificationProcess
+class NotificationProcess
 {
     const ORDER_NOTIFICATION_CLASS = 'Team3\Communication\Notification\OrderNotification';
 

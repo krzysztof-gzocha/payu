@@ -9,7 +9,7 @@ use Team3\Order\Model\OrderStatusInterface;
 use Team3\Serializer\SerializerInterface;
 use Team3\SignatureCalculator\Validator\SignatureValidatorInterface;
 
-class OrderNotificationProcessTest extends \Codeception\TestCase\Test
+class NotificationProcessTest extends \Codeception\TestCase\Test
 {
     /**
      * @var \UnitTester
@@ -18,7 +18,7 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
 
     public function testCompletedStatus()
     {
-        $factory = new OrderNotificationProcessFactory();
+        $factory = new NotificationProcessFactory();
         $process = $factory->build($this->getMock('\Psr\Log\LoggerInterface'));
         $notification = $process->process(new TestCredentials(), $this->getRealNotification());
 
@@ -39,7 +39,7 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
 
     public function testPendingStatus()
     {
-        $factory = new OrderNotificationProcessFactory();
+        $factory = new NotificationProcessFactory();
         $process = $factory->build($this->getMock('\Psr\Log\LoggerInterface'));
         $notification = $process->process(
             new TestCredentials(),
@@ -63,7 +63,7 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
 
     public function testResult()
     {
-        $process = new OrderNotificationProcess(
+        $process = new NotificationProcess(
             $this->getSerializer(),
             $this->getSignatureValidator(true)
         );
@@ -81,7 +81,7 @@ class OrderNotificationProcessTest extends \Codeception\TestCase\Test
      */
     public function testValidationError()
     {
-        $process = new OrderNotificationProcess(
+        $process = new NotificationProcess(
             $this->getSerializer(),
             $this->getSignatureValidator(false)
         );

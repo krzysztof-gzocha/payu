@@ -1,7 +1,7 @@
 <?php
 namespace Team3\Communication\Response;
 
-use Team3\Communication\Request\RequestStatus;
+use Team3\Communication\Request\Model\RequestStatus;
 use Team3\Order\Model\Order;
 
 /**

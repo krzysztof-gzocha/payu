@@ -7,7 +7,7 @@ namespace Team3\Communication\Response;
 
 use Team3\Communication\Request\OrderCreateRequest;
 use Team3\Communication\Request\PayURequestInterface;
-use Team3\Communication\Request\RequestStatus;
+use Team3\Communication\Request\Model\RequestStatus;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -39,7 +39,7 @@ class OrderCreateResponse implements ResponseInterface
 
     /**
      * @var RequestStatus
-     * @JMS\Type("Team3\Communication\Request\RequestStatus")
+     * @JMS\Type("Team3\Communication\Request\Model\RequestStatus")
      * @JMS\SerializedName("status")
      */
     private $requestStatus;

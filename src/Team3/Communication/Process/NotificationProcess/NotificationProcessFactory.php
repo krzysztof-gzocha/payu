@@ -14,16 +14,16 @@ use Team3\SignatureCalculator\SignatureCalculator;
 use Team3\SignatureCalculator\Validator\AlgorithmExtractor;
 use Team3\SignatureCalculator\Validator\SignatureValidator;
 
-class OrderNotificationProcessFactory implements OrderNotificationProcessFactoryInterface
+class NotificationProcessFactory implements NotificationProcessFactoryInterface
 {
     /**
      * @param LoggerInterface $logger
      *
-     * @return OrderNotificationProcess
+     * @return NotificationProcess
      */
     public function build(LoggerInterface $logger)
     {
-        return new OrderNotificationProcess(
+        return new NotificationProcess(
             $this->getSerializer($logger),
             $this->getSignatureValidator($logger),
             new AlgorithmsProvider()
