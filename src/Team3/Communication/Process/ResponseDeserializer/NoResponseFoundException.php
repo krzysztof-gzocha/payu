@@ -7,6 +7,6 @@ namespace Team3\Communication\Process\ResponseDeserializer;
 
 use Team3\Communication\Process\RequestProcessException;
 
-class NoResponseObjectException extends RequestProcessException
+class NoResponseFoundException extends RequestProcessException
 {
 }

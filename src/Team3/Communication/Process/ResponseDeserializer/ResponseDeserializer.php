@@ -8,6 +8,7 @@ namespace Team3\Communication\Process\ResponseDeserializer;
 use Buzz\Message\MessageInterface;
 use Team3\Communication\Process\RequestProcessException;
 use Team3\Communication\Request\PayURequestInterface;
+use Team3\Communication\Response\EmptyResponse;
 use Team3\Communication\Response\ResponseInterface;
 use Team3\Serializer\SerializerException;
 use Team3\Serializer\SerializerInterface;
@@ -61,20 +62,58 @@ class ResponseDeserializer implements ResponseDeserializerInterface
      * @param MessageInterface     $curlResponse
      * @param PayURequestInterface $payURequest
      *
-     * @return object
-     * @throws NoResponseObjectException
-     * @throws RequestProcessException
+     * @return ResponseInterface
+     * @throws NoResponseFoundException
      */
     public function deserializeResponse(
         MessageInterface $curlResponse,
         PayURequestInterface $payURequest
     ) {
+        return $this
+            ->deserialize(
+                $curlResponse,
+                $this->getResponseClass($payURequest)
+            );
+    }
+
+    /**
+     * @param PayURequestInterface $payURequest
+     *
+     * @return string
+     * @throws NoResponseFoundException
+     */
+    private function getResponseClass(
+        PayURequestInterface $payURequest
+    ) {
+        foreach ($this->responses as $response) {
+            if ($response->supports($payURequest)) {
+                return get_class($response);
+            }
+        }
+
+        throw new NoResponseFoundException(sprintf(
+            'No response class that supports %s was found',
+            get_class($payURequest)
+        ));
+    }
+
+    /**
+     * @param MessageInterface $curlResponse
+     * @param string           $responseClass
+     *
+     * @return object
+     * @throws RequestProcessException
+     */
+    private function deserialize(
+        MessageInterface $curlResponse,
+        $responseClass
+    ) {
         try {
-            $deserialized = $this
+            return $this
                 ->serializer
                 ->fromJson(
                     $curlResponse->getContent(),
-                    $this->getResponseClass($payURequest)
+                    $responseClass
                 );
         } catch (SerializerException $exception) {
             throw new RequestProcessException(
@@ -87,28 +126,5 @@ class ResponseDeserializer implements ResponseDeserializerInterface
                 $exception
             );
         }
-
-        return $deserialized;
-    }
-
-    /**
-     * @param PayURequestInterface $payURequest
-     *
-     * @return string
-     * @throws NoResponseObjectException
-     */
-    private function getResponseClass(
-        PayURequestInterface $payURequest
-    ) {
-        foreach ($this->responses as $response) {
-            if ($response->supports($payURequest)) {
-                return get_class($response);
-            }
-        }
-
-        throw new NoResponseObjectException(sprintf(
-            'There is no response object that support %s request',
-            get_class($payURequest)
-        ));
     }
 }
