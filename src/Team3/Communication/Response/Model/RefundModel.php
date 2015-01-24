@@ -66,6 +66,21 @@ class RefundModel implements RefundModelInterface
     private $statusDateTime;
 
     /**
+     * @JMS\PostDeserialize()
+     */
+    public function setCurrencyInAmount()
+    {
+        if (null === $this->currencyCode) {
+            return;
+        }
+
+        $this->amount = new Money(
+            $this->getAmount()->getValue(),
+            $this->currencyCode
+        );
+    }
+
+    /**
      * @return bool
      */
     public function isPending()
@@ -144,12 +159,7 @@ class RefundModel implements RefundModelInterface
      */
     public function setAmount($amount)
     {
-        $currency = null;
-        if (null !== $this->currencyCode) {
-            $currency = $this->currencyCode;
-        }
-
-        $this->amount = new Money($amount / 100, $currency);
+        $this->amount = new Money($amount / 100);
 
         return $this;
     }
