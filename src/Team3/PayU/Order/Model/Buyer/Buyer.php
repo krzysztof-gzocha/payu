@@ -38,7 +38,7 @@ class Buyer implements BuyerInterface
 
     /**
      * @var string
-     * @JMS\SerializedName("firstName")
+     * @JMS\SerializedName("lastName")
      * @JMS\Type("string")
      */
     protected $lastName;

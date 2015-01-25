@@ -10,6 +10,7 @@ use Buzz\Message\Response;
 class HttpStatusParser implements HttpStatusParserInterface
 {
     const SUCCESS_CODE = 200;
+    const REDIRECT_CODE = 302;
 
     /**
      * @param Response $curlResponse
@@ -20,11 +21,22 @@ class HttpStatusParser implements HttpStatusParserInterface
     {
         $statusCode = $curlResponse->getStatusCode();
 
-        if (self::SUCCESS_CODE !== $statusCode) {
+        if ($this->shouldThrowException($statusCode)) {
             throw new HttpStatusParserException(
                 $curlResponse->getContent(),
                 $statusCode
             );
         }
+    }
+
+    /**
+     * @param int $statusCode
+     *
+     * @return bool
+     */
+    private function shouldThrowException($statusCode)
+    {
+        return self::SUCCESS_CODE !== $statusCode
+            && self::REDIRECT_CODE !== $statusCode;
     }
 }
