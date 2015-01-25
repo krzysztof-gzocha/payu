@@ -3,7 +3,7 @@
 
 // Register annotations
 \Doctrine\Common\Annotations\AnnotationRegistry::registerFile(
-    __DIR__.'/../src/Team3/Annotation/PayU.php'
+    __DIR__.'/../src/Team3/PayU/Annotation/PayU.php'
 );
 \Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace(
     'JMS\Serializer\Annotation',
