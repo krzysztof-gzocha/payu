@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model\ShippingMethods;
 
 use Team3\PayU\Order\Model\IsFilledTrait;
@@ -31,9 +30,9 @@ class ShippingMethod implements ShippingMethodInterface
     /**
      * @var MoneyInterface
      * @JMS\Accessor(
-     *      getter="getPriceForSerialization",
-     *      setter="setPriceFromDeserialization"
-     * )
+     *                     getter="getPriceForSerialization",
+     *                     setter="setPriceFromDeserialization"
+     *                     )
      * @JMS\Type("integer")
      * @Assert\Type(type="object")
      * @Assert\Valid

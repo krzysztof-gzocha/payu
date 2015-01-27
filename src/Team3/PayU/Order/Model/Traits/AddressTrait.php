@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model\Traits;
 
 use Symfony\Component\Validator\Constraints as Assert;

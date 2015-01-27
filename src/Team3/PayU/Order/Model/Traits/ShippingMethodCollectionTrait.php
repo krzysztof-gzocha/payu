@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model\Traits;
 
 use Team3\PayU\Order\Model\ShippingMethods\ShippingMethodCollection;
@@ -15,9 +14,9 @@ trait ShippingMethodCollectionTrait
      * @JMS\Type("array<Team3\PayU\Order\Model\ShippingMethods\ShippingMethod>")
      * @JMS\SerializedName("shippingMethods")
      * @JMS\Accessor(
-     *      getter="getShippingMethodCollection",
-     *      setter="setShippingMethodCollectionFromDeserialization"
-     * )
+     *                                        getter="getShippingMethodCollection",
+     *                                        setter="setShippingMethodCollectionFromDeserialization"
+     *                                        )
      * @JMS\Groups({"shippingMethods"})
      */
     protected $shippingCollection;

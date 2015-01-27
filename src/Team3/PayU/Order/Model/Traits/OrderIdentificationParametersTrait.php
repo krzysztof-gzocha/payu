@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model\Traits;
 
 trait OrderIdentificationParametersTrait
@@ -12,9 +11,9 @@ trait OrderIdentificationParametersTrait
      * @JMS\Type("string")
      * @JMS\SerializedName("extOrderId")
      * @JMS\Accessor(
-     *      setter="setOrderId",
-     *      getter="getOrderId"
-     * )
+     *             setter="setOrderId",
+     *             getter="getOrderId"
+     *             )
      */
     protected $extOrderId;
 

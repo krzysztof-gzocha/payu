@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Communication\Request\Model;
 
 use Team3\PayU\Order\Model\Money\Money;
@@ -33,9 +32,9 @@ class RefundModel implements RefundModelInterface
      * @var MoneyInterface|null
      * @JMS\Type("integer")
      * @JMS\Accessor(
-     *      getter="getAmountForSerialization",
-     *      setter="setAmountFromDeserialization"
-     * )
+     *                          getter="getAmountForSerialization",
+     *                          setter="setAmountFromDeserialization"
+     *                          )
      */
     private $amount;
 

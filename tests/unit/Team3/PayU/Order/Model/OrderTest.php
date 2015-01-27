@@ -12,6 +12,8 @@ use Team3\PayU\ValidatorBuilder\ValidatorBuilder;
 
 class OrderTest extends \Codeception\TestCase\Test
 {
+    const CREATED_AT = '01.01.2015 14:35:01';
+    const CREATED_AT_FORMAT = 'd.m.Y H:i:s';
     /**
      * @var \UnitTester
      */
@@ -84,6 +86,15 @@ class OrderTest extends \Codeception\TestCase\Test
         $this->assertInstanceOf(
             'Team3\PayU\Order\Model\ShippingMethods\ShippingMethodCollection',
             $order->getShippingMethodCollection()
+        );
+        $order->setCreatedAt(new \DateTime(self::CREATED_AT));
+        $this->assertInstanceOf(
+            '\DateTime',
+            $order->getCreatedAt()
+        );
+        $this->assertEquals(
+            self::CREATED_AT,
+            $order->getCreatedAt()->format(self::CREATED_AT_FORMAT)
         );
     }
 }

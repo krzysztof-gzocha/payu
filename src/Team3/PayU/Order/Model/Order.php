@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model;
 
 use JMS\Serializer\Annotation as JMS;
@@ -68,9 +67,9 @@ class Order implements OrderInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\Accessor(
-     *      getter="getAdditionalDescription",
-     *      setter="setAdditionalDescription"
-     * )
+     *             getter="getAdditionalDescription",
+     *             setter="setAdditionalDescription"
+     *             )
      * @JMS\SerializedName("additionalDescription")
      */
     protected $extraDescription;
@@ -88,9 +87,9 @@ class Order implements OrderInterface
      * @JMS\Type("integer")
      * @JMS\SerializedName("totalAmount")
      * @JMS\Accessor(
-     *      getter="getTotalAmountForSerialization",
-     *      setter="setTotalAmountFromDeserialization"
-     * )
+     *                     getter="getTotalAmountForSerialization",
+     *                     setter="setTotalAmountFromDeserialization"
+     *                     )
      * @Assert\Type(type="object")
      * @Assert\NotBlank()
      * @Assert\Valid
@@ -109,8 +108,8 @@ class Order implements OrderInterface
      * @var \DateTime
      * @JMS\Type("string")
      * @JMS\Accessor(
-     *      setter="setCreatedAtFromDeserialization"
-     * )
+     *                setter="setCreatedAtFromDeserialization"
+     *                )
      * @JMS\SerializedName("orderCreateDate")
      */
     protected $createdAt;
@@ -119,9 +118,9 @@ class Order implements OrderInterface
      * @var OrderStatusInterface
      * @JMS\Type("string")
      * @JMS\Accessor(
-     *      getter="getStatusForSerialization",
-     *      setter="setStatusFromDeserialization"
-     * )
+     *                           getter="getStatusForSerialization",
+     *                           setter="setStatusFromDeserialization"
+     *                           )
      */
     protected $status;
 
