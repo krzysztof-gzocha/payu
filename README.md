@@ -1,6 +1,7 @@
 # PayU Integration
----
-This library written in PHP will allow easily integration with PayU API v2.1
+This library written in PHP will allow easily integration with [PayU API v2.1](http://developers.payu.com/pl/restapi.html).  
+Works with PHP version >=5.4 and HHVM.  
+[![Build Status](https://travis-ci.org/krzysztof-gzocha/payu.svg?branch=master)](https://travis-ci.org/krzysztof-gzocha/payu)
 ### Installation by composer
 ---
 To install this library simply add requirement to composer.  
@@ -23,7 +24,7 @@ composer install
 
 ### Basic usage
 ---
-#### 1. Configuration: 
+#### 1. Configuration 
 Default configuration's object is ```\Team3\PayU\Configuration\Configuration```, but any object that implements ```\Team3\PayU\Configuration\ConfigurationInterface``` will do the job. Most of the configuration parameters are already defined, you only have to set credentials (merchant ID and private key) taken from PayU. Test account credentials are already defined in ```\Team3\PayU\Configuration\Credentials\TestCredentials```, so if you just want to test the appllication you can use this class.
 
 Configuration with test credentials:
@@ -256,4 +257,37 @@ try {
 ```
 
 #### 6. Process notification about order
-@todo
+PayU can inform you about any changes in your order. To use this mechanism you simply need to define ```$order->setNotifyUrl('<URL in your app>')```. PayU will send notification directly to this URL.
+In action defined in notify URL you have to parse JSON string of the notification and check for the order status.
+To do so you can use NotificationProcess.
+```php
+use \Team3\PayU\Communication\Process\NotificationProcess\NotificationProcessFactory;
+use \Team3\PayU\Communication\Notification\OrderNotification;
+use \Team3\PayU\Communication\Process\NotificationProcess\NotificationProcessException;
+
+$logger = new NullLogger(); // Only for example. 
+$notificationProcessFactory = new NotificationProcessFactory();
+$notificationProcess = $notificationProcessFactory->build($logger);
+
+// $notificationData is content of received notification  
+// $signatureHeader can be read from http header "OpenPayu-Signature"  
+// from received notification. It can be null.  
+
+try {
+	/** @var OrderNotification $orderNotification */
+	$orderNotification = $notificationProcess->process(
+		$configuration->getCredentials(),
+		$notificationData,
+		$signatureHeader
+	);
+} catch (NotificationProcessException $exception) {
+	// Something was wrong with the process. Maybe signature was wrong?
+} catch (PayUException $exception) {
+	// Something went really wrong..
+}
+
+// $orderNotification->getOrder()->getStatus->isCompleted() -> true
+```
+
+## Important
+Please note that PayU will send notification in asynchronous way, so when you will receive notification about completing or cancelling order then you should ignore all later notifications.
