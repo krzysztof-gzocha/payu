@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Communication\Request\Model;
 
 use Team3\PayU\Order\Model\Money\MoneyInterface;

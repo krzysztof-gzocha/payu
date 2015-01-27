@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Order\Model\Products;
 
 use Team3\PayU\Order\Model\IsFilledTrait;
@@ -31,9 +30,9 @@ class Product implements ProductInterface
      * @var MoneyInterface
      * @JMS\SerializedName("unitPrice")
      * @JMS\Accessor(
-     *      getter="getUnitPriceForSerialization",
-     *      setter="setUnitPriceFromDeserialization"
-     * )
+     *                     getter="getUnitPriceForSerialization",
+     *                     setter="setUnitPriceFromDeserialization"
+     *                     )
      * @JMS\Type("integer")
      * @Assert\NotBlank()
      * @Assert\Valid()

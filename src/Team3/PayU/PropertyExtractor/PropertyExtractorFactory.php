@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\PropertyExtractor;
 
 use Psr\Log\LoggerInterface;
@@ -26,7 +25,7 @@ class PropertyExtractorFactory implements PropertyExtractorFactoryInterface
     }
 
     /**
-     * @param LoggerInterface  $logger
+     * @param  LoggerInterface $logger
      * @return ReaderInterface
      */
     private function getReader(LoggerInterface $logger)

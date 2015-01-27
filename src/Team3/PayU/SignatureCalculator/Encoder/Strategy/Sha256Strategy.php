@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\SignatureCalculator\Encoder\Strategy;
 
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
