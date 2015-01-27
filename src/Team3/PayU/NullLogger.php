@@ -13,6 +13,7 @@ use Psr\Log\LoggerInterface;
  *
  * Class NullLogger
  * @package Team3\PayU
+ * @SuppressWarnings(PHPMD.UnusedFormalParameter)
  */
 class NullLogger implements LoggerInterface
 {
