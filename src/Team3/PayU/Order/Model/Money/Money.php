@@ -74,7 +74,7 @@ class Money implements MoneyInterface
      */
     public function getValueWithoutSeparation($precision = 2)
     {
-        return (int) sprintf('%d', \bcmul($this->getValue(), pow(10, $precision)));
+        return (int) sprintf('%d', ($this->getValue() * (double) pow(10, $precision)));
     }
 
     /**
