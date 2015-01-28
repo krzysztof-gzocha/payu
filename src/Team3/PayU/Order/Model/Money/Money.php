@@ -85,11 +85,7 @@ class Money implements MoneyInterface
     public function add(MoneyInterface $money)
     {
         return new self(
-            \bcadd(
-                $this->getValue(),
-                $money->getValue(),
-                $this->precision + 1
-            ),
+            (double) ($this->getValue() + $money->getValue()),
             $this->currency,
             $this->precision
         );
@@ -103,11 +99,7 @@ class Money implements MoneyInterface
     public function multiply($multiplier)
     {
         return new self(
-            \bcmul(
-                $this->getValue(),
-                $multiplier,
-                $this->precision + 1
-            ),
+            (double) ($this->getValue() * $multiplier),
             $this->currency,
             $this->precision
         );
