@@ -16,8 +16,7 @@ use Team3\PayU\Serializer\SerializerInterface;
 use Team3\PayU\ValidatorBuilder\ValidatorBuilder;
 
 /**
- * Class RequestProcessFactory
- * @package Team3\PayU\Communication\Process
+ * {@inheritdoc}
  */
 class RequestProcessFactory implements RequestProcessFactoryInterface
 {

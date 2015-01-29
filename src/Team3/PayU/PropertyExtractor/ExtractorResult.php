@@ -5,6 +5,9 @@
 namespace Team3\PayU\PropertyExtractor;
 
 /**
+ * This class is holding value and property name extracted from given object.
+ * It can be returned by {@link ExtractorInterface}
+ *
  * Class ExtractorResult
  * @package Team3\PayU\Annotation\Extractor
  */

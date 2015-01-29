@@ -8,6 +8,7 @@ use Buzz\Message\Request;
 use Buzz\Message\Response;
 use Psr\Log\LoggerInterface;
 use Team3\PayU\Communication\CurlRequestBuilder\CurlRequestBuilderInterface;
+use Team3\PayU\Communication\Sender\SenderInterface;
 use Team3\PayU\Configuration\Configuration;
 use Team3\PayU\Configuration\Credentials\TestCredentials;
 
@@ -28,7 +29,7 @@ class ClientTest extends \Codeception\TestCase\Test
     public function testResponseContent()
     {
         $client = new ClientAdapter(
-            $this->getCurlClient(),
+            $this->getSender(),
             $this->getCurlRequestBuilder(),
             $this->getLogger()
         );
@@ -74,32 +75,35 @@ class ClientTest extends \Codeception\TestCase\Test
     private function getCurlClientWithException()
     {
         $client = $this
-            ->getMockBuilder('Buzz\Client\ClientInterface')
+            ->getMockBuilder('\Team3\PayU\Communication\Sender\SenderInterface')
             ->getMock();
 
         $client
             ->expects($this->any())
             ->method('send')
             ->withAnyParameters()
-            ->willThrowException(new RequestException());
+            ->willThrowException(new ClientException());
 
         return $client;
     }
 
     /**
-     * @return Curl
+     * @return SenderInterface
      */
-    private function getCurlClient()
+    private function getSender()
     {
         $client = $this
-            ->getMockBuilder('Buzz\Client\ClientInterface')
+            ->getMockBuilder('\Team3\PayU\Communication\Sender\SenderInterface')
             ->getMock();
 
         $client
             ->expects($this->any())
             ->method('send')
-            ->willReturnCallback(function (Request $request, Response $response) {
+            ->willReturnCallback(function () {
+                $response = new Response();
                 $response->setContent(self::RESPONSE_CONTENT);
+
+                return $response;
             });
 
         return $client;

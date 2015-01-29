@@ -6,6 +6,14 @@ namespace Team3\PayU\Communication\Process;
 
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 
+/**
+ * This exception will be thrown when {@link PayURequestInterface}
+ * requires an object, but this object is invalid.
+ * To get violations please use {@method getViolations}
+ *
+ * Class InvalidRequestDataObjectException
+ * @package Team3\PayU\Communication\Process
+ */
 class InvalidRequestDataObjectException extends RequestProcessException
 {
     /**

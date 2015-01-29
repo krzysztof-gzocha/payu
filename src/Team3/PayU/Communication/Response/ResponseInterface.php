@@ -7,7 +7,10 @@ namespace Team3\PayU\Communication\Response;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 
 /**
- * Class OrderCreateResponse
+ * Represents any response from PayU.
+ * It is used with {@link RequestProcessInterface}
+ *
+ * Interface ResponseInterface
  * @package Team3\PayU\Communication\Response
  */
 interface ResponseInterface

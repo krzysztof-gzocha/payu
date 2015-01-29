@@ -7,6 +7,13 @@ namespace Team3\PayU\Communication\Notification;
 use Team3\PayU\Order\Model\OrderInterface;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * This class is representing notification received from PayU
+ * about any changes in order status.
+ *
+ * Class OrderNotification
+ * @package Team3\PayU\Communication\Notification
+ */
 class OrderNotification implements NotificationInterface
 {
     /**

@@ -9,6 +9,13 @@ use Buzz\Message\Response;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Configuration\ConfigurationInterface;
 
+/**
+ * Will build proper cURL request from {@link PayURequestInterface}
+ * and send it via {@link SenderInterface}
+ *
+ * Interface ClientInterface
+ * @package Team3\PayU\Communication
+ */
 interface ClientInterface
 {
     /**

@@ -8,6 +8,12 @@ use Psr\Log\LoggerInterface;
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 use Team3\PayU\SignatureCalculator\Encoder\Strategy\EncoderStrategyInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class Encoder
+ * @package Team3\PayU\SignatureCalculator\Encoder
+ */
 class Encoder implements EncoderInterface
 {
     /**

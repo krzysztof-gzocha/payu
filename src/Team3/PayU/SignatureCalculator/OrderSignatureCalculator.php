@@ -11,6 +11,12 @@ use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 use Team3\PayU\SignatureCalculator\Encoder\EncoderInterface;
 use Team3\PayU\SignatureCalculator\ParametersSorter\ParametersSorterInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class OrderSignatureCalculator
+ * @package Team3\PayU\SignatureCalculator
+ */
 class OrderSignatureCalculator implements OrderSignatureCalculatorInterface
 {
     const SIGNATURE_FORMAT = 'signature=%s;algorithm=%s;sender=%s';

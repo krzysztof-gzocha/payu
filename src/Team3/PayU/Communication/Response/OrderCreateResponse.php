@@ -10,6 +10,8 @@ use Team3\PayU\Communication\Request\Model\RequestStatus;
 use JMS\Serializer\Annotation as JMS;
 
 /**
+ * Represents response from PayU after {@link OrderCreateRequest}
+ *
  * Class OrderCreateResponse
  * @package Team3\PayU\Communication\Response
  */

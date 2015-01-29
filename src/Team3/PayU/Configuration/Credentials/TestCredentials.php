@@ -6,6 +6,15 @@ namespace Team3\PayU\Configuration\Credentials;
 
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\Md5Algorithm;
 
+/**
+ * {@inheritdoc}
+ *
+ * Will return sandbox credentials, MD5 algorithm for signature calculations
+ * and TLSv1 as encryption protocol
+ *
+ * Class TestCredentials
+ * @package Team3\PayU\Configuration\Credentials
+ */
 class TestCredentials extends Credentials
 {
     const MERCHANT_POS_ID = '145227';

@@ -10,6 +10,13 @@ use Team3\PayU\Communication\Request\Model\RequestStatus;
 use Team3\PayU\Order\Model\OrderInterface;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * This class represents response from PayU when asked about order status.
+ * It is related with {@link OrderStatusRequest}
+ *
+ * Class OrderStatusResponse
+ * @package Team3\PayU\Communication\Response
+ */
 class OrderStatusResponse implements ResponseInterface
 {
     /**

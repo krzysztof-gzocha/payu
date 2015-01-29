@@ -9,22 +9,15 @@ use Team3\PayU\Communication\Process\RequestProcessException;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Communication\Response\ResponseInterface;
 
+/**
+ * This class will deserialize response content into concrete object.
+ * Possible returned objects should be located in {@link Team3\PayU\Communication\Response}
+ *
+ * Interface ResponseDeserializerInterface
+ * @package Team3\PayU\Communication\Process\ResponseDeserializer
+ */
 interface ResponseDeserializerInterface
 {
-    /**
-     * @param ResponseInterface $response
-     *
-     * @return $this
-     */
-    public function addResponse(ResponseInterface $response);
-
-    /**
-     * @param ResponseInterface[] $responses
-     *
-     * @return $this
-     */
-    public function setResponses(array $responses);
-
     /**
      * @param MessageInterface     $curlResponse
      * @param PayURequestInterface $payURequest

@@ -9,6 +9,9 @@ use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Configuration\ConfigurationInterface;
 use Team3\PayU\Serializer\SerializerInterface;
 
+/**
+ * {@inheritdoc}
+ */
 class CurlRequestBuilder implements CurlRequestBuilderInterface
 {
     const CONTENT_TYPE = 'application/json';

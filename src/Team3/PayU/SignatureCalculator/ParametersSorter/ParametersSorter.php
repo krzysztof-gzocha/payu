@@ -7,6 +7,12 @@ namespace Team3\PayU\SignatureCalculator\ParametersSorter;
 use Team3\PayU\Order\Model\OrderInterface;
 use Team3\PayU\Serializer\SerializerInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class ParametersSorter
+ * @package Team3\PayU\SignatureCalculator\ParametersSorter
+ */
 class ParametersSorter implements ParametersSorterInterface
 {
     /**

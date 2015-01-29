@@ -7,6 +7,12 @@ namespace Team3\PayU\ValidatorBuilder;
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
+/**
+ * Will build {@link ValidationInterface}
+ *
+ * Interface ValidatorBuilderInterface
+ * @package Team3\PayU\ValidatorBuilder
+ */
 interface ValidatorBuilderInterface
 {
     /**

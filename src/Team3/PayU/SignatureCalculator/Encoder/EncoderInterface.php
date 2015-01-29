@@ -6,6 +6,12 @@ namespace Team3\PayU\SignatureCalculator\Encoder;
 
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 
+/**
+ * Will encode given string with given algorithm passed as {@link AlgorithmInterface}
+ *
+ * Interface EncoderInterface
+ * @package Team3\PayU\SignatureCalculator\Encoder
+ */
 interface EncoderInterface
 {
     /**

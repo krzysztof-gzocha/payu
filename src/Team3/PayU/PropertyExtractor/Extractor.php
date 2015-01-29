@@ -9,6 +9,12 @@ use ReflectionClass;
 use ReflectionException;
 use Team3\PayU\PropertyExtractor\Reader\ReaderInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class Extractor
+ * @package Team3\PayU\PropertyExtractor
+ */
 class Extractor implements ExtractorInterface
 {
     /**

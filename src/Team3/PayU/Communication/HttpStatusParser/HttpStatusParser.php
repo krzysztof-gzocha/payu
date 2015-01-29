@@ -6,6 +6,9 @@ namespace Team3\PayU\Communication\HttpStatusParser;
 
 use Buzz\Message\Response;
 
+/**
+ * {@inheritdoc}
+ */
 class HttpStatusParser implements HttpStatusParserInterface
 {
     const SUCCESS_CODE = 200;

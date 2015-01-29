@@ -6,6 +6,13 @@ namespace Team3\PayU\Communication\Request;
 
 use Team3\PayU\Order\Model\OrderInterface;
 
+/**
+ * Used with {@link RequestProcessInterface} will help user to
+ * know in what state is his order.
+ *
+ * Class OrderStatusRequest
+ * @package Team3\PayU\Communication\Request
+ */
 class OrderStatusRequest extends AbstractPayURequest
 {
     /**

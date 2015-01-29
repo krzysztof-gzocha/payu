@@ -7,6 +7,13 @@ namespace Team3\PayU\Communication\Notification;
 use Team3\PayU\Communication\Response\Model\RefundModelInterface;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * This class represents notification received from PayU
+ * about any changes in money refund.
+ *
+ * Class RefundNotification
+ * @package Team3\PayU\Communication\Notification
+ */
 class RefundNotification implements NotificationInterface
 {
     /**
