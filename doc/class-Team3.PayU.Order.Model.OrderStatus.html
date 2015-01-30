@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Team3\PayU\Order\Model\OrderStatus | PayU integration by Krzysztof Gzocha</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">PayU integration by Krzysztof Gzocha</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Team3.PayU.Order.Model.html" title="Summary of Team3\PayU\Order\Model"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Team3.html">
+							Team3<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Team3.PayU.html">
+							PayU<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Annotation.html">
+							Annotation						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.html">
+							Communication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.CurlRequestBuilder.html">
+							CurlRequestBuilder						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.HttpStatusParser.html">
+							HttpStatusParser						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Notification.html">
+							Notification						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.html">
+							Process<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.NotificationProcess.html">
+							NotificationProcess						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.ResponseDeserializer.html">
+							ResponseDeserializer						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Request.html">
+							Request<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Request.Model.html">
+							Model						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Response.html">
+							Response<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Response.Model.html">
+							Model						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Sender.html">
+							Sender						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Configuration.Credentials.html">
+							Credentials						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Team3.PayU.Order.html">
+							Order<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Autocomplete.html">
+							Autocomplete<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Autocomplete.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Team3.PayU.Order.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Buyer.html">
+							Buyer						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Money.html">
+							Money						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Products.html">
+							Products						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.ShippingMethods.html">
+							ShippingMethods						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Traits.html">
+							Traits						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.html">
+							Transformer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.html">
+							UserOrder<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.html">
+							Strategy<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.Product.html">
+							Product						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.ShippingMethod.html">
+							ShippingMethod						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.PropertyExtractor.html">
+							PropertyExtractor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.PropertyExtractor.Reader.html">
+							Reader						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Serializer.html">
+							Serializer						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.html">
+							SignatureCalculator<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.html">
+							Encoder<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.Algorithms.html">
+							Algorithms						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.ParametersSorter.html">
+							ParametersSorter						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.ValidatorBuilder.html">
+							ValidatorBuilder						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.Order.html">Order</a></li>
+				<li class="active"><a href="class-Team3.PayU.Order.Model.OrderStatus.html">OrderStatus</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.IsFilledInterface.html">IsFilledInterface</a></li>
+				<li><a href="class-Team3.PayU.Order.Model.OrderInterface.html">OrderInterface</a></li>
+				<li><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html">OrderStatusInterface</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.IsFilledTrait.html">IsFilledTrait</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class OrderStatus</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Team3\PayU\Order\Model\OrderStatus</span></b>			
+			 implements 
+				<a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html"><span>Team3\PayU\Order\Model\OrderStatusInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Team3.html">Team3</a>\<a href="namespace-Team3.PayU.html">PayU</a>\<a href="namespace-Team3.PayU.Order.html">Order</a>\<a href="namespace-Team3.PayU.Order.Model.html">Model</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#7-85" title="Go to source code">Team3/PayU/Order/Model/OrderStatus.php</a>
+		<br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#14-20" title="Go to source code">__construct</a>( <span>string <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getValue" id="_getValue">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getValue">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#22-28" title="Go to source code">getValue</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_getValue">Team3\PayU\Order\Model\OrderStatusInterface::getValue()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isEmpty" id="_isEmpty">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isEmpty">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#30-36" title="Go to source code">isEmpty</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isEmpty">Team3\PayU\Order\Model\OrderStatusInterface::isEmpty()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isNew" id="_isNew">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isNew">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#38-44" title="Go to source code">isNew</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isNew">Team3\PayU\Order\Model\OrderStatusInterface::isNew()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isPending" id="_isPending">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isPending">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#46-52" title="Go to source code">isPending</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isPending">Team3\PayU\Order\Model\OrderStatusInterface::isPending()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isWaitingForConfirmation" id="_isWaitingForConfirmation">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isWaitingForConfirmation">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#54-60" title="Go to source code">isWaitingForConfirmation</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isWaitingForConfirmation">Team3\PayU\Order\Model\OrderStatusInterface::isWaitingForConfirmation()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isCompleted" id="_isCompleted">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isCompleted">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#62-68" title="Go to source code">isCompleted</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isCompleted">Team3\PayU\Order\Model\OrderStatusInterface::isCompleted()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isCanceled" id="_isCanceled">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isCanceled">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#70-76" title="Go to source code">isCanceled</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isCanceled">Team3\PayU\Order\Model\OrderStatusInterface::isCanceled()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isRejected" id="_isRejected">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isRejected">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#78-84" title="Go to source code">isRejected</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#_isRejected">Team3\PayU\Order\Model\OrderStatusInterface::isRejected()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+
+		<h3>Constants inherited from <a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#constants">Team3\PayU\Order\Model\OrderStatusInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#CANCELED"><b>CANCELED</b></a></code>, 
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#COMPLETED"><b>COMPLETED</b></a></code>, 
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#NEW_ORDER"><b>NEW_ORDER</b></a></code>, 
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#PENDING"><b>PENDING</b></a></code>, 
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#REJECTED"><b>REJECTED</b></a></code>, 
+			<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html#WAITING_FOR_CONFIRMATION"><b>WAITING_FOR_CONFIRMATION</b></a></code>
+		</p>
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="value" id="$value">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Team3.PayU.Order.Model.OrderStatus.html#9-12" title="Go to source code"><var>$value</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$value" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		PayU integration by Krzysztof Gzocha API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Interface Team3\PayU\Order\Model\OrderInterface | PayU integration by Krzysztof Gzocha</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">PayU integration by Krzysztof Gzocha</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Team3.PayU.Order.Model.html" title="Summary of Team3\PayU\Order\Model"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Team3.html">
+							Team3<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Team3.PayU.html">
+							PayU<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Annotation.html">
+							Annotation						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.html">
+							Communication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.CurlRequestBuilder.html">
+							CurlRequestBuilder						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.HttpStatusParser.html">
+							HttpStatusParser						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Notification.html">
+							Notification						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.html">
+							Process<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.NotificationProcess.html">
+							NotificationProcess						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Process.ResponseDeserializer.html">
+							ResponseDeserializer						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Request.html">
+							Request<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Request.Model.html">
+							Model						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Response.html">
+							Response<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Response.Model.html">
+							Model						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Communication.Sender.html">
+							Sender						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Configuration.Credentials.html">
+							Credentials						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Team3.PayU.Order.html">
+							Order<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Autocomplete.html">
+							Autocomplete<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Autocomplete.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Team3.PayU.Order.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Buyer.html">
+							Buyer						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Money.html">
+							Money						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Products.html">
+							Products						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.ShippingMethods.html">
+							ShippingMethods						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Model.Traits.html">
+							Traits						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.html">
+							Transformer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.html">
+							UserOrder<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.html">
+							Strategy<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.Product.html">
+							Product						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.Order.Transformer.UserOrder.Strategy.ShippingMethod.html">
+							ShippingMethod						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.PropertyExtractor.html">
+							PropertyExtractor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.PropertyExtractor.Reader.html">
+							Reader						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.Serializer.html">
+							Serializer						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.html">
+							SignatureCalculator<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.html">
+							Encoder<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.Algorithms.html">
+							Algorithms						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Encoder.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.ParametersSorter.html">
+							ParametersSorter						</a>
+							</li>
+					<li>
+						<a href="namespace-Team3.PayU.SignatureCalculator.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Team3.PayU.ValidatorBuilder.html">
+							ValidatorBuilder						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.Order.html">Order</a></li>
+				<li><a href="class-Team3.PayU.Order.Model.OrderStatus.html">OrderStatus</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.IsFilledInterface.html">IsFilledInterface</a></li>
+				<li class="active"><a href="class-Team3.PayU.Order.Model.OrderInterface.html">OrderInterface</a></li>
+				<li><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html">OrderStatusInterface</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Team3.PayU.Order.Model.IsFilledTrait.html">IsFilledTrait</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface OrderInterface</h1>
+
+
+	<div class="description">
+	<p>All classes that are serializable to JSON should implement this interface.</p>
+
+<p>Interface SerializableInterface</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Team3\PayU\Order\Model\OrderInterface</span></b>			
+			 implements 
+				<a href="class-Team3.PayU.Order.Model.IsFilledInterface.html"><span>Team3\PayU\Order\Model\IsFilledInterface</span></a>, 
+			
+				<a href="class-Team3.PayU.Serializer.SerializableInterface.html"><span>Team3\PayU\Serializer\SerializableInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+		</p>
+	</div>
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Team3.html">Team3</a>\<a href="namespace-Team3.PayU.html">PayU</a>\<a href="namespace-Team3.PayU.Order.html">Order</a>\<a href="namespace-Team3.PayU.Order.Model.html">Model</a><br>
+		<b>Package:</b> Team3\PayU\Serializer<br>
+
+			<b>Located at</b> <a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#13-211" title="Go to source code">Team3/PayU/Order/Model/OrderInterface.php</a>
+		<br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="getDescription" id="_getDescription">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getDescription">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#15-18" title="Go to source code">getDescription</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDescription" id="_setDescription">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDescription">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#20-25" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$description</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAdditionalDescription" id="_getAdditionalDescription">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAdditionalDescription">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#27-30" title="Go to source code">getAdditionalDescription</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setAdditionalDescription" id="_setAdditionalDescription">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setAdditionalDescription">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#32-37" title="Go to source code">setAdditionalDescription</a>( <span>string <var>$additionalDescription</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$additionalDescription</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrencyCode" id="_getCurrencyCode">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrencyCode">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#39-42" title="Go to source code">getCurrencyCode</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Inheritdoc</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCurrencyCode" id="_setCurrencyCode">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCurrencyCode">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#44-49" title="Go to source code">setCurrencyCode</a>( <span>string <var>$currencyCode</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currencyCode</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCustomerIp" id="_getCustomerIp">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCustomerIp">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#51-54" title="Go to source code">getCustomerIp</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Inheritdoc</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCustomerIp" id="_setCustomerIp">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCustomerIp">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#56-61" title="Go to source code">setCustomerIp</a>( <span>string <var>$customerIp</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$customerIp</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMerchantPosId" id="_getMerchantPosId">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMerchantPosId">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#63-66" title="Go to source code">getMerchantPosId</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Inheritdoc</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setMerchantPosId" id="_setMerchantPosId">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setMerchantPosId">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#68-73" title="Go to source code">setMerchantPosId</a>( <span>string <var>$merchantPosId</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$merchantPosId</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getOrderId" id="_getOrderId">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getOrderId">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#75-78" title="Go to source code">getOrderId</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Inheritdoc</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setOrderId" id="_setOrderId">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setOrderId">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#80-85" title="Go to source code">setOrderId</a>( <span>string <var>$orderId</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$orderId</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSignature" id="_getSignature">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSignature">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#87-90" title="Go to source code">getSignature</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Inheritdoc</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setSignature" id="_setSignature">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setSignature">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#92-97" title="Go to source code">setSignature</a>( <span>string <var>$signature</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$signature</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTotalAmount" id="_getTotalAmount">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Money.MoneyInterface.html">Team3\PayU\Order\Model\Money\MoneyInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTotalAmount">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#99-102" title="Go to source code">getTotalAmount</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Money.MoneyInterface.html">Team3\PayU\Order\Model\Money\MoneyInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setTotalAmount" id="_setTotalAmount">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setTotalAmount">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#104-109" title="Go to source code">setTotalAmount</a>( <span><code><a href="class-Team3.PayU.Order.Model.Money.MoneyInterface.html">Team3\PayU\Order\Model\Money\MoneyInterface</a></code> <var>$totalAmount</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$totalAmount</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getBuyer" id="_getBuyer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Buyer.BuyerInterface.html">Team3\PayU\Order\Model\Buyer\BuyerInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getBuyer">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#111-114" title="Go to source code">getBuyer</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Buyer.BuyerInterface.html">Team3\PayU\Order\Model\Buyer\BuyerInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBuyer" id="_setBuyer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBuyer">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#116-121" title="Go to source code">setBuyer</a>( <span><code><a href="class-Team3.PayU.Order.Model.Buyer.BuyerInterface.html">Team3\PayU\Order\Model\Buyer\BuyerInterface</a></code> <var>$buyer</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$buyer</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProductCollection" id="_getProductCollection">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Products.ProductCollectionInterface.html">Team3\PayU\Order\Model\Products\ProductCollectionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProductCollection">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#123-126" title="Go to source code">getProductCollection</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Products.ProductCollectionInterface.html">Team3\PayU\Order\Model\Products\ProductCollectionInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setProductCollection" id="_setProductCollection">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setProductCollection">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#128-133" title="Go to source code">setProductCollection</a>( <span><code><a href="class-Team3.PayU.Order.Model.Products.ProductCollectionInterface.html">Team3\PayU\Order\Model\Products\ProductCollectionInterface</a></code> <var>$productCollection</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$productCollection</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getShippingMethodCollection" id="_getShippingMethodCollection">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.ShippingMethods.ShippingMethodCollectionInterface.html">Team3\PayU\Order\Model\ShippingMethods\ShippingMethodCollectionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getShippingMethodCollection">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#135-138" title="Go to source code">getShippingMethodCollection</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.ShippingMethods.ShippingMethodCollectionInterface.html">Team3\PayU\Order\Model\ShippingMethods\ShippingMethodCollectionInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setShippingMethodCollection" id="_setShippingMethodCollection">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setShippingMethodCollection">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#140-145" title="Go to source code">setShippingMethodCollection</a>( <span><code><a href="class-Team3.PayU.Order.Model.ShippingMethods.ShippingMethodCollectionInterface.html">Team3\PayU\Order\Model\ShippingMethods\ShippingMethodCollectionInterface</a></code> <var>$shippingMethodCollection</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$shippingMethodCollection</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContinueUrl" id="_getContinueUrl">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContinueUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#147-150" title="Go to source code">getContinueUrl</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setContinueUrl" id="_setContinueUrl">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setContinueUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#152-157" title="Go to source code">setContinueUrl</a>( <span>string <var>$continueUrl</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$continueUrl</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNotifyUrl" id="_getNotifyUrl">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNotifyUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#159-162" title="Go to source code">getNotifyUrl</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setNotifyUrl" id="_setNotifyUrl">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setNotifyUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#164-169" title="Go to source code">setNotifyUrl</a>( <span>string <var>$notifyUrl</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$notifyUrl</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getOrderUrl" id="_getOrderUrl">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getOrderUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#171-174" title="Go to source code">getOrderUrl</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setOrderUrl" id="_setOrderUrl">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setOrderUrl">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#176-181" title="Go to source code">setOrderUrl</a>( <span>string <var>$orderUrl</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$orderUrl</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>$this
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCreatedAt" id="_getCreatedAt">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCreatedAt">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#183-186" title="Go to source code">getCreatedAt</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						DateTime
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCreatedAt" id="_setCreatedAt">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCreatedAt">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#188-193" title="Go to source code">setCreatedAt</a>( <span>DateTime <var>$createdAt</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$createdAt</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatus" id="_getStatus">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html">Team3\PayU\Order\Model\OrderStatusInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatus">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#195-198" title="Go to source code">getStatus</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html">Team3\PayU\Order\Model\OrderStatusInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setStatus" id="_setStatus">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStatus">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#200-205" title="Go to source code">setStatus</a>( <span><code><a href="class-Team3.PayU.Order.Model.OrderStatusInterface.html">Team3\PayU\Order\Model\OrderStatusInterface</a></code> <var>$status</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$status</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Team3.PayU.Order.Model.Order.html">Team3\PayU\Order\Model\Order</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPayUOrderId" id="_getPayUOrderId">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPayUOrderId">#</a>
+			<code><a href="source-class-Team3.PayU.Order.Model.OrderInterface.html#207-210" title="Go to source code">getPayUOrderId</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-Team3.PayU.Order.Model.IsFilledInterface.html#methods">Team3\PayU\Order\Model\IsFilledInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-Team3.PayU.Order.Model.IsFilledInterface.html#_isFilled">isFilled()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		PayU integration by Krzysztof Gzocha API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
