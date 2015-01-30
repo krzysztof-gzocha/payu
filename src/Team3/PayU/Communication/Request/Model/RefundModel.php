@@ -32,9 +32,9 @@ class RefundModel implements RefundModelInterface
      * @var MoneyInterface|null
      * @JMS\Type("integer")
      * @JMS\Accessor(
-     *                          getter="getAmountForSerialization",
-     *                          setter="setAmountFromDeserialization"
-     *                          )
+     *     getter="getAmountForSerialization",
+     *     setter="setAmountFromDeserialization"
+     * )
      */
     private $amount;
 

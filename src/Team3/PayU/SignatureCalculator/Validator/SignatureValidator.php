@@ -10,6 +10,12 @@ use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmsProviderInterfac
 use Team3\PayU\SignatureCalculator\SignatureCalculatorException;
 use Team3\PayU\SignatureCalculator\SignatureCalculatorInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class SignatureValidator
+ * @package Team3\PayU\SignatureCalculator\Validator
+ */
 class SignatureValidator implements SignatureValidatorInterface
 {
     /**

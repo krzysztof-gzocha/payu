@@ -7,6 +7,12 @@ namespace Team3\PayU\SignatureCalculator;
 use Team3\PayU\Configuration\Credentials\CredentialsInterface;
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 
+/**
+ * Is responsible to concat data, add private key and encrypt with given algorithm.
+ *
+ * Interface SignatureCalculatorInterface
+ * @package Team3\PayU\SignatureCalculator
+ */
 interface SignatureCalculatorInterface
 {
     /**

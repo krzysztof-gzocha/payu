@@ -9,6 +9,12 @@ use Team3\PayU\Configuration\Credentials\CredentialsInterface;
 use Team3\PayU\Serializer\SerializerInterface;
 use Team3\PayU\SignatureCalculator\Validator\SignatureValidatorInterface;
 
+/**
+ * This class will help in notification's receiving process.
+ *
+ * Class NotificationProcess
+ * @package Team3\PayU\Communication\Process\NotificationProcess
+ */
 class NotificationProcess
 {
     const ORDER_NOTIFICATION_CLASS = 'Team3\PayU\Communication\Notification\OrderNotification';

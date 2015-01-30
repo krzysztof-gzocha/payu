@@ -11,6 +11,9 @@ use JMS\Serializer\Annotation as JMS;
 use Team3\PayU\Communication\Response\Model\RefundModelInterface;
 
 /**
+ * Represents response from PayU when asked about refund.
+ * It's connected with {@link RefundRequest}
+ *
  * Class RefundResponse
  * @package Team3\PayU\Communication\Response
  * @JMS\AccessorOrder("alphabetical")

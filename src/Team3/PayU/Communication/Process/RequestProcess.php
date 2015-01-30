@@ -16,6 +16,11 @@ use Team3\PayU\Configuration\ConfigurationInterface;
 use Team3\PayU\Serializer\SerializableInterface;
 
 /**
+ * This class will help user to make a request to PayU.
+ * Basing on {@link PayURequestInterface} and {@link ConfigurationInterface}
+ * it will serialize objects, send request, parse HTTP status code of the response
+ * and deserialize the response into proper objects.
+ *
  * Class RequestProcess
  * @package Team3\PayU\Communication\Process
  */

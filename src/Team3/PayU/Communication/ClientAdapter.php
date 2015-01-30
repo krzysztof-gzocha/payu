@@ -16,12 +16,18 @@ use Team3\PayU\Communication\Sender\Sender;
 use Team3\PayU\Communication\Sender\SenderInterface;
 use Team3\PayU\Configuration\ConfigurationInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class ClientAdapter
+ * @package Team3\PayU\Communication
+ */
 class ClientAdapter implements PayUClientInterface
 {
     /**
-     * @var ClientInterface
+     * @var SenderInterface
      */
-    private $client;
+    private $sender;
 
     /**
      * @var CurlRequestBuilderInterface
@@ -34,25 +40,18 @@ class ClientAdapter implements PayUClientInterface
     private $logger;
 
     /**
-     * @var SenderInterface
-     */
-    private $sender;
-
-    /**
-     * @param ClientInterface             $client
+     * @param SenderInterface             $sender
      * @param CurlRequestBuilderInterface $requestBuilder
      * @param LoggerInterface             $logger
      */
     public function __construct(
-        ClientInterface $client,
+        SenderInterface $sender,
         CurlRequestBuilderInterface $requestBuilder,
         LoggerInterface $logger
     ) {
-        $this->client = $client;
+        $this->sender = $sender;
         $this->requestBuilder = $requestBuilder;
         $this->logger = $logger;
-
-        $this->sender = new Sender($this->client, $this->logger);
     }
 
     /**

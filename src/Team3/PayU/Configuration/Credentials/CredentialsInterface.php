@@ -6,6 +6,13 @@ namespace Team3\PayU\Configuration\Credentials;
 
 use Team3\PayU\SignatureCalculator\Encoder\Algorithms\AlgorithmInterface;
 
+/**
+ * Encapsulates credentials, signature calculating algorithm {@link AlgorithmInterface}
+ * and encryption protocol.
+ *
+ * Interface CredentialsInterface
+ * @package Team3\PayU\Configuration\Credentials
+ */
 interface CredentialsInterface
 {
     /**

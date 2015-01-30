@@ -9,6 +9,12 @@ use Team3\PayU\PropertyExtractor\Reader\AnnotationReader;
 use Team3\PayU\PropertyExtractor\Reader\ReaderInterface;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 
+/**
+ * Will return {@link ExtractorInterface}
+ *
+ * Class PropertyExtractorFactory
+ * @package Team3\PayU\PropertyExtractor
+ */
 class PropertyExtractorFactory implements PropertyExtractorFactoryInterface
 {
     /**

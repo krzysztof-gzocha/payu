@@ -13,6 +13,12 @@ use Team3\PayU\SignatureCalculator\SignatureCalculator;
 use Team3\PayU\SignatureCalculator\Validator\AlgorithmExtractor;
 use Team3\PayU\SignatureCalculator\Validator\SignatureValidator;
 
+/**
+ * This factory will build {@link NotificationProcess}
+ *
+ * Class NotificationProcessFactory
+ * @package Team3\PayU\Communication\Process\NotificationProcess
+ */
 class NotificationProcessFactory implements NotificationProcessFactoryInterface
 {
     /**

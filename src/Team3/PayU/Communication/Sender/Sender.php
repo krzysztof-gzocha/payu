@@ -11,6 +11,12 @@ use Psr\Log\LoggerInterface;
 use Team3\PayU\Configuration\Credentials\CredentialsInterface;
 use Team3\PayU\Communication\ClientException;
 
+/**
+ * Encapsulates all cURL related options and sending function.
+ *
+ * Class Sender
+ * @package Team3\PayU\Communication\Sender
+ */
 class Sender implements SenderInterface
 {
     /**

@@ -10,6 +10,12 @@ use Psr\Log\LoggerInterface;
 use Team3\PayU\Order\Model\OrderInterface;
 use Team3\PayU\Serializer\SerializerInterface as PayUSerializerInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class Serializer
+ * @package Team3\PayU\Serializer
+ */
 class Serializer implements PayUSerializerInterface
 {
     /**

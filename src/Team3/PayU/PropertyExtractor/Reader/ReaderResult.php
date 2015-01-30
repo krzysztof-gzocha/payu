@@ -4,6 +4,12 @@
  */
 namespace Team3\PayU\PropertyExtractor\Reader;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class ReaderResult
+ * @package Team3\PayU\PropertyExtractor\Reader
+ */
 class ReaderResult implements ReaderResultInterface
 {
     /**

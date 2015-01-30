@@ -8,6 +8,15 @@ use Buzz\Message\Request;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Configuration\ConfigurationInterface;
 
+/**
+ * This library is using two types of request. First type is {@link PayuRequestInterface}
+ * and second is {@link \Buzz\Message\Request}. Responsibility of this class is to transform
+ * simple {@link PayURequestInterface} into {@link \Buzz\Message\Request} with given
+ * {@link ConfigurationInterface}
+ *
+ * Interface CurlRequestBuilderInterface
+ * @package Team3\PayU\Communication\CurlRequestBuilder
+ */
 interface CurlRequestBuilderInterface
 {
     /**

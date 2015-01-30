@@ -6,6 +6,12 @@ namespace Team3\PayU\Communication\Request\Model;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * This class is representing status of the given request to PayU.
+ *
+ * Class RequestStatus
+ * @package Team3\PayU\Communication\Request\Model
+ */
 class RequestStatus
 {
     const STATUS_SUCCESS = 'SUCCESS';

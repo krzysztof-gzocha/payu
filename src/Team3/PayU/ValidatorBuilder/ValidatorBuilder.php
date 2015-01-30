@@ -9,6 +9,12 @@ use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
+/**
+ * {@inheritdoc}
+ *
+ * Class ValidatorBuilder
+ * @package Team3\PayU\ValidatorBuilder
+ */
 class ValidatorBuilder implements ValidatorBuilderInterface
 {
     /**

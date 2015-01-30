@@ -11,6 +11,9 @@ use Team3\PayU\Communication\Response\ResponseInterface;
 use Team3\PayU\Serializer\SerializerException;
 use Team3\PayU\Serializer\SerializerInterface;
 
+/**
+ * {@inheritdoc}
+ */
 class ResponseDeserializer implements ResponseDeserializerInterface
 {
     /**

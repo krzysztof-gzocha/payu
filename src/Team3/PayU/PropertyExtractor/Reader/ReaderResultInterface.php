@@ -4,6 +4,12 @@
  */
 namespace Team3\PayU\PropertyExtractor\Reader;
 
+/**
+ * This class is holding property name and method on which it was collected.
+ *
+ * Interface ReaderResultInterface
+ * @package Team3\PayU\PropertyExtractor\Reader
+ */
 interface ReaderResultInterface
 {
     /**

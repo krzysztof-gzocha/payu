@@ -6,6 +6,12 @@ namespace Team3\PayU\Communication\Process;
 
 use Psr\Log\LoggerInterface;
 
+/**
+ * Will return {@link RequestProcess}
+ *
+ * Interface RequestProcessFactoryInterface
+ * @package Team3\PayU\Communication\Process
+ */
 interface RequestProcessFactoryInterface
 {
     /**
