@@ -4,7 +4,6 @@
  */
 namespace Team3\PayU\Communication;
 
-use Buzz\Client\ClientInterface;
 use Buzz\Message\RequestInterface;
 use Team3\PayU\Communication\ClientInterface as PayUClientInterface;
 use Buzz\Exception\ClientException;
