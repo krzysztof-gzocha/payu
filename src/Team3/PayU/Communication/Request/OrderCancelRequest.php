@@ -2,18 +2,18 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
+
 namespace Team3\PayU\Communication\Request;
 
 use Team3\PayU\Order\Model\OrderInterface;
 
 /**
- * Used with {@link RequestProcessInterface} will help user to
- * know in what state is his order.
+ * Is representing model of request to cancel given order.
  *
- * Class OrderStatusRequest
+ * Class OrderCancelRequest
  * @package Team3\PayU\Communication\Request
  */
-class OrderStatusRequest extends AbstractPayURequest
+class OrderCancelRequest extends AbstractPayURequest
 {
     /**
      * @param OrderInterface $order
@@ -29,6 +29,6 @@ class OrderStatusRequest extends AbstractPayURequest
      */
     public function getMethod()
     {
-        return self::METHOD_GET;
+        return self::METHOD_DELETE;
     }
 }

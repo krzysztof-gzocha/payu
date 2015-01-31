@@ -11,10 +11,10 @@ use Team3\PayU\Communication\HttpStatusParser\HttpStatusParserInterface;
 use Team3\PayU\Communication\Process\ResponseDeserializer\NoResponseFoundException;
 use Team3\PayU\Communication\Process\ResponseDeserializer\ResponseDeserializer;
 use Team3\PayU\Communication\Request\OrderCreateRequest;
-use Team3\PayU\Communication\Request\OrderStatusRequest;
+use Team3\PayU\Communication\Request\OrderRetrieveRequest;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Communication\Response\OrderCreateResponse;
-use Team3\PayU\Communication\Response\OrderStatusResponse;
+use Team3\PayU\Communication\Response\OrderRetrieveResponse;
 use Team3\PayU\Configuration\Configuration;
 use Team3\PayU\Configuration\ConfigurationInterface;
 use Team3\PayU\Configuration\Credentials\TestCredentials;
@@ -112,20 +112,21 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         );
     }
 
-    public function testOrderStatusRequestProcess()
+    public function testOrderRetrieveRequestProcess()
     {
-        /** @var OrderStatusResponse $response */
+        /** @var OrderRetrieveResponse $response */
         $response = $this
             ->getRequestProcess($this->getOrderStatusCurlResponse())
             ->process(
-                new OrderStatusRequest(new Order()),
+                new OrderRetrieveRequest(new Order()),
                 $this->configuration
             );
 
         $this->assertInstanceOf(
-            'Team3\PayU\Communication\Response\OrderStatusResponse',
+            'Team3\PayU\Communication\Response\OrderRetrieveResponse',
             $response
         );
+
         $this->assertEquals(
             self::ORDER_ID,
             $response->getFirstOrder()->getPayUOrderId()
@@ -231,7 +232,7 @@ class RequestProcessTest extends \Codeception\TestCase\Test
         );
 
         $requestProcess
-            ->addResponse(new OrderStatusResponse())
+            ->addResponse(new OrderRetrieveResponse())
             ->addResponse(new OrderCreateResponse());
 
         return $requestProcess;

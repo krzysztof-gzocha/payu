@@ -4,7 +4,7 @@
  */
 namespace Team3\PayU\Communication\Response;
 
-use Team3\PayU\Communication\Request\OrderStatusRequest;
+use Team3\PayU\Communication\Request\OrderRetrieveRequest;
 use Team3\PayU\Communication\Request\PayURequestInterface;
 use Team3\PayU\Communication\Request\Model\RequestStatus;
 use Team3\PayU\Order\Model\OrderInterface;
@@ -12,12 +12,12 @@ use JMS\Serializer\Annotation as JMS;
 
 /**
  * This class represents response from PayU when asked about order status.
- * It is related with {@link OrderStatusRequest}
+ * It is related with {@link OrderRetrieveRequest}
  *
- * Class OrderStatusResponse
+ * Class OrderRetrieveResponse
  * @package Team3\PayU\Communication\Response
  */
-class OrderStatusResponse implements ResponseInterface
+class OrderRetrieveResponse implements ResponseInterface
 {
     /**
      * @var OrderInterface[]
@@ -40,7 +40,7 @@ class OrderStatusResponse implements ResponseInterface
      */
     public function supports(PayURequestInterface $payURequest)
     {
-        return $payURequest instanceof OrderStatusRequest;
+        return $payURequest instanceof OrderRetrieveRequest;
     }
 
     /**
@@ -54,7 +54,7 @@ class OrderStatusResponse implements ResponseInterface
     /**
      * @param OrderInterface[] $orders
      *
-     * @return OrderStatusResponse
+     * @return OrderRetrieveResponse
      */
     public function setOrders(array $orders)
     {
@@ -74,7 +74,7 @@ class OrderStatusResponse implements ResponseInterface
     /**
      * @param RequestStatus $requestStatus
      *
-     * @return OrderStatusResponse
+     * @return OrderRetrieveResponse
      */
     public function setRequestStatus($requestStatus)
     {
@@ -99,7 +99,7 @@ class OrderStatusResponse implements ResponseInterface
     {
         if (0 === $this->getOrdersCount()) {
             throw new NoOrdersInResponseException(
-                'There is no order in OrderStatusResponse.'
+                'There is no order in OrderRetrieveResponse.'
             );
         }
 

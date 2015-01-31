@@ -4,11 +4,11 @@ namespace Team3\PayU\Communication\Request;
 use Team3\PayU\Order\Model\Order;
 
 /**
- * Class OrderStatusRequestTest
+ * Class OrderRetrieveRequestTest
  * @package Team3\PayU\Communication\Request
  * @group communication
  */
-class OrderStatusRequestTest extends \Codeception\TestCase\Test
+class OrderRetrieveRequestTest extends \Codeception\TestCase\Test
 {
     const PAYU_ORDER_ID = '123';
 
@@ -21,7 +21,7 @@ class OrderStatusRequestTest extends \Codeception\TestCase\Test
     {
         $order = new Order();
         $order->setPayUOrderId(self::PAYU_ORDER_ID);
-        $orderStatusRequest = new OrderStatusRequest($order);
+        $orderStatusRequest = new OrderRetrieveRequest($order);
         $this->assertNotEmpty(
             $orderStatusRequest->getDataObject()
         );

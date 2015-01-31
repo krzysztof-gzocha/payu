@@ -5,8 +5,9 @@
 namespace Team3\PayU\Communication\Process\ResponseDeserializer;
 
 use Psr\Log\LoggerInterface;
+use Team3\PayU\Communication\Response\OrderCancelResponse;
 use Team3\PayU\Communication\Response\OrderCreateResponse;
-use Team3\PayU\Communication\Response\OrderStatusResponse;
+use Team3\PayU\Communication\Response\OrderRetrieveResponse;
 use Team3\PayU\Communication\Response\ResponseInterface;
 use Team3\PayU\Serializer\SerializerFactory;
 use Team3\PayU\Serializer\SerializerInterface;
@@ -45,7 +46,8 @@ class ResponseDeserializerFactory implements ResponseDeserializerFactoryInterfac
     {
         return [
             new OrderCreateResponse(),
-            new OrderStatusResponse()
+            new OrderRetrieveResponse(),
+            new OrderCancelResponse()
         ];
     }
 }

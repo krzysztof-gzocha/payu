@@ -233,15 +233,15 @@ if ($orderCreateResponse->getRequestStatus()->isSuccess()) {
 Retrieving info is similar process to creating new order. You can use the same RequestProcess, but with different Request object. Example:
 ```php
 // $requestProcess was created in exactly the same way.
-use \Team3\PayU\Communication\Response\OrderStatusResponse;
+use \Team3\PayU\Communication\Response\OrderRetrieveResponse;
 
 $order->setPayUOrderId('<order id from payu>');
 $requestProcess->shouldValidate(false); // We dont need to validate this time
 
 try {
-	/** @var OrderStatusResponse $orderStatusResponse */
+	/** @var OrderRetrieveResponse $orderStatusResponse */
 	$orderStatusResponse = $requestProcess->process(
-		new OrderStatusRequest($order), // $order->getPayU
+		new OrderRetrieveRequest($order), // $order->getPayU
 		$configuration
 	);
 } catch (PayUException $exception) {
