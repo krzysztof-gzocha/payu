@@ -19,6 +19,7 @@ interface PayURequestInterface
 {
     const METHOD_POST = 'POST';
     const METHOD_GET = 'GET';
+    const METHOD_DELETE = 'DELETE';
 
     /**
      * @return SerializableInterface

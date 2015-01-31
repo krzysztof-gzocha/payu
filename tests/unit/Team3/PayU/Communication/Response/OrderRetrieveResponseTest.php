@@ -5,11 +5,11 @@ use Team3\PayU\Communication\Request\Model\RequestStatus;
 use Team3\PayU\Order\Model\Order;
 
 /**
- * Class OrderStatusResponseTest
+ * Class OrderRetrieveResponseTest
  * @package Team3\PayU\Communication\Response
  * @group communication
  */
-class OrderStatusResponseTest extends \Codeception\TestCase\Test
+class OrderRetrieveResponseTest extends \Codeception\TestCase\Test
 {
     const ORDER_ID = '123';
     const STATUS_CODE = 'Status code';
@@ -28,7 +28,7 @@ class OrderStatusResponseTest extends \Codeception\TestCase\Test
         $requestStatus->setCode(self::STATUS_CODE);
         $requestStatus->setDescription(self::DESCRIPTION);
 
-        $orderStatusResponse = new OrderStatusResponse();
+        $orderStatusResponse = new OrderRetrieveResponse();
         $orderStatusResponse->setOrders([$order]);
         $orderStatusResponse->setRequestStatus($requestStatus);
 
@@ -58,7 +58,7 @@ class OrderStatusResponseTest extends \Codeception\TestCase\Test
      */
     public function testException()
     {
-        $orderStatusResponse = new OrderStatusResponse();
+        $orderStatusResponse = new OrderRetrieveResponse();
         $orderStatusResponse->getFirstOrder();
     }
 }
