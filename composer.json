@@ -16,11 +16,11 @@
         "vendor-dir": "vendor"
     },
     "require-dev": {
-        "phpspec/phpspec": "@stable",
-        "codeception/codeception": "@stable",
-        "phpmd/phpmd" : "@stable",
-        "fabpot/php-cs-fixer": "@stable",
-        "phing/phing": "@stable",
+        "phpspec/phpspec": "2.1.*",
+        "codeception/codeception": "2.1.*@dev",
+        "phpmd/phpmd" : ">=2.0.0",
+        "fabpot/php-cs-fixer": ">=v1.0",
+        "phing/phing": ">=2.4.12",
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
@@ -30,10 +30,10 @@
         }
     },
     "require": {
-        "doctrine/annotations": "@stable",
-        "jms/serializer": "@stable",
-        "symfony/validator": "@stable",
-        "psr/log": "@stable",
+        "doctrine/annotations": ">=v1.1",
+        "jms/serializer": ">=0.11.0",
+        "symfony/validator": ">=2.0.4",
+        "psr/log": "1.0.*@dev",
         "php": ">=5.4.0",
         "ext-curl": "*",
         "kriswallsmith/buzz": "0.13"
