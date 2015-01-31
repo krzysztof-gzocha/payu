@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * All money information will be stored and manipulated in this class.
- * 
+ *
  * Class Money
  * @package Team3\PayU\Order\Model\Money
  */

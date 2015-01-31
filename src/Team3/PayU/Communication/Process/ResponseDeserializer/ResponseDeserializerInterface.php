@@ -7,7 +7,6 @@ namespace Team3\PayU\Communication\Process\ResponseDeserializer;
 use Buzz\Message\MessageInterface;
 use Team3\PayU\Communication\Process\RequestProcessException;
 use Team3\PayU\Communication\Request\PayURequestInterface;
-use Team3\PayU\Communication\Response\ResponseInterface;
 
 /**
  * This class will deserialize response content into concrete object.

@@ -2,7 +2,6 @@
 /**
  * @author Krzysztof Gzocha <krzysztof.gzocha@xsolve.pl>
  */
-
 namespace Team3\PayU\Communication\Response;
 
 use JMS\Serializer\Annotation as JMS;
@@ -23,9 +22,9 @@ class OrderCancelResponse implements ResponseInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\Accessor(
-     *      setter="setPayUOrderId",
-     *      getter="getPayUOrderId"
-     * )
+     *             setter="setPayUOrderId",
+     *             getter="getPayUOrderId"
+     *             )
      */
     private $orderId;
 
@@ -33,9 +32,9 @@ class OrderCancelResponse implements ResponseInterface
      * @var string
      * @JMS\Type("string")
      * @JMS\Accessor(
-     *      setter="setOrderId",
-     *      getter="getOrderId"
-     * )
+     *             setter="setOrderId",
+     *             getter="getOrderId"
+     *             )
      */
     private $extOrderId;
 

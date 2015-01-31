@@ -241,7 +241,7 @@ $requestProcess->shouldValidate(false); // We dont need to validate this time
 try {
 	/** @var OrderRetrieveResponse $orderStatusResponse */
 	$orderStatusResponse = $requestProcess->process(
-		new OrderRetrieveRequest($order), // $order->getPayU
+		new OrderRetrieveRequest($order), // $order->getPayUOrderId() should not be null
 		$configuration
 	);
 } catch (PayUException $exception) {
@@ -252,11 +252,14 @@ try {
 // $status = $orderStatusResponse->getFirstOrder()->getStatus();
 // Completed status:
 // $status->isCompleted() -> true
-
-
 ```
 
-#### 6. Process notification about order
+#### 6. Order cancel request
+You can send to PayU request that will say "cancel this order". To do so you can use RequestProcess described above. If you will pass to it and object of ```Team3\Communication\Request\OrderCancelRequest``` and initialize it with ```OrderInterface``` with ```PayUOrderId``` parameter then you will cancel the order.
+In this case RequestProcess will return ```Team3\Communication\Response\OrderCancelResponse```.
+You can see it's parameters in documentation. Please note that parameter ```status``` is status of the *request*, **not order!**
+
+#### 7. Process notification about order
 PayU can inform you about any changes in your order. To use this mechanism you simply need to define ```$order->setNotifyUrl('<URL in your app>')```. PayU will send notification directly to this URL.
 In action defined in notify URL you have to parse JSON string of the notification and check for the order status.
 To do so you can use NotificationProcess.
@@ -291,3 +294,17 @@ try {
 
 ## Important
 Please note that PayU will send notification in asynchronous way, so when you will receive notification about completing or cancelling order then you should ignore all later notifications.
+
+### Running tests
+To run tests locally you have to install the library via composer with ```--require-dev``` parameter.
+This will install [Codeception framework](http://codeception.com/) which is helping with unit tests.
+Codeception is using helpers, but they are not in this library. 
+You can build them by using ```./bin/codecept build``` - now you are all set.
+Now you can use ```./bin/codecept run unit``` to run unit tests or
+ ```./bin/codecept run unit -c codeception.yml --coverage --coverage-html --coverage-xml``` to generate code coverage report.
+This library was built using [Phing](http://www.phing.info/) so you can use ```phing unit-tests``` or ```phing coverage```.
+
+Actual code coverage report can be found at [krzysztof-gzocha.github.io/payu/coverage](http://krzysztof-gzocha.github.io/payu/coverage/dashboard.html).
+
+### Contributing
+All pull requests are welcome and appreciated :)
