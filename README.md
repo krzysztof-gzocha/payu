@@ -7,13 +7,13 @@ Works with PHP version >=5.4 and HHVM.
 To install this library simply add requirement to composer.  
 You can do this by 
 ```
-php /path/to/composer.phar require "krzysztof-gzocha/payu:dev-master"
+php /path/to/composer.phar require "krzysztof-gzocha/payu:v1.0.1"
 ```  
 or simply add this to composer.json:
 ```json
 {
     "require": {
-        "krzysztof-gzocha/payu": "dev-master"
+        "krzysztof-gzocha/payu": "v1.0.1"
     }
 }
 ```  
@@ -308,3 +308,6 @@ Actual code coverage report can be found at [krzysztof-gzocha.github.io/payu/cov
 
 ### Contributing
 All pull requests are welcome and appreciated :)
+
+#### License
+License MIT available in license.txt.
